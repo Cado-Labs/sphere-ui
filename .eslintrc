@@ -1,0 +1,57 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "settings": {
+    "react": {
+      "version": "^17.0.2"
+    }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "legacyDecorators": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "prefer-object-spread",
+    "import"
+  ],
+  "extends": [
+    "umbrellio",
+    "umbrellio/react"
+  ],
+  "rules": {
+    "react/jsx-closing-bracket-location": "off",
+    "react/prop-types": "off",
+    "react/no-unused-prop-types": "off",
+    "react/jsx-pascal-case": "off",
+    "react/sort-comp": ["error", {
+      "order": [
+        "static-variables",
+        "static-methods",
+        "instance-variables",
+        "lifecycle",
+        "everything-else",
+        "render"
+      ]
+    }],
+    "switch-colon-spacing": "off",
+    "no-buffer-constructor": "off",
+    "no-unused-vars": ["error", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }],
+    "new-cap": "off",
+    "prefer-promise-reject-errors": "off",
+    "eqeqeq": ["error", "smart"],
+    "import/order": ["error", {
+      "groups": [["builtin", "external"], "internal", "parent", "sibling"],
+      "newlines-between": "always-and-inside-groups"
+    }],
+    "import/no-anonymous-default-export": ["error", { "allowObject": true }],
+    "import/group-exports": "error"
+  }
+}
