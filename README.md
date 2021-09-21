@@ -1,4 +1,4 @@
-# @cado-labs/sphere-ui
+# @cadolabs/sphere-ui &middot; [![Supporting](https://github.com/Cado-Labs/cado-labs-logos/blob/main/cado_labs_badge.svg)](https://github.com/Cado-Labs/) &middot; [![CI](https://github.com/Cado-Labs/sphere-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/Cado-Labs/sphere-ui/actions/workflows/ci.yml) &middot; [![npm version](https://badge.fury.io/js/sphere-ui.svg)](https://badge.fury.io/js/sphere-ui)
 
 UI Kit for awesome applications :nail_care:
 
@@ -7,18 +7,18 @@ Based on [PrimeReact](https://www.primefaces.org/primereact/).
 ## Install
 
 ```sh
-npm i --save @cado-labs/sphere-ui
+npm i --save @cadolabs/sphere-ui
 ```
 
 or
 
 ```sh
-yarn add @cado-labs/sphere-ui
+yarn add @cadolabs/sphere-ui
 ```
 
 And require it for further usage
 ```js
-import UI from "@cado-labs/sphere-ui"
+import UI from "@cadolabs/sphere-ui"
 ```
 
 ---
