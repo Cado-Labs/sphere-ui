@@ -1,0 +1,51 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "umbrellio",
+    "umbrellio/react",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/prop-types": "off",
+    "react/no-unused-prop-types": "off",
+    "react/jsx-pascal-case": "off",
+    "no-undef": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          [
+            "builtin",
+            "external"
+          ],
+          "internal",
+          "parent",
+          "sibling"
+        ],
+        "newlines-between": "always-and-inside-groups"
+      }
+    ],
+    "import/no-anonymous-default-export": [
+      "error",
+      {
+        "allowObject": true
+      }
+    ],
+    "import/group-exports": "error"
+  }
+}
