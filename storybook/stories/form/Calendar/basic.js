@@ -1,8 +1,10 @@
-// example
+import { Calendar } from "./Calendar"
+
 export const basic = {
-  header: "Button",
+  header: "Calendar",
   content: "Описание кнопки",
-  code: "<UI.Button label='Click me!'/>",
+  code: "<Calendar />",
+  scope: { Calendar },
   descriptionProps: [
     { name: "disable", type: "boolean", description: "Блокирует доступ к кнопке и её изменение." },
     { name: "tooltip", type: "any", description: "Всплывающая подсказка." },

@@ -5,5 +5,5 @@ import { StoryPage } from "@components"
 
 import { basic } from "./basic"
 
-storiesOf("Form/ Button", module)
+storiesOf("Form/ Calendar", module)
   .add("Описание", context => <StoryPage {...basic} {...context} />)
