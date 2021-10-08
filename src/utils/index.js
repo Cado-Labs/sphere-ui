@@ -1,0 +1,1 @@
+export { getPartsOfTime } from "./getDate"
