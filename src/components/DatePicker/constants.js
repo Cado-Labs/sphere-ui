@@ -1,4 +1,4 @@
-export const LOCALES_RANGE_BLOCKS = {
+const LOCALES_RANGE_BLOCKS = {
   ru: {
     today: "Сегодня",
     week: "Неделя",
@@ -15,4 +15,11 @@ export const LOCALES_RANGE_BLOCKS = {
     allTime: "All period",
     clear: "Clear",
   },
+}
+
+const START_DATE = "01.01.2010"
+
+export {
+  LOCALES_RANGE_BLOCKS,
+  START_DATE,
 }

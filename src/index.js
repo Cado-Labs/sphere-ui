@@ -100,6 +100,8 @@ export { TreeTable } from "primereact/treetable"
 export { TriStateCheckbox } from "primereact/tristatecheckbox"
 export { VirtualScroller } from "primereact/virtualscroller"
 
+export * from "primereact/utils"
+
 export { DatePicker } from "./components/DatePicker"
 export { TimePicker } from "./components/TimePicker"
 export { DateTimePicker } from "./components/DateTimePicker"

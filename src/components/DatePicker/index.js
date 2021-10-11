@@ -22,7 +22,7 @@ export const DatePicker = React.forwardRef(({
   monthNavigator = true,
   startRangeOfYears = "2010",
 }, ref) => {
-  const defaultProps = () => {
+  const getDefaultProps = () => {
     return {
       id,
       ref,
@@ -59,7 +59,7 @@ export const DatePicker = React.forwardRef(({
 
     return (
       <RangePicker
-        {...defaultProps()}
+        {...getDefaultProps()}
         rangeButtonsBar={rangeButtonsBar}
       />
     )
@@ -67,7 +67,7 @@ export const DatePicker = React.forwardRef(({
 
   const renderDatePicker = () => {
     return (
-      <Calendar {...defaultProps()} />
+      <Calendar {...getDefaultProps()} />
     )
   }
 

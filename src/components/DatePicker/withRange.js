@@ -2,7 +2,7 @@ import React from "react"
 
 import { getPartsOfTime } from "../../utils"
 
-import { LOCALES_RANGE_BLOCKS } from "./constants"
+import { LOCALES_RANGE_BLOCKS, START_DATE } from "./constants"
 
 export const withRange = Component =>
   class extends React.Component {
@@ -39,7 +39,7 @@ export const withRange = Component =>
     setAllTime = () => {
       const { month, day, year } = getPartsOfTime()
       const newDate = [
-        new Date("01.01.2010"),
+        new Date(START_DATE),
         new Date(`${month + 1}.${day}.${year}`),
       ]
 
