@@ -18,7 +18,9 @@ export const DatePicker = React.forwardRef(({
   dateFormat = "dd.mm.yy",
   showIcon = true,
   rangeButtonsBar = false,
-  disabled = false
+  disabled = false,
+  monthNavigator = true,
+  startRangeOfYears = "2010",
 }, ref) => {
   const defaultProps = () => {
     return {
@@ -33,7 +35,8 @@ export const DatePicker = React.forwardRef(({
       yearRange: getYearRange(),
       locale,
       disabled,
-      monthNavigator: true
+      monthNavigator,
+      startRangeOfYears,
     }
   }
 
@@ -48,7 +51,7 @@ export const DatePicker = React.forwardRef(({
   const getYearRange = () => {
     const { year } = getPartsOfTime()
 
-    return yearRange || `2010:${year}`
+    return yearRange || `${startRangeOfYears}:${year}`
   }
 
   const renderDateRangePicker = () => {
@@ -64,20 +67,7 @@ export const DatePicker = React.forwardRef(({
 
   const renderDatePicker = () => {
     return (
-      <Calendar
-        id={id}
-        ref={ref}
-        name={name}
-        value={value}
-        showIcon={showIcon}
-        onChange={onChange}
-        dateFormat={dateFormat}
-        placeholder={placeholder}
-        yearRange={getYearRange}
-        locale={locale}
-        disabled={disabled}
-        monthNavigator
-      />
+      <Calendar {...defaultProps()} />
     )
   }
 

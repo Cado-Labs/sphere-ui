@@ -13,7 +13,6 @@ export const DateTimePicker = React.forwardRef(({
   stepSecond = 1,
   stepMinute = 1,
   placeholder = "",
-  disabled = false
 }, ref) => {
   return (
     <Calendar

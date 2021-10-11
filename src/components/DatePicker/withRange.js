@@ -16,10 +16,9 @@ export const withRange = Component =>
     };
 
     setToday = () => {
-      const { month, day, year } = getPartsOfTime()
       const newDate = [
-        new Date(`${month + 1}.${day}.${year}`),
-        new Date(`${month + 1}.${day}.${year}`),
+        new Date(),
+        new Date(),
       ]
 
       this.onChange(newDate)
@@ -101,10 +100,10 @@ export const withRange = Component =>
     render () {
       return (
         <Component
+          {...this.props}
           selectionMode="range"
           ref={this.refCalendar}
           footerTemplate={this.renderFooter}
-          {...this.props}
         />
       )
     }
