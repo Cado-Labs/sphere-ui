@@ -1,6 +1,6 @@
 {
   "name": "storybook",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
@@ -34,7 +34,8 @@
     "storybook:debug": "yarn storybook --debug-webpack",
     "eslint": "eslint '**/*.js' -f table",
     "eslint:fix": "eslint '**/*.js' --fix",
-    "stylelint": "stylelint '**/*.scss' --fix",
+    "stylelint": "stylelint '**/*.scss'",
+    "stylelint:fix": "stylelint '**/*.scss' --fix",
     "build-storybook": "build-storybook"
   }
 }

@@ -4,47 +4,47 @@
 @import '~primeflex/primeflex.css';
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-	background: var(--surface-cart);
-	font-family: var(--font-family);
+  background: var(--surface-cart);
+  font-family: var(--font-family);
 }
 
 code {
-	background: var(--green-100);
-	border-radius: 10px;
-	color: var(--green-900);
-	display: flex;
-	padding: 15px;
-	white-space: pre-line;
+  background: var(--green-100);
+  border-radius: 10px;
+  color: var(--green-900);
+  display: flex;
+  padding: 15px;
+  white-space: pre-line;
 }
 
 .title {
-	border: 2px solid;
-	border-color: var(--surface-400);
-	border-width: 0 0 1px;
-	color: #262627;
-	font-size: 18px;
-	font-weight: 500;
-	margin-bottom: 1rem;
-	padding: 5px;
+  border: 2px solid;
+  border-color: var(--surface-400);
+  border-width: 0 0 1px;
+  color: #262627;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding: 5px;
 }
 
 .block-content {
-	display: flex;
-	flex-direction: column;
-	margin-top: 1em;
-	padding: 0.75em 0.25em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  padding: 0.75em 0.25em;
 }
 
 .live-content {
-	border-left: 10px solid var(--green-500);
+  border-left: 10px solid var(--green-500);
 }
 
 .header {
-	border-bottom: 2px solid var(--green-500);
-	font-size: 2em;
+  border-bottom: 2px solid var(--green-500);
+  font-size: 2em;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { DatePicker } from "../../../../../src"
 
 const code = `
@@ -58,6 +59,6 @@ export const datePicker = {
     { name: "showIcon", type: "boolean", description: "Если этот параметр включен, рядом с полем ввода отображается кнопка со значком." },
     { name: "rangeButtonsBar", type: "boolean", description: "Отображение кнопок выбора разных диапазонов дат." },
     { name: "monthNavigator", type: "boolean", description: "Дропдаун выбора месяцев." },
-    { name: "disabled", type: "boolean", description: "Текстовое поле не может изменяться пользователем."}
+    { name: "disabled", type: "boolean", description: "Текстовое поле не может изменяться пользователем." },
   ],
 }
