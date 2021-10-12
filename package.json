@@ -5,7 +5,10 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf dist; rollup -c",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "sb:build": "bin/storybook build",
+    "sb:eslint": "bin/storybook eslint",
+    "sb:stylelint": "bin/storybook stylelint"
   },
   "dependencies": {
     "@fullcalendar/core": "^5.9.0",
