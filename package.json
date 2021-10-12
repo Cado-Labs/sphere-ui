@@ -1,6 +1,6 @@
 {
   "name": "@cadolabs/sphere-ui",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
@@ -10,13 +10,20 @@
   "dependencies": {
     "@fullcalendar/core": "^5.9.0",
     "chart.js": "^3.5.1",
-    "primeflex": "2.0.0",
+    "primeflex": "^2.0.0",
     "primeicons": "^4.1.0",
     "primereact": "^6.5.1",
     "quill": "^1.3.7",
     "react-transition-group": "^4.4.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-config-umbrellio": "^5.0.1",
@@ -27,7 +34,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.26.0",
     "rollup": "^2.56.3",
-    "rollup-plugin-scss": "3",
+    "rollup-plugin-scss": "^3",
     "sass": "^1.42.0"
   },
   "peerDependencies": {
