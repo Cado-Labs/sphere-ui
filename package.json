@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rm -rf dist; rollup -c",
     "lint": "eslint .",
+    "sb:start": "bin/storybook start",
     "sb:build": "bin/storybook build",
     "sb:eslint": "bin/storybook eslint",
     "sb:stylelint": "bin/storybook stylelint"

@@ -3,6 +3,13 @@
 const ch = require("child_process")
 const event = process.argv.pop()
 
+const start = () => ch.exec(`
+cd ./storybook; 
+yarn storybook
+`, (error, stdout, stderr) => {
+  console.log(stdout || stderr)
+})
+
 const build = () => ch.exec(`
   cd ./storybook; 
   yarn build-storybook
@@ -25,6 +32,7 @@ const stylelint = () => ch.exec(`
 })
 
 switch (event) {
+  case "start": return start()
   case "build": return build()
   case "eslint": return eslint()
   case "stylelint": return stylelint()
