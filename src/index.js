@@ -106,4 +106,4 @@ export { TimePicker } from "./components/TimePicker"
 export { DateTimePicker } from "./components/DateTimePicker"
 export { MultiSelect } from "./components/MultiSelect"
 
-export { InitLocales } from "./locales"
+export { initLocales, changeLocale } from "./locales"

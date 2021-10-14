@@ -1,7 +1,16 @@
-import { addLocale } from "primereact/api"
+import { addLocale, locale } from "primereact/api"
 
 import { translations } from "./translations"
 
-export const InitLocales = () => {
+const initLocales = () => {
   addLocale("ru", translations.ru)
+}
+
+const changeLocale = language => {
+  locale(language)
+}
+
+export {
+  initLocales,
+  changeLocale,
 }

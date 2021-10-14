@@ -14,6 +14,7 @@ export const TimePicker = React.forwardRef(({
   stepMinute = 1,
   placeholder = "",
   monthNavigator = true,
+  showIcon = false,
 }, ref) => {
   return (
     <Calendar
@@ -30,6 +31,7 @@ export const TimePicker = React.forwardRef(({
       disabled={disabled}
       placeholder={placeholder}
       monthNavigator={monthNavigator}
+      showIcon={showIcon}
       hourFormat="24"
       showTime
       timeOnly

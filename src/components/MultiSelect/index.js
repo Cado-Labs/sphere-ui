@@ -20,6 +20,11 @@ export const MultiSelect = React.forwardRef(({
   panelClassName,
   panelStyle,
   style,
+  selectedItemsLabel,
+  name = null,
+  id = null,
+  disabled = false,
+  showClear = false,
 }, ref) => {
   const multiselectRef = useRef(ref)
 
@@ -32,7 +37,7 @@ export const MultiSelect = React.forwardRef(({
   }
 
   const handleClearAll = () => {
-    const newValue = { value: [] }
+    const newValue = { target: { name, value: [], id } }
 
     onChange(newValue)
   }
@@ -78,6 +83,11 @@ export const MultiSelect = React.forwardRef(({
       panelClassName={panelClassName}
       panelStyle={panelStyle}
       style={style}
+      name={name}
+      id={id}
+      disabled={disabled}
+      selectedItemsLabel={selectedItemsLabel}
+      showClear={showClear}
     />
   )
 })

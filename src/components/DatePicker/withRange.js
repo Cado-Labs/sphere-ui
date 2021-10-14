@@ -87,9 +87,9 @@ export const withRange = Component =>
       ]
 
       return this.props.rangeButtonsBar && (
-        <div className="p-d-flex p-flex-column">
+        <div className="flex flex-column">
           {blocks.map((block, key) => (
-            <div className="p-button p-mb-2" onClick={block.method} key={key}>
+            <div className="p-button mb-2" onClick={block.method} key={key}>
               {block.title}
             </div>
           ))}
