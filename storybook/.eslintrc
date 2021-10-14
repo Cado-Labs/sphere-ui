@@ -21,6 +21,7 @@
     "import"
   ],
   "rules": {
+    "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "react/no-unused-prop-types": "off",
     "react/jsx-pascal-case": "off",

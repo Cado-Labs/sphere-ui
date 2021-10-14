@@ -34,8 +34,8 @@
     "storybook:debug": "yarn storybook --debug-webpack",
     "eslint": "eslint '**/*.js' -f table",
     "eslint:fix": "eslint '**/*.js' --fix",
-    "stylelint": "stylelint '**/*.scss'",
-    "stylelint:fix": "stylelint '**/*.scss' --fix",
+    "stylelint": "stylelint '**/*.(sc|c)ss'",
+    "stylelint:fix": "stylelint '**/*.(sc|c)ss' --fix",
     "build-storybook": "build-storybook"
   }
 }

@@ -1,4 +1,4 @@
-import React from "react"
+import { Fragment } from "react"
 
 import { Table } from "./Table"
 import { Content } from "./Content"
@@ -31,11 +31,11 @@ export function StoryPage ({ content, header, descriptionProps, code, scope }) {
   }
 
   return (
-    <React.Fragment>
+    <Fragment>
       {header && renderHeader()}
       {content && renderContent()}
       {code && renderLive()}
       {descriptionProps && renderTable()}
-    </React.Fragment>
+    </Fragment>
   )
 }

@@ -1,4 +1,3 @@
-import React from "react"
 import * as UI from "@cadolabs/sphere-ui"
 
 import { Title } from "./Title"

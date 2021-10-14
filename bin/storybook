@@ -1,41 +1,13 @@
 #!/usr/bin/env node
 
-const ch = require("child_process")
 const event = process.argv.pop()
-
-const start = () => ch.exec(`
-cd ./storybook; 
-yarn storybook
-`, (error, stdout, stderr) => {
-  console.log(stdout || stderr)
-})
-
-const build = () => ch.exec(`
-  cd ./storybook; 
-  yarn build-storybook
-`, (error, stdout, stderr) => {
-  console.log(stdout || stderr)
-})
-
-const eslint = () => ch.exec(`
-  cd ./storybook; 
-  yarn eslint '--color'
-`, (error, stdout, stderr) => {
-  console.log(stdout || stderr)
-})
-
-const stylelint = () => ch.exec(`
-  cd ./storybook; 
-  yarn eslint '--color'
-`, (error, stdout, stderr) => {
-  console.log(stdout || stderr)
-})
+const { exec } = require("../utils/exec")
 
 switch (event) {
-  case "start": return start()
-  case "build": return build()
-  case "eslint": return eslint()
-  case "stylelint": return stylelint()
+  case "start": return exec("yarn storybook")
+  case "build": return exec("yarn build-storybook")
+  case "eslint": return exec("yarn eslint '--color'")
+  case "stylelint": return exec("yarn stylelint '--color'")
   default: {
     throw new Error(`Event ${event} empty or not exist!`);
   }

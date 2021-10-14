@@ -9,14 +9,26 @@ module.exports = {
           {
             loader: "babel-loader",
             options: {
-              presets: ["@babel/react", "@babel/env"],
+              presets: [
+                "@babel/env",
+                [
+                  "@babel/react",
+                  {
+                    runtime: "automatic",
+                  },
+                ],
+              ],
               babelrc: false,
             },
           },
         ],
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
