@@ -14,14 +14,16 @@ function DateTimePickerExample () {
   }
 
   return (
-    <div className="p-fluid p-grid p-formgrid">
-      <div className="p-field p-md-2">
+    <div className="fluid grid formgrid">
+      <div className="field col">
         <label htmlFor="dateTime">DateTimePicker</label>
-        <DateTimePicker
-          name="dateTime"
-          value={fields.dateTime}
-          onChange={onChange}
-        />
+        <div>
+          <DateTimePicker
+            name="dateTime"
+            value={fields.dateTime}
+            onChange={onChange}
+          />
+        </div>
       </div>
     </div>
   )

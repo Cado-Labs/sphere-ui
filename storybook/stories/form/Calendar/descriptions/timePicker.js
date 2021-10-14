@@ -14,14 +14,16 @@ function TimePickerExample () {
   }
 
   return (
-    <div className="p-fluid p-grid p-formgrid">
-      <div className="p-field p-md-2">
+    <div className="fluid grid formgrid">
+      <div className="field col">
         <label htmlFor="time">TimePicker</label>
-        <TimePicker
-          name="time"
-          value={fields.time}
-          onChange={onChange}
-        />
+        <div>
+          <TimePicker
+            name="time"
+            value={fields.time}
+            onChange={onChange}
+          />
+        </div>
       </div>
     </div>
   )

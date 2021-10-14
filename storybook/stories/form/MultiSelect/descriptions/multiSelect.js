@@ -15,15 +15,17 @@ function MultiSelectExample () {
 
   return (
     <div className="card">
-      <div className="p-fluid p-grid p-formgrid">
-        <div className="p-field p-col-12 p-md-2" style={{ width: "200px" }}>
+      <div className="fluid grid formgrid">
+        <div className="field col">
           <label htmlFor="city">MultiSelect</label>
-          <MultiSelect
-            name="city"
-            value={value}
-            onChange={(e) => setValue(e.value)}
-            options={citySelectItems}
-          />
+          <div style={{ width: "200px" }}>
+            <MultiSelect
+              name="city"
+              value={value}
+              onChange={(e) => setValue(e.value)}
+              options={citySelectItems}
+            />
+          </div>
         </div>
       </div>
     </div>
