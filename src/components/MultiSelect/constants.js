@@ -1,12 +1,12 @@
 const LOCALES_BUTTONS_SET = {
   ru: {
     selectAll: "Выбрать все",
-    deselectAll: "Убрать все",
+    clearAll: "Очистить",
 
   },
   en: {
     selectAll: "Select All",
-    deselectAll: "Deselect All",
+    clearAll: "Clear",
   },
 }
 

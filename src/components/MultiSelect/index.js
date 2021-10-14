@@ -28,36 +28,31 @@ export const MultiSelect = React.forwardRef(({
   }
 
   const handleSelectAll = event => {
-    const currentNode = getRef()?.current
-
-    if (!currentNode) {
-      return null
-    }
-    currentNode.onSelectAll(event)
+    return getRef()?.current?.onSelectAll(event)
   }
 
-  const handleDeselectAll = () => {
+  const handleClearAll = () => {
     const newValue = { value: [] }
 
     onChange(newValue)
   }
 
   const renderHeader = () => {
-    return filter ? null : () => <React.Fragment />
+    return filter ? null : <React.Fragment />
   }
 
   const renderFooter = () => {
     const translations = LOCALES_BUTTONS_SET[locale().locale]
 
     return (
-      <span className="p-buttonset flex flex-row justify-content-center">
+      <div className="p-buttonset flex flex-row justify-content-center">
         <button className="p-button" onClick={handleSelectAll}>
           {translations.selectAll}
         </button>
-        <button className="p-button" onClick={handleDeselectAll}>
-          {translations.deselectAll}
+        <button className="p-button" onClick={handleClearAll}>
+          {translations.clearAll}
         </button>
-      </span>
+      </div>
     )
   }
 
@@ -74,7 +69,7 @@ export const MultiSelect = React.forwardRef(({
       selectAll={false}
       showSelectAll={false}
       panelHeaderTemplate={renderHeader()}
-      panelFooterTemplate={renderFooter}
+      panelFooterTemplate={renderFooter()}
       className={className}
       placeholder={placeholder}
       inputId={inputId}
