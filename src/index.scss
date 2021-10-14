@@ -3,6 +3,8 @@
 @import "~primeicons/primeicons.css";
 @import "~primeflex/primeflex.css";
 
+@import "./components/MultiSelect/style.scss";
+
 html, body {
   font-family: var(--font-family);
 }
