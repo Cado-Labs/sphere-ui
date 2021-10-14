@@ -1,0 +1,41 @@
+{
+  "name": "storybook",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@storybook/addon-actions": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/builder-webpack5": "^6.3.8",
+    "@storybook/manager-webpack5": "^6.3.8",
+    "@storybook/react": "^6.3.8",
+    "@storybook/theming": "^6.3.8",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-umbrellio": "^5.0.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.3.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^22.0.0"
+  },
+  "dependencies": {
+    "@cadolabs/sphere-ui": "^1.4.4",
+    "prism-react-renderer": "^1.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-live": "^2.3.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "storybook:debug": "yarn storybook --debug-webpack",
+    "eslint": "eslint '**/*.js' -f table",
+    "eslint:fix": "eslint '**/*.js' --fix",
+    "stylelint": "stylelint '**/*.(sc|c)ss'",
+    "stylelint:fix": "stylelint '**/*.(sc|c)ss' --fix",
+    "build-storybook": "build-storybook"
+  }
+}

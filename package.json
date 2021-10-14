@@ -1,11 +1,15 @@
 {
   "name": "@cadolabs/sphere-ui",
-  "version": "1.3.0",
+  "version": "1.4.4",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf dist; rollup -c",
-    "lint": "eslint ."
+    "lint": "eslint './src/**/*.js'",
+    "sb:start": "bin/storybook start",
+    "sb:build": "bin/storybook build",
+    "sb:eslint": "bin/storybook eslint",
+    "sb:stylelint": "bin/storybook stylelint"
   },
   "dependencies": {
     "@fullcalendar/core": "^5.9.0",

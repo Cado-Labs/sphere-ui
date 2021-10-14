@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const event = process.argv.pop()
+const { exec } = require("../utils/exec")
+
+switch (event) {
+  case "start": return exec("yarn storybook")
+  case "build": return exec("yarn build-storybook")
+  case "eslint": return exec("yarn eslint '--color'")
+  case "stylelint": return exec("yarn stylelint '--color'")
+  default: {
+    throw new Error(`Event ${event} empty or not exist!`);
+  }
+}
