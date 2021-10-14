@@ -23,6 +23,60 @@ import UI from "@cadolabs/sphere-ui"
 
 ---
 
+## Storybook
+
+### At the root of the application
+
+run
+
+```sh
+yarn sb:start
+```
+
+build
+
+```sh
+yarn sb:build
+```
+
+run eslint
+
+```sh
+yarn sb:eslint
+```
+
+run stylelint
+
+```sh
+yarn sb:stylelint
+```
+
+### From the storybook folder
+
+run
+
+```sh
+yarn storybook
+```
+
+build
+
+```sh
+yarn build-storybook
+```
+
+run eslint
+
+```sh
+yarn eslint
+```
+
+run stylelint
+
+```sh
+yarn stylelint
+```
+
 ## Contributing
 
 - Fork it ( https://github.com/Cado-Labs/sphere-ui )
