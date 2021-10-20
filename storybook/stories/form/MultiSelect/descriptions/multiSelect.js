@@ -59,5 +59,6 @@ export const multiSelect = {
     { name: "style", type: "string", description: "Стили для элемента." },
     { name: "selectedItemsLabel", type: "string", description: "При превышении данного количества опций, в поле будет выводится не выбранные опции, а их количество." },
     { name: "showClear", type: "boolean", description: "Отображение иконки очистки поля." },
+    { name: "display", type: "string", description: "Вариант отображения выбранных значений." },
   ],
 }
