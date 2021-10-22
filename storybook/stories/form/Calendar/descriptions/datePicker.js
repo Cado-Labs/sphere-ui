@@ -5,7 +5,7 @@ const code = `
 function DatePickerExample () {
   const [fields, setFields] = React.useState({
     date: new Date(),
-    randeDate: [new Date(), new Date]
+    rangeDate: [new Date(), new Date]
   })
 
   const onChange = event => {
@@ -20,19 +20,19 @@ function DatePickerExample () {
         <div className="field col-fixed">
           <label htmlFor="date">DatePicker</label>
           <div>
-            <DatePicker 
-              name="date" 
-              value={fields.date} 
+            <DatePicker
+              name="date"
+              value={fields.date}
               onChange={onChange}
             />
           </div>
         </div>
         <div className="field col-fixed">
-          <label htmlFor="randeDate">DateRangePicker</label>
+          <label htmlFor="rangeDate">DateRangePicker</label>
           <div>
-            <DatePicker 
-              name="randeDate" 
-              value={fields.randeDate} 
+            <DatePicker
+              name="rangeDate"
+              value={fields.rangeDate}
               onChange={onChange}
               mode="range"
               rangeButtonsBar
