@@ -14,6 +14,8 @@ export const MultiSelect = React.forwardRef(({
   optionDisabled,
   optionLabel,
   optionValue,
+  optionGroupLabel,
+  optionGroupChildren,
   inputId,
   dropdownIcon,
   maxSelectedLabels,
@@ -69,6 +71,8 @@ export const MultiSelect = React.forwardRef(({
       optionDisabled={optionDisabled}
       optionLabel={optionLabel}
       optionValue={optionValue}
+      optionGroupLabel={optionGroupLabel}
+      optionGroupChildren={optionGroupChildren}
       value={value}
       onChange={onChange}
       filter={filter}
