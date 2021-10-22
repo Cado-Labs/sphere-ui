@@ -51,6 +51,8 @@ export const multiSelect = {
     { name: "optionDisabled", type: "string/function", description: "Имя свойства, которое используется для отключение опции." },
     { name: "optionLabel", type: "string", description: "Переопределение ключа label при отображении опции." },
     { name: "optionValue", type: "string", description: "Переопределение ключа value для значения опции." },
+    { name: "optionGroupLabel", type: "string", description: "Ключ с именем группы для группированных опций." },
+    { name: "optionGroupChildren", type: "string", description: "Ключ объекта с дочерними элементами для группировки опций." },
     { name: "inputId", type: "string", description: "Идентификатор поля ввода." },
     { name: "dropdownIcon", type: "string", description: "Класс значка раскрывающегося списка." },
     { name: "maxSelectedLabels", type: "number", description: "Определяет максимальное количество отображаемых в поле ввода выбранных опций." },
