@@ -48,6 +48,7 @@ export const multiSelect = {
     { name: "disabled", type: "boolean", description: "Текстовое поле не может изменяться пользователем." },
     { name: "options", type: "array", description: "Массив опций отображающие в раскрывающем списке." },
     { name: "filter", type: "boolean", description: "Отображение поля для поиска в раскрывающем списке." },
+    { name: "filterBy", type: "string", description: "Ключ для поиска элементов в поле поиска" },
     { name: "optionDisabled", type: "string/function", description: "Имя свойства, которое используется для отключение опции." },
     { name: "optionLabel", type: "string", description: "Переопределение ключа label при отображении опции." },
     { name: "optionValue", type: "string", description: "Переопределение ключа value для значения опции." },
