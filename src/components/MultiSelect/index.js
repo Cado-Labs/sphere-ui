@@ -9,6 +9,7 @@ export const MultiSelect = React.forwardRef(({
   value,
   onChange,
   filter,
+  filterBy,
   className,
   placeholder,
   optionDisabled,
@@ -76,6 +77,7 @@ export const MultiSelect = React.forwardRef(({
       value={value}
       onChange={onChange}
       filter={filter}
+      filterBy={filterBy}
       selectAll={false}
       showSelectAll={false}
       panelHeaderTemplate={renderHeader()}
