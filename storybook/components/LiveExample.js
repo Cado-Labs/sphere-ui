@@ -4,6 +4,7 @@ import {
   LiveError,
   LivePreview,
 } from "react-live"
+import { useTranslation } from "react-i18next"
 import theme from "prism-react-renderer/themes/github"
 import * as UI from "@cadolabs/sphere-ui"
 
@@ -16,6 +17,8 @@ LiveExample.defaultProps = {
 }
 
 export function LiveExample ({ code, scope }) {
+  const { t } = useTranslation()
+
   const renderLive = () => {
     return (
       <LiveProvider code={code} scope={scope} theme={theme}>
@@ -31,7 +34,7 @@ export function LiveExample ({ code, scope }) {
 
   const renderTitle = () => {
     return (
-      <Title>Живой пример</Title>
+      <Title>{t("components.live_editor.title")}</Title>
     )
   }
 

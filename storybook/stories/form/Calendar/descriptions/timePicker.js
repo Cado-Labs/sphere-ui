@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import { TimePicker } from "@cadolabs/sphere-ui"
 
+const PREFIX_NAME_LOCALE = "stories.form.calendar.timepicker"
+
 const code = `
 function TimePickerExample () {
   const [fields, setFields] = React.useState({
@@ -32,33 +34,25 @@ function TimePickerExample () {
 
 export const timePicker = {
   header: "TimePicker",
-  content: "Компонент TimePicker позволяет пользователю выбрать время (часы, минуты, секунды, милисекунды).",
+  content: `${PREFIX_NAME_LOCALE}.content`,
   code,
   scope: { TimePicker },
   descriptionProps: [
-    { name: "id", type: "string", description: "Уникальный идентификатор элемента." },
-    {
-      name: "ref",
-      type: "string",
-      description: "Возможность получить доступ к DOM-узлам и методам компонента.",
-    },
-    { name: "name", type: "string", description: "Определяет уникальное имя элемента формы." },
-    { name: "value", type: "string", description: "Начальное значение элемента управления." },
-    { name: "placeholder", type: "string", description: "Выводит текст внутри поля формы." },
-    { name: "dateFormat", type: "string", description: "Формат даты." },
-    { name: "yearRange", type: "string", description: "Доступные годы для выбора." },
-    { name: "mode", type: "string", description: "Тип выбора даты (range, default)." },
-    { name: "onChange", type: "function", description: "Обработчик события." },
-    {
-      name: "showIcon",
-      type: "boolean",
-      description: "Если этот параметр включен, рядом с полем ввода отображается кнопка со значком.",
-    },
-    { name: "showSeconds", type: "boolean", description: "Показывать ли секунды." },
-    { name: "showMillisec", type: "boolean", description: "Показывать ли милисекунды." },
-    { name: "stepHour", type: "number", description: "Шаг изменения часа." },
-    { name: "stepSecond", type: "number", description: "Шаг изменения секунд." },
-    { name: "stepMinute", type: "number", description: "Шаг изменения минуты." },
-    { name: "disabled", type: "boolean", description: "Текстовое поле не может изменяться пользователем." },
+    { name: "id", type: "string", description: `${PREFIX_NAME_LOCALE}.props.id` },
+    { name: "ref", type: "string", description: `${PREFIX_NAME_LOCALE}.props.ref` },
+    { name: "name", type: "string", description: `${PREFIX_NAME_LOCALE}.props.name` },
+    { name: "value", type: "string", description: `${PREFIX_NAME_LOCALE}.props.value` },
+    { name: "placeholder", type: "string", description: `${PREFIX_NAME_LOCALE}.props.placeholder` },
+    { name: "dateFormat", type: "string", description: `${PREFIX_NAME_LOCALE}.props.date_format` },
+    { name: "yearRange", type: "string", description: `${PREFIX_NAME_LOCALE}.props.year_range` },
+    { name: "mode", type: "string", description: `${PREFIX_NAME_LOCALE}.props.mode` },
+    { name: "onChange", type: "function", description: `${PREFIX_NAME_LOCALE}.props.on_change` },
+    { name: "showIcon", type: "boolean", description: `${PREFIX_NAME_LOCALE}.props.show_icon` },
+    { name: "showSeconds", type: "boolean", description: `${PREFIX_NAME_LOCALE}.props.show_seconds` },
+    { name: "showMillisec", type: "boolean", description: `${PREFIX_NAME_LOCALE}.props.show_millisec` },
+    { name: "stepHour", type: "number", description: `${PREFIX_NAME_LOCALE}.props.step_hour` },
+    { name: "stepSecond", type: "number", description: `${PREFIX_NAME_LOCALE}.props.step_second` },
+    { name: "stepMinute", type: "number", description: `${PREFIX_NAME_LOCALE}.props.step_minute` },
+    { name: "disabled", type: "boolean", description: `${PREFIX_NAME_LOCALE}.props.disabled` },
   ],
 }

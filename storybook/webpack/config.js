@@ -1,40 +1,18 @@
 const path = require("path")
+const presets = require('./presets')
 
 module.exports = {
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: [
-                "@babel/env",
-                [
-                  "@babel/react",
-                  {
-                    runtime: "automatic",
-                  },
-                ],
-              ],
-              babelrc: false,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
-      },
+      presets.js,
+      presets.styles,
+      presets.sass,
+      presets.yml,
     ],
   },
   resolve: {
     alias: {
+      '@i18n': path.resolve('i18n'),
       "@components": path.resolve("components"),
     },
   },
