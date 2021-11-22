@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import { TimePicker } from "@cadolabs/sphere-ui"
 
-const PREFIX_NAME_LOCALE = "stories.form.calendar.timepicker"
+const I18N_PREFIX = "stories.timepicker"
 
 const code = `
 function TimePickerExample () {
@@ -34,25 +34,25 @@ function TimePickerExample () {
 
 export const timePicker = {
   header: "TimePicker",
-  content: `${PREFIX_NAME_LOCALE}.content`,
+  content: `${I18N_PREFIX}.content`,
   code,
   scope: { TimePicker },
   descriptionProps: [
-    { name: "id", type: "string", description: `${PREFIX_NAME_LOCALE}.props.id` },
-    { name: "ref", type: "string", description: `${PREFIX_NAME_LOCALE}.props.ref` },
-    { name: "name", type: "string", description: `${PREFIX_NAME_LOCALE}.props.name` },
-    { name: "value", type: "string", description: `${PREFIX_NAME_LOCALE}.props.value` },
-    { name: "placeholder", type: "string", description: `${PREFIX_NAME_LOCALE}.props.placeholder` },
-    { name: "dateFormat", type: "string", description: `${PREFIX_NAME_LOCALE}.props.date_format` },
-    { name: "yearRange", type: "string", description: `${PREFIX_NAME_LOCALE}.props.year_range` },
-    { name: "mode", type: "string", description: `${PREFIX_NAME_LOCALE}.props.mode` },
-    { name: "onChange", type: "function", description: `${PREFIX_NAME_LOCALE}.props.on_change` },
-    { name: "showIcon", type: "boolean", description: `${PREFIX_NAME_LOCALE}.props.show_icon` },
-    { name: "showSeconds", type: "boolean", description: `${PREFIX_NAME_LOCALE}.props.show_seconds` },
-    { name: "showMillisec", type: "boolean", description: `${PREFIX_NAME_LOCALE}.props.show_millisec` },
-    { name: "stepHour", type: "number", description: `${PREFIX_NAME_LOCALE}.props.step_hour` },
-    { name: "stepSecond", type: "number", description: `${PREFIX_NAME_LOCALE}.props.step_second` },
-    { name: "stepMinute", type: "number", description: `${PREFIX_NAME_LOCALE}.props.step_minute` },
-    { name: "disabled", type: "boolean", description: `${PREFIX_NAME_LOCALE}.props.disabled` },
+    { name: "id", type: "string", description: `${I18N_PREFIX}.props.id` },
+    { name: "ref", type: "string", description: `${I18N_PREFIX}.props.ref` },
+    { name: "name", type: "string", description: `${I18N_PREFIX}.props.name` },
+    { name: "value", type: "string", description: `${I18N_PREFIX}.props.value` },
+    { name: "placeholder", type: "string", description: `${I18N_PREFIX}.props.placeholder` },
+    { name: "dateFormat", type: "string", description: `${I18N_PREFIX}.props.date_format` },
+    { name: "yearRange", type: "string", description: `${I18N_PREFIX}.props.year_range` },
+    { name: "mode", type: "string", description: `${I18N_PREFIX}.props.mode` },
+    { name: "onChange", type: "function", description: `${I18N_PREFIX}.props.on_change` },
+    { name: "showIcon", type: "boolean", description: `${I18N_PREFIX}.props.show_icon` },
+    { name: "showSeconds", type: "boolean", description: `${I18N_PREFIX}.props.show_seconds` },
+    { name: "showMillisec", type: "boolean", description: `${I18N_PREFIX}.props.show_millisec` },
+    { name: "stepHour", type: "number", description: `${I18N_PREFIX}.props.step_hour` },
+    { name: "stepSecond", type: "number", description: `${I18N_PREFIX}.props.step_second` },
+    { name: "stepMinute", type: "number", description: `${I18N_PREFIX}.props.step_minute` },
+    { name: "disabled", type: "boolean", description: `${I18N_PREFIX}.props.disabled` },
   ],
 }

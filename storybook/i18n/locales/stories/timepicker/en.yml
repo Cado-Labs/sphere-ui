@@ -1,0 +1,18 @@
+content: The TimePicker component allows the user to select the time (hours, minutes, seconds, milliseconds).
+props:
+  id: Unique identificator of the components
+  ref: Ability to access the DOM element and component methods.
+  name: Name of the input element.
+  value: Value of the component.
+  placeholder: Placeholder text for the input.
+  date_format: Format of the date.
+  year_range: Displays available years.
+  mode: Date picker type (range, default).
+  on_change: Event handler.
+  show_icon: Displays a button with icon next to input.
+  show_seconds: Show the seconds.
+  show_millisec: Show the milliseconds.
+  step_hour: Hours to change per step.
+  step_second: Seconds to change per step.
+  step_minute: Minutes to change per step.
+  disabled: Disable the component.

@@ -18,7 +18,7 @@ export function GetStarted () {
         yarn add @cadolabs/sphere-ui
       </code>
 
-      <h3>Импорт</h3>
+      <h3>{t("base.import")}</h3>
       <code>
         import UI from @cadolabs/sphere-ui
       </code>

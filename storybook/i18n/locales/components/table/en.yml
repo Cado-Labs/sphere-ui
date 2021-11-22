@@ -1,0 +1,5 @@
+title: Description of the properties used
+columns:
+  name: Name
+  type: Type
+  description: Description

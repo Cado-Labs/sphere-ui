@@ -1,7 +1,7 @@
 import i18n from "i18next"
 import { initReactI18next } from "react-i18next"
 
-import en from "./locales/en.yml"
+import * as en from "./locales/en"
 
 const translations = { en }
 const resources = Object.entries(translations).reduce((mem, [lang, translation]) => {

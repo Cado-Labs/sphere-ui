@@ -1,5 +1,5 @@
 module.exports = {
-  test: /\.ya?ml/,
+  test: /\.yml$/,
   type: "json",
   use: "yaml-loader",
 }
