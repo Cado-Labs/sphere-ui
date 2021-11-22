@@ -1,5 +1,6 @@
 const path = require("path")
-const presets = require('./presets')
+
+const presets = require("./presets")
 
 module.exports = {
   module: {
@@ -12,7 +13,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@i18n': path.resolve('i18n'),
+      "@i18n": path.resolve("i18n"),
       "@components": path.resolve("components"),
     },
   },

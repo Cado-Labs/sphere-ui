@@ -12,7 +12,7 @@ export function Table ({ description }) {
 
   const translationsDescription = () => {
     return description.map(row => {
-      return {...row, description: t(row.description)}
+      return { ...row, description: t(row.description) }
     })
   }
 
