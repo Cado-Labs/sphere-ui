@@ -100,6 +100,7 @@ export { TriStateCheckbox } from "primereact/tristatecheckbox"
 export { VirtualScroller } from "primereact/virtualscroller"
 
 export * from "primereact/utils"
+export * from "primereact/api"
 
 export { DatePicker } from "./components/DatePicker"
 export { TimePicker } from "./components/TimePicker"
