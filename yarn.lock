@@ -2730,20 +2730,20 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-primeflex@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/primeflex/-/primeflex-3.0.1.tgz#38b4f37caf0d20d3d28ed72fe1dee571671fc6b6"
-  integrity sha512-OmBVecmPyXFjIHuOmcbUVGJPh+2TPF3bBVO9ENtu4O4kF6taZThxGrxaWCljkfu6427wLfgDbtFKqq1vU2nj/Q==
+primeflex@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/primeflex/-/primeflex-3.1.0.tgz#2beef527e788981b823e5969752a87d7b72447ee"
+  integrity sha512-q8QutEO59eu79nJVyMFDcpdokiCIk79Rn6Y9NwxpiIp5rxRjNCacH2N7gM+ondQjvYnuj6LLOK8dEVx1J2i7Lw==
 
-primeicons@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/primeicons/-/primeicons-4.1.0.tgz#19eaef8ef5594b0006358ae64e738d03e167c9bb"
-  integrity sha512-uEv2pSPk1zQCfaB2VgnUfnUxxlGryYi+5rbdxmZBBt5v9S/pscIQYS5YDLxsQZ7D9jn5c76+Tx5wX/2J1nK6sA==
+primeicons@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/primeicons/-/primeicons-5.0.0.tgz#73a0b6028a77c58a9eeb331ad13aaf085e8451ee"
+  integrity sha512-heygWF0X5HFI1otlZE62pp6ye7sZ8om78J9au2BRkg8O7Y8AHTZ9qKMRzchZUHLe8zUAvdi6hZzzm9XxgwIExw==
 
-primereact@^6.6.0:
-  version "6.6.0"
-  resolved "https://registry.yarnpkg.com/primereact/-/primereact-6.6.0.tgz#9a6915101bc2fa1fe6d6d6ef8e554aa85d062e5b"
-  integrity sha512-onoowjhlOz9Kcjna1DYEKWTGjKah4MjqZchm9E3BkcWjeXoCLv3F5QnIo8eVF9q+xymEK/6Oh7zHlfCJYyWwDw==
+primereact@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/primereact/-/primereact-7.0.1.tgz#4aa4750320c71c457e6cf76de6a185e4a9e1065b"
+  integrity sha512-Mq3gc7VXn5xk0vapMui4utjO5AYxdH5PN4ShK6AM3/CQEcv0hWpolqHfHxX5HytaHWLvnzXcWDw/iDCwCV8BmA==
 
 progress@^2.0.0:
   version "2.0.3"
