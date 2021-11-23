@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import { MultiSelect } from "@cadolabs/sphere-ui"
 
+const I18N_PREFIX = "stories.multiselect"
+
 const code = `
 function MultiSelectExample () {
   const citySelectItems = [
@@ -35,33 +37,33 @@ function MultiSelectExample () {
 
 export const multiSelect = {
   header: "MultiSelect",
-  content: "Компонент MultiSelect позволяет выбирать несколько элементов из коллекции выпадающего списка.",
+  content: `${I18N_PREFIX}.content`,
   code,
   scope: { MultiSelect },
   descriptionProps: [
-    { name: "id", type: "string", description: "Уникальный идентификатор элемента." },
-    { name: "ref", type: "string", description: "Возможность получить доступ к DOM-узлам и методам компонента." },
-    { name: "name", type: "string", description: "Определяет уникальное имя элемента формы." },
-    { name: "value", type: "string", description: "Начальное значение элемента управления." },
-    { name: "placeholder", type: "string", description: "Выводит текст внутри поля формы." },
-    { name: "onChange", type: "function", description: "Обработчик события." },
-    { name: "disabled", type: "boolean", description: "Текстовое поле не может изменяться пользователем." },
-    { name: "options", type: "array", description: "Массив опций отображающие в раскрывающем списке." },
-    { name: "filter", type: "boolean", description: "Отображение поля для поиска в раскрывающем списке." },
-    { name: "filterBy", type: "string", description: "Ключ для поиска элементов в поле поиска" },
-    { name: "optionDisabled", type: "string/function", description: "Имя свойства, которое используется для отключение опции." },
-    { name: "optionLabel", type: "string", description: "Переопределение ключа label при отображении опции." },
-    { name: "optionValue", type: "string", description: "Переопределение ключа value для значения опции." },
-    { name: "optionGroupLabel", type: "string", description: "Ключ с именем группы для группированных опций." },
-    { name: "optionGroupChildren", type: "string", description: "Ключ объекта с дочерними элементами для группировки опций." },
-    { name: "inputId", type: "string", description: "Идентификатор поля ввода." },
-    { name: "dropdownIcon", type: "string", description: "Класс значка раскрывающегося списка." },
-    { name: "maxSelectedLabels", type: "number", description: "Определяет максимальное количество отображаемых в поле ввода выбранных опций." },
-    { name: "panelClassName", type: "string", description: "Класс панели." },
-    { name: "panelStyle", type: "string", description: "Стиль панели." },
-    { name: "style", type: "string", description: "Стили для элемента." },
-    { name: "selectedItemsLabel", type: "string", description: "При превышении данного количества опций, в поле будет выводится не выбранные опции, а их количество." },
-    { name: "showClear", type: "boolean", description: "Отображение иконки очистки поля." },
-    { name: "display", type: "string", description: "Вариант отображения выбранных значений." },
+    { name: "id", type: "string", description: `${I18N_PREFIX}.props.id` },
+    { name: "ref", type: "string", description: `${I18N_PREFIX}.props.ref` },
+    { name: "name", type: "string", description: `${I18N_PREFIX}.props.name` },
+    { name: "value", type: "string", description: `${I18N_PREFIX}.props.value` },
+    { name: "placeholder", type: "string", description: `${I18N_PREFIX}.props.placeholder` },
+    { name: "onChange", type: "function", description: `${I18N_PREFIX}.props.on_change` },
+    { name: "disabled", type: "boolean", description: `${I18N_PREFIX}.props.disabled` },
+    { name: "options", type: "array", description: `${I18N_PREFIX}.props.options` },
+    { name: "filter", type: "boolean", description: `${I18N_PREFIX}.props.filter` },
+    { name: "filterBy", type: "string", description: `${I18N_PREFIX}.props.filter_by` },
+    { name: "optionDisabled", type: "string/function", description: `${I18N_PREFIX}.props.option_disabled` },
+    { name: "optionLabel", type: "string", description: `${I18N_PREFIX}.props.option_label` },
+    { name: "optionValue", type: "string", description: `${I18N_PREFIX}.props.option_value` },
+    { name: "optionGroupLabel", type: "string", description: `${I18N_PREFIX}.props.option_group_label` },
+    { name: "optionGroupChildren", type: "string", description: `${I18N_PREFIX}.props.option_group_children` },
+    { name: "inputId", type: "string", description: `${I18N_PREFIX}.props.input_id` },
+    { name: "dropdownIcon", type: "string", description: `${I18N_PREFIX}.props.dropdown_icon` },
+    { name: "maxSelectedLabels", type: "number", description: `${I18N_PREFIX}.props.max_selected_labels` },
+    { name: "panelClassName", type: "string", description: `${I18N_PREFIX}.props.panel_classname` },
+    { name: "panelStyle", type: "string", description: `${I18N_PREFIX}.props.panel_style` },
+    { name: "style", type: "string", description: `${I18N_PREFIX}.props.style` },
+    { name: "selectedItemsLabel", type: "string", description: `${I18N_PREFIX}.props.selected_items_label` },
+    { name: "showClear", type: "boolean", description: `${I18N_PREFIX}.props.show_clear` },
+    { name: "display", type: "string", description: `${I18N_PREFIX}.props.display` },
   ],
 }

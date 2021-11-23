@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import { DatePicker } from "@cadolabs/sphere-ui"
 
+const I18N_PREFIX = "stories.datepicker"
+
 const code = `
 function DatePickerExample () {
   const [fields, setFields] = React.useState({
@@ -47,22 +49,22 @@ function DatePickerExample () {
 
 export const datePicker = {
   header: "DatePicker",
-  content: "Компонент DatePicker позволяет пользователю выбрать дату или диапазон дат.",
+  content: `${I18N_PREFIX}.content`,
   code,
   scope: { DatePicker },
   descriptionProps: [
-    { name: "id", type: "string", description: "Уникальный идентификатор элемента." },
-    { name: "ref", type: "string", description: "Возможность получить доступ к DOM-узлам и методам компонента." },
-    { name: "name", type: "string", description: "Определяет уникальное имя элемента формы." },
-    { name: "value", type: "string", description: "Начальное значение элемента управления." },
-    { name: "placeholder", type: "string", description: "Выводит текст внутри поля формы." },
-    { name: "dateFormat", type: "string", description: "Формат даты." },
-    { name: "yearRange", type: "string", description: "Доступные годы для выбора." },
-    { name: "mode", type: "string", description: "Тип выбора даты (range, default)." },
-    { name: "onChange", type: "function", description: "Обработчик события." },
-    { name: "showIcon", type: "boolean", description: "Если этот параметр включен, рядом с полем ввода отображается кнопка со значком." },
-    { name: "rangeButtonsBar", type: "boolean", description: "Отображение кнопок выбора разных диапазонов дат." },
-    { name: "monthNavigator", type: "boolean", description: "Дропдаун выбора месяцев." },
-    { name: "disabled", type: "boolean", description: "Текстовое поле не может изменяться пользователем." },
+    { name: "id", type: "string", description: `${I18N_PREFIX}.props.id` },
+    { name: "ref", type: "string", description: `${I18N_PREFIX}.props.ref` },
+    { name: "name", type: "string", description: `${I18N_PREFIX}.props.name` },
+    { name: "value", type: "string", description: `${I18N_PREFIX}.props.value` },
+    { name: "placeholder", type: "string", description: `${I18N_PREFIX}.props.placeholder` },
+    { name: "dateFormat", type: "string", description: `${I18N_PREFIX}.props.date_format` },
+    { name: "yearRange", type: "string", description: `${I18N_PREFIX}.props.year_range` },
+    { name: "mode", type: "string", description: `${I18N_PREFIX}.props.mode` },
+    { name: "onChange", type: "function", description: `${I18N_PREFIX}.props.on_change` },
+    { name: "showIcon", type: "boolean", description: `${I18N_PREFIX}.props.show_icon` },
+    { name: "rangeButtonsBar", type: "boolean", description: `${I18N_PREFIX}.props.range_buttons_bar` },
+    { name: "monthNavigator", type: "boolean", description: `${I18N_PREFIX}.props.month_navigator` },
+    { name: "disabled", type: "boolean", description: `${I18N_PREFIX}.props.disabled` },
   ],
 }

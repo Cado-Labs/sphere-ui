@@ -6,4 +6,4 @@ import { StoryPage } from "@components"
 import * as descriptions from "./descriptions"
 
 storiesOf("Form/ MultiSelect", module)
-  .add("Описание", context => <StoryPage {...descriptions.multiSelect} {...context} />)
+  .add("Description", context => <StoryPage {...descriptions.multiSelect} {...context} />)

@@ -3,5 +3,5 @@ import { storiesOf } from "@storybook/react"
 
 import { Validation } from "./Validation"
 
-storiesOf("Basics/Валидация форм", module)
-  .add("Инструмент", () => <Validation />)
+storiesOf("Basics/Form validation", module)
+  .add("Tool", () => <Validation />)
