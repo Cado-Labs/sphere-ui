@@ -98,6 +98,7 @@ export { TreeSelect } from "primereact/treeselect"
 export { TreeTable } from "primereact/treetable"
 export { TriStateCheckbox } from "primereact/tristatecheckbox"
 export { VirtualScroller } from "primereact/virtualscroller"
+export { Image } from "primereact/image"
 
 export * from "primereact/utils"
 export * from "primereact/api"
