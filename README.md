@@ -16,6 +16,18 @@ or
 yarn add @cadolabs/sphere-ui
 ```
 
+Include styles to your root `js` file:
+
+```js
+import "@cadolabs/sphere-ui/dist/index.css";
+```
+
+or root `css`, `scss` file:
+
+```css
+@import "~@cadolabs/sphere-ui/dist/index.css";
+```
+
 And require it for further usage
 ```js
 import UI from "@cadolabs/sphere-ui"
