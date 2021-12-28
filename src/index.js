@@ -107,5 +107,6 @@ export { DatePicker } from "./components/DatePicker"
 export { TimePicker } from "./components/TimePicker"
 export { DateTimePicker } from "./components/DateTimePicker"
 export { MultiSelect } from "./components/MultiSelect"
+export { Spinner } from "./components/Spinner"
 
 export { initLocales, changeLocale } from "./locales"
