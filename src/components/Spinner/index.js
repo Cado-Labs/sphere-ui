@@ -1,11 +1,11 @@
 import React from "react"
 import { ProgressSpinner } from "primereact/progressspinner"
 
-export const Spinner = ({ loading, children }) => {
+export const Spinner = ({ loading, children, ...props }) => {
   if (loading) {
     return (
       <div className="flex justify-content-center">
-        <ProgressSpinner />
+        <ProgressSpinner {...props} />
       </div>
     )
   }
