@@ -1,4 +1,5 @@
 import React, { Fragment } from "react"
+
 import { Number } from "../Number"
 
 const Money = ({ money: [amount, currency], precision = 2, ...options }) => {

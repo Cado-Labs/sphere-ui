@@ -1,4 +1,3 @@
-import React from "react"
 import BigNumber from "bignumber.js"
 
 const DEFAULT_PRECISION = 2
