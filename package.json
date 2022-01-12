@@ -9,7 +9,8 @@
     "sb:start": "bin/storybook start",
     "sb:build": "bin/storybook build",
     "sb:eslint": "bin/storybook eslint",
-    "sb:stylelint": "bin/storybook stylelint"
+    "sb:stylelint": "bin/storybook stylelint",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "@fullcalendar/core": "^5.9.0",
