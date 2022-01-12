@@ -1,6 +1,6 @@
 {
   "name": "@cadolabs/sphere-ui",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
@@ -9,10 +9,12 @@
     "sb:start": "bin/storybook start",
     "sb:build": "bin/storybook build",
     "sb:eslint": "bin/storybook eslint",
-    "sb:stylelint": "bin/storybook stylelint"
+    "sb:stylelint": "bin/storybook stylelint",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "@fullcalendar/core": "^5.9.0",
+    "bignumber.js": "^9.0.2",
     "chart.js": "^3.5.1",
     "primeflex": "^3.1.0",
     "primeicons": "^5.0.0",

@@ -108,5 +108,8 @@ export { TimePicker } from "./components/TimePicker"
 export { DateTimePicker } from "./components/DateTimePicker"
 export { MultiSelect } from "./components/MultiSelect"
 export { Spinner } from "./components/Spinner"
+export { Pagination } from "./components/Pagination"
+export { Number } from "./components/Number"
+export { Money } from "./components/Money"
 
 export { initLocales, changeLocale } from "./locales"
