@@ -16,7 +16,7 @@ export function Table ({ description }) {
     })
   }
 
-  const renderDefault = row => (row.default ? row.default.toString() : "–")
+  const renderDefault = row => (row.default == null ? "–" : row.default.toString())
 
   const renderTable = () => {
     return (
