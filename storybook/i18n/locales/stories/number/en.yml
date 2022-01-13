@@ -1,0 +1,7 @@
+content: Number component allows you to display number with different settings
+props:
+  value: Number to display
+  precision: Precision of the money display
+  enforcePrecision: Do we need to inforce precision
+  delimiter: Delimiter for fractional portion
+  separator: Separator for thousands

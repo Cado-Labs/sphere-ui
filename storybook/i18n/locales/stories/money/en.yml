@@ -1,0 +1,7 @@
+content: Money component can be used to display amount with currency in a proper way
+props:
+  money: Array of two elements – [amount, currency]
+  precision: Precision of the money display
+  enforcePrecision: Do we need to inforce precision
+  delimiter: Delimiter for fractional portion
+  separator: Separator for thousands
