@@ -13,7 +13,6 @@ export const TimePicker = React.forwardRef(({
   stepSecond = 1,
   stepMinute = 1,
   placeholder = "",
-  monthNavigator = true,
   showIcon = false,
 }, ref) => {
   return (
@@ -30,7 +29,6 @@ export const TimePicker = React.forwardRef(({
       stepMinute={stepMinute}
       disabled={disabled}
       placeholder={placeholder}
-      monthNavigator={monthNavigator}
       showIcon={showIcon}
       hourFormat="24"
       showTime

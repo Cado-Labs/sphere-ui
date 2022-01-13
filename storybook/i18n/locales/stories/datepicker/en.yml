@@ -5,6 +5,7 @@ props:
   name: Name of the input element.
   value: Value of the component.
   placeholder: Placeholder text for the input.
+  locale: DatePicker locale.
   date_format: Format of the date.
   year_range: Displays available years.
   mode: Date picker type (range, default).
@@ -13,3 +14,4 @@ props:
   range_buttons_bar: Displays buttons for selecting different date ranges.
   month_navigator: Displays a dropdown with months.
   disabled: Disable the component.
+  start_range_of_years: Start year of years range.

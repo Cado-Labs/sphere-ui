@@ -1,0 +1,3 @@
+content: Simple spinner
+props:
+  loading: Display spinner or not

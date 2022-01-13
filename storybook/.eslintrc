@@ -22,6 +22,7 @@
     "import"
   ],
   "rules": {
+    "eqeqeq": ["error", "smart"],
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "react/no-unused-prop-types": "off",

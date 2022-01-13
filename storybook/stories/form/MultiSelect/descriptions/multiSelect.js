@@ -47,7 +47,7 @@ export const multiSelect = {
     { name: "value", type: "string", description: `${I18N_PREFIX}.props.value` },
     { name: "placeholder", type: "string", description: `${I18N_PREFIX}.props.placeholder` },
     { name: "onChange", type: "function", description: `${I18N_PREFIX}.props.on_change` },
-    { name: "disabled", type: "boolean", description: `${I18N_PREFIX}.props.disabled` },
+    { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
     { name: "options", type: "array", description: `${I18N_PREFIX}.props.options` },
     { name: "filter", type: "boolean", description: `${I18N_PREFIX}.props.filter` },
     { name: "filterBy", type: "string", description: `${I18N_PREFIX}.props.filter_by` },
@@ -63,7 +63,7 @@ export const multiSelect = {
     { name: "panelStyle", type: "string", description: `${I18N_PREFIX}.props.panel_style` },
     { name: "style", type: "string", description: `${I18N_PREFIX}.props.style` },
     { name: "selectedItemsLabel", type: "string", description: `${I18N_PREFIX}.props.selected_items_label` },
-    { name: "showClear", type: "boolean", description: `${I18N_PREFIX}.props.show_clear` },
+    { name: "showClear", type: "boolean", default: false, description: `${I18N_PREFIX}.props.show_clear` },
     { name: "display", type: "string", description: `${I18N_PREFIX}.props.display` },
   ],
 }
