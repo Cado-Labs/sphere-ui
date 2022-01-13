@@ -9,7 +9,7 @@ function MoneyExample () {
     <Money
       money={[1000.1000, "USD"]}
       precision={2}
-      enforcePrecision={true}
+      enforcePrecision
       delimiter={"."}
       separator={" "}
     />

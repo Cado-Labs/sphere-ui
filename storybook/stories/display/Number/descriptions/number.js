@@ -9,7 +9,7 @@ function NumberExample () {
     <Number
       value={1000.1000}
       precision={2}
-      enforcePrecision={true}
+      enforcePrecision
       delimiter={"."}
       separator={" "}
     />
