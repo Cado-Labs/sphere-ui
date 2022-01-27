@@ -53,6 +53,10 @@ export const MultiSelect = React.forwardRef(({
   const renderFooter = () => {
     const translations = LOCALES_BUTTONS_SET[locale().locale]
 
+    if (optionDisabled) {
+      return null
+    }
+
     return (
       <div className="p-buttonset flex flex-row justify-content-center">
         <button className="p-button" onClick={handleSelectAll}>
