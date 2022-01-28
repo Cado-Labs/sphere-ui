@@ -1,7 +1,6 @@
 const path = require("path")
 
 const presets = require("./presets")
-
 module.exports = {
   module: {
     rules: [
