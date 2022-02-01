@@ -16,10 +16,10 @@ function DateTimePickerExample () {
   }
 
   return (
-    <div className="fluid grid formgrid">
-      <div className="field col">
+    <div className="s-form">
+      <div className="s-field-fixed">
         <label htmlFor="dateTime">DateTimePicker</label>
-        <div>
+        <div className="mt-2">
           <DateTimePicker
             name="dateTime"
             value={fields.dateTime}

@@ -1,8 +1,9 @@
 @import "~primereact/resources/primereact.min.css";
 @import "~primereact/resources/themes/saga-blue/theme.css";
 @import "~primeicons/primeicons.css";
-@import "~primeflex/primeflex.css";
-@import "~primeflex/src/_variables.scss";
+@import "~primeflex/primeflex.scss";
+
+@import "./styles/_layouts.scss";
 
 @import "./components/MultiSelect/style.scss";
 @import "./components/Pagination/style.scss";

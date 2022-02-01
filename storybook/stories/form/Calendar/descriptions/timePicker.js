@@ -16,10 +16,10 @@ function TimePickerExample () {
   }
 
   return (
-    <div className="fluid grid formgrid">
-      <div className="field col">
+    <div className="s-form">
+      <div className="s-field-fixed">
         <label htmlFor="time">TimePicker</label>
-        <div>
+        <div className="mt-2">
           <TimePicker
             name="time"
             value={fields.time}

@@ -1,0 +1,28 @@
+.s-form {
+  @extend .grid;
+  @extend .grid-nogutter;
+  @extend .m-0;
+  @extend .p-1;
+}
+
+.s-field {
+  @extend .flex;
+  @extend .p-1;
+
+  gap: 0.25rem !important;
+}
+
+.s-field-fixed {
+  @extend .p-1;
+  @extend .w-13rem;
+
+  & > * {
+    flex-grow: 1;
+  }
+}
+
+.s-field-action {
+  @extend .justify-content-center;
+  @extend .w-6rem;
+  @extend .ml-1;
+}

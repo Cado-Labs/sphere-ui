@@ -16,18 +16,16 @@ function MultiSelectExample () {
   const [value, setValue] = React.useState(null)
 
   return (
-    <div className="card">
-      <div className="fluid grid formgrid">
-        <div className="field col">
-          <label htmlFor="city">MultiSelect</label>
-          <div style={{ width: "200px" }}>
-            <MultiSelect
-              name="city"
-              value={value}
-              onChange={(e) => setValue(e.value)}
-              options={citySelectItems}
-            />
-          </div>
+    <div className="s-form">
+      <div className="s-field-fixed">
+        <label htmlFor="city">MultiSelect</label>
+        <div className="mt-2">
+          <MultiSelect
+            name="city"
+            value={value}
+            onChange={(e) => setValue(e.value)}
+            options={citySelectItems}
+          />
         </div>
       </div>
     </div>
