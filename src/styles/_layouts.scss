@@ -8,8 +8,7 @@
 .s-field {
   @extend .flex;
   @extend .p-1;
-
-  gap: 0.25rem !important;
+  @extend .gap-1;
 }
 
 .s-field-fixed {
