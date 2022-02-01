@@ -17,29 +17,27 @@ function DatePickerExample () {
   }
 
   return (
-    <div className="card">
-      <div className="fluid grid formgrid">
-        <div className="field col-fixed">
-          <label htmlFor="date">DatePicker</label>
-          <div>
-            <DatePicker
-              name="date"
-              value={fields.date}
-              onChange={onChange}
-            />
-          </div>
+    <div className="s-form">
+      <div className="s-field-fixed">
+        <label htmlFor="date">DatePicker</label>
+        <div className="mt-2">
+          <DatePicker
+            name="date"
+            value={fields.date}
+            onChange={onChange}
+          />
         </div>
-        <div className="field col-fixed">
-          <label htmlFor="rangeDate">DateRangePicker</label>
-          <div>
-            <DatePicker
-              name="rangeDate"
-              value={fields.rangeDate}
-              onChange={onChange}
-              mode="range"
-              rangeButtonsBar
-            />
-          </div>
+      </div>
+      <div className="s-field-fixed">
+        <label htmlFor="rangeDate">DateRangePicker</label>
+        <div className="mt-2">
+          <DatePicker
+            name="rangeDate"
+            value={fields.rangeDate}
+            onChange={onChange}
+            mode="range"
+            rangeButtonsBar
+          />
         </div>
       </div>
     </div>
