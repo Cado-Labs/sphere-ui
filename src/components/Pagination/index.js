@@ -14,6 +14,9 @@ export const Pagination = ({ page, pages, onPageClick }) => {
   const showFirstPage = page !== 1
   const showLastPage = page !== pages
 
+  const isTheFirstPage = page === 1
+  const isTheLastPage = page === pages
+
   const goToFirst = () => onPageClick(1)
   const goToLast = () => onPageClick(pages)
 
@@ -25,7 +28,7 @@ export const Pagination = ({ page, pages, onPageClick }) => {
       <div className="p-paginator-pages">
         <Button
           className="p-paginator-page"
-          disabled={!showPrevPage}
+          disabled={isTheFirstPage}
           icon="pi pi-angle-left"
           onClick={goToPrev}
         />
@@ -52,7 +55,7 @@ export const Pagination = ({ page, pages, onPageClick }) => {
         {showLastPage && <Button className="p-paginator-page" onClick={goToLast}>{pages}</Button>}
         <Button
           className="p-paginator-page"
-          disabled={!showNextPage}
+          disabled={isTheLastPage}
           icon="pi pi-angle-right"
           onClick={goToNext}
         />
