@@ -47,7 +47,7 @@ export const MultiSelect = React.forwardRef(({
   }
 
   const isOptionDisabled = () => {
-    if (!optionDisabled) return false 
+    if (!optionDisabled) return false
 
     const isFunction = optionDisabled instanceof Function
 
