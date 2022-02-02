@@ -12,7 +12,6 @@ export const MultiSelect = React.forwardRef(({
   filterBy,
   className,
   placeholder,
-  optionDisabled,
   optionLabel,
   optionValue,
   optionGroupLabel,
@@ -25,6 +24,7 @@ export const MultiSelect = React.forwardRef(({
   style,
   selectedItemsLabel,
   display,
+  optionDisabled = null,
   name = null,
   id = null,
   disabled = false,
@@ -46,6 +46,14 @@ export const MultiSelect = React.forwardRef(({
     onChange(newValue)
   }
 
+  const isOptionDisabled = () => {
+    if (!optionDisabled) return false 
+
+    const isFunction = optionDisabled instanceof Function
+
+    return isFunction ? optionDisabled() : optionDisabled
+  }
+
   const renderHeader = () => {
     return filter ? null : <React.Fragment />
   }
@@ -53,7 +61,7 @@ export const MultiSelect = React.forwardRef(({
   const renderFooter = () => {
     const translations = LOCALES_BUTTONS_SET[locale().locale]
 
-    if (optionDisabled) {
+    if (isOptionDisabled()) {
       return null
     }
 
