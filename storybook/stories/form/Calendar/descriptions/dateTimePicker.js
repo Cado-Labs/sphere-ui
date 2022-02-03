@@ -54,5 +54,6 @@ export const dateTimePicker = {
     { name: "stepSecond", type: "number", default: 1, description: `${I18N_PREFIX}.props.step_second` },
     { name: "stepMinute", type: "number", default: 1, description: `${I18N_PREFIX}.props.step_minute` },
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
+    { name: "viewDate", type: "date", default: null, description: `${I18N_PREFIX}.props.viewDate` },
   ],
 }
