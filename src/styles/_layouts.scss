@@ -3,6 +3,18 @@
   @extend .grid-nogutter;
   @extend .m-0;
   @extend .p-1;
+
+  & .p-dropdown,
+  & .p-multiselect,
+  & .p-inputtext {
+    width: 100%;
+    &.p-focus {
+      &:not(.p-disabled) {
+        box-shadow: none;
+        border: 1px solid #ced4da;
+      }
+    }
+  }
 }
 
 .s-field {

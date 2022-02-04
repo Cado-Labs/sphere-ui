@@ -43,7 +43,7 @@ export const dateTimePicker = {
     { name: "name", type: "string", description: `${I18N_PREFIX}.props.name` },
     { name: "value", type: "string", description: `${I18N_PREFIX}.props.value` },
     { name: "placeholder", type: "string", default: "''", description: `${I18N_PREFIX}.props.placeholder` },
-    { name: "dateFormat", type: "string", description: `${I18N_PREFIX}.props.date_format` },
+    { name: "dateFormat", type: "string", default: "dd.mm.yy", description: `${I18N_PREFIX}.props.date_format` },
     { name: "yearRange", type: "string", description: `${I18N_PREFIX}.props.year_range` },
     { name: "onChange", type: "function", description: `${I18N_PREFIX}.props.on_change` },
     { name: "showIcon", type: "boolean", default: false, description: `${I18N_PREFIX}.props.show_icon` },
@@ -54,5 +54,7 @@ export const dateTimePicker = {
     { name: "stepSecond", type: "number", default: 1, description: `${I18N_PREFIX}.props.step_second` },
     { name: "stepMinute", type: "number", default: 1, description: `${I18N_PREFIX}.props.step_minute` },
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
+    { name: "viewDate", type: "date", default: null, description: `${I18N_PREFIX}.props.viewDate` },
+    { name: "mask", type: "string", default: null, description: `${I18N_PREFIX}.props.mask` },
   ],
 }

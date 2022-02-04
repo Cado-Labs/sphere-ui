@@ -21,6 +21,8 @@ export const DatePicker = React.forwardRef(({
   disabled = false,
   monthNavigator = true,
   startRangeOfYears = "2010",
+  className = "",
+  mask = null,
 }, ref) => {
   const getDefaultProps = () => {
     return {
@@ -37,6 +39,8 @@ export const DatePicker = React.forwardRef(({
       disabled,
       monthNavigator,
       startRangeOfYears,
+      className,
+      mask,
     }
   }
 

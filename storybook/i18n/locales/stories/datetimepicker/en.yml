@@ -16,3 +16,5 @@ props:
   step_second: Seconds to change per step.
   step_minute: Minutes to change per step.
   disabled: Disable the component.
+  viewDate: Date instance whose month and year are used to display the calendar.
+  mask: Mask pattern for input element.

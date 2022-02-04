@@ -66,5 +66,6 @@ export const datePicker = {
     { name: "monthNavigator", type: "boolean", default: true, description: `${I18N_PREFIX}.props.month_navigator` },
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
     { name: "startRangeOfYears", type: "string", default: "2010", description: `${I18N_PREFIX}.props.start_range_of_years` },
+    { name: "mask", type: "string", default: null, description: `${I18N_PREFIX}.props.mask` },
   ],
 }
