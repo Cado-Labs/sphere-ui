@@ -15,6 +15,9 @@ export const DateTimePicker = React.forwardRef(({
   placeholder = "",
   showIcon = false,
   viewDate = null,
+  mask = null,
+  className = "",
+  dateFormat = "dd.mm.yy",
 }, ref) => {
   return (
     <Calendar
@@ -32,6 +35,9 @@ export const DateTimePicker = React.forwardRef(({
       disabled={disabled}
       showIcon={showIcon}
       viewDate={viewDate}
+      mask={mask}
+      className={className}
+      dateFormat={dateFormat}
       hourFormat="24"
       showTime
     />

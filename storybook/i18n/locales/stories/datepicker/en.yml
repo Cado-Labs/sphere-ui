@@ -15,3 +15,4 @@ props:
   month_navigator: Displays a dropdown with months.
   disabled: Disable the component.
   start_range_of_years: Start year of years range.
+  mask: Mask pattern for input element.
