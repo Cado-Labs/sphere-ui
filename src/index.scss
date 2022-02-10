@@ -12,9 +12,14 @@ html, body {
   font-family: var(--font-family);
 }
 
-.gap-1 { gap: $spacer * 0.25 !important; }
-.gap-2 { gap: $spacer * 0.5 !important; }
+.gap-1 { gap: $spacer * .25 !important; }
+
+.gap-2 { gap: $spacer * .5 !important; }
+
 .gap-3 { gap: $spacer * 1 !important; }
+
 .gap-4 { gap: $spacer * 1.5 !important; }
+
 .gap-5 { gap: $spacer * 2 !important; }
+
 .gap-6 { gap: $spacer * 3 !important; }

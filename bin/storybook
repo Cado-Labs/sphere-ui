@@ -6,6 +6,7 @@ const { exec } = require("../utils/exec")
 switch (event) {
   case "start": return exec("yarn storybook")
   case "build": return exec("yarn build-storybook")
+  case "lint": return exec("yarn lint")
   case "eslint": return exec("yarn eslint '--color'")
   case "stylelint": return exec("yarn stylelint '--color'")
   default: {

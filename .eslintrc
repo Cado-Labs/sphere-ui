@@ -1,5 +1,5 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "env": {
     "browser": true,
     "es6": true
@@ -14,7 +14,8 @@
       "jsx": true,
       "legacyDecorators": true
     },
-    "ecmaVersion": 2018,
+    "requireConfigFile": false,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "plugins": [

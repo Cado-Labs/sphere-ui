@@ -1,6 +1,6 @@
 # @cadolabs/sphere-ui &middot; <a target="_blank" href="https://github.com/Cado-Labs"><img src="https://github.com/Cado-Labs/cado-labs-logos/raw/main/cado_labs_badge.svg" alt="Supported by Cado Labs" style="max-width: 100%; height: 20px"></a> &middot; [![CI](https://github.com/Cado-Labs/sphere-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/Cado-Labs/sphere-ui/actions/workflows/ci.yml) &middot; [![npm version](https://badge.fury.io/js/@cadolabs%2Fsphere-ui.svg)](https://badge.fury.io/js/@cadolabs%2Fsphere-ui)
 
-UI Kit for awesome applications :nail_care:
+UI Kit for awesome applications 💅
 
 Based on [PrimeReact](https://www.primefaces.org/primereact/).
 
@@ -51,18 +51,6 @@ build
 yarn sb:build
 ```
 
-run eslint
-
-```sh
-yarn sb:eslint
-```
-
-run stylelint
-
-```sh
-yarn sb:stylelint
-```
-
 ### From the storybook folder
 
 run
@@ -77,25 +65,13 @@ build
 yarn build-storybook
 ```
 
-run eslint
-
-```sh
-yarn eslint
-```
-
-run stylelint
-
-```sh
-yarn stylelint
-```
-
 ## Contributing
 
 - Fork it ( https://github.com/Cado-Labs/sphere-ui )
 - Create your feature branch (`git checkout -b feature/my-new-feature`)
 - Commit your changes (`git commit -am '[feature_context] Add some feature'`)
 - Push to the branch (`git push origin feature/my-new-feature`)
-- Create new Pull Request
+- Create a new Pull Request
 
 ## License
 
