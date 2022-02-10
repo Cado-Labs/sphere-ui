@@ -1,6 +1,6 @@
 # @cadolabs/sphere-ui &middot; <a target="_blank" href="https://github.com/Cado-Labs"><img src="https://github.com/Cado-Labs/cado-labs-logos/raw/main/cado_labs_badge.svg" alt="Supported by Cado Labs" style="max-width: 100%; height: 20px"></a> &middot; [![CI](https://github.com/Cado-Labs/sphere-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/Cado-Labs/sphere-ui/actions/workflows/ci.yml) &middot; [![npm version](https://badge.fury.io/js/@cadolabs%2Fsphere-ui.svg)](https://badge.fury.io/js/@cadolabs%2Fsphere-ui)
 
-UI Kit for awesome applications :nail_care:
+UI Kit for awesome applications 💅
 
 Based on [PrimeReact](https://www.primefaces.org/primereact/).
 
