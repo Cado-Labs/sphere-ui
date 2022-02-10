@@ -1666,6 +1666,14 @@ eslint-config-umbrellio@^5.0.1:
   resolved "https://registry.yarnpkg.com/eslint-config-umbrellio/-/eslint-config-umbrellio-5.0.1.tgz#c07cae0f5a5659f8f3687e84a4221136e9e4ce8a"
   integrity sha512-Rpj1WtgDx6qQhB6PvJah6u+fHgGROuv7ftb//cs9z8rw20loo51jzjb6QSvTv2GVS51CYHTGhNWke8qihSceNg==
 
+eslint-formatter-table@^7.32.1:
+  version "7.32.1"
+  resolved "https://registry.yarnpkg.com/eslint-formatter-table/-/eslint-formatter-table-7.32.1.tgz#b7b0471c1f05e5aee2821e98c4a2b26bab281346"
+  integrity sha512-JYC49hAJMNjLfbgXVeQHU6ngP0M8ThgXCHLGrncYB+R/RHEhRPnLxHjolTJdb7RdQ8zcCt2F7Mrt6Ou3PwMOHw==
+  dependencies:
+    chalk "^4.0.0"
+    table "^6.0.9"
+
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.6.tgz#4048b958395da89668252001dbd9eca6b83bacbd"
@@ -3403,7 +3411,7 @@ svg-tags@^1.0.0:
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
 
-table@^6.8.0:
+table@^6.0.9, table@^6.8.0:
   version "6.8.0"
   resolved "https://registry.yarnpkg.com/table/-/table-6.8.0.tgz#87e28f14fa4321c3377ba286f07b79b281a3b3ca"
   integrity sha512-s/fitrbVeEyHKFa7mFdkuQMWlH1Wgw/yEXMt5xACT4ZpzWFluehAxRtUUQKPuWhaLAWhFcVx6w3oC8VKaUfPGA==

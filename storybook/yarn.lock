@@ -1116,7 +1116,7 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cadolabs/sphere-ui@2.3.4":
+"@cadolabs/sphere-ui@latest":
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/@cadolabs/sphere-ui/-/sphere-ui-2.3.4.tgz#b5f9270e3be62bc8fb6eb7d60aa45f1e11b2f5d0"
   integrity sha512-EDagn1eZPqg/SYCVw/wqquokL12J0WE9mzgYGhJb43kJNNSk9yGprRx8P3zqAKNHzM/Fg4LLooTNWjPBRw41Tg==
@@ -5026,6 +5026,14 @@ eslint-config-umbrellio@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/eslint-config-umbrellio/-/eslint-config-umbrellio-5.0.1.tgz#c07cae0f5a5659f8f3687e84a4221136e9e4ce8a"
   integrity sha512-Rpj1WtgDx6qQhB6PvJah6u+fHgGROuv7ftb//cs9z8rw20loo51jzjb6QSvTv2GVS51CYHTGhNWke8qihSceNg==
+
+eslint-formatter-table@^7.32.1:
+  version "7.32.1"
+  resolved "https://registry.yarnpkg.com/eslint-formatter-table/-/eslint-formatter-table-7.32.1.tgz#b7b0471c1f05e5aee2821e98c4a2b26bab281346"
+  integrity sha512-JYC49hAJMNjLfbgXVeQHU6ngP0M8ThgXCHLGrncYB+R/RHEhRPnLxHjolTJdb7RdQ8zcCt2F7Mrt6Ou3PwMOHw==
+  dependencies:
+    chalk "^4.0.0"
+    table "^6.0.9"
 
 eslint-scope@5.1.1, eslint-scope@^5.1.1:
   version "5.1.1"
@@ -9996,7 +10004,7 @@ synchronous-promise@^2.0.15:
   resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.15.tgz#07ca1822b9de0001f5ff73595f3d08c4f720eb8e"
   integrity sha512-k8uzYIkIVwmT+TcglpdN50pS2y1BDcUnBPK9iJeGu0Pl1lOI8pD6wtzgw91Pjpe+RxtTncw32tLxs/R0yNL2Mg==
 
-table@^6.8.0:
+table@^6.0.9, table@^6.8.0:
   version "6.8.0"
   resolved "https://registry.yarnpkg.com/table/-/table-6.8.0.tgz#87e28f14fa4321c3377ba286f07b79b281a3b3ca"
   integrity sha512-s/fitrbVeEyHKFa7mFdkuQMWlH1Wgw/yEXMt5xACT4ZpzWFluehAxRtUUQKPuWhaLAWhFcVx6w3oC8VKaUfPGA==
