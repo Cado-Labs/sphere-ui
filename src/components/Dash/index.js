@@ -1,0 +1,3 @@
+const Dash = () => "—"
+
+export { Dash }

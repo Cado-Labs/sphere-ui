@@ -52,5 +52,6 @@ export { Spinner } from "./components/Spinner"
 export { Pagination } from "./components/Pagination"
 export { Number } from "./components/Number"
 export { Money } from "./components/Money"
+export { Dash } from "./components/Dash"
 
 export { initLocales, changeLocale } from "./locales"
