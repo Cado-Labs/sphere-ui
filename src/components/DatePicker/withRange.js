@@ -13,7 +13,7 @@ export const withRange = Component =>
 
     clear = () => {
       this.onChange(null)
-    };
+    }
 
     setToday = () => {
       const newDate = [
@@ -22,7 +22,7 @@ export const withRange = Component =>
       ]
 
       this.onChange(newDate)
-    };
+    }
 
     setCurrentMonth = () => {
       const { month, year } = getPartsOfTime()
@@ -34,7 +34,7 @@ export const withRange = Component =>
       ]
 
       this.onChange(newDate)
-    };
+    }
 
     setAllTime = () => {
       const { month, day, year } = getPartsOfTime()
@@ -44,7 +44,7 @@ export const withRange = Component =>
       ]
 
       this.onChange(newDate)
-    };
+    }
 
     setWeek = () => {
       const { month, day, year } = getPartsOfTime()
@@ -53,7 +53,7 @@ export const withRange = Component =>
       const date = [week, new Date(`${month + 1}.${day}.${year}`)]
 
       this.onChange(date)
-    };
+    }
 
     setLast30Days = () => {
       const { month, day, year } = getPartsOfTime()
@@ -62,7 +62,7 @@ export const withRange = Component =>
       const date = [week, new Date(`${month + 1}.${day}.${year}`)]
 
       this.onChange(date)
-    };
+    }
 
     onChange = value => {
       this.refCalendar.current.onButtonClick()
@@ -73,7 +73,7 @@ export const withRange = Component =>
           value,
         },
       })
-    };
+    }
 
     renderFooter = () => {
       const translations = LOCALES_RANGE_BLOCKS[this.props.locale]
@@ -95,7 +95,7 @@ export const withRange = Component =>
           ))}
         </div>
       )
-    };
+    }
 
     render () {
       return (
