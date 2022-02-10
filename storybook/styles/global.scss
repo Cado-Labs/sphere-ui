@@ -1,4 +1,4 @@
-@import '@cadolabs/sphere-ui/dist/index.css';
+@import "@cadolabs/sphere-ui/dist/index.css";
 
 * {
   box-sizing: border-box;
@@ -6,34 +6,34 @@
 
 html,
 body {
-  background: var(--surface-cart);
   font-family: var(--font-family);
+  background: var(--surface-cart);
 }
 
 code {
-  background: var(--green-100);
-  border-radius: 10px;
-  color: var(--green-900);
   display: flex;
   padding: 15px;
+  color: var(--green-900);
   white-space: pre-line;
+  background: var(--green-100);
+  border-radius: 10px;
 }
 
 .title {
-  border: 2px solid var(--surface-400);
-  border-width: 0 0 1px;
-  color: #262627;
+  padding: 5px;
+  margin-bottom: 15px;
   font-size: 18px;
   font-weight: 500;
-  margin-bottom: 15px;
-  padding: 5px;
+  color: #262627;
+  border: 2px solid var(--surface-400);
+  border-width: 0 0 1px;
 }
 
 .block-content {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
   padding: 10px 5px;
+  margin-top: 10px;
 }
 
 .live-content {
@@ -41,6 +41,6 @@ code {
 }
 
 .header {
-  border-bottom: 2px solid var(--green-500);
   font-size: 25px;
+  border-bottom: 2px solid var(--green-500);
 }

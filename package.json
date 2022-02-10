@@ -7,9 +7,13 @@
   "homepage": "https://cado-labs.github.io/sphere-ui",
   "scripts": {
     "build": "rm -rf dist; rollup -c",
-    "lint": "eslint './src/**/*.js'",
+    "lint": "yarn run lint:js && yarn run lint:css",
+    "lint:js": "eslint './src/**/*.js'",
+    "lint:css": "stylelint './src/**/*.(sc|c)ss'",
+    "lint:fix": "yarn run lint:js --fix; yarn run lint:css --fix",
     "sb:start": "bin/storybook start",
     "sb:build": "bin/storybook build",
+    "sb:lint": "bin/storybook lint",
     "sb:eslint": "bin/storybook eslint",
     "sb:stylelint": "bin/storybook stylelint",
     "prepublishOnly": "yarn build"
@@ -38,9 +42,14 @@
     "eslint-plugin-prefer-object-spread": "^1.2.1",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.28.0",
+    "postcss": "^8.4.6",
+    "postcss-scss": "^4.0.3",
     "rollup": "^2.67.2",
     "rollup-plugin-scss": "^3.0.0",
-    "sass": "^1.49.7"
+    "sass": "^1.49.7",
+    "stylelint": "^14.4.0",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-umbrellio": "^0.1.2"
   },
   "peerDependencies": {
     "react": "^17.0.2",

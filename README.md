@@ -51,18 +51,6 @@ build
 yarn sb:build
 ```
 
-run eslint
-
-```sh
-yarn sb:eslint
-```
-
-run stylelint
-
-```sh
-yarn sb:stylelint
-```
-
 ### From the storybook folder
 
 run
@@ -77,25 +65,13 @@ build
 yarn build-storybook
 ```
 
-run eslint
-
-```sh
-yarn eslint
-```
-
-run stylelint
-
-```sh
-yarn stylelint
-```
-
 ## Contributing
 
 - Fork it ( https://github.com/Cado-Labs/sphere-ui )
 - Create your feature branch (`git checkout -b feature/my-new-feature`)
 - Commit your changes (`git commit -am '[feature_context] Add some feature'`)
 - Push to the branch (`git push origin feature/my-new-feature`)
-- Create new Pull Request
+- Create a new Pull Request
 
 ## License
 

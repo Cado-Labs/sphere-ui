@@ -8,10 +8,11 @@
   & .p-multiselect,
   & .p-inputtext {
     width: 100%;
+
     &.p-focus {
       &:not(.p-disabled) {
-        box-shadow: none;
         border: 1px solid #ced4da;
+        box-shadow: none;
       }
     }
   }

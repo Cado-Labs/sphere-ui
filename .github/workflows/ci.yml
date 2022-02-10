@@ -40,8 +40,7 @@ jobs:
           yarn install --frozen-lockfile
           cd storybook
           yarn install --frozen-lockfile
-          yarn eslint
-          yarn stylelint
+          yarn lint
 
   sphere:
     runs-on: ubuntu-latest
