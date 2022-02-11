@@ -1,3 +1,3 @@
-const Dash = () => "—"
+const Dash = "—"
 
 export { Dash }
