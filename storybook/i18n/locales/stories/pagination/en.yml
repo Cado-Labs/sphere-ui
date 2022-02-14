@@ -1,5 +1,5 @@
-content: Simple pagination buttons
+content: Simple pagination buttons.
 props:
-  page: Current page
-  pages: Total number of pages
-  onPageClick: Callback called on page click
+  page: Current page.
+  pages: Total number of pages.
+  onPageClick: Callback called on page click.
