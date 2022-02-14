@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import { Pagination } from "@cadolabs/sphere-ui"
 
 const I18N_PREFIX = "stories.pagination"

@@ -6,6 +6,8 @@ import { Content } from "./Content"
 import { Header } from "./Header"
 import { LiveExample } from "./LiveExample"
 
+import "./StoryPage.scss"
+
 export function StoryPage ({ content, header, descriptionProps, code, scope }) {
   const { t } = useTranslation()
 
