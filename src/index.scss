@@ -25,3 +25,32 @@ html, body {
 .gap-5 { gap: $spacer * 2 !important; }
 
 .gap-6 { gap: $spacer * 3 !important; }
+
+/* datepicker */
+
+.p-datepicker {
+  .p-datepicker-footer {
+    margin-top: .5rem;
+
+    & .p-button {
+      padding: .35em .3em;
+      font-size: .7rem;
+      margin-bottom: .3rem !important;
+    }
+  }
+  & &-header {
+    font-size: .9rem;
+    padding: 0;
+  }
+  table {
+    font-size: .7rem;
+    margin: 0;
+    td {
+      padding: 0;
+      > span {
+        width: 1.55rem;
+        height: 1.55rem;
+      }
+    }
+  }
+}

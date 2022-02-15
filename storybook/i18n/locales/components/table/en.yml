@@ -2,5 +2,5 @@ title: Description of the properties used
 columns:
   name: Name
   type: Type
-  default: Default value
+  default: Default
   description: Description

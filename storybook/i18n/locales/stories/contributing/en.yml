@@ -1,0 +1,39 @@
+title: Contributing
+contents:
+  title: Contents
+  preparation: Preparation
+  clone: Clone repositories
+  work: Work in a branch
+  build: Build and start the development server
+  update: Update component info in storybook
+  test: Test your JavaScript code
+  make: Make a pull request
+preparation:
+  title: Preparation
+  tools: "Before contributing to sphere-ui, you should make sure you have the following tools installed:"
+  node: Node.js v16 or above. Installation through a package manager using
+clone:
+  title: Clone repositories
+  goToGithub: Go to your GitHub Repositories.
+  download: Click on the "Clone or Download" button and copy the URL from the Clone with SSH option.
+  details: See GitHub docs for more details.
+work:
+  title: Work in a branch
+  contributing: When contributing to sphere-ui, your work should always be done in a branch off of your repo, this is also how you will submit your pull request when your work is done
+  newBranch: "To create a new branch, ensure you are in your forked branch in your terminal and run:"
+build:
+  title: Build and start the development server
+  storybook: A storybook is used to develop new components or extend existing ones.
+  symlink: Since the storybook uses the sphere-ui import from the npm registry, so you need to create a symlink to the compiled assets of the dist folder in the sphere-ui root, so that the components are picked up from there at the development.
+update:
+  title: Update component info in storybook
+  changes: With changes in the sphere-ui, you need to supplement the storybook.
+test:
+  title: Test your JavaScript code
+  commands: "After your changes by running our test commands:"
+make:
+  title: Make a pull request
+  commit: "When you are changes added push your commits to origin:"
+  comparePullRequest: In your browser, navigate to sphere-ui repository and click the button that reads "Compare & pull request".
+  createPullRequest: Write a title and description then click "Create pull request"
+  aboutRequest: About pull requests.

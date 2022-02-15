@@ -6,13 +6,15 @@ const I18N_PREFIX = "stories.money"
 const code = `
 function MoneyExample () {
   return (
-    <Money
-      money={[1000.1000, "USD"]}
-      precision={2}
-      enforcePrecision
-      delimiter={"."}
-      separator={" "}
-    />
+    <div className="p-card sh-container">
+      <Money
+        money={[1000.1000, "USD"]}
+        precision={2}
+        enforcePrecision
+        delimiter={"."}
+        separator={" "}
+      />
+    </div>
   )
 }
 `

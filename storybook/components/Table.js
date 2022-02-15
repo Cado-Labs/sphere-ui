@@ -21,11 +21,11 @@ export function Table ({ description }) {
   const renderTable = () => {
     return (
       <div className="card">
-        <UI.DataTable value={translationsDescription()}>
-          <UI.Column field="name" header={t("components.table.columns.name")} />
-          <UI.Column field="type" header={t("components.table.columns.type")} />
-          <UI.Column body={renderDefault} header={t("components.table.columns.default")} />
-          <UI.Column field="description" header={t("components.table.columns.description")} />
+        <UI.DataTable value={translationsDescription()} showGridlines stripedRows size="small">
+          <UI.Column field="name" header={t("components.table.columns.name")} style={{ fontWeight: "400" }} />
+          <UI.Column field="type" header={t("components.table.columns.type")} style={{ fontWeight: "300" }} />
+          <UI.Column body={renderDefault} header={t("components.table.columns.default")} style={{ fontWeight: "300" }} />
+          <UI.Column field="description" header={t("components.table.columns.description")} style={{ fontWeight: "300" }} />
         </UI.DataTable>
       </div>
     )

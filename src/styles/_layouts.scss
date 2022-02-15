@@ -1,40 +1,47 @@
-.s-form {
+.sh-container {
+  @extend .p-2;
+  @extend .border-noround;
+  @extend .border-bottom-1;
+  border-bottom-color: #e6e9ec;
+}
+
+.sh-grid {
   @extend .grid;
   @extend .grid-nogutter;
-  @extend .m-0;
-  @extend .p-1;
+}
 
-  & .p-dropdown,
-  & .p-multiselect,
-  & .p-inputtext {
-    width: 100%;
+@for $i from 1 through 12 {
+  .sh-field-col-#{$i} {
+    @media (max-width: $sm) {
+      flex: 0 0 auto;
+      padding: $gutter;
+      width: 100%;
+    }
 
-    &.p-focus {
-      &:not(.p-disabled) {
-        border: 1px solid #ced4da;
-        box-shadow: none;
+    @extend .field;
+    @extend .col-#{$i};
+    @extend .p-1;
+    @extend .mb-1;
+    @extend .md\:col-#{$i};
+
+    @if $i <= 3 {
+      @extend .sm\:col-4
+    };
+
+    @extend .lg\:col-#{$i};
+
+    & .p-dropdown,
+    & .p-multiselect,
+    & .p-inputtext,
+    & .p-calendar {
+      width: 100%;
+
+      &.p-focus {
+        &:not(.p-disabled) {
+          border: 1px solid var(--bluegray-100);
+          box-shadow: none;
+        }
       }
     }
   }
-}
-
-.s-field {
-  @extend .flex;
-  @extend .p-1;
-  @extend .gap-1;
-}
-
-.s-field-fixed {
-  @extend .p-1;
-  @extend .w-13rem;
-
-  & > * {
-    flex-grow: 1;
-  }
-}
-
-.s-field-action {
-  @extend .justify-content-center;
-  @extend .w-6rem;
-  @extend .ml-1;
 }

@@ -5,5 +5,5 @@ import { StoryPage } from "@components"
 
 import * as descriptions from "./descriptions"
 
-storiesOf("Display / Dash", module)
+storiesOf("Components/ Display / Dash", module)
   .add("Dash", context => <StoryPage {...descriptions.dash} {...context} />)
