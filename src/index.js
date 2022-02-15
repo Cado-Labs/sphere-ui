@@ -1,7 +1,5 @@
 import "./index.scss"
 
-export { Avatar } from "primereact/avatar"
-export { AvatarGroup } from "primereact/avatargroup"
 export { BlockUI } from "primereact/blockui"
 export { BreadCrumb } from "primereact/breadcrumb"
 export { Button, ButtonComponent } from "primereact/button"
@@ -43,6 +41,7 @@ export { TriStateCheckbox } from "primereact/tristatecheckbox"
 export * from "primereact/utils"
 export * from "primereact/api"
 
+export { Avatar } from "./components/Avatar"
 export { Badge } from "./components/Badge"
 export { Dash } from "./components/Dash"
 export { DatePicker } from "./components/DatePicker"
