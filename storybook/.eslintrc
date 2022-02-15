@@ -8,7 +8,8 @@
     "umbrellio",
     "umbrellio/react",
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:yml/standard"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -21,6 +22,15 @@
       "presets": ["@babel/preset-react"]
    }
   },
+  "overrides": [
+    {
+      "files": ["*.yaml", "*.yml"],
+      "parser": "yaml-eslint-parser",
+      "rules": {
+        "max-len": "off"
+      }
+    }
+  ],
   "plugins": [
     "react",
     "import"
@@ -53,6 +63,7 @@
         "allowObject": true
       }
     ],
-    "import/group-exports": "error"
+    "import/group-exports": "error",
+    "yml/key-name-casing": ["error", { "camelCase": true }]
   }
 }
