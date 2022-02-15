@@ -2,6 +2,6 @@ content: Badge is a small status indicator for another element.
 props:
   value: Value to display inside the badge.
   severity: Severity type of the badge, valid options are "success", "info", "warning", "danger".
-  size: Size of the badge, valid options are "large" and "xlarge".
-  class_name: Class of the element.
+  size: Size of the badge, valid options are "small", "large" and "xlarge".
+  className: Class of the element.
   style: Inline style of the component.

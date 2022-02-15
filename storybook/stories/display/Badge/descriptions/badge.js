@@ -53,7 +53,7 @@ export const badge = {
     { name: "value", type: "any", description: `${I18N_PREFIX}.props.value` },
     { name: "severity", type: "string", description: `${I18N_PREFIX}.props.severity` },
     { name: "size", type: "string", description: `${I18N_PREFIX}.props.size` },
-    { name: "className", type: "string", description: `${I18N_PREFIX}.props.class_name` },
+    { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
   ],
 }

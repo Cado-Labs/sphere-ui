@@ -1,20 +1,20 @@
 content: The DateTimePicker component allows the user to select a date and time.
 props:
-  id: Unique identificator of the components
+  id: Unique identificator of the components.
   ref: Ability to access the DOM element and component methods.
   name: Name of the input element.
   value: Value of the component.
   placeholder: Placeholder text for the input.
-  date_format: Format of the date.
-  year_range: Displays available years.
-  on_change: Event handler.
-  show_icon: Displays a button with icon next to input.
-  month_navigator: Displays a dropdown with months.
-  show_seconds: Show the seconds.
-  show_millisec: Show the milliseconds.
-  step_hour: Hours to change per step.
-  step_second: Seconds to change per step.
-  step_minute: Minutes to change per step.
+  dateFormat: Format of the date.
+  yearRange: Displays available years.
+  onChange: Event handler.
+  showIcon: Displays a button with icon next to input.
+  monthNavigator: Displays a dropdown with months.
+  showSeconds: Show the seconds.
+  showMillisec: Show the milliseconds.
+  stepHour: Hours to change per step.
+  stepSecond: Seconds to change per step.
+  stepMinute: Minutes to change per step.
   disabled: Disable the component.
   viewDate: Date instance whose month and year are used to display the calendar.
   mask: Mask pattern for input element.
