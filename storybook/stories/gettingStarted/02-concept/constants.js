@@ -8,6 +8,7 @@ const unusedComponents = [
   "Accordion",
   "AccordionTab",
   "AutoComplete",
+  "AvatarGroup",
   "Captcha",
   "Carousel",
   "CascadeSelect",
