@@ -35,8 +35,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   deploy-storybook:
+    needs: deploy-sphere
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout branch
         uses: actions/checkout@v2
