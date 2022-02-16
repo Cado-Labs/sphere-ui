@@ -14,8 +14,8 @@
   .sh-field-col-#{$i} {
     @media (max-width: $sm) {
       flex: 0 0 auto;
-      padding: $gutter;
       width: 100%;
+      padding: $gutter;
     }
 
     @extend .field;
@@ -25,8 +25,8 @@
     @extend .md\:col-#{$i};
 
     @if $i <= 3 {
-      @extend .sm\:col-4
-    };
+      @extend .sm\:col-4;
+    }
 
     @extend .lg\:col-#{$i};
 
