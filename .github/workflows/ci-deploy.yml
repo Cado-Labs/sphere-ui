@@ -49,7 +49,7 @@ jobs:
       - name: Build
         run: |
           cd storybook
-          yarn install --frozen-lockfile
+          yarn install
           yarn build-storybook
 
       - name: Deploy
