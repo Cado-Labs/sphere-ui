@@ -3,8 +3,6 @@ import { useTranslation } from "react-i18next"
 
 import { Title } from "./Title"
 
-const I18N_PREFIX = "components.eventTable"
-
 EventTable.defaultProps = {
   description: [],
 }
@@ -24,9 +22,21 @@ export function EventTable ({ description }) {
     return (
       <div className="card">
         <UI.DataTable value={translationsDescription()} showGridlines stripedRows size="small">
-          <UI.Column body={renderDefault} header={t("components.eventTable.columns.name")} className="font-light" />
-          <UI.Column body={renderDefault} header={t("components.eventTable.columns.params")} className="font-light" />
-          <UI.Column field="description" header={t("components.eventTable.columns.description")} className="font-light" />
+          <UI.Column
+            body={renderDefault}
+            header={t("components.eventTable.columns.name")}
+            className="font-light"
+          />
+          <UI.Column
+            body={renderDefault}
+            header={t("components.eventTable.columns.params")}
+            className="font-light"
+          />
+          <UI.Column
+            field="description"
+            header={t("components.eventTable.columns.description")}
+            className="font-light"
+          />
         </UI.DataTable>
       </div>
     )

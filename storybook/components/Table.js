@@ -22,10 +22,26 @@ export function Table ({ description }) {
     return (
       <div className="card">
         <UI.DataTable value={translationsDescription()} showGridlines stripedRows size="small">
-          <UI.Column field="name" header={t("components.table.columns.name")} className="font-light" />
-          <UI.Column field="type" header={t("components.table.columns.type")} className="font-light" />
-          <UI.Column body={renderDefault} header={t("components.table.columns.default")} className="font-light" />
-          <UI.Column field="description" header={t("components.table.columns.description")} className="font-light" />
+          <UI.Column
+            field="name"
+            header={t("components.table.columns.name")}
+            className="font-light"
+          />
+          <UI.Column
+            field="type"
+            header={t("components.table.columns.type")}
+            className="font-light"
+          />
+          <UI.Column
+            body={renderDefault}
+            header={t("components.table.columns.default")}
+            className="font-light"
+          />
+          <UI.Column
+            field="description"
+            header={t("components.table.columns.description")}
+            className="font-light"
+          />
         </UI.DataTable>
       </div>
     )
