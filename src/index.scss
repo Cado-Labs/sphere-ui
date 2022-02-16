@@ -32,13 +32,13 @@ html, body {
   .p-datepicker-footer {
     margin-top: .5rem;
 
-    & .p-button {
+    .p-button {
       padding: .35em .3em;
       margin-bottom: .3rem !important;
       font-size: .7rem;
     }
   }
-  & &-header {
+  &-header {
     padding: 0;
     font-size: .9rem;
   }

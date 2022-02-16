@@ -6,7 +6,7 @@ const I18N_PREFIX = "stories.badge"
 const code = `
 function BadgeExample () {
   return (
-    <div className="p-card sh-container">
+    <div className="p-card s-container">
       <div className="card">
         <h5>Numbers</h5>
         <Badge value="2" className="mr-2" />

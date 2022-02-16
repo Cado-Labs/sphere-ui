@@ -16,8 +16,8 @@ function MultiSelectExample () {
   const [value, setValue] = React.useState(null)
 
   return (
-    <div className="p-card sh-container">
-      <div className="sh-field-col-3">
+    <div className="p-card s-container">
+      <div className="s-field-col-3">
         <label htmlFor="city">MultiSelect</label>
           <MultiSelect
             name="city"

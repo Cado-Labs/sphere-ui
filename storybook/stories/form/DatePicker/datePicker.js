@@ -17,9 +17,9 @@ function DatePickerExample () {
   }
 
   return (
-    <div className="p-card sh-container">
-      <div className="sh-grid">
-        <div className="sh-field-col-3">
+    <div className="p-card s-container">
+      <div className="s-grid">
+        <div className="s-field-col-3">
           <label htmlFor="date">DatePicker</label>
           <DatePicker
             name="date"
@@ -27,7 +27,7 @@ function DatePickerExample () {
             onChange={onChange}
           />
         </div>
-        <div className="sh-field-col-3">
+        <div className="s-field-col-3">
           <label htmlFor="rangeDate">DateRangePicker</label>
           <DatePicker
             name="rangeDate"

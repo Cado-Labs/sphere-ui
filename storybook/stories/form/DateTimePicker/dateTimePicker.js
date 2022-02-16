@@ -16,9 +16,9 @@ function DateTimePickerExample () {
   }
 
   return (
-    <div className="p-card sh-container">
-      <div className="sh-grid">
-        <div className="sh-field-col-3">
+    <div className="p-card s-container">
+      <div className="s-grid">
+        <div className="s-field-col-3">
           <label htmlFor="dateTime">DateTimePicker</label>
             <DateTimePicker
               name="dateTime"

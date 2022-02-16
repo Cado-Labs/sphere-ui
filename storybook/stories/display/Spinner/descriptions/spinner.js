@@ -9,7 +9,7 @@ function SpinnerExample () {
   const toggleLoading = () => setLoading(!loading)
 
   return (
-    <div className="p-card sh-container">
+    <div className="p-card s-container">
       <div className="col-1">
         <Button onClick={toggleLoading}>Toggle</Button>
       </div>

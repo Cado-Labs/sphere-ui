@@ -6,7 +6,7 @@ const I18N_PREFIX = "stories.number"
 const code = `
 function NumberExample () {
   return (
-    <div className="p-card sh-container">
+    <div className="p-card s-container">
       <Number
         value={1000.1000}
         precision={2}

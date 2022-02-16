@@ -10,7 +10,7 @@ function FormExample () {
 
   const renderTitle = () => {
     return (
-      <div className="p-card sh-container">
+      <div className="p-card s-container">
         <span style={{ fontSize: "1.2rem" }}>Title</span>
       </div>
     )
@@ -20,9 +20,9 @@ function FormExample () {
     const classNames = "p-button-danger p-button-text"
 
     return (
-      <div className="sh-field-col-2">
+      <div className="s-field-col-2">
         <UI.Button type="submit">
-          save
+          show
         </UI.Button>
         <UI.Button type="button" className={classNames}>
           cancel
@@ -33,7 +33,7 @@ function FormExample () {
 
   const datePickerField = () => {
     return (
-      <div className="sh-field-col-2">
+      <div className="s-field-col-2">
         <label htmlFor="multiselect">DatePicker</label>
         <UI.DatePicker name="date" value={new Date()} />
       </div>
@@ -42,7 +42,7 @@ function FormExample () {
 
   const multiSelectField = () => {
     return (
-      <div className="sh-field-col-2">
+      <div className="s-field-col-2">
         <label htmlFor="multiselect">MultiSelect</label>
         <UI.MultiSelect
           id="multiselect"
@@ -58,7 +58,7 @@ function FormExample () {
 
   const inputField = () => {
     return (
-      <div className="sh-field-col-2">
+      <div className="s-field-col-2">
         <label htmlFor="input">InputText</label>
         <UI.InputText id="input" placeholder="inputText" />
       </div>
@@ -67,15 +67,15 @@ function FormExample () {
 
   const renderFilters = () => {
     return (
-      <div className="p-card sh-container">
-        <div className="sh-grid">
+      <div className="p-card s-container">
+        <div className="s-grid">
           {datePickerField()}
           {multiSelectField()}
           {inputField()}
           {inputField()}
           {inputField()}
         </div>
-        <div className="sh-grid">
+        <div className="s-grid">
           {actionButtons()}
         </div>
       </div>

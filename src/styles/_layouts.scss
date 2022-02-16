@@ -1,17 +1,17 @@
-.sh-container {
+.s-container {
   @extend .p-2;
   @extend .border-noround;
   @extend .border-bottom-1;
   border-bottom-color: #e6e9ec;
 }
 
-.sh-grid {
+.s-grid {
   @extend .grid;
   @extend .grid-nogutter;
 }
 
 @for $i from 1 through 12 {
-  .sh-field-col-#{$i} {
+  .s-field-col-#{$i} {
     @media (max-width: $sm) {
       flex: 0 0 auto;
       width: 100%;

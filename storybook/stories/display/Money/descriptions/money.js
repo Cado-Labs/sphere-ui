@@ -6,7 +6,7 @@ const I18N_PREFIX = "stories.money"
 const code = `
 function MoneyExample () {
   return (
-    <div className="p-card sh-container">
+    <div className="p-card s-container">
       <Money
         money={[1000.1000, "USD"]}
         precision={2}

@@ -10,7 +10,7 @@ function PanelExample () {
 
   const renderTitle = () => {
     return (
-      <div className="p-card sh-container">
+      <div className="p-card s-container">
         <span style={{ fontSize: "1.2rem" }}>Title</span>
       </div>
     )
@@ -20,7 +20,7 @@ function PanelExample () {
     const classNames = "p-button-danger p-button-text"
 
     return (
-      <div className="sh-field-col-12">
+      <div className="s-field-col-12">
         <UI.Button type="submit">
           save
         </UI.Button>
@@ -33,7 +33,7 @@ function PanelExample () {
 
   const multiSelectField = () => {
     return (
-      <div className="sh-field-col-12">
+      <div className="s-field-col-12">
         <label htmlFor="multiselect">MultiSelect</label>
         <UI.MultiSelect
           id="multiselect"
@@ -48,7 +48,7 @@ function PanelExample () {
 
   const inputField = () => {
     return (
-      <div className="sh-field-col-12">
+      <div className="s-field-col-12">
         <label htmlFor="input">InputText</label>
         <UI.InputText id="input" />
       </div>
@@ -57,8 +57,8 @@ function PanelExample () {
 
   const renderForms = () => {
     return (
-      <div className="p-card sh-container">
-        <div className="sh-grid">
+      <div className="p-card s-container">
+        <div className="s-grid">
           {multiSelectField()}
           {inputField()}
           {inputField()}
@@ -66,7 +66,7 @@ function PanelExample () {
           {inputField()}
           {inputField()}
         </div>
-        <div className="sh-grid">
+        <div className="s-grid">
           {actionButtons()}
         </div>
       </div>
@@ -74,7 +74,7 @@ function PanelExample () {
   }
 
   return (
-    <div className="sh-field-col-5">
+    <div className="s-field-col-5">
       {renderTitle()}
       {renderForms()}
     </div>

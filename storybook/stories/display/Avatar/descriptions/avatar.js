@@ -6,7 +6,7 @@ const I18N_PREFIX = "stories.avatar"
 const code = `
 function AvatarExample () {
   return (
-    <div className="p-card sh-container">
+    <div className="p-card s-container">
       <div className="grid">
         <div className="col-12 md:col-4">
           <div className="card">
