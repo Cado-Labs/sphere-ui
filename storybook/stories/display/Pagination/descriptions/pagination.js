@@ -16,6 +16,10 @@ function PaginationExample () {
 }
 `
 
+const onPageClickParams = [
+  { name: "page", description: "Page number" },
+]
+
 export const pagination = {
   header: "Pagination",
   content: `${I18N_PREFIX}.content`,
@@ -24,6 +28,12 @@ export const pagination = {
   descriptionProps: [
     { name: "page", type: "number", description: `${I18N_PREFIX}.props.page` },
     { name: "pages", type: "number", description: `${I18N_PREFIX}.props.pages` },
-    { name: "onPageClick", type: "function", description: `${I18N_PREFIX}.props.onPageClick` },
+  ],
+  eventDescriptionProps: [
+    {
+      name: "onPageClick",
+      params: onPageClickParams,
+      description: `${I18N_PREFIX}.props.onPageClick`,
+    },
   ],
 }

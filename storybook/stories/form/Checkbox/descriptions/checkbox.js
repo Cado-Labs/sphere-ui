@@ -47,6 +47,16 @@ function CheckboxExample () {
 }
 `
 
+const onChangeParams = [
+  { name: "event.originalEvent", description: "Original event" },
+  { name: "event.value", description: "Value of the checkbox" },
+  { name: "event.checked", description: "Checked state as a boolean" },
+]
+
+const onMouseDownParams = [
+  { name: "event", description: "Browser event" },
+]
+
 export const checkbox = {
   header: "Checkbox",
   content: `${I18N_PREFIX}.content`,
@@ -67,7 +77,9 @@ export const checkbox = {
     { name: "tooltip", type: "any", description: `${I18N_PREFIX}.props.tooltip` },
     { name: "tooltipOptions", type: "object", description: `${I18N_PREFIX}.props.tooltipOptions` },
     { name: "ariaLabelledBy", type: "string", description: `${I18N_PREFIX}.props.ariaLabelledBy` },
-    { name: "onChange", type: "function", description: `${I18N_PREFIX}.props.onChange` },
-    { name: "onMouseDown", type: "function", description: `${I18N_PREFIX}.props.onMouseDown` },
+  ],
+  eventDescriptionProps: [
+    { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },
+    { name: "onMouseDown", params: onMouseDownParams, description: `${I18N_PREFIX}.props.onMouseDown` },
   ],
 }

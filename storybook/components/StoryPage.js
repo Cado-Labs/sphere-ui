@@ -4,7 +4,8 @@ import { useTranslation } from "react-i18next"
 import { Table } from "./Table"
 import { Content } from "./Content"
 import { Header } from "./Header"
-import { LiveExample, EventTable } from "./LiveExample"
+import { LiveExample } from "./LiveExample"
+import { EventTable } from "./EventTable"
 
 import "./StoryPage.scss"
 

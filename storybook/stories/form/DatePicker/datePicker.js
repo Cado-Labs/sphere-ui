@@ -43,6 +43,11 @@ function DatePickerExample () {
 }
 `
 
+const onChangeParams = [
+  { name: "originalEvent", description: "Browser event" },
+  { name: "value", description: "New date" },
+]
+
 export const datePicker = {
   header: "DatePicker",
   content: `${I18N_PREFIX}.content`,
@@ -58,12 +63,14 @@ export const datePicker = {
     { name: "dateFormat", type: "string", default: "dd.mm.yy", description: `${I18N_PREFIX}.props.dateFormat` },
     { name: "yearRange", type: "string", description: `${I18N_PREFIX}.props.yearRange` },
     { name: "mode", type: "string", default: "default", description: `${I18N_PREFIX}.props.mode` },
-    { name: "onChange", type: "function", description: `${I18N_PREFIX}.props.onChange` },
     { name: "showIcon", type: "boolean", default: true, description: `${I18N_PREFIX}.props.showIcon` },
     { name: "rangeButtonsBar", type: "boolean", default: false, description: `${I18N_PREFIX}.props.rangeButtonsBar` },
     { name: "monthNavigator", type: "boolean", default: true, description: `${I18N_PREFIX}.props.monthNavigator` },
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
     { name: "startRangeOfYears", type: "string", default: "2010", description: `${I18N_PREFIX}.props.startRangeOfYears` },
     { name: "mask", type: "string", default: null, description: `${I18N_PREFIX}.props.mask` },
+  ],
+  eventDescriptionProps: [
+    { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },
   ],
 }
