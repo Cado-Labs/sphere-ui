@@ -16,19 +16,23 @@ export function EventTable ({ description }) {
     })
   }
 
-  const renderDefault = row => (row.default == null ? "–" : row.default.toString())
+  const renderParams = row => {
+    return row.params.map(({ name, description }) => {
+      return <div key={name}>{name}: {description}</div>
+    })
+  }
 
   const renderTable = () => {
     return (
       <div className="card">
         <UI.DataTable value={translationsDescription()} showGridlines stripedRows size="small">
           <UI.Column
-            body={renderDefault}
+            field="name"
             header={t("components.eventTable.columns.name")}
             className="font-light"
           />
           <UI.Column
-            body={renderDefault}
+            body={renderParams}
             header={t("components.eventTable.columns.params")}
             className="font-light"
           />
@@ -44,7 +48,7 @@ export function EventTable ({ description }) {
 
   const renderTitle = () => {
     return (
-      <Title>{t("title")}</Title>
+      <Title>{t("components.eventTable.title")}</Title>
     )
   }
 

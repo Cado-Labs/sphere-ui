@@ -92,6 +92,10 @@ function AvatarExample () {
 }
 `
 
+const eventParams = [
+  { name: "event", description: "Browser event" },
+]
+
 export const avatar = {
   header: "Avatar",
   content: `${I18N_PREFIX}.content`,
@@ -106,7 +110,9 @@ export const avatar = {
     { name: "imageAlt", type: "string", description: `${I18N_PREFIX}.props.imageAlt` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
-    { name: "onImageError", type: "function", description: `${I18N_PREFIX}.props.onImageError` },
-    { name: "onClick", type: "function", description: `${I18N_PREFIX}.props.onClick` },
+  ],
+  eventDescriptionProps: [
+    { name: "onClick", params: eventParams, description: `${I18N_PREFIX}.props.onClick` },
+    { name: "onImageError", params: eventParams, description: `${I18N_PREFIX}.props.onImageError` },
   ],
 }

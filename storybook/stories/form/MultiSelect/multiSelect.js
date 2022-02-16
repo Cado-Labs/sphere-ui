@@ -31,6 +31,11 @@ function MultiSelectExample () {
 }
 `
 
+const onChangeParams = [
+  { name: "event.originalEvent", description: "Browser event" },
+  { name: "event.value", description: "Current selected values" },
+]
+
 export const multiSelect = {
   header: "MultiSelect",
   content: `${I18N_PREFIX}.content`,
@@ -42,7 +47,6 @@ export const multiSelect = {
     { name: "name", type: "string", description: `${I18N_PREFIX}.props.name` },
     { name: "value", type: "string", description: `${I18N_PREFIX}.props.value` },
     { name: "placeholder", type: "string", description: `${I18N_PREFIX}.props.placeholder` },
-    { name: "onChange", type: "function", description: `${I18N_PREFIX}.props.onChange` },
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
     { name: "options", type: "array", description: `${I18N_PREFIX}.props.options` },
     { name: "filter", type: "boolean", description: `${I18N_PREFIX}.props.filter` },
@@ -61,5 +65,8 @@ export const multiSelect = {
     { name: "selectedItemsLabel", type: "string", description: `${I18N_PREFIX}.props.selectedItemsLabel` },
     { name: "showClear", type: "boolean", default: false, description: `${I18N_PREFIX}.props.showClear` },
     { name: "display", type: "string", description: `${I18N_PREFIX}.props.display` },
+  ],
+  eventDescriptionProps: [
+    { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },
   ],
 }

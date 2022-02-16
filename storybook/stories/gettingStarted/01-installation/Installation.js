@@ -27,14 +27,14 @@ export function Installation () {
       <h4>{t("import.title")}</h4>
       <Highlighter
         code={code.import}
-        language="bash"
+        language="javascript"
       />
       <h4>{t("import.styleTitle")}</h4>
       <p>{t("import.rules")}</p>
       <p>{t("import.connectJs")}</p>
       <Highlighter
         code={code.styles}
-        language="bash"
+        language="javascript"
       />
       <h2>{t("storybook.title")}</h2>
       {t("storybook.run")}

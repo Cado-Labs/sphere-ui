@@ -32,6 +32,11 @@ function DateTimePickerExample () {
 }
 `
 
+const onChangeParams = [
+  { name: "originalEvent", description: "Browser event" },
+  { name: "value", description: "New date" },
+]
+
 export const dateTimePicker = {
   header: "DateTimePicker",
   content: `${I18N_PREFIX}.content`,
@@ -45,7 +50,6 @@ export const dateTimePicker = {
     { name: "placeholder", type: "string", default: "''", description: `${I18N_PREFIX}.props.placeholder` },
     { name: "dateFormat", type: "string", default: "dd.mm.yy", description: `${I18N_PREFIX}.props.dateFormat` },
     { name: "yearRange", type: "string", description: `${I18N_PREFIX}.props.yearRange` },
-    { name: "onChange", type: "function", description: `${I18N_PREFIX}.props.onChange` },
     { name: "showIcon", type: "boolean", default: false, description: `${I18N_PREFIX}.props.showIcon` },
     { name: "monthNavigator", type: "boolean", description: `${I18N_PREFIX}.props.monthNavigator` },
     { name: "showSeconds", type: "boolean", default: true, description: `${I18N_PREFIX}.props.showSeconds` },
@@ -56,5 +60,8 @@ export const dateTimePicker = {
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
     { name: "viewDate", type: "date", default: null, description: `${I18N_PREFIX}.props.viewDate` },
     { name: "mask", type: "string", default: null, description: `${I18N_PREFIX}.props.mask` },
+  ],
+  eventDescriptionProps: [
+    { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },
   ],
 }

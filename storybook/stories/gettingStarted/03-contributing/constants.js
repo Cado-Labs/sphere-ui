@@ -20,10 +20,8 @@ git checkout -b your-branch-name
 `,
 
   lint: `
-yarn lint:js # Checking javascript code
-yarn lint:css # Checking style code
-yarn sb:lint # Checking javascript code at storybook
-yarn sb:eslint # Checking javascript style at storybook
+yarn lint # Linting javascript and style files
+yarn sb:lint # Linting javascript, styles and .yml files at storybook folder
 `,
 
   build: `

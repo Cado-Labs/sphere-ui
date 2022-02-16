@@ -1,7 +1,9 @@
 import React from "react"
-import { storiesOf } from "@storybook/react"
 
 import { Contributing } from "./Contributing"
 
-storiesOf("Getting started/Contributing", module)
-  .add("Contributing", () => <Contributing />)
+export default {
+  title: "Getting started/Contributing",
+}
+
+export const _Contributing = () => <Contributing />

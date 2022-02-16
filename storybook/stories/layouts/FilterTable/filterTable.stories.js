@@ -1,7 +1,13 @@
 import React from "react"
-import { storiesOf } from "@storybook/react"
 
 import { FilterTable } from "./FilterTable"
 
-storiesOf("Layouts/FilterTable", module)
-  .add("FilterTable", context => <FilterTable {...context} />)
+export default {
+  title: "Layouts/FilterTable",
+}
+
+export const _FilterTable = context => <FilterTable {...context} />
+
+_FilterTable.story = {
+  name: "FilterTable",
+}

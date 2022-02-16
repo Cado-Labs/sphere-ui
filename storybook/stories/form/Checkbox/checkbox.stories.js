@@ -5,7 +5,7 @@ import { StoryPage } from "@components"
 import * as descriptions from "./descriptions"
 
 export default {
-  title: "Components/ Display / Badge",
+  title: "Components/ Form",
 }
 
-export const Badge = context => <StoryPage {...descriptions.badge} {...context} />
+export const Checkbox = context => <StoryPage {...descriptions.checkbox} {...context} />

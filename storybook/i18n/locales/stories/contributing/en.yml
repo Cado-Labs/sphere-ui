@@ -30,7 +30,7 @@ update:
   changes: With changes in the sphere-ui, you need to supplement the storybook.
 test:
   title: Test your JavaScript code
-  commands: "After your changes by running our test commands:"
+  commands: "Lint your changes by running script:"
 make:
   title: Make a pull request
   commit: "When you are changes added push your commits to origin:"

@@ -1,0 +1,18 @@
+content: Checkbox is an extension to standard checkbox element with skinning capabilities.
+props:
+  id: Unique identifier of the element.
+  inputId: Unique identifier of the inner native checkbox.
+  value: Value of the checkbox.
+  name: Name of the checkbox element.
+  checked: Specifies whether a checkbox should be checked or not.
+  style: Inline style of the element.
+  className: Class of the element.
+  disabled: When present, it specifies that the element value cannot be altered.
+  required: When present, it specifies that an input field must be filled out before submitting the form.
+  readOnly: When present, it specifies that the element cannot be typed.
+  tabIndex: Index of the element in tabbing order.
+  tooltip: Content of the tooltip <img />.
+  tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
+  ariaLabelledBy: Establishes relationships between the component and label(s) where its value should be one or more element IDs.
+  onChange: Callback to invoke on value change
+  onMouseDown: Callback to invoke to when a mouse button is pressed.

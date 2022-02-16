@@ -1,9 +1,15 @@
 import React from "react"
-import { storiesOf } from "@storybook/react"
 
 import { StoryPage } from "@components"
 
 import { datePicker } from "./datePicker"
 
-storiesOf("Components/ Form", module)
-  .add("DatePicker", context => <StoryPage {...datePicker} {...context} />)
+export default {
+  title: "Components/ Form",
+}
+
+export const DatePicker = context => <StoryPage {...datePicker} {...context} />
+
+DatePicker.story = {
+  name: "DatePicker",
+}

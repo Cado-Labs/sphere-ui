@@ -32,6 +32,11 @@ function TimePickerExample () {
 }
 `
 
+const onChangeParams = [
+  { name: "originalEvent", description: "Browser event" },
+  { name: "value", description: "New date" },
+]
+
 export const timePicker = {
   header: "TimePicker",
   content: `${I18N_PREFIX}.content`,
@@ -46,7 +51,6 @@ export const timePicker = {
     { name: "dateFormat", type: "string", description: `${I18N_PREFIX}.props.dateFormat` },
     { name: "yearRange", type: "string", description: `${I18N_PREFIX}.props.yearRange` },
     { name: "mode", type: "string", description: `${I18N_PREFIX}.props.mode` },
-    { name: "onChange", type: "function", description: `${I18N_PREFIX}.props.onChange` },
     { name: "showIcon", type: "boolean", default: false, description: `${I18N_PREFIX}.props.showIcon` },
     { name: "showSeconds", type: "boolean", default: false, description: `${I18N_PREFIX}.props.showSeconds` },
     { name: "showMillisec", type: "boolean", default: false, description: `${I18N_PREFIX}.props.showMillisec` },
@@ -55,5 +59,8 @@ export const timePicker = {
     { name: "stepMinute", type: "number", description: `${I18N_PREFIX}.props.stepMinute` },
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
     { name: "viewDate", type: "date", default: null, description: `${I18N_PREFIX}.props.viewDate` },
+  ],
+  eventDescriptionProps: [
+    { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },
   ],
 }
