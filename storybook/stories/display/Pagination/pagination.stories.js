@@ -1,9 +1,11 @@
 import React from "react"
-import { storiesOf } from "@storybook/react"
 
 import { StoryPage } from "@components"
 
 import * as descriptions from "./descriptions"
 
-storiesOf("Components/ Display / Pagination", module)
-  .add("Pagination", context => <StoryPage {...descriptions.pagination} {...context} />)
+export default {
+  title: "Components/ Display / Pagination",
+}
+
+export const Pagination = context => <StoryPage {...descriptions.pagination} {...context} />

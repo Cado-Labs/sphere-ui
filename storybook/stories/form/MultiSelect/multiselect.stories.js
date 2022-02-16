@@ -1,9 +1,15 @@
 import React from "react"
-import { storiesOf } from "@storybook/react"
 
 import { StoryPage } from "@components"
 
 import { multiSelect } from "./multiSelect"
 
-storiesOf("Components/ Form/ MultiSelect", module)
-  .add("MultiSelect", context => <StoryPage {...multiSelect} {...context} />)
+export default {
+  title: "Components/ Form/ MultiSelect",
+}
+
+export const MultiSelect = context => <StoryPage {...multiSelect} {...context} />
+
+MultiSelect.story = {
+  name: "MultiSelect",
+}

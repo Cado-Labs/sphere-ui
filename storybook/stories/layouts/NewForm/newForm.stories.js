@@ -1,7 +1,13 @@
 import React from "react"
-import { storiesOf } from "@storybook/react"
 
 import { NewForm } from "./NewForm"
 
-storiesOf("Layouts/NewForm", module)
-  .add("NewForm", context => <NewForm {...context} />)
+export default {
+  title: "Layouts/NewForm",
+}
+
+export const _NewForm = context => <NewForm {...context} />
+
+_NewForm.story = {
+  name: "NewForm",
+}
