@@ -26,7 +26,6 @@ const unusedComponents = [
   "Inplace",
   "Knob",
   "ListBox",
-  "ListBox",
   "MegaMenu",
   "Mention",
   "Menu",
