@@ -5,5 +5,5 @@ import { StoryPage } from "@components"
 
 import * as descriptions from "./descriptions"
 
-storiesOf("Form / Checkbox", module)
+storiesOf("Components/ Form", module)
   .add("Checkbox", context => <StoryPage {...descriptions.checkbox} {...context} />)

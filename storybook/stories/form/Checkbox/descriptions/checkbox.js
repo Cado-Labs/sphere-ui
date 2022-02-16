@@ -68,6 +68,6 @@ export const checkbox = {
     { name: "tooltipOptions", type: "object", description: `${I18N_PREFIX}.props.tooltipOptions` },
     { name: "ariaLabelledBy", type: "string", description: `${I18N_PREFIX}.props.ariaLabelledBy` },
     { name: "onChange", type: "function", description: `${I18N_PREFIX}.props.onChange` },
-    { name: "onChonMouseDownange", type: "function", description: `${I18N_PREFIX}.props.onMouseDown` },
+    { name: "onMouseDown", type: "function", description: `${I18N_PREFIX}.props.onMouseDown` },
   ],
 }
