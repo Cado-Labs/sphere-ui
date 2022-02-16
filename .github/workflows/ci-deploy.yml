@@ -4,20 +4,32 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'package.json'
 
 jobs:
   deploy-sphere:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Check version changes
+        uses: EndBug/version-check@v1
+        id: check
+
+      - name: Set up Node.js
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/setup-node@v2
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn install
-      - run: npm publish --access=public
+
+      - name: Install dependencies
+        if: steps.check.outputs.changed == 'true'
+        run: yarn install
+
+      - name: Publish package to NPM
+        if: steps.check.outputs.changed == 'true'
+        run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   deploy-storybook:

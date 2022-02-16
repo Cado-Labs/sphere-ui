@@ -10,6 +10,8 @@ import * as UI from "@cadolabs/sphere-ui"
 
 import { Title } from "./Title"
 
+const I18N_PREFIX = "components.liveEditor"
+
 const defaultScope = { UI }
 
 LiveExample.defaultProps = {
@@ -18,7 +20,7 @@ LiveExample.defaultProps = {
 }
 
 export function LiveExample ({ code, scope }) {
-  const { t } = useTranslation()
+  const { t } = useTranslation('translation', { keyPrefix: I18N_PREFIX })
 
   const renderLive = () => {
     return (
@@ -27,8 +29,10 @@ export function LiveExample ({ code, scope }) {
         <br />
         <div className="live-content">
           <UI.Tooltip target=".tag" />
-          <span className="tag" data-pr-tooltip="Below you can edit the code and apply different props from the table">
-            <UI.Tag className="border-noround tag" icon="pi pi-info-circle" severity="info">Hover over me</UI.Tag>
+          <span className="tag" data-pr-tooltip={t("hover.description")}>
+            <UI.Tag className="border-noround tag" icon="pi pi-info-circle" severity="info">
+              {t("hover.title")}
+            </UI.Tag>
           </span>
           <LiveEditor />
         </div>
@@ -39,7 +43,7 @@ export function LiveExample ({ code, scope }) {
 
   const renderTitle = () => {
     return (
-      <Title>{t("components.live_editor.title")}</Title>
+      <Title>{t("title")}</Title>
     )
   }
 

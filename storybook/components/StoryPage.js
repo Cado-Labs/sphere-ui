@@ -5,10 +5,11 @@ import { Table } from "./Table"
 import { Content } from "./Content"
 import { Header } from "./Header"
 import { LiveExample } from "./LiveExample"
+import { EventTable } from "./LiveExample"
 
 import "./StoryPage.scss"
 
-export function StoryPage ({ content, header, descriptionProps, code, scope }) {
+export function StoryPage ({ content, header, descriptionProps, eventDescriptionProps, code, scope }) {
   const { t } = useTranslation()
 
   const renderContent = () => {
@@ -29,6 +30,12 @@ export function StoryPage ({ content, header, descriptionProps, code, scope }) {
     )
   }
 
+  const renderEventTable = () => {
+    return (
+      <EventTable description={eventDescriptionProps} />
+    )
+  }
+
   const renderLive = () => {
     return (
       <LiveExample code={code} scope={scope} />
@@ -41,6 +48,7 @@ export function StoryPage ({ content, header, descriptionProps, code, scope }) {
       {content && renderContent()}
       {code && renderLive()}
       {descriptionProps && renderTable()}
+      {eventDescriptionProps && renderEventTable()}
     </Fragment>
   )
 }
