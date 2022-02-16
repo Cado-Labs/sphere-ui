@@ -4,7 +4,11 @@ const I18N_PREFIX = "stories.dash"
 
 const code = `
 function DashExample () {
-  return ("Total count: " + Dash)
+  return (
+    <div className="p-card s-container">
+      Total count: {Dash}
+    </div>
+  )
 }
 `
 

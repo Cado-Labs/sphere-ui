@@ -5,5 +5,5 @@ import { StoryPage } from "@components"
 
 import * as descriptions from "./descriptions"
 
-storiesOf("Display / Avatar", module)
+storiesOf("Components/ Display / Avatar", module)
   .add("Avatar", context => <StoryPage {...descriptions.avatar} {...context} />)

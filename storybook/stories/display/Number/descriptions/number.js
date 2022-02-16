@@ -6,13 +6,15 @@ const I18N_PREFIX = "stories.number"
 const code = `
 function NumberExample () {
   return (
-    <Number
-      value={1000.1000}
-      precision={2}
-      enforcePrecision
-      delimiter={"."}
-      separator={" "}
-    />
+    <div className="p-card s-container">
+      <Number
+        value={1000.1000}
+        precision={2}
+        enforcePrecision
+        delimiter={"."}
+        separator={" "}
+      />
+    </div>
   )
 }
 `

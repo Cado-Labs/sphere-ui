@@ -1,0 +1,14 @@
+title: Sphere-UI
+about:
+  title: Component library based on Primereact.
+  link: Read more about the concept.
+installation: Installation
+import:
+  title: Import
+  styleTitle: Import sphere styles
+  rules: If you are writing a microfrontend and your host application is already using sphere-ui, then you can skip this step.
+  connectJs: "Otherwise, to connect to js file:"
+
+storybook:
+  title: Storybook
+  run: "To run the storybook:"

@@ -1,0 +1,14 @@
+title: Concept
+message: Please read this section carefully!
+description: This library is based on primereact, but many components have been changed or excluded because we use a unified approach to designing and development interfaces.
+newComponents: We also added our own components to the library, which are not in the primereact.
+documentation: Therefore, it is <b>better to use our documentation in components section</b> than to go to
+primereact: primereact
+excluded: "List of excluded components:"
+sections:
+  layouts:
+    title: layouts
+    description: For easy of use UI blocks while build applications in no time, go to the
+  contributing:
+    title: contributing
+    description: If errors are found when using the library, or not enough properties, or the component needs to be extended, go to the

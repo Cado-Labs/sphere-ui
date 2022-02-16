@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react"
 
 import { StoryPage } from "@components"
 
-import * as descriptions from "./descriptions"
+import { multiSelect } from "./multiSelect"
 
-storiesOf("Form/ MultiSelect", module)
-  .add("Description", context => <StoryPage {...descriptions.multiSelect} {...context} />)
+storiesOf("Components/ Form/ MultiSelect", module)
+  .add("MultiSelect", context => <StoryPage {...multiSelect} {...context} />)

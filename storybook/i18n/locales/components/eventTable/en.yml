@@ -1,0 +1,5 @@
+title: Description of the events used
+columns:
+  name: Name
+  params: Parameters
+  description: Description

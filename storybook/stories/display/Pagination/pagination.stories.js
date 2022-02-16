@@ -5,5 +5,5 @@ import { StoryPage } from "@components"
 
 import * as descriptions from "./descriptions"
 
-storiesOf("Display / Pagination", module)
+storiesOf("Components/ Display / Pagination", module)
   .add("Pagination", context => <StoryPage {...descriptions.pagination} {...context} />)

@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { Spinner } from "@cadolabs/sphere-ui"
+import { Spinner, Button } from "@cadolabs/sphere-ui"
 
 const I18N_PREFIX = "stories.spinner"
 
@@ -9,9 +9,9 @@ function SpinnerExample () {
   const toggleLoading = () => setLoading(!loading)
 
   return (
-    <div className="flex">
+    <div className="p-card s-container">
       <div className="col-1">
-        <button onClick={toggleLoading}>Toggle</button>
+        <Button onClick={toggleLoading}>Toggle</Button>
       </div>
       <div className="col-2">
         <Spinner loading={loading}>Some content</Spinner>
@@ -25,7 +25,7 @@ export const spinner = {
   header: "Spinner",
   content: `${I18N_PREFIX}.content`,
   code,
-  scope: { Spinner },
+  scope: { Spinner, Button },
   descriptionProps: [
     { name: "loading", type: "boolean", description: `${I18N_PREFIX}.props.loading` },
   ],
