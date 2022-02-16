@@ -5,16 +5,16 @@ import { linkTo } from "@storybook/addon-links"
 import { I18N_PREFIX, links, unusedComponents } from "./constants"
 
 export function Concept () {
-  const { t } = useTranslation('translation', { keyPrefix: I18N_PREFIX })
+  const { t } = useTranslation("translation", { keyPrefix: I18N_PREFIX })
 
   return (
     <div>
       <h2>{t("title")}</h2>
-      <Message severity="warn" text={t("message")}></Message>
+      <Message severity="warn" text={t("message")} />
       <p>{t("description")}</p>
       <p>{t("newComponents")}</p>
       <p>
-        <span dangerouslySetInnerHTML={{ __html: t('documentation') }} />
+        <span dangerouslySetInnerHTML={{ __html: t("documentation") }} />
         <a href={links.prime}> {t("primereact")}</a>.
       </p>
       <p>{t("excluded")}</p>
@@ -31,7 +31,10 @@ export function Concept () {
       </p>
       <p>
         {t("sections.contributing.description")}
-        <a onClick={linkTo("Getting started", "Contributing")}> {t("sections.contributing.title")}</a>.
+        <a onClick={
+          linkTo("Getting started", "Contributing")
+        }
+        > {t("sections.contributing.title")}</a>.
       </p>
     </div >
   )

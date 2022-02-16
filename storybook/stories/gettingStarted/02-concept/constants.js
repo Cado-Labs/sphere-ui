@@ -1,10 +1,10 @@
-export const links = {
-  prime: "https://primefaces.org/primereact"
+const links = {
+  prime: "https://primefaces.org/primereact",
 }
 
-export const I18N_PREFIX = "stories.concept"
+const I18N_PREFIX = "stories.concept"
 
-export const unusedComponents = [
+const unusedComponents = [
   "AutoComplete",
   "CascadeSelect",
   "ColorPicker",
@@ -60,3 +60,9 @@ export const unusedComponents = [
   "ProgressSpinner",
   "Tree",
 ]
+
+export {
+  links,
+  I18N_PREFIX,
+  unusedComponents,
+}

@@ -4,12 +4,18 @@ import { useTranslation } from "react-i18next"
 import { Table } from "./Table"
 import { Content } from "./Content"
 import { Header } from "./Header"
-import { LiveExample } from "./LiveExample"
-import { EventTable } from "./LiveExample"
+import { LiveExample, EventTable } from "./LiveExample"
 
 import "./StoryPage.scss"
 
-export function StoryPage ({ content, header, descriptionProps, eventDescriptionProps, code, scope }) {
+export function StoryPage ({
+  content,
+  header,
+  descriptionProps,
+  eventDescriptionProps,
+  code,
+  scope,
+}) {
   const { t } = useTranslation()
 
   const renderContent = () => {

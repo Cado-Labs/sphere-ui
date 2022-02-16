@@ -7,7 +7,7 @@ import { Anchor } from "@components/Anchor"
 import { codes, links, I18N_PREFIX } from "./constants"
 
 export function Contributing () {
-  const { t } = useTranslation('translation', { keyPrefix: I18N_PREFIX })
+  const { t } = useTranslation("translation", { keyPrefix: I18N_PREFIX })
 
   const preparationRef = React.useRef(null)
   const cloneRef = React.useRef(null)
@@ -22,7 +22,11 @@ export function Contributing () {
       <React.Fragment>
         <h4>{t("contents.title")}</h4>
         <ul>
-          <li><Anchor href="#preparation" toRef={preparationRef}>{t("contents.preparation")}</Anchor></li>
+          <li>
+            <Anchor href="#preparation" toRef={preparationRef}>
+              {t("contents.preparation")}
+            </Anchor>
+          </li>
           <li><Anchor href="#clone" toRef={cloneRef}>{t("contents.clone")}</Anchor></li>
           <li><Anchor href="#work" toRef={workRef}>{t("contents.work")}</Anchor></li>
           <li><Anchor href="#build" toRef={buildRef}>{t("contents.build")}</Anchor></li>

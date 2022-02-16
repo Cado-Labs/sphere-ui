@@ -5,5 +5,5 @@ export const Anchor = ({ href, toRef, ...rest }) => {
     toRef.current.focus()
   }
 
-  return <a href={href} onClick={go} {...rest}></a>
+  return <a href={href} onClick={go} {...rest} />
 }

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next"
 const I18N_PREFIX = "stories.layouts"
 
 export function Description () {
-  const { t } = useTranslation('translation', { keyPrefix: I18N_PREFIX })
+  const { t } = useTranslation("translation", { keyPrefix: I18N_PREFIX })
 
   return (
     <div>

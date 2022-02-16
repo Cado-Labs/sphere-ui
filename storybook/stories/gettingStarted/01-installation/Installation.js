@@ -1,5 +1,5 @@
 import React from "react"
-import { linkTo } from '@storybook/addon-links';
+import { linkTo } from "@storybook/addon-links"
 import { useTranslation } from "react-i18next"
 
 import { Highlighter } from "@components/Highlighter"
@@ -7,7 +7,7 @@ import { Highlighter } from "@components/Highlighter"
 import { code, I18N_PREFIX } from "./constants"
 
 export function Installation () {
-  const { t } = useTranslation('translation', { keyPrefix: I18N_PREFIX })
+  const { t } = useTranslation("translation", { keyPrefix: I18N_PREFIX })
 
   return (
     <div>

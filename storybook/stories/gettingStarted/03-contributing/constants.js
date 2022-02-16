@@ -1,13 +1,14 @@
-export const links = {
+/* eslint-disable max-len */
+const links = {
   nvm: "https://github.com/nvm-sh/nvm",
   yarn: "https://yarnpkg.com/",
   git: "https://git-scm.com/",
   quickstart: "https://docs.github.com/en/get-started/quickstart/fork-a-repo",
-  pullRequest: "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"
+  pullRequest: "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests",
 
 }
 
-export const codes = {
+const codes = {
   clone: `
 git clone git@github.com:Cado-Labs/sphere-ui.git
 cd sphere-ui
@@ -37,7 +38,13 @@ yarn storybook # Run storybook
 git add -A
 git commit -m 'COMMIT MESSAGE'
 git push -u origin BRANCH_NAME
-`
+`,
 }
 
-export const I18N_PREFIX = "stories.contributing"
+const I18N_PREFIX = "stories.contributing"
+
+export {
+  links,
+  codes,
+  I18N_PREFIX,
+}

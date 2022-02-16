@@ -1,4 +1,4 @@
-export const code = {
+const code = {
   installation: `
 npm i @cadolabs/sphere-ui
 # OR
@@ -20,8 +20,12 @@ import '@cadolabs/sphere-ui/dist/index.css'
 yarn sb:start
 # from the storybook folder use
 yarn storybook
-`
+`,
 }
 
-export const I18N_PREFIX = "stories.installation"
+const I18N_PREFIX = "stories.installation"
 
+export {
+  code,
+  I18N_PREFIX,
+}

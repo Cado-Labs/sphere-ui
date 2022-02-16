@@ -10,8 +10,7 @@ EventTable.defaultProps = {
 }
 
 export function EventTable ({ description }) {
-  const { t } = useTranslation('translation', { keyPrefix: I18N_PREFIX })
-
+  const { t } = useTranslation("translation", { keyPrefix: I18N_PREFIX })
 
   const translationsDescription = () => {
     return description.map(row => {

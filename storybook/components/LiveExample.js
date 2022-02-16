@@ -20,7 +20,7 @@ LiveExample.defaultProps = {
 }
 
 export function LiveExample ({ code, scope }) {
-  const { t } = useTranslation('translation', { keyPrefix: I18N_PREFIX })
+  const { t } = useTranslation("translation", { keyPrefix: I18N_PREFIX })
 
   const renderLive = () => {
     return (
