@@ -5,11 +5,9 @@ import { StoryPage } from "@components"
 import { timePicker } from "./timePicker"
 
 export default {
-  title: "Components/ Form",
+  title: "Components / Form",
 }
 
 export const TimePicker = context => <StoryPage {...timePicker} {...context} />
 
-TimePicker.story = {
-  name: "TimePicker",
-}
+TimePicker.storyName = "TimePicker"

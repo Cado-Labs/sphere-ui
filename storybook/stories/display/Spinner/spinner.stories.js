@@ -5,7 +5,7 @@ import { StoryPage } from "@components"
 import * as descriptions from "./descriptions"
 
 export default {
-  title: "Components/ Display / Spinner",
+  title: "Components / Display",
 }
 
 export const Spinner = context => <StoryPage {...descriptions.spinner} {...context} />
