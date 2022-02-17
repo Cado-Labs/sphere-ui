@@ -65,3 +65,15 @@ a {
 pre[class*="language-"] {
   background: #282c34 !important;
 }
+
+.button-demo {
+  .p-button {
+    margin-right: .5rem;
+  }
+
+  .p-buttonset {
+    .p-button {
+      margin-right: 0;
+    }
+  }
+}

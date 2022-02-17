@@ -18,7 +18,7 @@ function CheckboxExample () {
   }
 
   return (
-    <div>
+    <div className="p-card s-container">
       <h3>Basic</h3>
       <div className="field-checkbox">
         <Checkbox inputId="binary" checked={checked} onChange={e => setChecked(e.checked)} />

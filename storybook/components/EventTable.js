@@ -29,17 +29,17 @@ export function EventTable ({ description }) {
           <UI.Column
             field="name"
             header={t("components.eventTable.columns.name")}
-            className="font-light"
+            bodyClassName="font-light"
           />
           <UI.Column
             body={renderParams}
             header={t("components.eventTable.columns.params")}
-            className="font-light"
+            bodyClassName="font-light"
           />
           <UI.Column
             field="description"
             header={t("components.eventTable.columns.description")}
-            className="font-light"
+            bodyClassName="font-light"
           />
         </UI.DataTable>
       </div>
