@@ -1,4 +1,4 @@
-content: Button is an extension to standard button element with icons and theming.
+content: Card is a flexible container component.
 props:
   id: Unique identifier of the element.
   header: Header of the card.
