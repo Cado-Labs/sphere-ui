@@ -8,4 +8,4 @@ export default {
   title: "Components / Display",
 }
 
-export const Badge = context => <StoryPage {...descriptions.badge} {...context} />
+export const Card = context => <StoryPage {...descriptions.card} {...context} />
