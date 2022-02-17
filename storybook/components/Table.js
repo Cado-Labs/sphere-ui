@@ -25,22 +25,22 @@ export function Table ({ description }) {
           <UI.Column
             field="name"
             header={t("components.table.columns.name")}
-            className="font-light"
+            bodyClassName="font-light"
           />
           <UI.Column
             field="type"
             header={t("components.table.columns.type")}
-            className="font-light"
+            bodyClassName="font-light"
           />
           <UI.Column
             body={renderDefault}
             header={t("components.table.columns.default")}
-            className="font-light"
+            bodyClassName="font-light"
           />
           <UI.Column
             field="description"
             header={t("components.table.columns.description")}
-            className="font-light"
+            bodyClassName="font-light"
           />
         </UI.DataTable>
       </div>
