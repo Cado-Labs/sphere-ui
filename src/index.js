@@ -1,7 +1,6 @@
 import "./index.scss"
 
 export { BlockUI } from "primereact/blockui"
-export { BreadCrumb } from "primereact/breadcrumb"
 export { Checkbox } from "primereact/checkbox"
 export { Chip } from "primereact/chip"
 export { Chips } from "primereact/chips"
@@ -41,6 +40,7 @@ export * from "primereact/api"
 
 export { Avatar } from "./components/Avatar"
 export { Badge } from "./components/Badge"
+export { BreadCrumb } from "./components/BreadCrumb"
 export { Button } from "./components/Button"
 export { Card } from "./components/Card"
 export { Dash } from "./components/Dash"

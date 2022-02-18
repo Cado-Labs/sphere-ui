@@ -6,6 +6,7 @@ import { Content } from "./Content"
 import { Header } from "./Header"
 import { LiveExample } from "./LiveExample"
 import { EventTable } from "./EventTable"
+import { Footer } from "./Footer"
 
 import "./StoryPage.scss"
 
@@ -16,6 +17,7 @@ export function StoryPage ({
   eventDescriptionProps,
   code,
   scope,
+  footer,
 }) {
   const { t } = useTranslation()
 
@@ -49,6 +51,12 @@ export function StoryPage ({
     )
   }
 
+  const renderFooter = () => {
+    return (
+      <Footer>{footer}</Footer>
+    )
+  }
+
   return (
     <Fragment>
       {header && renderHeader()}
@@ -56,6 +64,7 @@ export function StoryPage ({
       {code && renderLive()}
       {descriptionProps && renderTable()}
       {eventDescriptionProps && renderEventTable()}
+      {footer && renderFooter()}
     </Fragment>
   )
 }

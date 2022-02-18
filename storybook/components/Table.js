@@ -7,7 +7,7 @@ Table.defaultProps = {
   description: [],
 }
 
-export function Table ({ description }) {
+export function Table ({ description, title }) {
   const { t } = useTranslation()
 
   const translationsDescription = () => {
@@ -49,7 +49,7 @@ export function Table ({ description }) {
 
   const renderTitle = () => {
     return (
-      <Title>{t("components.table.title")}</Title>
+      <Title>{title || t("components.table.title")}</Title>
     )
   }
 
