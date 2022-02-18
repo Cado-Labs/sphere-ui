@@ -2,10 +2,10 @@ import React from "react"
 
 import { StoryPage } from "@components"
 
-import * as descriptions from "./descriptions"
+import { avatar } from "./avatar"
 
 export default {
   title: "Components / Display",
 }
 
-export const Avatar = context => <StoryPage {...descriptions.avatar} {...context} />
+export const Avatar = context => <StoryPage {...avatar} {...context} />

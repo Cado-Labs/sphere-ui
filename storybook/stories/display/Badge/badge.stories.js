@@ -2,10 +2,10 @@ import React from "react"
 
 import { StoryPage } from "@components"
 
-import * as descriptions from "./descriptions"
+import { badge } from "./badge"
 
 export default {
   title: "Components / Display",
 }
 
-export const Badge = context => <StoryPage {...descriptions.badge} {...context} />
+export const Badge = context => <StoryPage {...badge} {...context} />
