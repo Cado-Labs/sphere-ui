@@ -2,10 +2,10 @@ import React from "react"
 
 import { StoryPage } from "@components"
 
-import * as descriptions from "./descriptions"
+import { spinner } from "./spinner"
 
 export default {
   title: "Components / Display",
 }
 
-export const Spinner = context => <StoryPage {...descriptions.spinner} {...context} />
+export const Spinner = context => <StoryPage {...spinner} {...context} />

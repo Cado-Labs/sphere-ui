@@ -51,7 +51,7 @@ export const card = {
     { name: "footer", type: "any", description: `${I18N_PREFIX}.props.footer` },
     { name: "title", type: "any", description: `${I18N_PREFIX}.props.title` },
     { name: "subTitle", type: "any", description: `${I18N_PREFIX}.props.subTitle` },
-    { name: "sustylebTitle", type: "object", description: `${I18N_PREFIX}.props.style` },
+    { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
   ],
 }

@@ -1,0 +1,24 @@
+content: Breadcrumb provides contextual information about page hierarchy.
+props:
+  id: Unique identifier of the element.
+  model: An array of item configurations.
+  home: Configuration for the home icon.
+  style: Inline style of the component.
+  className: Class of the component.
+header:
+  model: Model structure.
+  home: Home structure.
+model:
+  label: Text of the item.
+  url: External link to navigate when item is clicked.
+  command: Callback to execute when item is clicked.
+  disabled: When set as true, disables the item.
+  style: Inline style of the item.
+  className: Class of the item.
+home:
+  icon: Icon of the home item.
+  url: External link to navigate when the home item is clicked.
+  command: Callback to execute when the home item is clicked.
+  disabled: When set as true, disables the home item.
+  style: Inline style of the home item.
+  className: Class of the home item.

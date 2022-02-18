@@ -2,10 +2,10 @@ import React from "react"
 
 import { StoryPage } from "@components"
 
-import * as descriptions from "./descriptions"
+import { pagination } from "./pagination"
 
 export default {
   title: "Components / Display",
 }
 
-export const Pagination = context => <StoryPage {...descriptions.pagination} {...context} />
+export const Pagination = context => <StoryPage {...pagination} {...context} />

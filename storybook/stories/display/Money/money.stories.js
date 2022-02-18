@@ -2,10 +2,10 @@ import React from "react"
 
 import { StoryPage } from "@components"
 
-import * as descriptions from "./descriptions"
+import { money } from "./money"
 
 export default {
   title: "Components / Display",
 }
 
-export const Money = context => <StoryPage {...descriptions.money} {...context} />
+export const Money = context => <StoryPage {...money} {...context} />
