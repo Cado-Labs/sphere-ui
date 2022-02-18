@@ -6,8 +6,8 @@ props:
   style: Inline style of the component.
   className: Class of the component.
 header:
-  model: Model structure.
-  home: Home structure.
+  model: Model structure
+  home: Home structure
 model:
   label: Text of the item.
   url: External link to navigate when item is clicked.
