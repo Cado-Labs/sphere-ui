@@ -1,9 +1,10 @@
 /* eslint-disable max-len */
 import { Fragment } from "react"
 import { BreadCrumb } from "@cadolabs/sphere-ui"
-import i18n from "i18next"
 
-import { Table } from "@components"
+import i18n from "@i18n"
+
+import { ParamsTable } from "@components"
 
 const I18N_PREFIX = "stories.breadcrumb"
 
@@ -55,7 +56,7 @@ export const breadCrumb = {
   ],
   footer: (
     <Fragment>
-      <Table
+      <ParamsTable
         title={i18n.t(`${I18N_PREFIX}.header.model`)}
         description={[
           { name: "label", type: "string", description: `${I18N_PREFIX}.model.label` },
@@ -66,7 +67,7 @@ export const breadCrumb = {
           { name: "style", type: "object", description: `${I18N_PREFIX}.model.style` },
         ]}
       />
-      <Table
+      <ParamsTable
         title={i18n.t(`${I18N_PREFIX}.header.home`)}
         description={[
           { name: "icon", type: "string", default: "pi pi-home", description: `${I18N_PREFIX}.home.icon` },

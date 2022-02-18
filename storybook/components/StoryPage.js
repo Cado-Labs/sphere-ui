@@ -1,7 +1,7 @@
 import { Fragment } from "react"
 import { useTranslation } from "react-i18next"
 
-import { Table } from "./Table"
+import { ParamsTable } from "./ParamsTable"
 import { Content } from "./Content"
 import { Header } from "./Header"
 import { LiveExample } from "./LiveExample"
@@ -35,7 +35,7 @@ export function StoryPage ({
 
   const renderTable = () => {
     return (
-      <Table description={descriptionProps} />
+      <ParamsTable description={descriptionProps} />
     )
   }
 

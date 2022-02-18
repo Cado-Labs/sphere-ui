@@ -1,13 +1,16 @@
 import * as UI from "@cadolabs/sphere-ui"
 import { useTranslation } from "react-i18next"
 
+import i18n from "@i18n"
+
 import { Title } from "./Title"
 
-Table.defaultProps = {
+ParamsTable.defaultProps = {
   description: [],
+  title: i18n.t("components.table.title"),
 }
 
-export function Table ({ description, title }) {
+export function ParamsTable ({ description, title }) {
   const { t } = useTranslation()
 
   const translationsDescription = () => {
@@ -49,7 +52,7 @@ export function Table ({ description, title }) {
 
   const renderTitle = () => {
     return (
-      <Title>{title || t("components.table.title")}</Title>
+      <Title>{title}</Title>
     )
   }
 
