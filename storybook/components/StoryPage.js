@@ -20,7 +20,7 @@ export function StoryPage ({
 }) {
   const renderContent = () => {
     return (
-      <Content>{(content)}</Content>
+      <Content>{content}</Content>
     )
   }
 
