@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 
 import { Button } from "@cadolabs/sphere-ui"
+import i18n from "@i18n"
 
 const I18N_PREFIX = "stories.button"
 
@@ -141,7 +142,7 @@ function ButtonExample () {
 
 export const button = {
   header: "Button",
-  content: `${I18N_PREFIX}.content`,
+  content: i18n.t(`${I18N_PREFIX}.content`),
   code,
   scope: { Button },
   descriptionProps: [

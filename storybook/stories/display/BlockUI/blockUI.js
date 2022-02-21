@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import { BlockUI, Button, Checkbox } from "@cadolabs/sphere-ui"
+import i18n from "@i18n"
 
 const I18N_PREFIX = "stories.blockui"
 
@@ -44,7 +45,7 @@ function BlockUIExample () {
 
 export const blockUI = {
   header: "BlockUI",
-  content: `${I18N_PREFIX}.content`,
+  content: i18n.t(`${I18N_PREFIX}.content`),
   code,
   scope: { BlockUI, Button, Checkbox },
   descriptionProps: [

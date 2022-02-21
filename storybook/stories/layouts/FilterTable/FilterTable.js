@@ -1,7 +1,7 @@
 import React from "react"
-import { useTranslation } from "react-i18next"
 import * as UI from "@cadolabs/sphere-ui"
 
+import { useTranslation } from "@i18n"
 import { LiveExample } from "@components"
 
 const code = `

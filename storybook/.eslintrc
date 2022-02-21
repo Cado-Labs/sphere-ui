@@ -7,8 +7,6 @@
   "extends": [
     "umbrellio",
     "umbrellio/react",
-    "eslint:recommended",
-    "plugin:react/recommended",
     "plugin:yml/standard"
   ],
   "parserOptions": {

@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import { MultiSelect } from "@cadolabs/sphere-ui"
 
+import i18n from "@i18n"
+
 const I18N_PREFIX = "stories.multiselect"
 
 const code = `
@@ -38,7 +40,7 @@ const onChangeParams = [
 
 export const multiSelect = {
   header: "MultiSelect",
-  content: `${I18N_PREFIX}.content`,
+  content: i18n.t(`${I18N_PREFIX}.content`),
   code,
   scope: { MultiSelect },
   descriptionProps: [

@@ -1,18 +1,18 @@
 const webpack = require("../webpack/config")
 
 module.exports = {
-  "stories": [
+  stories: [
     "../stories/**/*.stories.mdx",
-    "../stories/**/*.stories.@(js|jsx|ts|tsx)"
+    "../stories/**/*.stories.@(js|jsx|ts|tsx)",
   ],
-  "addons": [
+  addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials"
+    "@storybook/addon-essentials",
   ],
-  "core": {
-    "builder": "webpack5"
+  core: {
+    builder: "webpack5",
   },
-  webpackFinal: async (config) => {
+  webpackFinal: async config => {
     return {
       ...config,
       module: {
@@ -24,8 +24,8 @@ module.exports = {
         alias: {
           ...config.resolve.alias,
           ...webpack.resolve.alias,
-        }
-      }
+        },
+      },
     }
-  }
+  },
 }

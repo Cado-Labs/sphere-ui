@@ -1,20 +1,21 @@
 import { addons } from "@storybook/addons"
+
 import themes from "./theme"
 
 addons.setConfig({
   theme: themes,
   showPanel: false,
-  panelPosition: 'bottom',
-  initialActive: 'sidebar',
+  panelPosition: "bottom",
+  initialActive: "sidebar",
   sidebar: {
     showRoots: false,
-    collapsedRoots: ['other'],
+    collapsedRoots: ["other"],
   },
   toolbar: {
-    title: { hidden: true, },
-    zoom: { hidden: true, },
-    eject: { hidden: true, },
-    copy: { hidden: true, },
-    fullscreen: { hidden: true, },
+    title: { hidden: true },
+    zoom: { hidden: true },
+    eject: { hidden: true },
+    copy: { hidden: true },
+    fullscreen: { hidden: true },
   },
 })

@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import { DatePicker } from "@cadolabs/sphere-ui"
 
+import i18n from "@i18n"
+
 const I18N_PREFIX = "stories.datepicker"
 
 const code = `
@@ -50,7 +52,7 @@ const onChangeParams = [
 
 export const datePicker = {
   header: "DatePicker",
-  content: `${I18N_PREFIX}.content`,
+  content: i18n.t(`${I18N_PREFIX}.content`),
   code,
   scope: { DatePicker },
   descriptionProps: [

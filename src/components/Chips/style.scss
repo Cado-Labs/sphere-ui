@@ -1,0 +1,14 @@
+.p-chips {
+  width: 100%;
+
+  &_scrollable {
+    .p-chips-multiple-container {
+      flex-wrap: nowrap !important;
+      overflow: auto !important;
+    }
+
+    .p-chips-input-token input {
+      width: auto !important;
+    }
+  }
+}
