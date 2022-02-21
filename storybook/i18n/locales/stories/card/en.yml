@@ -1,0 +1,9 @@
+content: Card is a flexible container component.
+props:
+  id: Unique identifier of the element.
+  header: Header of the card.
+  footer: Footer of the card.
+  title: Title of the card.
+  subTitle: Secondary title of the card.
+  style: Inline style of the component.
+  className: Style class of the component.

@@ -8,14 +8,14 @@ function BadgeExample () {
   return (
     <div className="p-card s-container">
       <div className="card">
-        <h5>Numbers</h5>
+        <h3>Numbers</h3>
         <Badge value="2" className="mr-2" />
         <Badge value="8" severity="success" className="mr-2" />
         <Badge value="4" severity="info" className="mr-2" />
         <Badge value="12" severity="warning" className="mr-2" />
         <Badge value="3" severity="danger" />
 
-        <h5 className="mb-4">Positioned Badge</h5>
+        <h3 className="mb-4">Positioned Badge</h3>
         <i className="pi pi-bell mr-4 p-text-secondary p-overlay-badge" style={{ fontSize: '2rem' }}>
           <Badge value="2" />
         </i>
@@ -26,13 +26,13 @@ function BadgeExample () {
           <Badge severity="danger" />
         </i>
 
-        <h5>Button Badge</h5>
+        <h3>Button Badge</h3>
         <Button type="button" label="Emails" className="mr-2"><Badge value="8" /></Button>
         <Button type="button" label="Messages" icon="pi pi-users" className="p-button-warning">
           <Badge value="8" severity="danger" />
         </Button>
 
-        <h5>Sizes</h5>
+        <h3>Sizes</h3>
         <Badge value="2" className="mr-2" size="small" severity="info" />
         <Badge value="2" className="mr-2" />
         <Badge value="4" className="mr-2" size="large" severity="warning" />

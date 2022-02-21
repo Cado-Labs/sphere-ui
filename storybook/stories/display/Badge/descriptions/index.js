@@ -1,1 +1,0 @@
-export { badge } from "./badge"

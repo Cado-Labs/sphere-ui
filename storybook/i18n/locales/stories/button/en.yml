@@ -1,0 +1,10 @@
+content: Button is an extension to standard button element with icons and theming.
+props:
+  label: Text of the button.
+  icon: Name of the icon or JSX element for icon.
+  iconPos: Position of the icon, valid values are "left", "right", "top" and "bottom".
+  tooltip: Content of the tooltip.
+  tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
+  disabled: When present, it specifies that the button should be disabled. A disabled button is unusable and un-clickable.
+  loading: Display loading icon of the button
+  loadingIcon: Name of the loading icon or JSX element for loading icon.

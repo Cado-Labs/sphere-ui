@@ -2,10 +2,10 @@ import React from "react"
 
 import { StoryPage } from "@components"
 
-import * as descriptions from "./descriptions"
+import { checkbox } from "./checkbox"
 
 export default {
-  title: "Components/ Form",
+  title: "Components / Form",
 }
 
-export const Checkbox = context => <StoryPage {...descriptions.checkbox} {...context} />
+export const Checkbox = context => <StoryPage {...checkbox} {...context} />

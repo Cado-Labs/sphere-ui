@@ -5,11 +5,9 @@ import { StoryPage } from "@components"
 import { dateTimePicker } from "./dateTimePicker"
 
 export default {
-  title: "Components/ Form",
+  title: "Components / Form",
 }
 
 export const DateTimePicker = context => <StoryPage {...dateTimePicker} {...context} />
 
-DateTimePicker.story = {
-  name: "DateTimePicker",
-}
+DateTimePicker.storyName = "DateTimePicker"

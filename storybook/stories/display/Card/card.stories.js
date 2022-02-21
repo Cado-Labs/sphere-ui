@@ -2,10 +2,10 @@ import React from "react"
 
 import { StoryPage } from "@components"
 
-import { dash } from "./dash"
+import { card } from "./card"
 
 export default {
   title: "Components / Display",
 }
 
-export const Dash = context => <StoryPage {...dash} {...context} />
+export const Card = context => <StoryPage {...card} {...context} />

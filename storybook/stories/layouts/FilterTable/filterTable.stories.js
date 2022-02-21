@@ -3,11 +3,9 @@ import React from "react"
 import { FilterTable } from "./FilterTable"
 
 export default {
-  title: "Layouts/FilterTable",
+  title: "Layouts / FilterTable",
 }
 
 export const _FilterTable = context => <FilterTable {...context} />
 
-_FilterTable.story = {
-  name: "FilterTable",
-}
+_FilterTable.storyName = "FilterTable"

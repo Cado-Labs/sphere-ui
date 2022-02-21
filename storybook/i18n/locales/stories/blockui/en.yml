@@ -1,0 +1,8 @@
+content: BlockUI can block other components.
+props:
+  id: Unique identifier of the element.
+  blocked: Controls the blocked state.
+  baseZIndex: Base zIndex value to use in layering.
+  autoZIndex: Whether to automatically manage layering.
+  className: Class of the element.
+  style: Inline style of the element.

@@ -1,6 +1,6 @@
 export { Content } from "./Content"
 export { Title } from "./Title"
 export { LiveExample } from "./LiveExample"
-export { Table } from "./Table"
+export { ParamsTable } from "./ParamsTable"
 export { Header } from "./Header"
 export { StoryPage } from "./StoryPage"
