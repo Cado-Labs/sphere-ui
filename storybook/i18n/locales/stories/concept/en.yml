@@ -2,7 +2,7 @@ title: Concept
 message: Please read this section carefully!
 description: This library is based on primereact, but many components have been changed or excluded because we use a unified approach to designing and development interfaces.
 newComponents: We also added our own components to the library, which are not in the primereact.
-documentation: Therefore, it is <b>better to use our documentation in components section</b> than to go to
+documentation: Therefore, it is <strong>better to use our documentation in components section</strong> than to go to
 primereact: primereact
 excluded: "List of excluded components:"
 sections:

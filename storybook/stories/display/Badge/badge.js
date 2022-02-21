@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import { Badge, Button } from "@cadolabs/sphere-ui"
+import i18n from "@i18n"
 
 const I18N_PREFIX = "stories.badge"
 
@@ -45,7 +46,7 @@ function BadgeExample () {
 
 export const badge = {
   header: "Badge",
-  content: `${I18N_PREFIX}.content`,
+  content: i18n.t(`${I18N_PREFIX}.content`),
   code,
   scope: { Badge, Button },
   descriptionProps: [

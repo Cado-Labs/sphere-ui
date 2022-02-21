@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import { Number } from "@cadolabs/sphere-ui"
 
+import i18n from "@i18n"
+
 const I18N_PREFIX = "stories.number"
 
 const code = `
@@ -21,7 +23,7 @@ function NumberExample () {
 
 export const number = {
   header: "Number",
-  content: `${I18N_PREFIX}.content`,
+  content: i18n.t(`${I18N_PREFIX}.content`),
   code,
   scope: { Number },
   descriptionProps: [

@@ -1,5 +1,4 @@
 import { Fragment } from "react"
-import { useTranslation } from "react-i18next"
 
 import { ParamsTable } from "./ParamsTable"
 import { Content } from "./Content"
@@ -19,11 +18,9 @@ export function StoryPage ({
   scope,
   footer,
 }) {
-  const { t } = useTranslation()
-
   const renderContent = () => {
     return (
-      <Content>{t(content)}</Content>
+      <Content>{(content)}</Content>
     )
   }
 

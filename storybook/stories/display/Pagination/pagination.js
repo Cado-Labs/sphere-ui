@@ -1,5 +1,7 @@
 import { Pagination } from "@cadolabs/sphere-ui"
 
+import i18n from "@i18n"
+
 const I18N_PREFIX = "stories.pagination"
 
 const code = `
@@ -22,7 +24,7 @@ const onPageClickParams = [
 
 export const pagination = {
   header: "Pagination",
-  content: `${I18N_PREFIX}.content`,
+  content: i18n.t(`${I18N_PREFIX}.content`),
   code,
   scope: { Pagination },
   descriptionProps: [

@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import { Checkbox } from "@cadolabs/sphere-ui"
 
+import i18n from "@i18n"
+
 const I18N_PREFIX = "stories.checkbox"
 
 const code = `
@@ -59,7 +61,7 @@ const onMouseDownParams = [
 
 export const checkbox = {
   header: "Checkbox",
-  content: `${I18N_PREFIX}.content`,
+  content: i18n.t(`${I18N_PREFIX}.content`),
   code,
   scope: { Checkbox },
   descriptionProps: [
