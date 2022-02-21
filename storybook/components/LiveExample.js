@@ -1,7 +1,8 @@
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
-import { useTranslation } from "react-i18next"
 import theme from "prism-react-renderer/themes/oceanicNext"
 import * as UI from "@cadolabs/sphere-ui"
+
+import { useTranslation } from "@i18n"
 
 import { Title } from "./Title"
 

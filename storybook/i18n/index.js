@@ -1,5 +1,5 @@
 import i18n from "i18next"
-import { initReactI18next } from "react-i18next"
+import { initReactI18next, useTranslation, Trans, I18nextProvider } from "react-i18next"
 
 import * as en from "./locales/en"
 
@@ -17,9 +17,12 @@ i18n
     react: {
       useSuspense: false,
     },
-    interpolation: {
-      escapeValue: false,
-    },
   })
 
 export default i18n
+
+export {
+  useTranslation,
+  Trans,
+  I18nextProvider,
+}

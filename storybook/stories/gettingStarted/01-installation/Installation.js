@@ -1,7 +1,7 @@
 import React from "react"
 import { linkTo } from "@storybook/addon-links"
-import { useTranslation } from "react-i18next"
 
+import { useTranslation } from "@i18n"
 import { Highlighter } from "@components/Highlighter"
 
 import { code, I18N_PREFIX } from "./constants"
