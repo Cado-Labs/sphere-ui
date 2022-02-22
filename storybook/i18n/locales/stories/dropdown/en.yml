@@ -1,0 +1,40 @@
+content: Dropdown also known as Select, is used to choose an item from a collection of options.
+emptyMessage: Nothing found
+props:
+  id: Unique identifier of the element.
+  name: Name of the input element.
+  value: Value of the component.
+  options: An array of selectitems to display as the available options.
+  optionLabel: Name of the label field of an option when arbitrary objects are used as options instead of SelectItems.
+  optionValue: Name of the value field of an option when arbitrary objects are used as options instead of SelectItems.
+  optionDisabled: Property name or getter function to use as the disabled flag of an option, defaults to false when not defined.
+  optionGroupLabel: Property name or getter function to use as the label of an option group.
+  optionGroupChildren: Property name or getter function that refers to the children options of option group.
+  style: Inline style of the element.
+  className: Class of the element.
+  filter: When specified, displays an input field to filter the items on keyup.
+  filterBy: When filtering is enabled, filterBy decides which field or fields (comma separated) to search against.
+  placeholder: Default text to display when no option is selected.
+  required: When present, it specifies that an input field must be filled out before submitting the form.
+  disabled: When present, it specifies that the component should be disabled.
+  panelClassName: Style class of the overlay panel element.
+  panelStyle: Inline style of the overlay panel element.
+  inputId: Identifier of the focusable input.
+  showClear: When enabled, a clear icon is displayed to clear the value.
+  ariaLabel: Used to define a string that labels the component.
+  ariaLabelledBy: Contains the element IDs of labels.
+  autoFocus: When present, it specifies that the component should automatically get focus on load.
+  tooltip: Content of the tooltip.
+  tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
+  onChange: Callback to invoke on value change.
+  onFocus: Callback to invoke when the element receives focus.
+  onBlur: Callback to invoke when the element loses focus.
+  onShow: Callback to invoke when overlay panel becomes visible.
+  onHide: Callback to invoke when overlay panel becomes hidden.
+header:
+  selectItem: SelectItem API
+selectItem:
+  label: Label of the option.
+  value: Value of the option.
+  className: ClassName of the option.
+  disabled: Whether the option is disabled or not.

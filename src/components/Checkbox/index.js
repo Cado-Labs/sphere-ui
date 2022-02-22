@@ -17,7 +17,6 @@ export const Checkbox = React.forwardRef(({
   tooltipOptions,
   ariaLabelledBy,
   onChange,
-  onMouseDown,
 }, ref) => {
   return (
     <PrimeCheckbox
@@ -37,7 +36,6 @@ export const Checkbox = React.forwardRef(({
       tooltipOptions={tooltipOptions}
       ariaLabelledBy={ariaLabelledBy}
       onChange={onChange}
-      onMouseDown={onMouseDown}
     />
   )
 })
