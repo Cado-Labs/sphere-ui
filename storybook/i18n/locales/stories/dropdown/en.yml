@@ -26,7 +26,7 @@ props:
   autoFocus: When present, it specifies that the component should automatically get focus on load.
   tooltip: Content of the tooltip.
   tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
-  onChange: Callback to invoke on value change
+  onChange: Callback to invoke on value change.
   onFocus: Callback to invoke when the element receives focus.
   onBlur: Callback to invoke when the element loses focus.
   onShow: Callback to invoke when overlay panel becomes visible.
