@@ -24,3 +24,4 @@ props:
   selectedItemsLabel: Function that gets an item in the value and returns the content for it.
   showClear: Displays an icon to clear the value.
   display: Used mode to display the selected item. Valid values are 'comma' and 'chip'.
+  removeIcon: Icon of the remove chip element.
