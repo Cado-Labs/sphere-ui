@@ -65,7 +65,6 @@ export const multiSelect = {
     { name: "selectedItemsLabel", type: "string", description: `${I18N_PREFIX}.props.selectedItemsLabel` },
     { name: "showClear", type: "boolean", default: false, description: `${I18N_PREFIX}.props.showClear` },
     { name: "display", type: "string", description: `${I18N_PREFIX}.props.display` },
-    { name: "removeIcon", type: "any", default: false, description: `${I18N_PREFIX}.props.removeIcon` },
   ],
   eventDescriptionProps: [
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },

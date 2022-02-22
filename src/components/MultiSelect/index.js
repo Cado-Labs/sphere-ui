@@ -29,7 +29,6 @@ export const MultiSelect = React.forwardRef(({
   id = null,
   disabled = false,
   showClear = false,
-  removeIcon = false,
 }, ref) => {
   const multiselectRef = useRef(ref)
 
@@ -53,6 +52,10 @@ export const MultiSelect = React.forwardRef(({
     const isFunction = optionDisabled instanceof Function
 
     return isFunction ? optionDisabled() : optionDisabled
+  }
+
+  const removeIcon = () => {
+    return isOptionDisabled() ? false : "pi pi-times-circle"
   }
 
   const renderHeader = () => {
@@ -109,7 +112,7 @@ export const MultiSelect = React.forwardRef(({
       selectedItemsLabel={selectedItemsLabel}
       showClear={showClear}
       display={display}
-      removeIcon={removeIcon}
+      removeIcon={removeIcon()}
     />
   )
 })
