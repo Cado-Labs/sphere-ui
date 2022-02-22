@@ -18,6 +18,8 @@ export function EventTable ({ description }) {
   }
 
   const renderParams = row => {
+    if (!row.params) return "–"
+
     return row.params.map(({ name, description }) => {
       return <div key={name}>{name}: {description}</div>
     })

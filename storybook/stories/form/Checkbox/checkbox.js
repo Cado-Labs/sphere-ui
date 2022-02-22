@@ -55,10 +55,6 @@ const onChangeParams = [
   { name: "event.checked", description: "Checked state as a boolean" },
 ]
 
-const onMouseDownParams = [
-  { name: "event", description: "Browser event" },
-]
-
 export const checkbox = {
   header: "Checkbox",
   content: i18n.t(`${I18N_PREFIX}.content`),
@@ -82,6 +78,5 @@ export const checkbox = {
   ],
   eventDescriptionProps: [
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },
-    { name: "onMouseDown", params: onMouseDownParams, description: `${I18N_PREFIX}.props.onMouseDown` },
   ],
 }

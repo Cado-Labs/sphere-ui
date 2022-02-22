@@ -15,4 +15,3 @@ props:
   tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
   ariaLabelledBy: Establishes relationships between the component and label(s) where its value should be one or more element IDs.
   onChange: Callback to invoke on value change
-  onMouseDown: Callback to invoke to when a mouse button is pressed.
