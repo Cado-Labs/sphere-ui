@@ -18,7 +18,7 @@ function RadioButtonExample () {
 
   return (
     <div className="p-card s-container">
-      <h5>Basic</h5>
+      <h3>Basic</h3>
       <div className="field-radiobutton">
         <RadioButton
           inputId="city1"
@@ -59,7 +59,7 @@ function RadioButtonExample () {
         <label htmlFor="city4">San Francisco</label>
       </div>
 
-      <h5>Dynamic Values, Preselection, Value Binding and Disabled Option</h5>
+      <h3>Dynamic Values, Preselection, Value Binding and Disabled Option</h3>
       {
         categories.map(category => {
           return (
