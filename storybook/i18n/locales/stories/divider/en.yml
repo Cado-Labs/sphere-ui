@@ -1,0 +1,7 @@
+content: Divider is used to separate contents.
+props:
+  align: Alignment of the content, options are "left", "center", "right" for horizontal layout and "top", "center", "bottom" for vertical.
+  layout: Specifies the orientation, valid values are "horizontal" and "vertical".
+  type: Border style type, valid values are "solid", "dashed" and "dotted".
+  style: Inline style of the element.
+  className: Class of the element.
