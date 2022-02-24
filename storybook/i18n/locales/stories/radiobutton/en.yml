@@ -2,7 +2,7 @@ content: RadioButton is an extension to standard radio button element with skinn
 props:
   id: Unique identifier of the element.
   inputId: Unique identifier of the inner native radiobutton.
-  name: Name of the checkbox element.
+  name: Name of the inner natuve radiobutton element.
   value: Value of the radiobutton.
   checked: Specifies whether a radiobutton should be checked or not.
   style: Inline style of the element.
