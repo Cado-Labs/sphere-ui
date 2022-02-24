@@ -1,0 +1,23 @@
+content: SelectButton is used to choose single or multiple items from a list using buttons.
+props:
+  id: Unique identifier of the element.
+  value: Value of the component.
+  options: An array of objects to display as the available options.
+  optionDisabled: Property name or getter function to use as the disabled flag of an option, defaults to false when not defined.
+  tabIndex: Index of the element in tabbing order.
+  multiple: When specified, allows selecting multiple values.
+  unselectable: Whether selection can be cleared.
+  disabled: When present, it specifies that the element should be disabled.
+  style: Inline style of the element.
+  className: Class of the element.
+  tooltip: Content of the tooltip.
+  tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
+  ariaLabelledBy: Establishes relationships between the component and label(s) where its value should be one or more element IDs.
+  onChange: Callback to invoke on value change.
+header:
+  selectItem: SelectItem API
+selectItem:
+  label: Label of the option.
+  value: Value of the option.
+  className: ClassName of the option.
+  disabled: Whether the option is disabled or not.

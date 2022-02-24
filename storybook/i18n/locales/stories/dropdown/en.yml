@@ -5,8 +5,8 @@ props:
   name: Name of the input element.
   value: Value of the component.
   options: An array of selectitems to display as the available options.
-  optionLabel: Name of the label field of an option when arbitrary objects are used as options instead of SelectItems.
-  optionValue: Name of the value field of an option when arbitrary objects are used as options instead of SelectItems.
+  optionLabel: "!DEPRECATED – use SelectItem API instead! Name of the label field of an option when arbitrary objects are used as options instead of SelectItems."
+  optionValue: "!DEPRECATED – use SelectItem API instead! Name of the value field of an option when arbitrary objects are used as options instead of SelectItems."
   optionDisabled: Property name or getter function to use as the disabled flag of an option, defaults to false when not defined.
   optionGroupLabel: Property name or getter function to use as the label of an option group.
   optionGroupChildren: Property name or getter function that refers to the children options of option group.
