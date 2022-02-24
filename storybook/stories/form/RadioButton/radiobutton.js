@@ -8,10 +8,10 @@ const I18N_PREFIX = "stories.radiobutton"
 const code = `
 function RadioButtonExample () {
   const categories = [
-    { name: 'Accounting', key: 'A' },
-    { name: 'Marketing', key: 'M' },
-    { name: 'Production', key: 'P' },
-    { name: 'Research', key: 'R' },
+    { name: 'Accounting', value: 'A' },
+    { name: 'Marketing', value: 'M' },
+    { name: 'Production', value: 'P' },
+    { name: 'Research', value: 'R' },
   ];
   const [city, setCity] = React.useState(null);
   const [selectedCategory, setSelectedCategory] = React.useState(categories[1]);
@@ -63,16 +63,16 @@ function RadioButtonExample () {
       {
         categories.map(category => {
           return (
-            <div key={category.key} className="field-radiobutton">
+            <div key={category.value} className="field-radiobutton">
               <RadioButton
-                inputId={category.key}
+                inputId={category.value}
                 name="category"
                 value={category}
                 onChange={e => setSelectedCategory(e.value)}
-                checked={selectedCategory.key === category.key}
-                disabled={category.key === "R"}
+                checked={selectedCategory.value === category.value}
+                disabled={category.value === "R"}
               />
-              <label htmlFor={category.key}>{category.name}</label>
+              <label htmlFor={category.value}>{category.name}</label>
             </div>
           )
         })
