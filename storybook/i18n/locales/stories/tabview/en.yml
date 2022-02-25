@@ -1,0 +1,48 @@
+content:
+  main: TabView is a container component to group content with tabs.
+  start:
+    title: Getting Started
+    body: Tabview element consists of one or more TabPanel elements and can either be used as a Controlled or Uncontrolled component.
+  controlled: In controlled mode, "activeIndex" and "onTabChange" properties need to be defined to control the state.
+  uncontrolled: In uncontrolled mode, no additional properties are required.
+  template:
+    title: The header element is fully customizable on TabPanel. To make special header, an object can be given to the "headerTemplate" property as below.
+    body: See examples and options params API below
+props:
+  tabview:
+    id: Unique identifier of the element.
+    activeIndex: Active index of the TabView.
+    style: Inline style of the tabview.
+    className: Class of the tabview.
+    renderActiveOnly: Whether to render the contents of the selected tab or all tabs.
+    scrollable: When enabled displays buttons at each side of the tab headers to scroll the tab list.
+    onTabChange: Callback to invoke when an active tab is changed.
+  tabpanel:
+    header: Content of tab headers.
+    headerTemplate: Header template of the tab to customize more.
+    leftIcon: Icons can be placed at left of a header.
+    rightIcon: Icons can be placed at right of a header..
+    disabled: Whether the tab is disabled.
+    closable: Defines if tab can be removed.
+    style: Inline style of the tab header and content.
+    className: Class of the tab header and content.
+    headerStyle: Inline style of the tab header.
+    headerClassName: Class of the tab header.
+    contentStyle: Inline style of the tab content.
+    contentClassName: Class of the tab content.
+  headerTemplate:
+    className: Class of the default header element.
+    titleClassName: Class of the title element.
+    onClick: Click event for the header element.
+    leftIconElement: Default left icon element created by the component.
+    titleElement: Default title element created by the component.
+    rightIconElement: Default right icon element created by the component.
+    element: Default element created by the component.
+    props: Component props.
+    index: The index of tab.
+    selected: Whether the panel is selected.
+    ariaControls: The value of aria-controls property.
+header:
+  tabview: Properties For TabView
+  tabpanel: Properties For TabPanel
+  headerTemplate: headerTemplate options API
