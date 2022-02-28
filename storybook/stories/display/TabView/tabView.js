@@ -17,19 +17,9 @@ function TabViewExample () {
     return { title: ("Tab" + tabNumber), content: ("Tab " + tabNumber +  " Content") }
   })
 
-  const tabHeaderITemplate = options => {
-    console.log(options)
-    return (
-      <button type="button" onClick={options.onClick} className={options.className}>
-        <i className="pi pi-prime mr-2" />
-        {options.titleElement}
-      </button>
-    )
-  }
-
   const tabHeaderIIITemplate = options => {
     return (
-      <div onClick={options.onClick} className="px-3" style={{ cursor: "pointer" }}>
+      <div onClick={options.onClick} className={options.className} style={{ cursor: "pointer" }}>
         <i className="pi pi-envelope p-text-secondary p-overlay-badge" style={{ fontSize: '2rem' }}>
           <Badge severity="danger" />
         </i>
@@ -39,10 +29,19 @@ function TabViewExample () {
 
   const tabHeaderIITemplate = options => {
     return (
-      <div className="flex align-items-center px-3" style={{ cursor: "pointer" }} onClick={options.onClick}>
+      <div className={options.className} style={{ cursor: "pointer" }} onClick={options.onClick}>
         <Avatar image="images/avatar/amyelsner.png" onImageError={e => e.target.src = "https://randomuser.me/api/portraits/women/81.jpg"} shape="circle" className="mx-2" />
         Amy Elsner
       </div>
+    )
+  }
+
+  const tabHeaderITemplate = options => {
+    return (
+      <button className={options.className} style={{ cursor: "pointer", height: "calc(100% + 2px)" }} onClick={options.onClick}>
+        <i className="pi pi-prime mr-2" />
+        {options.titleElement}
+      </button>
     )
   }
 
@@ -121,10 +120,10 @@ function TabViewExample () {
           <TabPanel header="Header I" headerTemplate={tabHeaderITemplate}>
             <p>Aliquam auctor lacus nec lacus porta egestas. Quisque mauris elit.</p>
           </TabPanel>
-          <TabPanel headerTemplate={tabHeaderIITemplate} headerClassName="flex align-items-center">
+          <TabPanel headerTemplate={tabHeaderIITemplate}>
             <p>Morbi a pretium tellus, non vulputate quam. Vivamus nunc enim.</p>
           </TabPanel>
-          <TabPanel headerTemplate={tabHeaderIIITemplate} headerClassName="flex align-items-center">
+          <TabPanel headerTemplate={tabHeaderIIITemplate}>
             <p>Suspendisse non leo eu augue convallis viverra nec at augue.</p>
           </TabPanel>
         </TabView>
@@ -133,7 +132,7 @@ function TabViewExample () {
       <div className="p-card s-container mb-3">
         <h3>Closable</h3>
         <TabView>
-          <TabPanel header="Header I" >
+          <TabPanel header="Header I">
             <p>Aliquam auctor lacus nec lacus porta egestas. Quisque mauris elit.</p>
           </TabPanel>
           <TabPanel header="Header II closable" closable>

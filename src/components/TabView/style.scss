@@ -7,7 +7,7 @@
       z-index: 1;
       display: block;
       height: 2px;
-      background-color: #4caf50;
+      background-color: var(--primary-color);
       transition: 500ms cubic-bezier(.35, 0, .25, 1);
     }
   }
