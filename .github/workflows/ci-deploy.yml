@@ -1,9 +1,8 @@
 name: deploy
 
 on:
-  push:
-    branches:
-      - master
+  release:
+    types: [created]
 
 jobs:
   deploy-sphere:
@@ -12,25 +11,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Check version changes
-        uses: EndBug/version-check@v1
-        id: check
-        with:
-          diff-search: true
-
       - name: Set up Node.js
-        if: steps.check.outputs.changed == 'true'
         uses: actions/setup-node@v2
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
-        if: steps.check.outputs.changed == 'true'
         run: yarn install --frozen-lockfile
 
       - name: Publish package to NPM
-        if: steps.check.outputs.changed == 'true'
         run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

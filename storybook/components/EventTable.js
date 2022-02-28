@@ -1,5 +1,6 @@
 import * as UI from "@cadolabs/sphere-ui"
-import { useTranslation } from "react-i18next"
+
+import { useTranslation } from "@i18n"
 
 import { Title } from "./Title"
 
@@ -17,6 +18,8 @@ export function EventTable ({ description }) {
   }
 
   const renderParams = row => {
+    if (!row.params) return "–"
+
     return row.params.map(({ name, description }) => {
       return <div key={name}>{name}: {description}</div>
     })

@@ -24,6 +24,8 @@ export const MultiSelect = React.forwardRef(({
   style,
   selectedItemsLabel,
   display,
+  tooltip,
+  tooltipOptions,
   optionDisabled = null,
   name = null,
   id = null,
@@ -113,6 +115,8 @@ export const MultiSelect = React.forwardRef(({
       showClear={showClear}
       display={display}
       removeIcon={removeIcon()}
+      tooltip={tooltip}
+      tooltipOptions={tooltipOptions}
     />
   )
 })

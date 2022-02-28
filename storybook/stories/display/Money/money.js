@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import { Money } from "@cadolabs/sphere-ui"
 
+import i18n from "@i18n"
+
 const I18N_PREFIX = "stories.money"
 
 const code = `
@@ -21,7 +23,7 @@ function MoneyExample () {
 
 export const money = {
   header: "Money",
-  content: `${I18N_PREFIX}.content`,
+  content: i18n.t(`${I18N_PREFIX}.content`),
   code,
   scope: { Money },
   descriptionProps: [

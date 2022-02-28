@@ -1,5 +1,7 @@
 import { Dash } from "@cadolabs/sphere-ui"
 
+import i18n from "@i18n"
+
 const I18N_PREFIX = "stories.dash"
 
 const code = `
@@ -14,7 +16,7 @@ function DashExample () {
 
 export const dash = {
   header: "Dash",
-  content: `${I18N_PREFIX}.content`,
+  content: i18n.t(`${I18N_PREFIX}.content`),
   code,
   scope: { Dash },
 }

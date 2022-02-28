@@ -1,6 +1,7 @@
-import { useTranslation } from "react-i18next"
 import { Message } from "@cadolabs/sphere-ui"
 import { linkTo } from "@storybook/addon-links"
+
+import { useTranslation, Trans } from "@i18n"
 
 import { I18N_PREFIX, links, unusedComponents } from "./constants"
 
@@ -14,7 +15,10 @@ export function Concept () {
       <p>{t("description")}</p>
       <p>{t("newComponents")}</p>
       <p>
-        <span dangerouslySetInnerHTML={{ __html: t("documentation") }} />
+        <Trans
+          i18nKey={`${I18N_PREFIX}.documentation`}
+          components={{ strong: <strong /> }}
+        />
         <a href={links.prime}> {t("primereact")}</a>.
       </p>
       <p>{t("excluded")}</p>

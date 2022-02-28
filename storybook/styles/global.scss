@@ -77,3 +77,11 @@ pre[class*="language-"] {
     }
   }
 }
+
+.inline-code {
+  display: inline;
+  padding: 0 3px;
+  font-family: courier, monospace;
+  background-color: #eee;
+  border-radius: 3px;
+}

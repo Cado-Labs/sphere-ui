@@ -1,0 +1,14 @@
+// Define selected tab bar styles on our own because Prime styles are broken in some cases
+.p-tabview {
+  .p-tabview-nav {
+    .p-tabview-ink-bar {
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      display: block;
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: 500ms cubic-bezier(.35, 0, .25, 1);
+    }
+  }
+}
