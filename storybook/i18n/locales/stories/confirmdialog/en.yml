@@ -1,0 +1,14 @@
+content: confirmDialog method for advanced confirmation messages. Uses a Dialog UI.
+props:
+  message: Message of the confirmation.
+  acceptLabel: Label of the accept button.
+  rejectLabel: Label of the reject button.
+  icon: Icon to display next to the message.
+  acceptClassName: Style class of the accept button.
+  rejectClassName: Style class of the reject button.
+events:
+  accept: Callback to execute when action is confirmed.
+  reject: Callback to execute when action is rejected.
+footer:
+  title: Other properties
+  text: Properties from the <code>Dialog</code> component are supported as well. See <code>Dialog</code> component story.
