@@ -33,6 +33,7 @@ function confirmDialogExample () {
       header: "Delete Confirmation",
       icon: "pi pi-info-circle",
       acceptClassName: "p-button-danger",
+      rejectClassName: "p-button-text p-button-plain",
       accept,
       reject,
     })
@@ -45,7 +46,7 @@ function confirmDialogExample () {
       <div className="p-card s-container">
         <h3>Basic</h3>
         <Button onClick={confirm1} icon="pi pi-check" label="Confirm" className="mr-2" />
-        <Button onClick={confirm2} icon="pi pi-times" label="Delete" />
+        <Button onClick={confirm2} icon="pi pi-times" label="Delete" className="p-button-danger p-button-outlined" />
       </div>
     </div>
   )
