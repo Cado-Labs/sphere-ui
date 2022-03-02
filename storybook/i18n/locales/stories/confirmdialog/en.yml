@@ -4,8 +4,8 @@ props:
   acceptLabel: Label of the accept button.
   rejectLabel: Label of the reject button.
   icon: Icon to display next to the message.
-  acceptClassName: Style class of the accept button.
-  rejectClassName: Style class of the reject button.
+  acceptClassName: Class of the accept button.
+  rejectClassName: Class of the reject button.
 events:
   accept: Callback to execute when action is confirmed.
   reject: Callback to execute when action is rejected.
