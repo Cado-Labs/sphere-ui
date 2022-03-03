@@ -1,0 +1,17 @@
+content: ConfirmPopup displays a confirmation overlay displayed relatively to its target.
+props:
+  target: Element to align the overlay. (Required)
+  message: Message of the confirmation.
+  acceptLabel: Label of the accept button.
+  rejectLabel: Label of the reject button.
+  icon: Icon to display next to the message.
+  acceptClassName: Style class of the accept button.
+  rejectClassName: Style class of the reject button.
+  className: Class of the element.
+  style: Inline style of the element.
+  footer: Footer content of the confirm popup.
+events:
+  accept: Callback to execute when action is confirmed.
+  reject: Callback to execute when action is rejected.
+  onShow: Callback to invoke when overlay panel becomes visible.
+  onHide: Callback to invoke when confirm popup is hidden.
