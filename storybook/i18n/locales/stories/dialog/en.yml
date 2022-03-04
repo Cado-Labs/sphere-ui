@@ -11,7 +11,6 @@ props:
   showHeader: Whether to show the header or not.
   baseZIndex: Base zIndex value to use in layering.
   breakpoints: Object literal to define widths per screen size.
-events:
   onHide: Callback to invoke when dialog is hidden (Required).
   onShow: Callback to invoke when dialog is showed.
   onClick: Callback to invoke when dialog is clicked.

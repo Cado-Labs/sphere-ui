@@ -15,7 +15,6 @@ props:
   ariaLabelledBy: Establishes relationships between the component and label(s) where its value should be one or more element IDs.
   allowDuplicate: Whether to allow duplicate values or not.
   scrollable: When present, it specifies that the element should be scrollable inside parent container.
-events:
   onAdd: Callback to invoke when a chip is added.
   onRemove: Callback to invoke when a chip is removed.
   onChange: Callback to invoke when a chip is added or removed.

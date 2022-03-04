@@ -80,9 +80,9 @@ export const confirmPopupPage = {
     { name: "footer", type: "any", description: `${I18N_PREFIX}.props.footer` },
   ],
   eventDescriptionProps: [
-    { name: "accept", description: `${I18N_PREFIX}.events.accept` },
-    { name: "reject", description: `${I18N_PREFIX}.events.reject` },
-    { name: "onShow", description: `${I18N_PREFIX}.events.onShow` },
-    { name: "onHide", params: onHideParams, description: `${I18N_PREFIX}.events.onHide` },
+    { name: "accept", description: `${I18N_PREFIX}.props.accept` },
+    { name: "reject", description: `${I18N_PREFIX}.props.reject` },
+    { name: "onShow", description: `${I18N_PREFIX}.props.onShow` },
+    { name: "onHide", params: onHideParams, description: `${I18N_PREFIX}.props.onHide` },
   ],
 }

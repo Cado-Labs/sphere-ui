@@ -73,10 +73,10 @@ export const chips = {
     { name: "allowDuplicate", type: "boolean", default: true, description: `${I18N_PREFIX}.props.removable` },
   ],
   eventDescriptionProps: [
-    { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.events.onChange` },
-    { name: "onAdd", params: onAddParams, description: `${I18N_PREFIX}.events.onAdd` },
-    { name: "onRemove", params: onRemoveParams, description: `${I18N_PREFIX}.events.onRemove` },
-    { name: "onFocus", params: onFocusParams, description: `${I18N_PREFIX}.events.onFocus` },
-    { name: "onBlur", params: onBlurParams, description: `${I18N_PREFIX}.events.onBlur` },
+    { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },
+    { name: "onAdd", params: onAddParams, description: `${I18N_PREFIX}.props.onAdd` },
+    { name: "onRemove", params: onRemoveParams, description: `${I18N_PREFIX}.props.onRemove` },
+    { name: "onFocus", params: onFocusParams, description: `${I18N_PREFIX}.props.onFocus` },
+    { name: "onBlur", params: onBlurParams, description: `${I18N_PREFIX}.props.onBlur` },
   ],
 }
