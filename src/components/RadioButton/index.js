@@ -1,6 +1,8 @@
 import React from "react"
 import { RadioButton as PrimeRadioButton } from "primereact/radiobutton"
 
+import { filterTooltipOptions } from "../../utils"
+
 export const RadioButton = React.forwardRef(({
   id,
   inputId,
@@ -17,6 +19,8 @@ export const RadioButton = React.forwardRef(({
   ariaLabelledBy,
   onChange,
 }, ref) => {
+  const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+
   return (
     <PrimeRadioButton
       ref={ref}
@@ -31,7 +35,7 @@ export const RadioButton = React.forwardRef(({
       required={required}
       tabIndex={tabIndex}
       tooltip={tooltip}
-      tooltipOptions={tooltipOptions}
+      tooltipOptions={filteredTooltipOptions}
       ariaLabelledBy={ariaLabelledBy}
       onChange={onChange}
     />
