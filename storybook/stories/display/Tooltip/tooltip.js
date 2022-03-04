@@ -74,9 +74,9 @@ function TooltipExample () {
         <Button type="button" label="Save" icon="pi pi-check" disabled tooltip="A Disabled Button" tooltipOptions={{ showOnDisabled: true }} />
       </div>
 
-      <h3>Target</h3>
+      <h3>Target with positioning</h3>
       <div className="flex align-items-center">
-        <Tooltip target=".custom-target-icon" hideEvent="click" at="right+5 top">
+        <Tooltip target=".custom-target-icon" at="right+5 top">
           No notifications
         </Tooltip>
 
@@ -145,7 +145,7 @@ export const tooltip = {
     { name: "showEvent", type: "string", default: "mouseenter", description: `${I18N_PREFIX}.props.showEvent` },
     { name: "hideEvent", type: "string", default: "mouseleave", description: `${I18N_PREFIX}.props.hideEvent` },
     { name: "autoZIndex", type: "string", default: true, description: `${I18N_PREFIX}.props.autoZIndex` },
-    { name: "baseZIndex", type: "number", default: 100, description: `${I18N_PREFIX}.props.baseZIndex` },
+    { name: "baseZIndex", type: "number", default: 200, description: `${I18N_PREFIX}.props.baseZIndex` },
     { name: "showDelay", type: "number", default: 0, description: `${I18N_PREFIX}.props.showDelay` },
     { name: "hideDelay", type: "number", default: 0, description: `${I18N_PREFIX}.props.hideDelay` },
     { name: "autoHide", type: "boolean", default: true, description: `${I18N_PREFIX}.props.autoHide` },
