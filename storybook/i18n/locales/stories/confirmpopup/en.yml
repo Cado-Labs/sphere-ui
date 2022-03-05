@@ -10,7 +10,6 @@ props:
   className: Class of the element.
   style: Inline style of the element.
   footer: Footer content of the confirm popup.
-events:
   accept: Callback to execute when action is confirmed.
   reject: Callback to execute when action is rejected.
   onShow: Callback to invoke when overlay panel becomes visible.

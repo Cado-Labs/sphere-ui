@@ -119,10 +119,9 @@ export const dialog = {
     { name: "breakpoints", type: "object", description: `${I18N_PREFIX}.props.breakpoints` },
   ],
   eventDescriptionProps: [
-    { name: "onHide", description: `${I18N_PREFIX}.events.onHide` },
-    { name: "onShow", description: `${I18N_PREFIX}.events.onShow` },
-    { name: "onClick", params: onClickParams, description: `${I18N_PREFIX}.events.onClick` },
-    { name: "onMaskClick", params: onClickParams, description: `${I18N_PREFIX}.events.onMaskClick` },
-
+    { name: "onHide", description: `${I18N_PREFIX}.props.onHide` },
+    { name: "onShow", description: `${I18N_PREFIX}.props.onShow` },
+    { name: "onClick", params: onClickParams, description: `${I18N_PREFIX}.props.onClick` },
+    { name: "onMaskClick", params: onClickParams, description: `${I18N_PREFIX}.props.onMaskClick` },
   ],
 }

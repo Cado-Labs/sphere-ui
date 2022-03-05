@@ -67,8 +67,8 @@ export const confirmDialogPage = {
     { name: "rejectClassName", type: "string", description: `${I18N_PREFIX}.props.rejectClassName` },
   ],
   eventDescriptionProps: [
-    { name: "accept", description: `${I18N_PREFIX}.events.accept` },
-    { name: "reject", description: `${I18N_PREFIX}.events.reject` },
+    { name: "accept", description: `${I18N_PREFIX}.props.accept` },
+    { name: "reject", description: `${I18N_PREFIX}.props.reject` },
   ],
   footer: (
     <div>

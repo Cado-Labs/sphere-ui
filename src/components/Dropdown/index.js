@@ -3,6 +3,8 @@ import { Dropdown as PrimeDropdown } from "primereact/dropdown"
 import { locale } from "primereact/api"
 import { classNames as cn } from "primereact/utils"
 
+import { filterTooltipOptions } from "../../utils"
+
 const EMPTY_MESSAGE = {
   ru: "Ничего не найдено",
   en: "Nothing found",
@@ -42,6 +44,7 @@ export const Dropdown = React.forwardRef(({
 }, ref) => {
   const emptyMessage = EMPTY_MESSAGE[locale().locale]
   const dropdownClassName = cn(className, "w-full")
+  const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
 
   return (
     <PrimeDropdown
@@ -72,7 +75,7 @@ export const Dropdown = React.forwardRef(({
       emptyFilterMessage={emptyMessage}
       autoFocus={autoFocus}
       tooltip={tooltip}
-      tooltipOptions={tooltipOptions}
+      tooltipOptions={filteredTooltipOptions}
       showFilterClear
       onChange={onChange}
       onFocus={onFocus}

@@ -2,6 +2,8 @@ import React, { useRef } from "react"
 import { MultiSelect as Select } from "primereact/multiselect"
 import { locale } from "primereact/api"
 
+import { filterTooltipOptions } from "../../utils"
+
 import { LOCALES_BUTTONS_SET } from "./constants"
 
 export const MultiSelect = React.forwardRef(({
@@ -33,6 +35,7 @@ export const MultiSelect = React.forwardRef(({
   showClear = false,
 }, ref) => {
   const multiselectRef = useRef(ref)
+  const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
 
   const getRef = () => {
     return ref || multiselectRef
@@ -116,7 +119,7 @@ export const MultiSelect = React.forwardRef(({
       display={display}
       removeIcon={removeIcon()}
       tooltip={tooltip}
-      tooltipOptions={tooltipOptions}
+      tooltipOptions={filteredTooltipOptions}
     />
   )
 })

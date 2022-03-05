@@ -1,6 +1,8 @@
 import React from "react"
 import { SelectButton as PrimeSelectButton } from "primereact/selectbutton"
 
+import { filterTooltipOptions } from "../../utils"
+
 export const SelectButton = React.forwardRef(({
   id,
   value,
@@ -17,6 +19,8 @@ export const SelectButton = React.forwardRef(({
   ariaLabelledBy,
   onChange,
 }, ref) => {
+  const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+
   return (
     <PrimeSelectButton
       ref={ref}
@@ -31,7 +35,7 @@ export const SelectButton = React.forwardRef(({
       style={style}
       className={className}
       tooltip={tooltip}
-      tooltipOptions={tooltipOptions}
+      tooltipOptions={filteredTooltipOptions}
       ariaLabelledBy={ariaLabelledBy}
       onChange={onChange}
     />
