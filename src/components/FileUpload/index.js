@@ -1,5 +1,13 @@
 import React from "react"
 import { FileUpload as PrimeFileUpload } from "primereact/fileupload"
+import { locale } from "primereact/api"
+
+const getValidationMessage = (file, maxFileSize) => ({
+  /* eslint-disable max-len */
+  en: `${file.name}: Invalid file size (${file.size} bytes), maximum upload size is ${maxFileSize} bytes.`,
+  ru: `${file.name}: Неправильный размер файла (${file.size} байт), максимальный возможный размер — ${maxFileSize} байт.`,
+  /* eslint-enable max-len */
+})
 
 export const FileUpload = React.forwardRef(({
   id,
@@ -31,8 +39,7 @@ export const FileUpload = React.forwardRef(({
     let message = null
 
     if (maxFileSize && file.size > Number(maxFileSize)) {
-      // eslint-disable-next-line max-len
-      message = `${file.name}: Invalid file size (${file.size} bytes), maximum upload size is ${maxFileSize} bytes.`
+      message = getValidationMessage(file, maxFileSize)[locale().locale]
     }
 
     handleFailedValidation && handleFailedValidation({ file, message })
