@@ -35,6 +35,7 @@ export const FileUpload = React.forwardRef(({
   uploadHandler,
   onRemove,
 }, ref) => {
+  // adding validation message because Prime don't do it in basic mode
   const onValidationFail = file => {
     let message = null
 
