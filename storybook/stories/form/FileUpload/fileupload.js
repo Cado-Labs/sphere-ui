@@ -124,6 +124,12 @@ function FileUploadExample () {
 }
 `
 
+const myUploaderExample = `
+const myUploader = (event) => {
+    //event.files == files to upload
+}
+`
+
 const onBeforeUploadParams = [
   { name: "event.xhr", description: "XmlHttpRequest instance." },
   { name: "event.formData", description: "FormData object." },
@@ -173,7 +179,6 @@ export const fileupload = {
   header: "FileUpload",
   content: (
     <div>
-
       <div className="mb-3">
         {i18n.t(`${I18N_PREFIX}.content.main`)}
       </div>
@@ -266,14 +271,7 @@ export const fileupload = {
           language="jsx"
           code={`<FileUpload name="demo[]" url="./upload" customUpload uploadHandler={myUploader} />`}
         />
-        <Highlighter
-          language="jsx"
-          code={`
-const myUploader = (event) => {
-    //event.files == files to upload
-}
-          `}
-        />
+        <Highlighter language="jsx" code={myUploaderExample} />
         <p>
           <Trans
             i18nKey={`${I18N_PREFIX}.content.customUpload.onSelect`}
