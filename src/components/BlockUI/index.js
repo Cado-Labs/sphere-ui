@@ -5,7 +5,7 @@ export const BlockUI = React.forwardRef(({
   id,
   blocked,
   baseZIndex = 50,
-  autoZIndex,
+  autoZIndex = true,
   className,
   style,
   children,
