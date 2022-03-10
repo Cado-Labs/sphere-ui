@@ -98,7 +98,7 @@ const basicExample = `
 const globalToltipExample = `
 <Tooltip target=".customClassName" />
 
-<img className="customClassName" data-pr-tooltip="Logo"  alt="logo" src="showcase/images/logo.png" height="80px"/>
+<img className="customClassName" data-pr-tooltip="Logo"  alt="logo" src="showcase/images/logo.png" height="80px" />
 <div className="customClassName" data-pr-tooltip="This is a div element" style={{ width: '50px', height: '50px', border: '1px solid black' }} />
  `
 
@@ -133,7 +133,7 @@ export const tooltip = {
         <Highlighter
           language="jsx"
           code={
-            `<InputText type="text" placeholder="Right" tooltip="Enter your username" tooltipOptions={{position: 'right'}}/>`
+            `<InputText type="text" placeholder="Right" tooltip="Enter your username" tooltipOptions={{position: 'right'}} />`
           }
         />
         <p>
@@ -145,7 +145,7 @@ export const tooltip = {
         <Highlighter
           language="jsx"
           code={
-            `<InputText type="text" tooltip="Enter your username" at="right+5 top"/>`
+            `<InputText type="text" tooltip="Enter your username" at="right+5 top" />`
           }
         />
       </div>
