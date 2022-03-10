@@ -1,0 +1,20 @@
+content: TieredMenu displays submenus in nested overlays.
+props:
+  id: Unique identifier of the element.
+  model: An array of item configurations.
+  style: Inline style of the component.
+  className: Class of the component.
+  autoZIndex: Whether to automatically manage layering.
+  baseZIndex: Base zIndex value to use in layering.
+header:
+  model: Model structure
+model:
+  label: Text of the item.
+  url: External link to navigate when item is clicked.
+  command: Callback to execute when item is clicked.
+  disabled: When set as true, disables the item.
+  style: Inline style of the item.
+  className: Class of the item.
+  icon: Icon of the item.
+  items: An array of children Model items.
+  separator: Defines the item as a separator.

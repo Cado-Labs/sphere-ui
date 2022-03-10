@@ -1,3 +1,5 @@
+import { filterOptions } from "./filterOptions"
+
 const POSSIBLE_PARAMS = [
   "id",
   "disabled",
@@ -19,7 +21,5 @@ const POSSIBLE_PARAMS = [
 ]
 
 export const filterTooltipOptions = options => {
-  if (!options) return null
-  const entries = Object.entries(options).filter(([key]) => POSSIBLE_PARAMS.includes(key))
-  return Object.fromEntries(entries)
+  return filterOptions(options, POSSIBLE_PARAMS)
 }
