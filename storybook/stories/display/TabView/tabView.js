@@ -2,9 +2,9 @@
 import { Fragment } from "react"
 import { TabView, TabPanel, Button, Avatar, Badge } from "@cadolabs/sphere-ui"
 
-import i18n from "@i18n"
+import i18n, { Trans } from "@i18n"
 
-import { ParamsTable } from "@components"
+import { ParamsTable, Highlighter } from "@components"
 
 const I18N_PREFIX = "stories.tabview"
 
@@ -167,6 +167,61 @@ function TabViewExample () {
 }
 `
 
+const controlledExample = `
+const [activeIndex, setActiveIndex] = useState(0);
+
+<TabView activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)}>
+    <TabPanel header="Header I">
+        Content I
+    </TabPanel>
+    <TabPanel header="Header II">
+        Content II
+    </TabPanel>
+    <TabPanel header="Header III">
+        Content III
+    </TabPanel>
+</TabView>
+`
+
+const uncontrolledExample = `
+<TabView>
+    <TabPanel header="Header I">
+        Content I
+    </TabPanel>
+    <TabPanel header="Header II">
+        Content II
+    </TabPanel>
+    <TabPanel header="Header III">
+        Content III
+    </TabPanel>
+</TabView>
+`
+
+const headerTemplateExample = `
+<TabView>
+    <TabPanel header="Header I" headerTemplate={template}>
+        Content I
+    </TabPanel>
+</TabView>
+`
+
+const headerTemplateFunctionExample = `
+template: (options) => {
+  // options.className
+  // options.titleClassName
+  // options.onClick
+  // options.leftIconElement
+  // options.titleElement
+  // options.rightIconElement
+  // options.element
+  // options.props
+  // options.index
+  // options.selected
+  // options.ariaControls
+}
+
+`
+
 export const tabView = {
   header: "TabView",
   content: (
@@ -176,20 +231,38 @@ export const tabView = {
       </div>
       <div className="mb-3">
         <div className="title">{i18n.t(`${I18N_PREFIX}.content.start.title`)}</div>
-        <div>{i18n.t(`${I18N_PREFIX}.content.start.body`)}</div>
+        <p>
+          <Trans
+            i18nKey={`${I18N_PREFIX}.content.start.body`}
+            components={{ code: <code className="inline-code" /> }}
+          />
+        </p>
       </div>
       <div className="mb-3">
-        <div className="title">Controlled Component</div>
-        <div>{i18n.t(`${I18N_PREFIX}.content.controlled`)}</div>
+        <div className="title">{i18n.t(`${I18N_PREFIX}.content.controlled.title`)}</div>
+        <p>
+          <Trans
+            i18nKey={`${I18N_PREFIX}.content.controlled.body`}
+            components={{ code: <code className="inline-code" /> }}
+          />
+        </p>
+        <Highlighter language="jsx" code={controlledExample} />
       </div>
       <div className="mb-3">
-        <div className="title"h3>Controlled Component</div>
-        <div>{i18n.t(`${I18N_PREFIX}.content.uncontrolled`)}</div>
+        <div className="title"h3>{i18n.t(`${I18N_PREFIX}.content.uncontrolled.title`)}</div>
+        <p>{i18n.t(`${I18N_PREFIX}.content.uncontrolled.body`)}</p>
+        <Highlighter language="jsx" code={uncontrolledExample} />
       </div>
       <div>
-        <div className="title">Header Template</div>
-        <div>{i18n.t(`${I18N_PREFIX}.content.template.title`)}</div>
-        <div>{i18n.t(`${I18N_PREFIX}.content.template.body`)}</div>
+        <div className="title">{i18n.t(`${I18N_PREFIX}.content.template.title`)}</div>
+        <p>
+          <Trans
+            i18nKey={`${I18N_PREFIX}.content.template.body`}
+            components={{ code: <code className="inline-code" /> }}
+          />
+        </p>
+        <Highlighter language="jsx" code={headerTemplateExample} />
+        <Highlighter language="jsx" code={headerTemplateFunctionExample} />
       </div>
     </div>
   ),

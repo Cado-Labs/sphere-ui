@@ -2,12 +2,16 @@ content:
   main: TabView is a container component to group content with tabs.
   start:
     title: Getting Started
-    body: Tabview element consists of one or more TabPanel elements and can either be used as a Controlled or Uncontrolled component.
-  controlled: In controlled mode, "activeIndex" and "onTabChange" properties need to be defined to control the state.
-  uncontrolled: In uncontrolled mode, no additional properties are required.
+    body: <code>Tabview</code> element consists of one or more <code>TabPanel</code> elements and can either be used as a Controlled or Uncontrolled component.
+  controlled:
+    title: Controlled Component
+    body: In controlled mode, <code>activeIndex</code> and <code>onTabChange</code> properties need to be defined to control the state.
+  uncontrolled:
+    title: Uncontrolled Component
+    body: In uncontrolled mode, no additional properties are required.
   template:
-    title: The header element is fully customizable on TabPanel. To make special header, an object can be given to the "headerTemplate" property as below.
-    body: See examples and options params API below
+    title: Header Template
+    body: The header element is fully customizable on <code>TabPanel</code>. To make special header, an object can be given to the <code>headerTemplate</code> property as below. See examples and options params API below
 props:
   tabview:
     id: Unique identifier of the element.
