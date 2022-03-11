@@ -1,18 +1,19 @@
 /* eslint-disable max-len */
-import { TieredMenu } from "@cadolabs/sphere-ui"
+import { PanelMenu } from "@cadolabs/sphere-ui"
 
 import i18n from "@i18n"
 
 import { ParamsTable } from "@components"
 
-const I18N_PREFIX = "stories.tieredmenu"
+const I18N_PREFIX = "stories.panelmenu"
 
 const code = `
-function TieredMenuExample () {
+function PanelMenuExample () {
   const items = [
     {
       label: "File",
       icon: "pi pi-fw pi-file",
+      expanded: true,
       items: [
         {
           label: "New",
@@ -33,10 +34,6 @@ function TieredMenuExample () {
         {
           label: "Delete",
           icon: "pi pi-fw pi-trash",
-          disabled: true,
-        },
-        {
-          separator: true,
         },
         {
           label: "Export",
@@ -47,6 +44,7 @@ function TieredMenuExample () {
     {
       label: "Edit",
       icon: "pi pi-fw pi-pencil",
+      disabled: true,
       items: [
         {
           label: "Left",
@@ -64,7 +62,6 @@ function TieredMenuExample () {
           label: "Justify",
           icon: "pi pi-fw pi-align-justify",
         },
-
       ],
     },
     {
@@ -74,12 +71,10 @@ function TieredMenuExample () {
         {
           label: "New",
           icon: "pi pi-fw pi-user-plus",
-
         },
         {
           label: "Delete",
           icon: "pi pi-fw pi-user-minus",
-
         },
         {
           label: "Search",
@@ -128,42 +123,32 @@ function TieredMenuExample () {
             {
               label: "Remove",
               icon: "pi pi-fw pi-calendar-minus",
+              disabled: true,
             },
           ],
         },
       ],
     },
-    {
-      separator: true,
-    },
-    {
-      label: "Quit",
-      icon: "pi pi-fw pi-power-off",
-      url: "http://example.com"
-    },
   ]
 
   return (
     <div className="p-card s-container">
-      <h3>Tiered menu</h3>
-      <TieredMenu model={items} />
+      <PanelMenu model={items} style={{ width: "22rem" }} />
     </div>
   )
 }
 `
 
-export const tieredMenu = {
-  header: "TieredMenu",
+export const panelMenu = {
+  header: "PanelMenu",
   content: i18n.t(`${I18N_PREFIX}.content`),
   code,
-  scope: { TieredMenu },
+  scope: { PanelMenu },
   descriptionProps: [
     { name: "id", type: "string", description: `${I18N_PREFIX}.props.id` },
     { name: "model", type: "Array<Model>", description: `${I18N_PREFIX}.props.model` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
-    { name: "autoZIndex", type: "boolean", default: true, description: `${I18N_PREFIX}.props.autoZIndex` },
-    { name: "baseZIndex", type: "number", default: 150, description: `${I18N_PREFIX}.props.baseZIndex` },
   ],
   footer: (
     <ParamsTable
@@ -171,13 +156,12 @@ export const tieredMenu = {
       description={[
         { name: "label", type: "string", description: `${I18N_PREFIX}.model.label` },
         { name: "items", type: "Array<Model>", description: `${I18N_PREFIX}.model.items` },
-        { name: "url", type: "string", description: `${I18N_PREFIX}.model.url` },
         { name: "command", type: "function", description: `${I18N_PREFIX}.model.command` },
         { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.model.disabled` },
+        { name: "expanded", type: "boolean", default: false, description: `${I18N_PREFIX}.model.expanded` },
         { name: "className", type: "string", description: `${I18N_PREFIX}.model.className` },
         { name: "style", type: "object", description: `${I18N_PREFIX}.model.style` },
         { name: "icon", type: "string", description: `${I18N_PREFIX}.model.icon` },
-        { name: "separator", type: "boolean", default: false, description: `${I18N_PREFIX}.model.separator` },
       ]}
     />
   ),
