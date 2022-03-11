@@ -1,7 +1,7 @@
 content: Breadcrumb provides contextual information about page hierarchy.
 props:
   id: Unique identifier of the element.
-  model: An array of item configurations.
+  model: An array of Model items.
   home: Configuration for the home icon.
   style: Inline style of the component.
   className: Class of the component.
