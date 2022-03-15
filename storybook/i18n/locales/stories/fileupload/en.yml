@@ -1,0 +1,57 @@
+content:
+  main: FileUpload is a simple file uploader.
+  start:
+    title: Getting Started
+    body: FileUpload requires a <code>url</code> property as the upload target and a <code>name</code> to identify the files at backend.
+  multiple:
+    title: Multiple Uploads
+    body: Only one file can be selected at a time by default, to allow selecting multiple files at once enable <code>multiple</code> option.
+  auto:
+    title: Auto Uploads
+    body: When <code>auto</code> property is enabled, upload begins as soon as file selection is completed or a file is dropped on the drop area.
+  fileTypes:
+    title: File Types
+    body: Selectable file types can be restricted with <code>accept</code> property, example below only allows images to be uploaded. Read more about other possible values <acceptLink>here</acceptLink>.
+  fileSize:
+    title: File Size
+    body: Maximium file size can be restricted using <code>maxFileSize</code> property defined in bytes.
+  request:
+    title: Request Customization
+    body: <code>XHR</code> request to upload the files can be customized using the <code>onBeforeUpload</code> callback that passes the <code>xhr</code> instance and <code>FormData</code> object as event parameters.
+  customUpload:
+    title: Custom Upload
+    body: Uploading implementation can be overriden by enabling customUpload property and defining a custom upload handler event.
+    onSelect: Or you can omit <code>url</code> and <code>name</code> properties and manually handle file in <code>onSelect</code> property.
+props:
+  id: Unique identifier of the element.
+  name: Name of the request parameter to identify the files at backend.
+  url: Remote url to upload the files.
+  multiple: Used to select multiple files at once from file dialog.
+  accept: Pattern to restrict the allowed file types such as "image/*".
+  disabled: Disables the upload functionality.
+  auto: When enabled, upload begins automatically after selection is completed.
+  maxFileSize: Maximum file size allowed in bytes.
+  style: Inline style of the component.
+  className: Class of the component.
+  withCredentials: Cross-site Access-Control requests should be made using credentials such as cookies, authorization headers or TLS client certificates.
+  chooseLabel: Label of the choose button. Defaults to global value in Locale configuration.
+  chooseOptions: Options used to customize the choose button. See properties below.
+  customUpload: Whether to use the default upload or a manual implementation defined in uploadHandler callback.
+  onBeforeUpload: Callback to invoke before file upload begins to customize the request such as post parameters before the files.
+  onBeforeSend: Callback to invoke before file send begins to customize the request such as adding headers.
+  onUpload: Callback to invoke when file upload is complete.
+  onError: Callback to invoke if file upload fails.
+  onClear: Callback to invoke when files in queue are removed without uploading.
+  onSelect: Callback to invoke when files are selected.
+  onProgress: Callback to invoke when files are being uploaded.
+  onValidationFail: Callback to invoke when a validation file fails.
+  uploadHandler: Callback to invoke in custom upload mode to upload the files manually.
+  onRemove: Callback to invoke when a file is removed without uploading using clear button of a file.
+header:
+  chooseOptions: ChooseOptions API
+chooseOptions:
+  label: Label of the button
+  icon: Icon of button.
+  iconOnly: When defined, only icon of the button is shown.
+  className: Class of button.
+  style: Style of button.

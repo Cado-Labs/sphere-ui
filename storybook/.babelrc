@@ -15,13 +15,15 @@
       {
         "languages": [
           "javascript",
+          "jsx",
           "css",
           "html",
           "bash"
         ],
         "plugins": [
           "line-numbers",
-          "show-language"
+          "show-language",
+          "copy-to-clipboard"
         ],
         "theme": "okaidia",
         "css": true

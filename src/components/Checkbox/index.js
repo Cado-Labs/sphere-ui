@@ -1,6 +1,8 @@
 import React from "react"
 import { Checkbox as PrimeCheckbox } from "primereact/checkbox"
 
+import { filterTooltipOptions } from "../../utils"
+
 export const Checkbox = React.forwardRef(({
   id,
   inputId,
@@ -18,6 +20,8 @@ export const Checkbox = React.forwardRef(({
   ariaLabelledBy,
   onChange,
 }, ref) => {
+  const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+
   return (
     <PrimeCheckbox
       ref={ref}
@@ -33,7 +37,7 @@ export const Checkbox = React.forwardRef(({
       readOnly={readOnly}
       tabIndex={tabIndex}
       tooltip={tooltip}
-      tooltipOptions={tooltipOptions}
+      tooltipOptions={filteredTooltipOptions}
       ariaLabelledBy={ariaLabelledBy}
       onChange={onChange}
     />

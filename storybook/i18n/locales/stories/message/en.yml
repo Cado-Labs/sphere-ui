@@ -1,0 +1,15 @@
+content:
+  main: Message is used to display inline messages with various severities.
+  start:
+    title: Getting Started
+    body: <code>Message</code> component uses <code>text</code> property for rendering standard messages or <code>content</code> property for customized messages.
+  severities:
+    title: Severities
+    body: There are four possible values for the severity of a message. Each severity renders its own icon in messages.
+props:
+  id: Unique identifier of the element.
+  className: Class of the element.
+  style: Inline style of the component.
+  severity: Severity level of the message.
+  text: Text of the message.
+  content: Template of the message.

@@ -1,0 +1,31 @@
+content:
+  main: Tooltip functionality is integrated within various components.
+  start:
+    title: Getting Started
+    body: Tooltip functionality is integrated within the the components that have support such as inputtext or buttons. Content is defined with the <code>tooltip</code> property. Tooltip options are defined with <code>tooltipOptions</code> property. Possible options are listed below.
+  position:
+    title: Position
+    body: There are four choices to position the tooltip, default value is "right" and alternatives are "top", "bottom", "left". Position is specified using <code>tooltipOptions</code> property.
+    at: "Property \"at\" may be used for custom positioning. Examples of usage: <code>\"right+5 top\"</code>, <code>\"left bottom\"</code>, <code>\"left center-10\"</code>"
+  global:
+    title: Global Tooltip
+    body: It is used to bind tooltip to components without <code>tooltip</code> props. Also can be used to bind the same properties to more than one element. The target property is required for the global tooltip. It can be a selector, DOM element or selector array.
+props:
+  id: Unique identifier of the element.
+  target: Target element on global tooltip option (only for <Tooltip> component).
+  disabled: When present, it specifies that the tooltip should be hidden.
+  className: Class of the tooltip.
+  style: Style of the tooltip.
+  position: Position of the tooltip, valid values are "right", "left", "top" and "bottom".
+  at: Defines which position on the target element to align the positioned tooltip.
+  event: Event to show the tooltip, valid values are "hover" and "focus".
+  showEvent: Event to show the tooltip if the "event" property is empty.
+  hideEvent: Event to hide the tooltip if the "event" property is empty.
+  autoZIndex: Whether to automatically manage layering.
+  baseZIndex: Base zIndex value to use in layering.
+  showDelay: Delay to show the tooltip in milliseconds.
+  hideDelay: Delay to hide the tooltip in milliseconds.
+  autoHide: Whether to hide tooltip when hovering over tooltip content.
+  showOnDisabled: Whether to show tooltip for disabled elements.
+  onShow: Callback to invoke when the tooltip is shown.
+  onHide: Callback to invoke when the tooltip is hidden.

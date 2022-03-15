@@ -51,7 +51,7 @@ export const blockUI = {
   descriptionProps: [
     { name: "id", type: "string", description: `${I18N_PREFIX}.props.id` },
     { name: "blocked", type: "boolean", default: false, description: `${I18N_PREFIX}.props.blocked` },
-    { name: "baseZIndex", type: "number", default: 100, description: `${I18N_PREFIX}.props.baseZIndex` },
+    { name: "baseZIndex", type: "number", default: 50, description: `${I18N_PREFIX}.props.baseZIndex` },
     { name: "autoZIndex", type: "boolean", default: true, description: `${I18N_PREFIX}.props.autoZIndex` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },

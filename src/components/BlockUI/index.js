@@ -4,8 +4,8 @@ import { BlockUI as PrimeBlockUI } from "primereact/blockui"
 export const BlockUI = React.forwardRef(({
   id,
   blocked,
-  baseZIndex = 100,
-  autoZIndex,
+  baseZIndex = 50,
+  autoZIndex = true,
   className,
   style,
   children,

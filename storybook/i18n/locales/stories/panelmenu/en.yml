@@ -1,0 +1,17 @@
+content: PanelMenu is a hybrid of accordion-tree components.
+props:
+  id: Unique identifier of the element.
+  model: An array of Model items.
+  style: Inline style of the component.
+  className: Class of the component.
+header:
+  model: Model structure
+model:
+  label: Text of the item.
+  command: Callback to execute when item is clicked.
+  disabled: When set as true, disables the item.
+  expanded: Visibility of submenu.
+  style: Inline style of the item.
+  className: Class of the item.
+  icon: Icon of the item.
+  items: An array of children Model items.

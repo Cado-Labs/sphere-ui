@@ -1,0 +1,17 @@
+content: Dialog is a container to display content in an overlay window.
+props:
+  id: Unique identifier of the element.
+  header: Title content of the dialog.
+  footer: Footer content of the dialog.
+  visible: Specifies the visibility of the dialog.
+  contentStyle: Style of the content section.
+  contentClassName: Class of the content section.
+  style: Inline style of the component.
+  className: Class of the component.
+  showHeader: Whether to show the header or not.
+  baseZIndex: Base zIndex value to use in layering.
+  breakpoints: Object literal to define widths per screen size.
+  onHide: Callback to invoke when dialog is hidden (Required).
+  onShow: Callback to invoke when dialog is showed.
+  onClick: Callback to invoke when dialog is clicked.
+  onMaskClick: Callback to invoke when the mask is clicked.
