@@ -141,8 +141,10 @@ function ButtonExample () {
 `
 
 export const button = {
-  header: "Button",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "Button",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { Button },
   descriptionProps: [

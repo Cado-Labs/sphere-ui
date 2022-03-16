@@ -67,39 +67,41 @@ function MessageExample () {
 }
 `
 
-export const message = {
-  header: "Message",
-  content: (
-    <div>
-      <div className="mb-3">
-        {i18n.t(`${I18N_PREFIX}.content.main`)}
-      </div>
-      <div className="mb-3">
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.start.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.start.body`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-      </div>
-      <div className="mb-3">
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.severities.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.severities.body`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-        <ul>
-          <li className="line-height-3">success</li>
-          <li className="line-height-3">info</li>
-          <li className="line-height-3">warn</li>
-          <li className="line-height-3">error</li>
-        </ul>
-      </div>
+const messageExtra = (
+  <div>
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.start.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.start.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
     </div>
-  ),
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.severities.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.severities.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+      <ul>
+        <li className="line-height-3">success</li>
+        <li className="line-height-3">info</li>
+        <li className="line-height-3">warn</li>
+        <li className="line-height-3">error</li>
+      </ul>
+    </div>
+  </div>
+)
+
+export const message = {
+  component: "Message",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content.main`),
+    extra: messageExtra,
+  },
   code,
   scope: { Message, InputText },
   descriptionProps: [

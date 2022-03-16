@@ -139,11 +139,8 @@ const onRemoveParams = [
   { name: "message", description: "Removed message" },
 ]
 
-const storyContent = (
+const toastExtra = (
   <div>
-    <div className="mb-3">
-      {i18n.t(`${I18N_PREFIX}.content.main`)}
-    </div>
     <div className="mb-3">
       <div className="title">{i18n.t(`${I18N_PREFIX}.content.start.title`)}</div>
       <p>
@@ -244,8 +241,11 @@ const storyContent = (
 )
 
 export const toast = {
-  header: "Toast",
-  content: storyContent,
+  component: "Toast",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content.main`),
+    extra: toastExtra,
+  },
   code,
   scope: { Toast, Button },
   descriptionProps: [

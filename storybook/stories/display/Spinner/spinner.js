@@ -24,8 +24,10 @@ function SpinnerExample () {
 `
 
 export const spinner = {
-  header: "Spinner",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "Spinner",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { Spinner, Button },
   descriptionProps: [

@@ -140,8 +140,10 @@ function PanelMenuExample () {
 `
 
 export const panelMenu = {
-  header: "PanelMenu",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "PanelMenu",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { PanelMenu },
   descriptionProps: [

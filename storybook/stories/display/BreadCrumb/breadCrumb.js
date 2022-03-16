@@ -43,8 +43,10 @@ function BreadCrumbExample () {
 `
 
 export const breadCrumb = {
-  header: "BreadCrumb",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "BreadCrumb",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { BreadCrumb },
   descriptionProps: [

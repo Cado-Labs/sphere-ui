@@ -56,8 +56,10 @@ const onChangeParams = [
 ]
 
 export const checkbox = {
-  header: "Checkbox",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "Checkbox",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { Checkbox },
   descriptionProps: [

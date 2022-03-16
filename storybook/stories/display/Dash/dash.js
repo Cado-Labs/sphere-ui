@@ -15,8 +15,10 @@ function DashExample () {
 `
 
 export const dash = {
-  header: "Dash",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "Dash",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { Dash },
 }

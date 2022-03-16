@@ -98,8 +98,10 @@ const eventParams = [
 ]
 
 export const avatar = {
-  header: "Avatar",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "Avatar",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { Avatar, Badge },
   descriptionProps: [
