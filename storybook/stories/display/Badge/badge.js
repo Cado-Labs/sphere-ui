@@ -45,8 +45,10 @@ function BadgeExample () {
 `
 
 export const badge = {
-  header: "Badge",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "Badge",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { Badge, Button },
   descriptionProps: [

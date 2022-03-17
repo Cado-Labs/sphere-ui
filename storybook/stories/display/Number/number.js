@@ -22,8 +22,10 @@ function NumberExample () {
 `
 
 export const number = {
-  header: "Number",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "Number",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { Number },
   descriptionProps: [

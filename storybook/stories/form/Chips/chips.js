@@ -48,12 +48,10 @@ const onBlurParams = [
 ]
 
 export const chips = {
-  header: "Chips",
-  content: (
-    <p>
-      <Trans i18nKey={`${I18N_PREFIX}.content`} components={{ key: <code className="inline-code" /> }} />
-    </p>
-  ),
+  component: "Chips",
+  content: {
+    description: <Trans i18nKey={`${I18N_PREFIX}.content`} components={{ key: <code className="inline-code" /> }} />,
+  },
   code,
   scope: { Chips },
   descriptionProps: [

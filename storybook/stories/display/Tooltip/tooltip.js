@@ -102,68 +102,70 @@ const globalToltipExample = `
 <div className="customClassName" data-pr-tooltip="This is a div element" style={{ width: '50px', height: '50px', border: '1px solid black' }} />
  `
 
-export const tooltip = {
-  header: "Tooltip",
-  content: (
-    <div>
-      <div className="mb-3">
-        {i18n.t(`${I18N_PREFIX}.content.main`)}
-      </div>
-      <div className="mb-3">
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.start.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.start.body`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-        <Highlighter
-          language="jsx"
-          code={basicExample}
+const tooltipExtra = (
+  <div>
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.start.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.start.body`}
+          components={{ code: <code className="inline-code" /> }}
         />
-      </div>
-      <div className="mb-3">
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.position.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.position.body`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-        <Highlighter
-          language="jsx"
-          code={
-            `<InputText type="text" placeholder="Right" tooltip="Enter your username" tooltipOptions={{position: 'right'}} />`
-          }
-        />
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.position.at`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-        <Highlighter
-          language="jsx"
-          code={
-            `<InputText type="text" tooltip="Enter your username" at="right+5 top" />`
-          }
-        />
-      </div>
-      <div className="mb-3">
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.global.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.global.body`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-        <Highlighter
-          language="jsx"
-          code={globalToltipExample}
-        />
-      </div>
+      </p>
+      <Highlighter
+        language="jsx"
+        code={basicExample}
+      />
     </div>
-  ),
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.position.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.position.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+      <Highlighter
+        language="jsx"
+        code={
+          `<InputText type="text" placeholder="Right" tooltip="Enter your username" tooltipOptions={{position: 'right'}} />`
+        }
+      />
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.position.at`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+      <Highlighter
+        language="jsx"
+        code={
+          `<InputText type="text" tooltip="Enter your username" at="right+5 top" />`
+        }
+      />
+    </div>
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.global.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.global.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+      <Highlighter
+        language="jsx"
+        code={globalToltipExample}
+      />
+    </div>
+  </div>
+)
+
+export const tooltip = {
+  component: "Tooltip",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content.main`),
+    extra: tooltipExtra,
+  },
   code,
   scope: { Tooltip, InputText, Button, Checkbox, Badge },
   descriptionProps: [

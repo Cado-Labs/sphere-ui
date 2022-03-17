@@ -1,17 +1,21 @@
 import { Fragment } from "react"
 
-import { ParamsTable } from "./ParamsTable"
+import { useTranslation } from "@i18n"
+
 import { Content } from "./Content"
-import { Header } from "./Header"
-import { LiveExample } from "./LiveExample"
 import { EventTable } from "./EventTable"
 import { Footer } from "./Footer"
+import { Header } from "./Header"
+import { Highlighter } from "./Highlighter"
+import { LiveExample } from "./LiveExample"
+import { ParamsTable } from "./ParamsTable"
 
 import "./StoryPage.scss"
 
 export function StoryPage ({
   content,
   header,
+  component,
   descriptionProps,
   eventDescriptionProps,
   code,
@@ -19,14 +23,30 @@ export function StoryPage ({
   footer,
 }) {
   const renderContent = () => {
+    const { t } = useTranslation()
+
     return (
-      <Content>{content}</Content>
+      <Content>
+        <div className="mb-3">
+          {content.description}
+        </div>
+
+        <div>
+          <div className="title">{t("components.content.import")}</div>
+          <Highlighter
+            language="jsx"
+            code={`import { ${component} } from "@cadolabs/sphere-ui"`}
+          />
+        </div>
+
+        {content.extra}
+      </Content>
     )
   }
 
   const renderHeader = () => {
     return (
-      <Header>{header}</Header>
+      <Header>{header || component}</Header>
     )
   }
 
@@ -56,7 +76,7 @@ export function StoryPage ({
 
   return (
     <Fragment>
-      {header && renderHeader()}
+      {renderHeader()}
       {content && renderContent()}
       {code && renderLive()}
       {descriptionProps && renderTable()}

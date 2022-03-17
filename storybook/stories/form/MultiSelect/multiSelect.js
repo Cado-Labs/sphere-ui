@@ -39,8 +39,10 @@ const onChangeParams = [
 ]
 
 export const multiSelect = {
-  header: "MultiSelect",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "MultiSelect",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { MultiSelect },
   descriptionProps: [

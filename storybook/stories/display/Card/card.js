@@ -42,8 +42,10 @@ function CardExample () {
 `
 
 export const card = {
-  header: "Card",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "Card",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { Card, Button },
   descriptionProps: [

@@ -115,8 +115,10 @@ const onBlurParams = [
 ]
 
 export const dropdown = {
-  header: "Dropdown",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "Dropdown",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { Dropdown },
   descriptionProps: [

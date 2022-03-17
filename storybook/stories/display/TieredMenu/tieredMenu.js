@@ -153,8 +153,10 @@ function TieredMenuExample () {
 `
 
 export const tieredMenu = {
-  header: "TieredMenu",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "TieredMenu",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { TieredMenu },
   descriptionProps: [

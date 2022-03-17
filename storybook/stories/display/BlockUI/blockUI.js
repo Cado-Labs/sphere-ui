@@ -44,8 +44,10 @@ function BlockUIExample () {
 `
 
 export const blockUI = {
-  header: "BlockUI",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "BlockUI",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { BlockUI, Button, Checkbox },
   descriptionProps: [

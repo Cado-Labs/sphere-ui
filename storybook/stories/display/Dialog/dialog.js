@@ -101,8 +101,10 @@ const onClickParams = [
 ]
 
 export const dialog = {
-  header: "Dialog",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "Dialog",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { Dialog, Button },
   descriptionProps: [
