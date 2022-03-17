@@ -1,0 +1,8 @@
+content: Chip represents entities using icons, labels and images.
+props:
+  label: Defines the text to display.
+  icon: Defines the icon to display.
+  removable: Whether to display a remove icon.
+  style: Inline style of the element.
+  className: Class of the element.
+  onRemove: Callback to invoke when a chip is removed.
