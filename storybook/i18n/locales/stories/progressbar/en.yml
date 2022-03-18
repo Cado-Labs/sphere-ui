@@ -1,0 +1,10 @@
+content: ProgressBar is a process status indicator.
+props:
+  id: Unique identifier of the element.
+  value: Current value of the progress.
+  showValue: Show or hide progress bar value.
+  unit: Unit sign appended to the value.
+  color: Color for the background of the progress.
+  style: Inline style of the element.
+  className: Class of the element.
+  displayValueTemplate: Custom display value template
