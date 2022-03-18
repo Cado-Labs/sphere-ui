@@ -1,0 +1,26 @@
+content:
+  main: Skeleton is a placeholder to display instead of the actual content.
+  start:
+    title: Getting Started
+    body: Skeleton displays a rectangle in its simplest form.
+  circle:
+    title: Circle
+    body: The other option is the <code>circle</code> by setting shape property as "circle".
+  size:
+    title: Size
+    body: In order to customize the size, use <code>width</code> and <code>height</code> properties for rectangles and <code>size</code> for Circle and Square shapes.
+  radius:
+    title: Border Radius
+    body: The default border radius of a rectangle is specified by the theme and can be overriden using the <code>borderRadius</code> property.
+  animation:
+    title: Animation
+    body: Animation can be turned of by setting <code>animation</code> to "none".
+props:
+  shape: Shape of the element, options are "rectangle" and "circle".
+  size: Size of the Circle or Square.
+  width: Width of the rectangle element.
+  height: Height of the rectangle element.
+  borderRadius: Border radius of the element, defaults to value from theme.
+  animation: Type of the animation, valid options are "wave" and "none".
+  style: Inline style of the component.
+  className: Class of the component.
