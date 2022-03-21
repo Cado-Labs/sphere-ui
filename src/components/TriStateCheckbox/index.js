@@ -1,21 +1,17 @@
 import React from "react"
-import { Checkbox as PrimeCheckbox } from "primereact/checkbox"
+import { TriStateCheckbox as PrimeTriStateCheckbox } from "primereact/tristatecheckbox"
 
 import { filterTooltipOptions } from "../../utils"
 
-export const Checkbox = React.forwardRef(({
+export const TriStateCheckbox = React.forwardRef(({
   id,
   inputRef,
   inputId,
   value,
   name,
-  checked,
   style,
   className,
   disabled,
-  required,
-  readOnly,
-  tabIndex,
   tooltip,
   tooltipOptions,
   ariaLabelledBy,
@@ -24,20 +20,16 @@ export const Checkbox = React.forwardRef(({
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
 
   return (
-    <PrimeCheckbox
+    <PrimeTriStateCheckbox
       ref={ref}
       id={id}
       inputRef={inputRef}
       inputId={inputId}
       value={value}
       name={name}
-      checked={checked}
       style={style}
       className={className}
       disabled={disabled}
-      required={required}
-      readOnly={readOnly}
-      tabIndex={tabIndex}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
       ariaLabelledBy={ariaLabelledBy}
