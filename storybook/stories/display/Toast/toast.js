@@ -177,7 +177,7 @@ const toastExtra = (
 
     <div className="mb-3">
       <div className="title">{i18n.t(`${I18N_PREFIX}.content.show.title`)}</div>
-      <p>{i18n.t(`${I18N_PREFIX}.show.main`)}</p>
+      <p>{i18n.t(`${I18N_PREFIX}.content.show.body`)}</p>
       <Highlighter language="jsx" code={showExample} />
       <Highlighter language="jsx" code={showMethodsExample} />
     </div>

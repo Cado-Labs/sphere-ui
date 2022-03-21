@@ -66,7 +66,7 @@ const tagExtra = (
         <li className="line-height-3">secondary</li>
         <li className="line-height-3">success</li>
         <li className="line-height-3">info</li>
-        <li className="line-height-3">warn</li>
+        <li className="line-height-3">warning</li>
         <li className="line-height-3">help</li>
         <li className="line-height-3">error</li>
       </ul>

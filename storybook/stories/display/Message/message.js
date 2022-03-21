@@ -95,7 +95,7 @@ const messageExtra = (
       <ul>
         <li className="line-height-3">info (default)</li>
         <li className="line-height-3">success</li>
-        <li className="line-height-3">warning</li>
+        <li className="line-height-3">warn</li>
         <li className="line-height-3">error</li>
         <li className="line-height-3">secondary (without icon)</li>
         <li className="line-height-3">help (without icon)</li>
