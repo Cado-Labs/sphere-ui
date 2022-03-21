@@ -64,6 +64,7 @@ export const checkbox = {
   scope: { Checkbox },
   descriptionProps: [
     { name: "id", type: "string", description: `${I18N_PREFIX}.props.id` },
+    { name: "inputRef", type: "React.Ref", description: `${I18N_PREFIX}.props.inputRef` },
     { name: "inputId", type: "string", description: `${I18N_PREFIX}.props.inputId` },
     { name: "value", type: "any", description: `${I18N_PREFIX}.props.value` },
     { name: "name", type: "string", description: `${I18N_PREFIX}.props.name` },

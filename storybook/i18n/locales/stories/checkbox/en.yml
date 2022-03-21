@@ -1,6 +1,7 @@
 content: Checkbox is an extension to standard checkbox element with skinning capabilities.
 props:
   id: Unique identifier of the element.
+  inputRef: Ref to the native checkbox element.
   inputId: Unique identifier of the inner native checkbox.
   value: Value of the checkbox.
   name: Name of the checkbox element.
