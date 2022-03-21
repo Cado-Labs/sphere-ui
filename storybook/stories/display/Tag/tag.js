@@ -49,7 +49,12 @@ const tagExtra = (
 
     <div className="mb-3">
       <div className="title">{i18n.t(`${I18N_PREFIX}.content.icon.title`)}</div>
-      <p>{i18n.t(`${I18N_PREFIX}.content.icon.body`)}</p>
+      <p>{
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.icon.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      }</p>
       <Highlighter language="jsx" code={`<Tag value="New" icon="pi pi-plus" />`} />
     </div>
 
