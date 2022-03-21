@@ -7,4 +7,4 @@ props:
   color: Color for the background of the progress.
   style: Inline style of the element.
   className: Class of the element.
-  displayValueTemplate: Custom display value template
+  displayValueTemplate: Custom display value template.

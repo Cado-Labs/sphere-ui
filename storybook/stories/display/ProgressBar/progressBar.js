@@ -34,10 +34,8 @@ function ProgressBarExample () {
     }, 2000)
 
     return () => {
-      if (interval.current) {
-        clearInterval(interval.current)
-        interval.current = null
-      }
+      clearInterval(interval.current)
+      interval.current = null
     }
   }, [])
 
