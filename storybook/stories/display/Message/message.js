@@ -24,6 +24,12 @@ function MessageExample () {
         <div className="col-12 md:col-3">
           <Message severity="error" text="Message Content" />
         </div>
+        <div className="col-12 md:col-3">
+          <Message severity="secondary" text="Message Content" />
+        </div>
+        <div className="col-12 md:col-3">
+          <Message severity="help" text="Message Content" />
+        </div>
       </div>
 
       <h3>Validation Message</h3>
@@ -87,10 +93,12 @@ const messageExtra = (
         />
       </p>
       <ul>
+        <li className="line-height-3">info (default)</li>
         <li className="line-height-3">success</li>
-        <li className="line-height-3">info</li>
         <li className="line-height-3">warn</li>
         <li className="line-height-3">error</li>
+        <li className="line-height-3">secondary (without icon)</li>
+        <li className="line-height-3">help (without icon)</li>
       </ul>
     </div>
   </div>

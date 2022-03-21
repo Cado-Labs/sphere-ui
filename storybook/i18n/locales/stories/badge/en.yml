@@ -1,7 +1,14 @@
-content: Badge is a small status indicator for another element.
+content:
+  main: Badge is a small status indicator for another element.
+  start:
+    title: Getting Started
+    body: Content of the badge is specified using the <code>value</code> property.
+  severities:
+    title: Severities
+    body: Different color options are available as severity levels.
 props:
   value: Value to display inside the badge.
-  severity: Severity type of the badge, valid options are "success", "info", "warning", "danger".
+  severity: Severity type of the badge.
   size: Size of the badge, valid options are "small", "large" and "xlarge".
   className: Class of the element.
   style: Inline style of the component.
