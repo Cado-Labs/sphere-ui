@@ -16,8 +16,10 @@ import '@cadolabs/sphere-ui/dist/index.css'
 @import '~@cadolabs/sphere-ui/dist/index.css'
 `,
   storybook: `
-# from root folder
-yarn sb:start
+# navigate to storybook folder
+cd storybook
+# install dependencies
+yarn install
 # from the storybook folder use
 yarn storybook
 `,

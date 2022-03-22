@@ -29,6 +29,7 @@ yarn build --watch # Runs the project with the ability to watch for changes and 
 yarn link # Create a symlink in @cadolabs/sphere-ui
 cd storybook
 yarn link @cadolabs/sphere-ui # Pin the symlink
+yarn install # Install dependencies
 yarn storybook # Run storybook
 `,
 
