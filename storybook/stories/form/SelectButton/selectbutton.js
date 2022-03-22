@@ -36,8 +36,10 @@ const onChangeParams = [
 ]
 
 export const selectbutton = {
-  header: "SelectButton",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "SelectButton",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { SelectButton },
   descriptionProps: [

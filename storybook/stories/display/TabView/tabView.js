@@ -219,53 +219,54 @@ template: (options) => {
   // options.selected
   // options.ariaControls
 }
-
 `
 
-export const tabView = {
-  header: "TabView",
-  content: (
-    <div>
-      <div className="mb-3">
-        {i18n.t(`${I18N_PREFIX}.content.main`)}
-      </div>
-      <div className="mb-3">
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.start.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.start.body`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-      </div>
-      <div className="mb-3">
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.controlled.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.controlled.body`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-        <Highlighter language="jsx" code={controlledExample} />
-      </div>
-      <div className="mb-3">
-        <div className="title"h3>{i18n.t(`${I18N_PREFIX}.content.uncontrolled.title`)}</div>
-        <p>{i18n.t(`${I18N_PREFIX}.content.uncontrolled.body`)}</p>
-        <Highlighter language="jsx" code={uncontrolledExample} />
-      </div>
-      <div>
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.template.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.template.body`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-        <Highlighter language="jsx" code={headerTemplateExample} />
-        <Highlighter language="jsx" code={headerTemplateFunctionExample} />
-      </div>
+const tabViewExtra = (
+  <div>
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.start.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.start.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
     </div>
-  ),
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.controlled.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.controlled.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+      <Highlighter language="jsx" code={controlledExample} />
+    </div>
+    <div className="mb-3">
+      <div className="title"h3>{i18n.t(`${I18N_PREFIX}.content.uncontrolled.title`)}</div>
+      <p>{i18n.t(`${I18N_PREFIX}.content.uncontrolled.body`)}</p>
+      <Highlighter language="jsx" code={uncontrolledExample} />
+    </div>
+    <div>
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.template.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.template.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+      <Highlighter language="jsx" code={headerTemplateExample} />
+      <Highlighter language="jsx" code={headerTemplateFunctionExample} />
+    </div>
+  </div>
+)
+
+export const tabView = {
+  component: "TabView",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content.main`),
+    extra: tabViewExtra,
+  },
   code,
   scope: { TabView, TabPanel, Button, Avatar, Badge },
   footer: (

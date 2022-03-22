@@ -40,8 +40,10 @@ const onChangeParams = [
 ]
 
 export const timePicker = {
-  header: "TimePicker",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "TimePicker",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { TimePicker },
   descriptionProps: [

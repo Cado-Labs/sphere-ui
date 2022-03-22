@@ -54,8 +54,10 @@ function confirmDialogExample () {
 `
 
 export const confirmDialogPage = {
-  header: "confirmDialog",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "confirmDialog",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { confirmDialog, Button, Toast },
   descriptionProps: [

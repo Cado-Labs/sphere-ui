@@ -9,3 +9,5 @@ export default {
 }
 
 export const BlockUI = context => <StoryPage {...blockUI} {...context} />
+
+BlockUI.storyName = "BlockUI"

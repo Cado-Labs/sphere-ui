@@ -22,8 +22,10 @@ function MoneyExample () {
 `
 
 export const money = {
-  header: "Money",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "Money",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { Money },
   descriptionProps: [

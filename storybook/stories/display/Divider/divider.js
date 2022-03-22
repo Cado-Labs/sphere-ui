@@ -152,8 +152,10 @@ function DividerExample () {
 `
 
 export const divider = {
-  header: "Divider",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "Divider",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { Divider, Button, InputText },
   descriptionProps: [

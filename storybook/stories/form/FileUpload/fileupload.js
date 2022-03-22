@@ -175,116 +175,118 @@ const onRemoveParams = [
   { name: "event.file", description: "Selected file." },
 ]
 
-export const fileupload = {
-  header: "FileUpload",
-  content: (
-    <div>
-      <div className="mb-3">
-        {i18n.t(`${I18N_PREFIX}.content.main`)}
-      </div>
-      <div className="mb-3">
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.start.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.start.body`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-        <Highlighter
-          language="jsx"
-          code={`<FileUpload name="demo" url="./upload" />`}
+const fileuploadExtra = (
+  <div>
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.start.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.start.body`}
+          components={{ code: <code className="inline-code" /> }}
         />
-      </div>
-      <div className="mb-3">
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.multiple.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.multiple.body`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-        <Highlighter
-          language="jsx"
-          code={`<FileUpload name="demo[]" url="./upload" multiple />`}
-        />
-      </div>
-      <div className="mb-3">
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.auto.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.auto.body`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-        <Highlighter
-          language="jsx"
-          code={`<FileUpload name="demo" url="./upload" auto />`}
-        />
-      </div>
-      <div className="mb-3">
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.fileTypes.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.fileTypes.body`}
-            components={{
-              code: <code className="inline-code" />,
-              acceptLink: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept" target="_blank" />,
-            }}
-          />
-        </p>
-        <Highlighter
-          language="jsx"
-          code={`<FileUpload name="demo[]" url="./upload" multiple accept="image/*" />`}
-        />
-      </div>
-      <div className="mb-3">
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.fileSize.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.fileSize.body`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-        <Highlighter
-          language="jsx"
-          code={`<FileUpload name="demo" url="./upload" maxFileSize={1000000} />`}
-        />
-      </div>
-      <div className="mb-3">
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.request.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.request.body`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-      </div>
-      <div className="mb-3">
-        <div className="title">{i18n.t(`${I18N_PREFIX}.content.customUpload.title`)}</div>
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.customUpload.body`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-        <Highlighter
-          language="jsx"
-          code={`<FileUpload name="demo[]" url="./upload" customUpload uploadHandler={myUploader} />`}
-        />
-        <Highlighter language="jsx" code={myUploaderExample} />
-        <p>
-          <Trans
-            i18nKey={`${I18N_PREFIX}.content.customUpload.onSelect`}
-            components={{ code: <code className="inline-code" /> }}
-          />
-        </p>
-        <Highlighter
-          language="jsx"
-          code={`<FileUpload onSelect={data => onSelectFile(data.files[0])} />`}
-        />
-      </div>
+      </p>
+      <Highlighter
+        language="jsx"
+        code={`<FileUpload name="demo" url="./upload" />`}
+      />
     </div>
-  ),
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.multiple.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.multiple.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+      <Highlighter
+        language="jsx"
+        code={`<FileUpload name="demo[]" url="./upload" multiple />`}
+      />
+    </div>
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.auto.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.auto.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+      <Highlighter
+        language="jsx"
+        code={`<FileUpload name="demo" url="./upload" auto />`}
+      />
+    </div>
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.fileTypes.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.fileTypes.body`}
+          components={{
+            code: <code className="inline-code" />,
+            acceptLink: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept" target="_blank" />,
+          }}
+        />
+      </p>
+      <Highlighter
+        language="jsx"
+        code={`<FileUpload name="demo[]" url="./upload" multiple accept="image/*" />`}
+      />
+    </div>
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.fileSize.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.fileSize.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+      <Highlighter
+        language="jsx"
+        code={`<FileUpload name="demo" url="./upload" maxFileSize={1000000} />`}
+      />
+    </div>
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.request.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.request.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+    </div>
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.customUpload.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.customUpload.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+      <Highlighter
+        language="jsx"
+        code={`<FileUpload name="demo[]" url="./upload" customUpload uploadHandler={myUploader} />`}
+      />
+      <Highlighter language="jsx" code={myUploaderExample} />
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.customUpload.onSelect`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+      <Highlighter
+        language="jsx"
+        code={`<FileUpload onSelect={data => onSelectFile(data.files[0])} />`}
+      />
+    </div>
+  </div>
+)
+
+export const fileupload = {
+  component: "FileUpload",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content.main`),
+    extra: fileuploadExtra,
+  },
   code,
   scope: { FileUpload, Toast, InputText, Button },
   descriptionProps: [

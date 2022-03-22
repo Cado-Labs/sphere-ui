@@ -1,0 +1,43 @@
+content:
+  main: Toast is used to display messages in an overlay.
+  start:
+    title: Getting Started
+    body: A single message is represented by the Message interface that defines various properties such as <code>severity</code>, <code>summary</code> and <code>detail</code>. Messages are displayed by using the <code>show</code> method on the <code>ref</code> of the <code>Toast</code> instance.
+  severities:
+    title: Severities
+    body: There are four possible values for the severity of a message. Each severity renders its own icon in messages.
+  show:
+    title: Showing Messages
+    body: Show method accepts either a single message or an array of messages.
+  closable:
+    title: Closable
+    body: Toasts are closable by default resulting in a close icon being displayed on top right corner. In order to disable closable messages, set <code>closable</code> to false.
+  sticky:
+    title: Sticky
+    body: Messages are cleared automatically after the timeout of 3 seconds. Use <code>sticky</code> mode to make them stay until they are manually removed.
+  position:
+    title: Position
+    body: There are four positions available for the toast container defined by the <code>position</code> property that defaults to "top-right". Other valid values are "top-left", "bottom-left" and "bottom-right"
+  clear:
+    title: Clearing Messages
+    body: <code>clear</code> method removes all messages from Toast.
+props:
+  id: Unique identifier of the element.
+  className: Class of the element.
+  style: Inline style of the element.
+  baseZIndex: Base zIndex value to use in layering.
+  position: Position of the toast in viewport, valid values are "top-right", "top-left", "bottom-left" and "bottom-right".
+  onClick: Callback to invoke when a message gets clicked.
+  onRemove: Callback to invoke when a message is removed.
+  onShow: Callback to invoke when message becomes visible.
+  onHide: Callback to invoke when message becomes hidden.
+header:
+  message: Message structure
+message:
+  severity: Severity of the message.
+  summary: Summary content of the message.
+  detail: Detail content of the message.
+  closable: Whether the message can be closed manually using the close icon.
+  sticky: When enabled, message is not removed automatically.
+  className: Class of the message.
+  style: Inline style of the message.

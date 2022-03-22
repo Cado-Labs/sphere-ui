@@ -1,0 +1,14 @@
+content: TriStateCheckbox is used to select either "true", "false" or "null" as the value.
+props:
+  id: Unique identifier of the element.
+  inputRef: Ref to the native checkbox element.
+  inputId: Unique identifier of the native checkbox element.
+  value: Value of the TriStateCheckbox.
+  name: Name of the checkbox element.
+  style: Inline style of the element.
+  className: Class of the element.
+  disabled: When present, it specifies that the element value cannot be altered.
+  tooltip: Content of the tooltip.
+  tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
+  ariaLabelledBy: Establishes relationships between the component and label(s) where its value should be one or more element IDs.
+  onChange: Callback to invoke on value change

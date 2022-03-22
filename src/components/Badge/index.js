@@ -9,7 +9,11 @@ export const Badge = React.forwardRef(({
   className,
   style,
 }, ref) => {
-  const badgeClassName = cn(className, { "p-badge-sm": size === "small" })
+  const badgeClassName = cn(className, {
+    "p-badge-sm": size === "small",
+    "p-badge-secondary": severity === "secondary",
+    "p-badge-help": severity === "help",
+  })
 
   return (
     <PrimeBadge

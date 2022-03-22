@@ -1,0 +1,21 @@
+content:
+  main: Displays an image with preview and tranformation options.
+  start:
+    title: Getting Started
+    body: Image is used as the native <code>img</code> element and supports all properties that the native element has.
+  preview:
+    title: Preview
+    body: Preview mode displays a modal layer when the image is clicked that provides transformation options such as rotating and zooming.
+props:
+  preview: Controls the preview functionality.
+  src: Path to the image you want to embed.
+  alt: Text description of the image.
+  width: Width of the image.
+  height: Height of the image.
+  downloadable: Adds a download button to the preview control menu.
+  containerStyle: Inline style of the image container.
+  containerClassName: Class of the image container.
+  imageStyle: Inline style of the image element.
+  imageClassName: Class of the image element.
+  onShow: Triggered when the preview overlay is shown.
+  onHide: Triggered when the preview overlay is hidden.

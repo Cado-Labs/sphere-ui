@@ -40,8 +40,10 @@ const onChangeParams = [
 ]
 
 export const dateTimePicker = {
-  header: "DateTimePicker",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "DateTimePicker",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { DateTimePicker },
   descriptionProps: [

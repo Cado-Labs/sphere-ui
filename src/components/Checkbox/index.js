@@ -5,6 +5,7 @@ import { filterTooltipOptions } from "../../utils"
 
 export const Checkbox = React.forwardRef(({
   id,
+  inputRef,
   inputId,
   value,
   name,
@@ -26,6 +27,7 @@ export const Checkbox = React.forwardRef(({
     <PrimeCheckbox
       ref={ref}
       id={id}
+      inputRef={inputRef}
       inputId={inputId}
       value={value}
       name={name}

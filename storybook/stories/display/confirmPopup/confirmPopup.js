@@ -63,8 +63,10 @@ const onHideParams = [
 ]
 
 export const confirmPopupPage = {
-  header: "confirmPopup",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "confirmPopup",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { confirmPopup, Button, Toast },
   descriptionProps: [

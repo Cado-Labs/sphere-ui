@@ -89,8 +89,10 @@ const onChangeParams = [
 ]
 
 export const radiobutton = {
-  header: "RadioButton",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "RadioButton",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { RadioButton },
   descriptionProps: [

@@ -51,8 +51,10 @@ const onChangeParams = [
 ]
 
 export const datePicker = {
-  header: "DatePicker",
-  content: i18n.t(`${I18N_PREFIX}.content`),
+  component: "DatePicker",
+  content: {
+    description: i18n.t(`${I18N_PREFIX}.content`),
+  },
   code,
   scope: { DatePicker },
   descriptionProps: [
