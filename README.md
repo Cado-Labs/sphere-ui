@@ -37,21 +37,17 @@ import UI from "@cadolabs/sphere-ui"
 
 ## Storybook
 
-### At the root of the application
-
-run
+navigate to storybook folder
 
 ```sh
-yarn sb:start
+cd storybook
 ```
 
-build
+install dependencies
 
 ```sh
-yarn sb:build
+yarn install
 ```
-
-### From the storybook folder
 
 run
 
