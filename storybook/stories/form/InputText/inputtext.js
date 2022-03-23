@@ -148,7 +148,7 @@ const inputTextExtra = (
       </p>
       <Highlighter
         language="jsx"
-        code={`<InputText keyfilter={/^[^#<>*!]+$/}/>`}
+        code={`<InputText keyfilter={/^[^#<>*!]+$/} />`}
       />
     </div>
   </div>
