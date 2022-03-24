@@ -1,0 +1,15 @@
+content:
+  main: InputTextarea add styling and autoResize functionality to standard textarea element.
+  start:
+    title: Getting Started
+    body: InputTextarea is used as a controlled input with <code>value</code> and <code>onChange</code> properties.
+  autoresize:
+    title: AutoResize
+    body: In auto resize mode, textarea grows instead of displaying a scrollbar.
+  properties:
+    title: Properties
+    body: InputTextarea passes any attribute to the underlying textarea element. Additional properties are shown below.
+props:
+  autoResize: When present, height of textarea changes as being typed.
+  tooltip: Content of the tooltip.
+  tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
