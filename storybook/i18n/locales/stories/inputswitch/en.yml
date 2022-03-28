@@ -1,0 +1,22 @@
+content:
+  main: InputSwitch is used to select a boolean value.
+  start:
+    title: Getting Started
+    body: InputSwitch is used as a controlled input with <code>checked</code> and <code>onChange</code> properties.
+props:
+  id: Unique identifier of the element.
+  inputRef: Ref to the native checkbox element.
+  style: Inline style of the element.
+  className: Class of the element.
+  inputId: Identifier of the input element.
+  name: Name of the input element.
+  checked: Specifies whether a component should be checked or not.
+  trueValue: Value in checked state.
+  falseValue: Value in unchecked state.
+  disabled: When present, it specifies that the component should be disabled.
+  tooltip: Content of the tooltip.
+  tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
+  ariaLabelledBy: Establishes relationships between the component and label(s) where its value should be one or more element IDs.
+  onChange: Callback to invoke on value change.
+  onFocus: Callback to invoke when the element receives focus.
+  onBlur: Callback to invoke when the element loses focus.

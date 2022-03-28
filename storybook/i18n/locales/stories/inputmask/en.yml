@@ -1,0 +1,40 @@
+content:
+  main: InputMask component is used to enter input in a certain format such as numeric, date, currency, email and phone.
+  start:
+    title: Getting Started
+    body: InputMask is used as a controlled component with <code>value</code> and <code>onChange</code> properties.
+  mask:
+    title: Mask
+    body: Mask format can be a combination of the the following built-in definitions.
+  slotchar:
+    title: SlotChar
+    body: Underscore <code>_</code> is the default placeholder for a mask and this can be customized using <code>slotChart</code> option.
+  optional:
+    title: Optional Values
+    body: If the input does not complete the mask definition, it is cleared by default. Use <code>autoClear</code> property to control this behavior. In addition, certain part of a mask can be made optional by using <code>?</code> symbol where anything after the question mark becomes optional.
+props:
+  id: Unique identifier of the element.
+  inputRef: Ref to the native input element.
+  value: Value of the component.
+  type: Native input type.
+  mask: Mask pattern.
+  slotChar: Placeholder character in mask, default is underscore.
+  autoClear: Clears the incomplete value on blur.
+  unmask: Defines if model sets the raw unmasked value to bound value or the formatted mask value.
+  style: Inline style of the element.
+  className: Class of the element.
+  placeholder: Advisory information to display on input.
+  size: Size of the input field.
+  maxLength: Maximum number of character allows in the input field.
+  tabIndex: Specifies tab order of the element.
+  disabled: When present, it specifies that the element value cannot be altered.
+  readOnly: When present, it specifies that an input field is read-only.
+  name: Name of the input field.
+  required: When present, it specifies that the element must be filled out before submitting the form.
+  tooltip: Content of the tooltip.
+  tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
+  ariaLabelledBy: Establishes relationships between the component and label(s) where its value should be one or more element IDs.
+  onComplete: Callback to invoke on when user completes the mask pattern.
+  onChange: Callback to invoke on value change.
+  onFocus: Callback to invoke when input receives focus.
+  onBlur: Callback to invoke when input loses focus.

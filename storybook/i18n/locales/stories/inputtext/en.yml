@@ -1,0 +1,17 @@
+content:
+  main: InputText is an extension to standard input element with theming and keyfiltering.
+  start:
+    title: Getting Started
+    body: InputText is used as a controlled input with <code>value</code> and <code>onChange</code> properties.
+  properties:
+    title: Properties
+    body: InputText passes any valid attribute to the underlying input element. Extended properties are shown below.
+  keyfilter:
+    title: KeyFilter
+    body: InputText has built-in key filtering support to block certain keys. The value of the filter can either a built-in regular expression or a custom one. Following input only accepts integers.
+    builtinFilters: Commonly used cases have their own built-in shortcuts.
+    customFilters: "A custom filter is enabled by binding a regular expression, an example that blocks special characters would be:"
+props:
+  keyfilter: Format definition of the keys to block.
+  tooltip: Content of the tooltip.
+  tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.

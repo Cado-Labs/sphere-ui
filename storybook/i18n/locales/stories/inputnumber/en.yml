@@ -1,0 +1,60 @@
+content:
+  main: InputNumber is an input component to provide numerical input.
+  start:
+    title: Getting Started
+    body: InputNumber is used as a controlled input with <code>value</code> and <code>onValueChange</code> properties. Component always provides a number type although formatting on the input is a string.
+    integers: By default only integers value are allowed when there is no other configuration.
+    fractions: Fractions are configured with the <code>minFractionDigits</code> property. Optionally <code>maxFractionDigits</code> can be used to defined a boundary for the maximum digits.
+    locale: <code>locale</code> option is available to set the localization information such as grouping and decimal symbols where default value is the browser locale. Locales are defined per <langLink>BCP Language Tag</langLink>.
+  prefixAndSuffix:
+    title: Prefix and Suffix
+    body: Custom texts e.g. units can be placed before or after the input section with the <code>prefix</code> and <code>suffix</code> properties.
+  buttons:
+    title: Buttons
+    body: Step buttons is enabled using the <code>showButtons</code> option. Note that even there are no buttons, up and down arrow keys can be used to spin the values with keyboard.
+  step:
+    title: Step
+    body: Step factor is 1 by default and can be customized with <code>step</code> option.
+  boundaries:
+    title: Min and Max Boundaries
+    body: Value to be entered can be restricted by configuring the <code>min</code> and <code>max</code> options.
+props:
+  value: Value of the component.
+  inputRef: Ref to the native input element.
+  format: Whether to format the value.
+  showButtons: Displays step buttons.
+  locale: Locale to be used in formatting.
+  prefix: Text to display before the value.
+  suffix: Text to display after the value.
+  useGrouping: Whether to use grouping separators, such as thousands separators or thousand/lakh/crore separators.
+  minFractionDigits: The minimum number of fraction digits to use. Possible values are from 0 to 20; the default for is 0.
+  maxFractionDigits: The maximum number of fraction digits to use. Possible values are from 0 to 20; the default formatting is the larger of minimumFractionDigits and 3.
+  id: Identifier of the element.
+  name: Name of the input element.
+  type: Type of the input element.
+  allowEmpty: Determines whether the input field is empty.
+  step: Step factor to increment/decrement the value.
+  min: Mininum boundary value.
+  max: Maximum boundary value.
+  disabled: When present, it specifies that the element should be disabled.
+  required: When present, it specifies that an input field must be filled out before submitting the form.
+  tabIndex: Index of the element in tabbing order.
+  autoFocus: When present, it specifies that the component should automatically get focus on load.
+  pattern: The pattern attribute specifies a regular expression that the element's value is checked against on form submission.
+  inputMode: The inputmode attribute provides a hint to browsers for devices with onscreen keyboards to help them decide which keyboard to display.
+  placeholder: Hint text for the input field.
+  readOnly: When present, it specifies that the element should be read-only.
+  size: Size of the input field.
+  style: Inline style of the component.
+  className: Class of the element.
+  inputId: Identifier of the input element.
+  inputStyle: Inline style of the input field.
+  inputClassName: Class of the input field.
+  tooltip: Content of the tooltip.
+  tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
+  ariaLabelledBy: Establishes relationships between the component and label(s) where its value should be one or more element IDs.
+  onValueChange: Callback to invoke after validation check and value change.
+  onChange: Callback to invoke on value change.
+  onFocus: Callback to invoke when input receives focus.
+  onBlur: Callback to invoke when input loses focus.
+  onKeyDown: Callback to invoke when the key pressed.

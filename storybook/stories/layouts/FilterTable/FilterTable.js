@@ -5,7 +5,7 @@ import { useTranslation } from "@i18n"
 import { LiveExample } from "@components"
 
 const code = `
-function FormExample () {
+function FilterTableExample () {
   const [value, setValue] = React.useState("")
 
   const renderTitle = () => {
