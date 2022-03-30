@@ -124,3 +124,6 @@ pages:
     title: DataTable Templating
     description: Custom content at header, body and footer sections are supported via templating.
     content: Field data of a corresponding row is displayed as the cell content by default, this can be customized using templating where current row data and column properties are passed to the body template. On the other hand, <code>header</code> and <code>footer</code> properties of a column are used to define the content of these sections by accepting either simple string values or JSX for advanced content. Similarly <code>DataTable</code> itself also provides <code>header</code> and <code>footer</code> properties for the main header and footer of the table.
+  size:
+    title: DataTable Size
+    description: In addition to the regular table, a smal and a large version are available with different paddings.
