@@ -36,7 +36,7 @@ function BasicDataTableExample () {
 export const basic = {
   header: i18n.t(`${I18N_PREFIX}.title`),
   content: {
-    description: i18n.t(`${I18N_PREFIX}.body`),
+    description: i18n.t(`${I18N_PREFIX}.description`),
   },
   code,
   scope: { DataTable, Column },
