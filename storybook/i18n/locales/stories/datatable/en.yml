@@ -127,3 +127,6 @@ pages:
   size:
     title: DataTable Size
     description: In addition to the regular table, a smal and a large version are available with different paddings.
+  gridlines:
+    title: DataTable GridLines
+    description: "Enabling showGridlines displays borders between cells. Note: Some themes may always display gridlines by design."
