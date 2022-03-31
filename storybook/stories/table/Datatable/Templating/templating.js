@@ -26,18 +26,6 @@ function TemplatingDataTableExample () {
     instock: "success",
   }
 
-  const formatCurrency = value => {
-    return (
-      <Money
-        money={[value, "USD"]}
-        precision={2}
-        enforcePrecision
-        delimiter={"."}
-        separator={" "}
-      />
-    )
-  }
-
   const imageBodyTemplate = rowData => {
     const imageUrl = "https://www.primefaces.org/primereact/images/product/" + rowData.image
     return (
@@ -51,7 +39,15 @@ function TemplatingDataTableExample () {
   }
 
   const priceBodyTemplate = rowData => {
-    return formatCurrency(rowData.price)
+    return (
+      <Money
+        money={[rowData.price, "USD"]}
+        precision={2}
+        enforcePrecision
+        delimiter={"."}
+        separator={" "}
+      />
+    )
   }
 
   const ratingBodyTemplate = rowData => {

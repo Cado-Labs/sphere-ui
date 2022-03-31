@@ -133,3 +133,6 @@ pages:
   pagination:
     title: DataTable Pagination
     description: Pagination is a separate component, which can be used with DataTable. It supports a backend-based pagination with data fetching on every page click.
+  sort:
+    title: DataTable Sort
+    description: Enabling sortable property on a column is enough to make a column sortable. Multiple column sorting is enabled using <code>sortMode</code> property and used with <code>metaKey</code>.
