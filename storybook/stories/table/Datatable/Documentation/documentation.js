@@ -350,7 +350,7 @@ export const documentation = {
     { name: "tabIndex", type: "number", description: `${I18N_PREFIX}.props.tabIndex` },
     { name: "stateKey", type: "string", description: `${I18N_PREFIX}.props.stateKey` },
     { name: "stateStorage", type: "string", default: "session", description: `${I18N_PREFIX}.props.stateStorage` },
-    { name: "editMode", type: "string", default: "cell", description: `${I18N_PREFIX}.props.editMode` },
+    { name: "editMode", type: "boolean", default: false, description: `${I18N_PREFIX}.props.editMode` },
     { name: "editingRows", type: "array|object", default: "cell", description: `${I18N_PREFIX}.props.editingRows` },
     { name: "showGridlines", type: "boolean", default: false, description: `${I18N_PREFIX}.props.showGridlines` },
     { name: "size", type: "string", default: "normal", description: `${I18N_PREFIX}.props.size` },

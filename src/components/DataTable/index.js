@@ -59,7 +59,7 @@ export const DataTable = React.forwardRef(({
   tabIndex = 0,
   stateKey,
   stateStorage = "session",
-  editMode = "cell",
+  editMode = false,
   editingRows,
   showGridlines = false,
   size = "normal",
@@ -198,7 +198,7 @@ export const DataTable = React.forwardRef(({
       tabIndex={tabIndex}
       stateKey={stateKey}
       stateStorage={stateStorage}
-      editMode={editMode}
+      editMode={editMode ? "row" : null}
       editingRows={editingRows}
       showGridlines={showGridlines}
       size={size}
