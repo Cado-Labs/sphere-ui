@@ -1,6 +1,6 @@
 import React from "react"
 import { Column as PrimeColumn } from "primereact/column"
-
+// TODO: убрать пропсы, сделать просто реэкспорт
 export const Column = React.forwardRef(({
   field,
   sortField,
@@ -51,6 +51,9 @@ export const Column = React.forwardRef(({
   selectionMode = false, // (сделать булевым, если true, то показывается чекбокс),
   columnKey,
 }, ref) => {
+  // console.log("selectionMode", selectionMode)
+  console.log("COLUMN")
+
   return (
     <PrimeColumn
       ref={ref}

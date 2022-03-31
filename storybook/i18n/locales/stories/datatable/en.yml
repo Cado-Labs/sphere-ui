@@ -111,7 +111,7 @@ columnProps:
   rowEditor: Displays icons to edit row.
   exportable: Defines whether the column is exported or not.
   # reorderable: Used to defined reorderableColumns per column when reorderableColumns of table is enabled, defaults to value of reorderableColumns.
-  selectionMode: Whether column based selection mode is enabled.
+  selectionMode: Defines column based selection mode, options are "single" and "multiple".
   # columnKey: Identifier of a column if field property is not defined. Only utilized by reorderableColumns feature at the moment.
 pages:
   basic:
@@ -136,3 +136,7 @@ pages:
   sort:
     title: DataTable Sort
     description: Enabling sortable property on a column is enough to make a column sortable. Multiple column sorting is enabled using <code>sortMode</code> property and used with <code>metaKey</code>.
+  selection:
+    title: DataTable Selection
+    description: DataTable provides checkbox selection mode. Selected rows or cells are bound to the selection property and <code>onRowSelect</code>-<code>onRowUnselect</code> events are provided as optional callbacks.
+    content: DataTable provides single and multiple selection modes on click of a row or cell. Selected rows are bound to the <code>selection</code> property for reading and updated using <code>onSelectionChange</code> callback. Column based selection can be done using radio buttons or checkboxes using <code>selectionMode</code> of a particular column. In addition <code>onRowSelect</code>-<code>onRowUnselect</code> / <code>onCellSelect</code>-<code>onCellUnselect</code> events are provided as optional callbacks.
