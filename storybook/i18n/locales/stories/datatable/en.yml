@@ -143,3 +143,6 @@ pages:
   edit:
     title: DataTable Edit
     description: Row editing provides a rapid and user friendly way to manipulate data. Row editing toggles the visibility of the all editors in the row at once and provides additional options to save and cancel editing.
+  scroll:
+    title: DataTable Scroll
+    description: DataTable supports both horizontal and vertical scrolling as well as frozen columns and rows. Scrollable <code>DataTable</code> is enabled using <code>scrollable</code> property and <code>scrollHeight</code> to define the viewport height.
