@@ -146,3 +146,6 @@ pages:
   scroll:
     title: DataTable Scroll
     description: DataTable supports both horizontal and vertical scrolling as well as frozen columns and rows. Scrollable <code>DataTable</code> is enabled using <code>scrollable</code> property and <code>scrollHeight</code> to define the viewport height.
+  style:
+    title: DataTable Styling
+    description: Particular rows and cells can be styled based on data.
