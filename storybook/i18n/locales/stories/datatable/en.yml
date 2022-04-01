@@ -144,3 +144,9 @@ pages:
   export:
     title: DataTable Export
     description: DataTable can export its data to various formats. Column exporting is enabled using <code>exportable</code> property.
+  responsive:
+    title: DataTable Responsive
+    description: DataTable responsive layout can be achieved in two ways; first approach is displaying a horizontal scrollbar for smaller screens and second one is defining a breakpoint to display the cells of a row as stacked.
+    layouts:
+      scroll: Set <code>responsiveLayout</code> to scroll to enabled this layout. Note that, when scroll mode is enabled table-layout automatically switches to auto from fixed as a result table widths are likely to differ and resizable columns are not supported. Read more about <layoutLink>table-layout</layoutLink> for more details.
+      stack: In stack layout, columns are displayed as stacked after a certain breakpoint. Default is '960px'.
