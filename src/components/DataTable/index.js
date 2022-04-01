@@ -65,6 +65,7 @@ export const DataTable = React.forwardRef(({
   globalFilterFields,
   showSelectionElement,
   isDataSelectable,
+  columnKey,
   onSort,
   onPage,
   onFilter,
@@ -144,6 +145,7 @@ export const DataTable = React.forwardRef(({
       globalFilterFields={globalFilterFields}
       showSelectionElement={showSelectionElement}
       isDataSelectable={isDataSelectable}
+      columnKey={columnKey}
       onSort={onSort}
       onPage={onPage}
       onFilter={onFilter}

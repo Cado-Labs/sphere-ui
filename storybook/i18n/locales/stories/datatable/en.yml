@@ -104,9 +104,7 @@ columnProps:
   rowReorder: Whether this column displays an icon to reorder the rows.
   rowEditor: Displays icons to edit row.
   exportable: Defines whether the column is exported or not.
-  # reorderable: Used to defined reorderableColumns per column when reorderableColumns of table is enabled, defaults to value of reorderableColumns.
   selectionMode: Defines column based selection mode, options are "single" and "multiple".
-  # columnKey: Identifier of a column if field property is not defined. Only utilized by reorderableColumns feature at the moment.
 pages:
   basic:
     title: DataTable Basic
