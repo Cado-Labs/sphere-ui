@@ -1,0 +1,152 @@
+content:
+  main: DataTable displays data in tabular format. Column component is required.
+  start:
+    title: Getting Started
+    body: <code>DataTable</code> requires a value as an array of objects and columns defined with <code>Column</code> component.
+  column:
+    title: Column Component
+    body: Column component defines various options to specify corresponding features. See properties below.
+props:
+  id: Unique identifier of the element.
+  value: An array of objects to display.
+  header: Header content of the table.
+  footer: Footer content of the table.
+  style: Inline style of the component.
+  className: Class of the component.
+  tableStyle: Inline style of the table element.
+  tableClassName: Class of the table element.
+  first: Index of the first row to be displayed.
+  lazy: Defines if data is loaded and interacted with in lazy manner.
+  sortField: Name of the field to sort data by default.
+  sortOrder: Order to sort the data by default.
+  multiSortMeta: An array of SortMeta objects to sort the data by default in multiple sort mode.
+  sortMode: Defines whether sorting works on single column or on multiple columns.
+  defaultSortOrder: Default sort order of an unsorted column.
+  removableSort: When enabled, columns can have an un-sorted state.
+  emptyMessage: Text to display when there is no data.
+  selection: Selected row in single mode or an array of values in multiple mode.
+  onSelectionChange: Callback to invoke when selection changes.
+  dataKey: A property to uniquely identify a record in data.
+  selectionPageOnly: When enabled with paginator and checkbox selection mode, the select all checkbox in the header will select all rows on the current page.
+  showSelectAll: Whether to show checkbox for all rows selecting.
+  selectAll: Value of selectAll checkbox in controlled mode.
+  headerColumnGroup: ColumnGroup component for header.
+  footerColumnGroup: ColumnGroup component for footer.
+  scrollable: When specified, enables horizontal and/or vertical scrolling.
+  scrollHeight: Height of the scroll viewport.
+  scrollDirection: Orientation of the scrolling, options are "vertical", "horizontal" and "both".
+  frozenWidth: Width of the frozen part in scrollable DataTable.
+  frozenValue: Items of the frozen part in scrollable DataTable.
+  csvSeparator: Character to use as the csv separator.
+  exportFilename: Name of the exported file.
+  autoLayout: Whether the cell widths scale according to their content or not.
+  rowClassName: "Function that takes the row data and returns an object in \"{'styleclass' : condition}\" format to define a classname for a particular now."
+  cellClassName: "Function that takes the cell data and returns an object in \"{'styleclass' : condition}\" format to define a classname for a particular now."
+  loading: Displays a loader to indicate data load is in progress.
+  tabIndex: Index of the element in tabbing order.
+  editMode: Whether to enable editing rows mode or not.
+  editingRows: A collection of rows to represent the current editing data in row edit mode.
+  showGridlines: Whether to show grid lines between cells.
+  size: "Define to set alternative sizes. Valid values: \"small\", \"normal\" and \"large\"."
+  responsiveLayout: Defines the responsive mode, valid options are "stack" and "scroll".
+  breakpoint: The breakpoint to define the maximum width boundary when using stack responsive layout.
+  onRowEditComplete: Callback to invoke when row edit is completed.
+  showSelectionElement: Function that returns a boolean by passing the row data to decide if the radio or checkbox should be displayed per row.
+  isDataSelectable: Function that returns a boolean to decide whether the data should be selectable.
+  onSort: Callback to invoke on sort.
+  onAllRowsSelect: Callback to invoke when all rows are selected using the header checkbox.
+  onAllRowsUnselect: Callback to invoke when all rows are unselected using the header checkbox.
+  onRowSelect: Callback to invoke when a row is selected.
+  onRowUnselect: Callback to invoke when a row is unselected.
+  onSelectAllChange: Callback to invoke when selectAll checkbox clicked.
+  onValueChange: Callback to invoke after filtering and sorting to pass the rendered value.
+  rowEditValidator: Callback to invoke to validate the editing row when the save icon is clicked on row editing mode.
+  onRowEditInit: Callback to invoke when the editing icon is clicked on row editing mode.
+  onRowEditSave: Callback to invoke when the save icon is clicked on row editing mode.
+  onRowEditCancel: Callback to invoke when the cancel icon is clicked on row editing mode.
+  onRowEditChange: Callback to invoke when the row editor is programmatically shown/hidden on row editing mode.
+  exportFunction: A function to implement custom export. Need to return string value.
+header:
+  column: Properties of Column component
+columnProps:
+  field: Property of a row data.
+  sortField: Property of a row data used for sorting, defaults to field.
+  exportField: Property of a row data used for exporting, defaults to field.
+  header: Header content of the column.
+  body: Body content of the column.
+  footer: Footer content of the column.
+  sortable: Defines if a column is sortable.
+  sortFunction: Sort function for custom sorting.
+  dataType: Depending on the dataType of the column, suitable match modes are displayed.
+  align: Aligns the content of the column, valid values are "left", "right" and "center".
+  alignHeader: Aligns the header of the column, valid values are "left", "right" and "center".
+  alignFrozen: Position of a frozen column, valid values are "left" and "right".
+  hidden: Whether the column is rendered.
+  style: Inline style of the column.
+  className: Class of the column.
+  headerStyle: Inline style of the header.
+  headerClassName: Style class of the header.
+  bodyStyle: Inline style of the body.
+  bodyClassName: Class of the body.
+  footerStyle: Inline style of the footer.
+  footerClassName: Class of the footer.
+  frozen: Whether the column is fixed in horizontal scrolling or not.
+  colSpan: Number of columns to span for grouping.
+  rowSpan: Number of rows to span for grouping.
+  editor: Function to provide the cell editor input.
+  cellEditValidator: Validator function to validate the cell input value.
+  cellEditValidatorEvent: Event to trigger the validation, possible values are "click" and "blur".
+  onBeforeCellEditHide: Callback to invoke before the cell editor is hidden.
+  onBeforeCellEditShow: Callback to invoke before the cell editor is shown.
+  onCellEditInit: Callback to invoke when cell edit is initiated.
+  onCellEditComplete: Callback to execute when editor is submitted.
+  onCellEditCancel: Callback to execute when editor is cancelled.
+  rowReorder: Whether this column displays an icon to reorder the rows.
+  rowEditor: Displays icons to edit row.
+  exportable: Defines whether the column is exported or not.
+  selectionMode: Defines column based selection mode, options are "single" and "multiple".
+pages:
+  basic:
+    title: DataTable Basic
+    description: DataTable requires a collection to display along with column components for the representation of the data.
+  dynamic:
+    title: DataTable Dynamic Columns
+    description: Columns can be defined dynamically.
+  templating:
+    title: DataTable Templating
+    description: Custom content at header, body and footer sections are supported via templating.
+    content: Field data of a corresponding row is displayed as the cell content by default, this can be customized using templating where current row data and column properties are passed to the body template. On the other hand, <code>header</code> and <code>footer</code> properties of a column are used to define the content of these sections by accepting either simple string values or JSX for advanced content. Similarly <code>DataTable</code> itself also provides <code>header</code> and <code>footer</code> properties for the main header and footer of the table.
+  size:
+    title: DataTable Size
+    description: In addition to the regular table, a smal and a large version are available with different paddings.
+  gridlines:
+    title: DataTable GridLines
+    description: "Enabling showGridlines displays borders between cells. Note: Some themes may always display gridlines by design."
+  pagination:
+    title: DataTable Pagination
+    description: Pagination is a separate component, which can be used with DataTable. It supports a backend-based pagination with data fetching on every page click.
+  sort:
+    title: DataTable Sort
+    description: Enabling sortable property on a column is enough to make a column sortable. Multiple column sorting is enabled using <code>sortMode</code> property and used with <code>metaKey</code>.
+  selection:
+    title: DataTable Selection
+    description: DataTable provides checkbox selection mode. Selected rows or cells are bound to the selection property and <code>onRowSelect</code>-<code>onRowUnselect</code> events are provided as optional callbacks.
+    content: DataTable provides single and multiple selection modes on click of a row or cell. Selected rows are bound to the <code>selection</code> property for reading and updated using <code>onSelectionChange</code> callback. Column based selection can be done using radio buttons or checkboxes using <code>selectionMode</code> of a particular column. In addition <code>onRowSelect</code>-<code>onRowUnselect</code> / <code>onCellSelect</code>-<code>onCellUnselect</code> events are provided as optional callbacks.
+  edit:
+    title: DataTable Edit
+    description: Row editing provides a rapid and user friendly way to manipulate data. Row editing toggles the visibility of the all editors in the row at once and provides additional options to save and cancel editing.
+  scroll:
+    title: DataTable Scroll
+    description: DataTable supports both horizontal and vertical scrolling as well as frozen columns and rows. Scrollable <code>DataTable</code> is enabled using <code>scrollable</code> property and <code>scrollHeight</code> to define the viewport height.
+  style:
+    title: DataTable Styling
+    description: Particular rows and cells can be styled based on data.
+  export:
+    title: DataTable Export
+    description: DataTable can export its data to various formats. Column exporting is enabled using <code>exportable</code> property.
+  responsive:
+    title: DataTable Responsive
+    description: DataTable responsive layout can be achieved in two ways; first approach is displaying a horizontal scrollbar for smaller screens and second one is defining a breakpoint to display the cells of a row as stacked.
+    layouts:
+      scroll: Set <code>responsiveLayout</code> to scroll to enabled this layout. Note that, when scroll mode is enabled table-layout automatically switches to auto from fixed as a result table widths are likely to differ and resizable columns are not supported. Read more about <layoutLink>table-layout</layoutLink> for more details.
+      stack: In stack layout, columns are displayed as stacked after a certain breakpoint. Default is '960px'.

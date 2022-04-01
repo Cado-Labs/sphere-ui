@@ -31,13 +31,15 @@ export function StoryPage ({
           {content.description}
         </div>
 
-        <div>
-          <div className="title">{t("components.content.import")}</div>
-          <Highlighter
-            language="jsx"
-            code={`import { ${component} } from "@cadolabs/sphere-ui"`}
-          />
-        </div>
+        {component && (
+          <div>
+            <div className="title">{t("components.content.import")}</div>
+            <Highlighter
+              language="jsx"
+              code={`import { ${component} } from "@cadolabs/sphere-ui"`}
+            />
+          </div>
+        )}
 
         {content.extra}
       </Content>
