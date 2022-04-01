@@ -416,8 +416,8 @@ export const documentation = {
         { name: "onCellEditCancel", type: "function", description: `${I18N_PREFIX}.columnProps.onCellEditCancel` },
         { name: "rowReorder", type: "boolean", default: false, description: `${I18N_PREFIX}.columnProps.rowReorder` },
         { name: "rowEditor", type: "boolean", default: false, description: `${I18N_PREFIX}.columnProps.rowEditor` },
-        { name: "exportable", type: "boolean", default: true, description: `${I18N_PREFIX}.columnProps.exportable` },
-        { name: "selectionMode", type: "boolean", default: false, description: `${I18N_PREFIX}.columnProps.exportable` },
+        { name: "exportable", type: "boolean", description: `${I18N_PREFIX}.columnProps.exportable` },
+        { name: "selectionMode", type: "boolean", default: false, description: `${I18N_PREFIX}.columnProps.selectionMode` },
       ]}
     />
   ),

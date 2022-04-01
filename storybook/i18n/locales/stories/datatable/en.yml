@@ -149,3 +149,6 @@ pages:
   style:
     title: DataTable Styling
     description: Particular rows and cells can be styled based on data.
+  export:
+    title: DataTable Export
+    description: DataTable can export its data to various formats. Column exporting is enabled using <code>exportable</code> property.
