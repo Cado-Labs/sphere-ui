@@ -44,8 +44,6 @@ props:
   cellClassName: "Function that takes the cell data and returns an object in \"{'styleclass' : condition}\" format to define a classname for a particular now."
   loading: Displays a loader to indicate data load is in progress.
   tabIndex: Index of the element in tabbing order.
-  stateKey: Unique identifier of a stateful table to use in state storage.
-  stateStorage: "Defines where a stateful table keeps its state, valid values are \"session\" for sessionStorage, \"local\" for localStorage and \"custom\"."
   editMode: Whether to enable editing rows mode or not.
   editingRows: A collection of rows to represent the current editing data in row edit mode.
   showGridlines: Whether to show grid lines between cells.
@@ -68,10 +66,6 @@ props:
   onRowEditCancel: Callback to invoke when the cancel icon is clicked on row editing mode.
   onRowEditChange: Callback to invoke when the row editor is programmatically shown/hidden on row editing mode.
   exportFunction: A function to implement custom export. Need to return string value.
-  customSaveState: "A function to implement custom saveState with stateStorage=\"custom\" state: the object to be stored."
-  customRestoreState: A function to implement custom restoreState with stateStorage="custom". Need to return state object.
-  onStateSave: Callback to invoke table state is saved.
-  onStateRestore: Callback to invoke table state is restored.
 header:
   column: Properties of Column component
 columnProps:

@@ -8,7 +8,6 @@ const EMPTY_MESSAGE = {
 }
 
 export const DataTable = React.forwardRef(({
-  // needed props
   id,
   value,
   header,
@@ -35,11 +34,9 @@ export const DataTable = React.forwardRef(({
   onSelectionChange,
   dataKey,
   selectionPageOnly = false,
-  // не описаны в доке
   showSelectAll = true,
   selectAll = false,
   onSelectAllChange,
-  //
   headerColumnGroup,
   footerColumnGroup,
   filters,
@@ -57,8 +54,6 @@ export const DataTable = React.forwardRef(({
   cellClassName,
   loading = false,
   tabIndex = 0,
-  stateKey,
-  stateStorage = "session",
   editMode = false,
   editingRows,
   showGridlines = false,
@@ -84,65 +79,6 @@ export const DataTable = React.forwardRef(({
   onRowEditCancel,
   onRowEditChange,
   exportFunction,
-  customSaveState,
-  customRestoreState,
-  onStateSave,
-  onStateRestore,
-
-  // unneeded props
-  // alwaysShowPaginator = false, // было true
-  // paginatorPosition = "bottom",
-  // paginatorTemplate = "FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown",
-  // paginatorLeft,
-  // paginatorRight,
-  // paginatorDropdownAppendTo,
-  // pageLinkSize = 5,
-  // currentPageReportTemplate = "({currentPage} of {totalPages})",
-  // selectionMode,
-  // dragSelection = false,
-  // cellSelection = false,
-  // contextMenuSelection,
-  // onContextMenuSelectionChange,
-  // compareSelectionBy = "deepEquals",
-  // metaKeySelection = true,
-  // selectOnEdit = true,
-  // selectionAutoFocus = true,
-  // resizableColumns = false,
-  // columnResizeMode = "fit",
-  // reorderableColumns = false,
-  // filterDelay = 300,
-  // virtualScrollerOptions,
-  // loadingIcon = "pi pi-spinner",
-  // rowHover = false,
-  // stripedRows = false,
-  // expandedRowIcon = "pi pi-chevron-down",
-  // collapsedRowIcon = "pi pi-chevron-right",
-  // showRowReorderElement,
-  // onColumnResizeEnd,
-  // onColumnResizerClick,
-  // onColumnResizerDoubleClick,
-  // onRowClick,
-  // onRowDoubleClick,
-  // onContextMenu,
-  // onColReorder,
-  // onCellClick,
-  // onCellSelect,
-  // onCellUnselect,
-  // onRowReorder,
-  //
-  // не уверен нужны ли
-  // expandedRows,
-  // rowExpansionTemplate,
-  // onRowToggle,
-  // rowGroupMode,
-  // rowGroupHeaderTemplate,
-  // rowGroupFooterTemplate,
-  // groupRowsBy,
-  // expandableRowGroups = false,
-  // onRowExpand,
-  // onRowCollapse,
-  //
-
   children,
 }, ref) => {
   const emptyMessage = customEmptyMessage || EMPTY_MESSAGE[locale().locale]
@@ -161,6 +97,7 @@ export const DataTable = React.forwardRef(({
       paginator={paginator}
       paginatorClassName={paginatorClassName}
       rowsPerPageOptions={rowsPerPageOptions}
+      alwaysShowPaginator={false}
       first={first}
       rows={rows}
       totalRecords={totalRecords}
@@ -196,8 +133,6 @@ export const DataTable = React.forwardRef(({
       cellClassName={cellClassName}
       loading={loading}
       tabIndex={tabIndex}
-      stateKey={stateKey}
-      stateStorage={stateStorage}
       editMode={editMode ? "row" : null}
       editingRows={editingRows}
       showGridlines={showGridlines}
@@ -223,10 +158,6 @@ export const DataTable = React.forwardRef(({
       onRowEditCancel={onRowEditCancel}
       onRowEditChange={onRowEditChange}
       exportFunction={exportFunction}
-      customSaveState={customSaveState}
-      customRestoreState={customRestoreState}
-      onStateSave={onStateSave}
-      onStateRestore={onStateRestore}
     >
       {children}
     </PrimeDataTable>

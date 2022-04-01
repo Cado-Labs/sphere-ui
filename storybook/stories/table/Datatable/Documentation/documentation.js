@@ -259,14 +259,6 @@ const onRowEditCompleteParams = [
   { name: "event.index", description: "Current editing row data index" },
 ]
 
-const onStateSaveParams = [
-  { name: "event.state", description: "Table state" },
-]
-
-const onStateRestoreParams = [
-  { name: "event.state", description: "Table state" },
-]
-
 const exportFunctionParams = [
   { name: "event.data", description: "Field data" },
   { name: "event.field", description: "Column field" },
@@ -348,8 +340,6 @@ export const documentation = {
     { name: "cellClassName", type: "function", description: `${I18N_PREFIX}.props.cellClassName` },
     { name: "loading", type: "boolean", default: false, description: `${I18N_PREFIX}.props.loading` },
     { name: "tabIndex", type: "number", description: `${I18N_PREFIX}.props.tabIndex` },
-    { name: "stateKey", type: "string", description: `${I18N_PREFIX}.props.stateKey` },
-    { name: "stateStorage", type: "string", default: "session", description: `${I18N_PREFIX}.props.stateStorage` },
     { name: "editMode", type: "boolean", default: false, description: `${I18N_PREFIX}.props.editMode` },
     { name: "editingRows", type: "array|object", default: "cell", description: `${I18N_PREFIX}.props.editingRows` },
     { name: "showGridlines", type: "boolean", default: false, description: `${I18N_PREFIX}.props.showGridlines` },
@@ -374,8 +364,6 @@ export const documentation = {
     { name: "onRowEditCancel", params: onRowEditCancelParams, description: `${I18N_PREFIX}.props.onRowEditCancel` },
     { name: "onRowEditChange", params: onRowEditChangeParams, description: `${I18N_PREFIX}.props.onRowEditChange` },
     { name: "onRowEditComplete", params: onRowEditCompleteParams, description: `${I18N_PREFIX}.props.onRowEditComplete` },
-    { name: "onStateSave", params: onStateSaveParams, description: `${I18N_PREFIX}.props.onStateSave` },
-    { name: "onStateRestore", params: onStateRestoreParams, description: `${I18N_PREFIX}.props.onStateRestore` },
     { name: "exportFunction", params: exportFunctionParams, description: `${I18N_PREFIX}.props.exportFunction` },
   ],
   footer: (
