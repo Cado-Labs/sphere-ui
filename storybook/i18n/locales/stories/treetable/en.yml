@@ -1,0 +1,87 @@
+content:
+  main: TreeTable is used to display hierarchical data in tabular format.
+  start:
+    title: Getting Started
+    body: TreeTable component requires an array of TreeNode objects as its <code>value</code> and columns defined with one or more Column components.
+  treenode:
+    title: TreeNode API
+    body: Following properties of the API are currently utilized by the TreeTable.
+  column:
+    title: Column Component
+    body: Column component defines various options to specify corresponding features. See properties below.
+props:
+  id: Unique identifier of the element.
+  value: An array of treenodes to display.
+  header: Header content of the table.
+  footer: Footer content of the table.
+  style: Inline style of the component.
+  className: Style class of the component.
+  tableStyle: Inline style of the table element.
+  tableClassName: Style class of the table element.
+  expandedKeys: An array of keys to represent the state of the tree expansion state in controlled mode.
+  first: Index of the first row to be displayed.
+  lazy: Defines if data is loaded and interacted with in lazy manner.
+  sortField: Name of the field to sort data by default.
+  sortOrder: Order to sort the data by default.
+  multiSortMeta: An array of SortMeta objects to sort the data by default in multiple sort mode.
+  sortMode: Defines whether sorting works on single column or on multiple columns.
+  defaultSortOrder: Default sort order of an unsorted column.
+  removableSort: When enabled, columns can have an un-sorted state.
+  selectionMode: Defines the selection mode, valid values "single", "multiple", and "checkbox".
+  selectionKeys: A single or an array of keys to control the selection state.
+  metaKeySelection: Defines whether metaKey is requred or not for the selection. When true metaKey needs to be pressed to select or unselect an item and when set to false selection of each item can be toggled individually.
+  selectOnEdit: Determines whether the cell editor will be opened when clicking to select any row on Selection and Cell Edit modes.
+  propagateSelectionUp: Whether checkbox selections propagate to ancestor nodes.
+  propagateSelectionDown: Whether checkbox selections propagate to descendant nodes.
+  autoLayout: Whether the cell widths scale according to their content or not.
+  rowClassName: "Function that takes the row data and returns an object in \"{'styleclass' : condition}\" format to define a classname for a particular now."
+  loading: Displays a loader to indicate data load is in progress.
+  tabIndex: Index of the element in tabbing order.
+  scrollable: When specified, enables horizontal and/or vertical scrolling.
+  scrollHeight: Height of the scroll viewport.
+  headerColumnGroup: ColumnCroup component for header.
+  footerColumnGroup: ColumnCroup component for footer.
+  frozenHeaderColumnGroup: ColumnCroup component for header of frozen columns.
+  frozenFooterColumnGroup: ColumnCroup component for footer of frozen columns.
+  frozenWidth: Width of the frozen part in scrollable DataTable.
+  emptyMessage: Text to display when there is no data.
+  showGridlines: Whether to show grid lines between cells.
+  onExpand: Callback to invoke when a node is expanded.
+  onCollapse: Callback to invoke when a node is collapsed.
+  onToggle: Callback to invoke when a node is toggled.
+  onSort: Callback to invoke on sort.
+  onSelect: Callback to invoke when a node is selected.
+  onUnselect: Callback to invoke when a node is unselected.
+  onSelectionChange: Callback to invoke when selection changes.
+header:
+  column: Properties of Column component
+  treenode: TreeNode API
+treenodeProps:
+  key: Unique key of the node.
+  data: Data represented by the node.
+  children: An array of treenodes as children.
+  style: Inline style of the node.
+  className: Style class of the node.
+  selectable: Whether the node is selectable when selection mode is enabled.
+  leaf: Specifies if the node has children. Used in lazy loading.
+columnProps:
+  field: Property of a row data.
+  sortField: Property of a row data used for sorting, defaults to field.
+  header: Header content of the column.
+  body: Body content of the column.
+  footer: Footer content of the column.
+  sortable: Defines if a column is sortable.
+  sortFunction: Sort function for custom sorting.
+  style: Inline style of the column.
+  className: Class of the column.
+  headerStyle: Inline style of the header.
+  headerClassName: Style class of the header.
+  bodyStyle: Inline style of the body.
+  bodyClassName: Class of the body.
+  footerStyle: Inline style of the footer.
+  footerClassName: Class of the footer.
+  frozen: Whether the column is fixed in horizontal scrolling or not.
+  colSpan: Number of columns to span for grouping.
+  rowSpan: Number of rows to span for grouping.
+  editor: Function to provide the cell editor input.
+  cellEditValidator: Validator function to validate the cell input value.
