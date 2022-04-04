@@ -89,3 +89,6 @@ pages:
   templating:
     title: TreeTable Templating
     description: Custom content at header, body and footer sections are supported via templating.
+  pagination:
+    title: TreeTable Pagination
+    description: Pagination is a separate component, which can be used with TreeTable. It supports a backend-based pagination with data fetching on every page click.
