@@ -85,3 +85,7 @@ columnProps:
   rowSpan: Number of rows to span for grouping.
   editor: Function to provide the cell editor input.
   cellEditValidator: Validator function to validate the cell input value.
+pages:
+  templating:
+    title: TreeTable Templating
+    description: Custom content at header, body and footer sections are supported via templating.
