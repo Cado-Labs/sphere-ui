@@ -121,3 +121,6 @@ pages:
       body3: Certain columns can be frozen by using the <code>frozen</code> property of the column component. Widths of the frozen section is specified by the <code>frozenWidth</code> property.
       body4: Note that frozen columns are enabled, frozen and scrollable cells may have content with varying height which leads to misalignment. Provide fixed height to cells to avoid alignment issues.
       body5: When using frozen columns with column grouping, use <code>frozenHeaderColumnGroup</code> and <code>frozenFooterColumnGroup</code> properties along <code>withheaderColumnGroup</code> and <code>footerColumnGroup</code>.
+  style:
+    title: TreeTable Styling
+    description: Particular rows and cells can be styled based on data.
