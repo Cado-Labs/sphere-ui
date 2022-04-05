@@ -205,7 +205,10 @@ const treetableExtra = (
     <div className="mb-3">
       <div className="title">{i18n.t(`${I18N_PREFIX}.content.column.title`)}</div>
       <p>
-        {i18n.t(`${I18N_PREFIX}.content.column.body`)}
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.column.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
       </p>
     </div>
   </div>
@@ -286,6 +289,7 @@ export const documentation = {
         { name: "bodyClassName", type: "string", description: `${I18N_PREFIX}.columnProps.bodyClassName` },
         { name: "footerStyle", type: "object", description: `${I18N_PREFIX}.columnProps.footerStyle` },
         { name: "footerClassName", type: "string", description: `${I18N_PREFIX}.columnProps.footerClassName` },
+        { name: "expander", type: "boolean", default: false, description: `${I18N_PREFIX}.columnProps.expander` },
         { name: "frozen", type: "boolean", default: false, description: `${I18N_PREFIX}.columnProps.frozen` },
         { name: "colSpan", type: "number", description: `${I18N_PREFIX}.columnProps.colSpan` },
         { name: "rowSpan", type: "number", description: `${I18N_PREFIX}.columnProps.rowSpan` },

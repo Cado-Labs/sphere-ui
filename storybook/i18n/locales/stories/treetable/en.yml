@@ -8,7 +8,7 @@ content:
     body: Following properties of the API are currently utilized by the TreeTable.
   column:
     title: Column Component
-    body: Column component defines various options to specify corresponding features. See properties below.
+    body: Column component defines various options to specify corresponding features. See properties below. Notice the <code>expander</code> property in the name column to indicate that this column displays an icon to toggle the child nodes.
 props:
   id: Unique identifier of the element.
   value: An array of treenodes to display.
@@ -80,6 +80,7 @@ columnProps:
   bodyClassName: Class of the body.
   footerStyle: Inline style of the footer.
   footerClassName: Class of the footer.
+  expander: Displays an icon to toggle expansion of children.
   frozen: Whether the column is fixed in horizontal scrolling or not.
   colSpan: Number of columns to span for grouping.
   rowSpan: Number of rows to span for grouping.
@@ -92,3 +93,13 @@ pages:
   pagination:
     title: TreeTable Pagination
     description: Pagination is a separate component, which can be used with TreeTable. It supports a backend-based pagination with data fetching on every page click.
+  sort:
+    title: DataTable Sort
+    description: TreeTable supports both single column and multiple column sorting.
+    content:
+      body1: Enabling <code>sortable</code> property at column component would be enough to make a column sortable. The property to use when sorting is field by default and can be customized using <code>sortField</code>.
+      body2: By default sorting is executed on the clicked column only. To enable multiple field sorting, set <code>sortMode</code> property to "multiple" and use metakey when clicking on another column.
+      body3: In case you'd like to display the table as sorted per a single column by default on mount, use <code>sortField</code> and <code>sortOrder</code> properties in Controlled or Uncontrolled manner. In controlled mode, <code>sortField</code>, <code>sortOrder</code> and <code>onSort</code> properties need to be defined to control the sorting state.
+      body4: In multiple mode, use the <code>multiSortMeta</code> property and bind an array of SortMeta objects instead.
+      body5: In uncontrolled mode, no additional properties need to be enabled. Initial sort field can be still be provided using the <code>sortField</code> property in uncontrolled mode however it is evaluated at initial rendering and ignored in further updates. If you programmatically need to update the sorting state, prefer to use the component as controlled.
+      body6: To customize sorting algorithm, set sortable option to custom and define a <code>sortFunction</code> that sorts the list.
