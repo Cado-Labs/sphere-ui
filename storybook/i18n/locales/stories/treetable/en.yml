@@ -109,3 +109,6 @@ pages:
   colgroup:
     title: TreeTable Column Grouping
     description: Columns can be grouped at header and footer using <code>headerColumnGroup</code> and <code>footerColumnGroup</code> components that both define an array of columns each having colspan and rowspan.
+  edit:
+    title: TreeTable Edit
+    description: Incell editing feature provides a way to quickly edit data inside the table. A cell editor is defined using the <code>editor</code> property that refers to a function to return an input element for the editing. Clicking outside the cell or hitting enter key closes the cell, however this may not be desirable if the input is invalid. In order to decide whether to keep the cell open or not, provide a <code>cellEditValidator</code> function that validates the value.
