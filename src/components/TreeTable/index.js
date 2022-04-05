@@ -19,7 +19,7 @@ export const TreeTable = React.forwardRef(({
   sortMode = "single",
   defaultSortOrder = 1,
   removableSort = false,
-  selectionMode,
+  selectionMode = false,
   selectionKeys,
   metaKeySelection = true,
   selectOnEdit = true,
@@ -66,7 +66,7 @@ export const TreeTable = React.forwardRef(({
       sortMode={sortMode}
       defaultSortOrder={defaultSortOrder}
       removableSort={removableSort}
-      selectionMode={selectionMode}
+      selectionMode={selectionMode ? "checkbox" : null}
       selectionKeys={selectionKeys}
       metaKeySelection={metaKeySelection}
       selectOnEdit={selectOnEdit}

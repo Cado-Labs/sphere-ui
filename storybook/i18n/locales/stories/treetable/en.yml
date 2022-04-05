@@ -27,7 +27,7 @@ props:
   sortMode: Defines whether sorting works on single column or on multiple columns.
   defaultSortOrder: Default sort order of an unsorted column.
   removableSort: When enabled, columns can have an un-sorted state.
-  selectionMode: Defines the selection mode, valid values "single", "multiple", and "checkbox".
+  selectionMode: When enabled, the table rows can be selected.
   selectionKeys: A single or an array of keys to control the selection state.
   metaKeySelection: Defines whether metaKey is requred or not for the selection. When true metaKey needs to be pressed to select or unselect an item and when set to false selection of each item can be toggled individually.
   selectOnEdit: Determines whether the cell editor will be opened when clicking to select any row on Selection and Cell Edit modes.
@@ -94,7 +94,7 @@ pages:
     title: TreeTable Pagination
     description: Pagination is a separate component, which can be used with TreeTable. It supports a backend-based pagination with data fetching on every page click.
   sort:
-    title: DataTable Sort
+    title: TreeTable Sort
     description: TreeTable supports both single column and multiple column sorting.
     content:
       body1: Enabling <code>sortable</code> property at column component would be enough to make a column sortable. The property to use when sorting is field by default and can be customized using <code>sortField</code>.
@@ -103,3 +103,6 @@ pages:
       body4: In multiple mode, use the <code>multiSortMeta</code> property and bind an array of SortMeta objects instead.
       body5: In uncontrolled mode, no additional properties need to be enabled. Initial sort field can be still be provided using the <code>sortField</code> property in uncontrolled mode however it is evaluated at initial rendering and ignored in further updates. If you programmatically need to update the sorting state, prefer to use the component as controlled.
       body6: To customize sorting algorithm, set sortable option to custom and define a <code>sortFunction</code> that sorts the list.
+  selection:
+    title: TreeTable Selection
+    description: TreeTable supports single, multiple and checkbox based selection modes.

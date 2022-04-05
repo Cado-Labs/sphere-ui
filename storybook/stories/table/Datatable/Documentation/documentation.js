@@ -168,7 +168,7 @@ function DataTableExample () {
         dataKey="id" rowHover selection={selectedCustomers} onSelectionChange={e => setSelectedCustomers(e.value)}
         responsiveLayout="scroll" emptyMessage="No customers found."
       >
-        <Column selectionMode headerStyle={{ width: "3em" }} />
+        <Column selectionMode="multiple" headerStyle={{ width: "3em" }} />
         <Column field="name" header="Name" sortable style={{ minWidth: "14rem" }} />
         <Column field="country.name" header="Country" sortable style={{ minWidth: "14rem" }} body={countryBodyTemplate} />
         <Column header="Agent" sortable sortField="representative" style={{ minWidth: "14rem" }} body={representativeBodyTemplate} />
