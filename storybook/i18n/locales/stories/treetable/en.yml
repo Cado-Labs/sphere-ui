@@ -43,7 +43,7 @@ props:
   footerColumnGroup: ColumnCroup component for footer.
   frozenHeaderColumnGroup: ColumnCroup component for header of frozen columns.
   frozenFooterColumnGroup: ColumnCroup component for footer of frozen columns.
-  frozenWidth: Width of the frozen part in scrollable DataTable.
+  frozenWidth: Width of the frozen part in scrollable TreeTable.
   emptyMessage: Text to display when there is no data.
   showGridlines: Whether to show grid lines between cells.
   onExpand: Callback to invoke when a node is expanded.
@@ -112,3 +112,12 @@ pages:
   edit:
     title: TreeTable Edit
     description: Incell editing feature provides a way to quickly edit data inside the table. A cell editor is defined using the <code>editor</code> property that refers to a function to return an input element for the editing. Clicking outside the cell or hitting enter key closes the cell, however this may not be desirable if the input is invalid. In order to decide whether to keep the cell open or not, provide a <code>cellEditValidator</code> function that validates the value.
+  scroll:
+    title: TreeTable Scroll
+    description: Scrolling data is available horizontally, vertically or both with optional support for frozen columns.
+    content:
+      body1: TreeTable supports both horizontal and vertical scrolling as well as frozen columns. Vertical scrolling is enabled using <code>scrollable</code> property and <code>scrollHeight</code> to define the viewport height.
+      body2: Horizontal Scrolling requires a width of TreeTable to be defined and explicit widths on columns.
+      body3: Certain columns can be frozen by using the <code>frozen</code> property of the column component. Widths of the frozen section is specified by the <code>frozenWidth</code> property.
+      body4: Note that frozen columns are enabled, frozen and scrollable cells may have content with varying height which leads to misalignment. Provide fixed height to cells to avoid alignment issues.
+      body5: When using frozen columns with column grouping, use <code>frozenHeaderColumnGroup</code> and <code>frozenFooterColumnGroup</code> properties along <code>withheaderColumnGroup</code> and <code>footerColumnGroup</code>.

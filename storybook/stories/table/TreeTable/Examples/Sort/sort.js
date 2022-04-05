@@ -122,9 +122,9 @@ function SortTreeTableExample () {
 
 const body3Example = `
 <TreeTable value={nodes} sortField={sortField} sortOrder={sortOrder} onSort={(e) => {setSortField(e.sortField); setSortOrder(e.sortOrder}}>
-  <Column field="name" header="Name" expander sortable></Column>
-  <Column field="size" header="Size" sortable></Column>
-  <Column field="type" header="Type" sortable></Column>
+  <Column field="name" header="Name" expander sortable />
+  <Column field="size" header="Size" sortable />
+  <Column field="type" header="Type" sortable />
 </TreeTable>
 `
 
@@ -134,17 +134,17 @@ multiSortMeta.push({field: 'year', order: 1});
 multiSortMeta.push({field: 'brand', order: -1});
 
 <TreeTable value={nodes} multiSortMeta={multiSortMeta} onSort={(e) => setMultiSortMeta(e.multiSortMeta)}>
-    <Column field="name" header="Name" expander sortable></Column>
-    <Column field="size" header="Size" sortable></Column>
-    <Column field="type" header="Type" sortable></Column>
+    <Column field="name" header="Name" expander sortable />
+    <Column field="size" header="Size" sortable />
+    <Column field="type" header="Type" sortable />
 </TreeTable>
 `
 
 const body5Example = `
 <TreeTable value={nodes} sortField="year">
-    <Column field="name" header="Name" sortable></Column>
-    <Column field="size" header="Size" sortable></Column>
-    <Column field="type" header="Type" sortable></Column>
+    <Column field="name" header="Name" sortable />
+    <Column field="size" header="Size" sortable />
+    <Column field="type" header="Type" sortable />
 </TreeTable>
 `
 
@@ -155,9 +155,9 @@ mysort(event) {
 }
 
 <TreeTable value={nodes} sortField="year">
-    <Column field="name" header="Name" expander sortable></Column>
-    <Column field="size" header="Size" sortable="custom" sortFunction={mysort}></Column>
-    <Column field="type" header="Type" sortable></Column>
+    <Column field="name" header="Name" expander sortable />
+    <Column field="size" header="Size" sortable="custom" sortFunction={mysort} />
+    <Column field="type" header="Type" sortable />
 </TreeTable>
 `
 
