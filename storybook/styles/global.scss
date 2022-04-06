@@ -90,3 +90,42 @@ pre[class*="language-"] {
 .copy-to-clipboard-button {
   color: #bbb !important;
 }
+
+/* DataTableDemo (style story) */
+
+.datatable-style-demo .outofstock {
+  font-weight: 700;
+  color: #ff5252;
+  text-decoration: line-through;
+}
+
+.datatable-style-demo .lowstock {
+  font-weight: 700;
+  color: #ffa726;
+}
+
+.datatable-style-demo .instock {
+  font-weight: 700;
+  color: #66bb6a;
+}
+
+.datatable-style-demo .row-accessories {
+  background-color: rgba(0, 0, 0, .15) !important;
+}
+
+/* TreeTableDemo (responsive story) */
+
+.treetable-responsive-demo .sm-visible {
+  display: none;
+}
+
+@media screen and (max-width: 40em) {
+  .treetable-responsive-demo .sm-invisible {
+    display: none;
+  }
+
+  .treetable-responsive-demo .sm-visible {
+    display: inline;
+    margin-right: .5rem;
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "@cadolabs/sphere-ui",
-  "version": "4.5.0",
+  "version": "4.6.0",
   "main": "dist/index.js",
   "license": "MIT",
   "repository": "https://github.com/Cado-Labs/sphere-ui",
@@ -37,7 +37,7 @@
     "eslint": "^8.12.0",
     "eslint-config-umbrellio": "^5.0.1",
     "eslint-formatter-table": "^7.32.1",
-    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prefer-object-spread": "^1.2.1",
@@ -47,7 +47,7 @@
     "postcss-scss": "^4.0.3",
     "rollup": "^2.70.1",
     "rollup-plugin-scss": "^3.0.0",
-    "sass": "^1.49.9",
+    "sass": "^1.49.11",
     "stylelint": "^14.6.1",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-umbrellio": "^0.1.2"

@@ -1,0 +1,129 @@
+content:
+  main: TreeTable is used to display hierarchical data in tabular format.
+  start:
+    title: Getting Started
+    body: TreeTable component requires an array of TreeNode objects as its <code>value</code> and columns defined with one or more Column components.
+  treenode:
+    title: TreeNode API
+    body: Following properties of the API are currently utilized by the TreeTable.
+  column:
+    title: Column Component
+    body: Column component defines various options to specify corresponding features. See properties below. Notice the <code>expander</code> property in the name column to indicate that this column displays an icon to toggle the child nodes.
+props:
+  id: Unique identifier of the element.
+  value: An array of treenodes to display.
+  header: Header content of the table.
+  footer: Footer content of the table.
+  style: Inline style of the component.
+  className: Style class of the component.
+  tableStyle: Inline style of the table element.
+  tableClassName: Style class of the table element.
+  expandedKeys: An array of keys to represent the state of the tree expansion state in controlled mode.
+  first: Index of the first row to be displayed.
+  lazy: Defines if data is loaded and interacted with in lazy manner.
+  sortField: Name of the field to sort data by default.
+  sortOrder: Order to sort the data by default.
+  multiSortMeta: An array of SortMeta objects to sort the data by default in multiple sort mode.
+  sortMode: Defines whether sorting works on single column or on multiple columns.
+  defaultSortOrder: Default sort order of an unsorted column.
+  removableSort: When enabled, columns can have an un-sorted state.
+  selectionMode: When enabled, the table rows can be selected.
+  selectionKeys: A single or an array of keys to control the selection state.
+  metaKeySelection: Defines whether metaKey is requred or not for the selection. When true metaKey needs to be pressed to select or unselect an item and when set to false selection of each item can be toggled individually.
+  selectOnEdit: Determines whether the cell editor will be opened when clicking to select any row on Selection and Cell Edit modes.
+  propagateSelectionUp: Whether checkbox selections propagate to ancestor nodes.
+  propagateSelectionDown: Whether checkbox selections propagate to descendant nodes.
+  autoLayout: Whether the cell widths scale according to their content or not.
+  rowClassName: "Function that takes the row data and returns an object in \"{'styleclass' : condition}\" format to define a classname for a particular now."
+  loading: Displays a loader to indicate data load is in progress.
+  tabIndex: Index of the element in tabbing order.
+  scrollable: When specified, enables horizontal and/or vertical scrolling.
+  scrollHeight: Height of the scroll viewport.
+  headerColumnGroup: ColumnCroup component for header.
+  footerColumnGroup: ColumnCroup component for footer.
+  frozenHeaderColumnGroup: ColumnCroup component for header of frozen columns.
+  frozenFooterColumnGroup: ColumnCroup component for footer of frozen columns.
+  frozenWidth: Width of the frozen part in scrollable TreeTable.
+  emptyMessage: Text to display when there is no data.
+  showGridlines: Whether to show grid lines between cells.
+  onExpand: Callback to invoke when a node is expanded.
+  onCollapse: Callback to invoke when a node is collapsed.
+  onToggle: Callback to invoke when a node is toggled.
+  onSort: Callback to invoke on sort.
+  onSelect: Callback to invoke when a node is selected.
+  onUnselect: Callback to invoke when a node is unselected.
+  onSelectionChange: Callback to invoke when selection changes.
+header:
+  column: Properties of Column component
+  treenode: TreeNode API
+treenodeProps:
+  key: Unique key of the node.
+  data: Data represented by the node.
+  children: An array of treenodes as children.
+  style: Inline style of the node.
+  className: Style class of the node.
+  selectable: Whether the node is selectable when selection mode is enabled.
+  leaf: Specifies if the node has children. Used in lazy loading.
+columnProps:
+  field: Property of a row data.
+  sortField: Property of a row data used for sorting, defaults to field.
+  header: Header content of the column.
+  body: Body content of the column.
+  footer: Footer content of the column.
+  sortable: Defines if a column is sortable.
+  sortFunction: Sort function for custom sorting.
+  style: Inline style of the column.
+  className: Class of the column.
+  headerStyle: Inline style of the header.
+  headerClassName: Style class of the header.
+  bodyStyle: Inline style of the body.
+  bodyClassName: Class of the body.
+  footerStyle: Inline style of the footer.
+  footerClassName: Class of the footer.
+  expander: Displays an icon to toggle expansion of children.
+  frozen: Whether the column is fixed in horizontal scrolling or not.
+  colSpan: Number of columns to span for grouping.
+  rowSpan: Number of rows to span for grouping.
+  editor: Function to provide the cell editor input.
+  cellEditValidator: Validator function to validate the cell input value.
+pages:
+  templating:
+    title: TreeTable Templating
+    description: Custom content at header, body and footer sections are supported via templating.
+  pagination:
+    title: TreeTable Pagination
+    description: Pagination is a separate component, which can be used with TreeTable. It supports a backend-based pagination with data fetching on every page click.
+  sort:
+    title: TreeTable Sort
+    description: TreeTable supports both single column and multiple column sorting.
+    content:
+      body1: Enabling <code>sortable</code> property at column component would be enough to make a column sortable. The property to use when sorting is field by default and can be customized using <code>sortField</code>.
+      body2: By default sorting is executed on the clicked column only. To enable multiple field sorting, set <code>sortMode</code> property to "multiple" and use metakey when clicking on another column.
+      body3: In case you'd like to display the table as sorted per a single column by default on mount, use <code>sortField</code> and <code>sortOrder</code> properties in Controlled or Uncontrolled manner. In controlled mode, <code>sortField</code>, <code>sortOrder</code> and <code>onSort</code> properties need to be defined to control the sorting state.
+      body4: In multiple mode, use the <code>multiSortMeta</code> property and bind an array of SortMeta objects instead.
+      body5: In uncontrolled mode, no additional properties need to be enabled. Initial sort field can be still be provided using the <code>sortField</code> property in uncontrolled mode however it is evaluated at initial rendering and ignored in further updates. If you programmatically need to update the sorting state, prefer to use the component as controlled.
+      body6: To customize sorting algorithm, set sortable option to custom and define a <code>sortFunction</code> that sorts the list.
+  selection:
+    title: TreeTable Selection
+    description: TreeTable supports single, multiple and checkbox based selection modes.
+  colgroup:
+    title: TreeTable Column Grouping
+    description: Columns can be grouped at header and footer using <code>headerColumnGroup</code> and <code>footerColumnGroup</code> components that both define an array of columns each having colspan and rowspan.
+  edit:
+    title: TreeTable Edit
+    description: Incell editing feature provides a way to quickly edit data inside the table. A cell editor is defined using the <code>editor</code> property that refers to a function to return an input element for the editing. Clicking outside the cell or hitting enter key closes the cell, however this may not be desirable if the input is invalid. In order to decide whether to keep the cell open or not, provide a <code>cellEditValidator</code> function that validates the value.
+  scroll:
+    title: TreeTable Scroll
+    description: Scrolling data is available horizontally, vertically or both with optional support for frozen columns.
+    content:
+      body1: TreeTable supports both horizontal and vertical scrolling as well as frozen columns. Vertical scrolling is enabled using <code>scrollable</code> property and <code>scrollHeight</code> to define the viewport height.
+      body2: Horizontal Scrolling requires a width of TreeTable to be defined and explicit widths on columns.
+      body3: Certain columns can be frozen by using the <code>frozen</code> property of the column component. Widths of the frozen section is specified by the <code>frozenWidth</code> property.
+      body4: Note that frozen columns are enabled, frozen and scrollable cells may have content with varying height which leads to misalignment. Provide fixed height to cells to avoid alignment issues.
+      body5: When using frozen columns with column grouping, use <code>frozenHeaderColumnGroup</code> and <code>frozenFooterColumnGroup</code> properties along <code>withheaderColumnGroup</code> and <code>footerColumnGroup</code>.
+  style:
+    title: TreeTable Styling
+    description: Particular rows and cells can be styled based on data.
+  responsive:
+    title: TreeTable Responsive
+    description: TreeTable can be made responsive via css @media at-rule.

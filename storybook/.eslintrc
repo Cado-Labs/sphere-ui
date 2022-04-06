@@ -39,7 +39,6 @@
     "react/prop-types": "off",
     "react/no-unused-prop-types": "off",
     "react/jsx-pascal-case": "off",
-    "no-undef": "off",
     "import/order": [
       "error",
       {
