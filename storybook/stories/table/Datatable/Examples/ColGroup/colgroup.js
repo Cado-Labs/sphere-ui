@@ -41,19 +41,13 @@ function ColGroupDataTableExample () {
   }
 
   const lastYearTotal = () => {
-    let total = 0
-    sales.forEach(sale => {
-      total += sale.lastYearProfit
-    })
+    const total = sales.reduce((acc, sale) => acc + sale.lastYearProfit, 0)
 
     return formatCurrency(total)
   }
 
   const thisYearTotal = () => {
-    let total = 0
-    sales.forEach(sale => {
-      total += sale.thisYearProfit
-    })
+    const total = sales.reduce((acc, sale) => acc + sale.thisYearProfit, 0)
 
     return formatCurrency(total)
   }
