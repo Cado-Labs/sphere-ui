@@ -124,3 +124,6 @@ pages:
   style:
     title: TreeTable Styling
     description: Particular rows and cells can be styled based on data.
+  responsive:
+    title: TreeTable Responsive
+    description: TreeTable can be made responsive via css @media at-rule.
