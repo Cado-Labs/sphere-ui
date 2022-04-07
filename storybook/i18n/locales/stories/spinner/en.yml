@@ -1,3 +1,6 @@
 content: Simple spinner.
 props:
   loading: Display spinner or not.
+  style: Inline style of the element.
+  className: Class of the element.
+  strokeWidth: Width of the circle stroke.
