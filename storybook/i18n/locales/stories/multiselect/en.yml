@@ -26,3 +26,4 @@ props:
   display: Used mode to display the selected item. Valid values are 'comma' and 'chip'.
   tooltip: Content of the tooltip.
   tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
+  dataKey: A property to uniquely match the value in options for better performance.
