@@ -6,14 +6,28 @@ const I18N_PREFIX = "stories.pagination"
 
 const code = `
 function PaginationExample () {
-  const [page, setPage] = React.useState(1)
+  const [page1, setPage1] = React.useState(1)
+  const [page2, setPage2] = React.useState(1)
 
   return (
-    <Pagination
-      page={page}
-      pages={10}
-      onPageClick={setPage}
-    />
+    <div>
+      <div className="p-card s-container mb-3">
+        <h3>Basic Pagination</h3>
+        <Pagination
+          page={page1}
+          pages={10}
+          onPageClick={setPage1}
+        />
+      </div>
+
+      <div className="p-card s-container">
+        <h3>Infinite Pagination</h3>
+        <Pagination
+          page={page2}
+          onPageClick={setPage2}
+        />
+      </div>
+    </div>
   )
 }
 `
