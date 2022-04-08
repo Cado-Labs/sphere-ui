@@ -17,7 +17,29 @@ export const DateTimePicker = React.forwardRef(({
   viewDate = null,
   mask = null,
   className = "",
+  style,
+  inputClassName,
+  inputStyle,
+  panelClassName,
+  panelStyle,
   dateFormat = "dd.mm.yy",
+  monthNavigator = true,
+  yearNavigator = true,
+  tooltip,
+  tooltipOptions,
+  required = false,
+  inputId,
+  readOnlyInput = false,
+  tabIndex,
+  autoZIndex = true,
+  baseZIndex = 50,
+  onFocus,
+  onBlur,
+  onInput,
+  onSelect,
+  onShow,
+  onHide,
+  onVisibleChange,
 }, ref) => {
   return (
     <Calendar
@@ -37,9 +59,31 @@ export const DateTimePicker = React.forwardRef(({
       viewDate={viewDate}
       mask={mask}
       className={className}
+      style={style}
+      inputClassName={inputClassName}
+      inputStyle={inputStyle}
+      panelClassName={panelClassName}
+      panelStyle={panelStyle}
       dateFormat={dateFormat}
       hourFormat="24"
       showTime
+      monthNavigator={monthNavigator}
+      yearNavigator={yearNavigator}
+      tooltip={tooltip}
+      tooltipOptions={tooltipOptions}
+      required={required}
+      inputId={inputId}
+      readOnlyInput={readOnlyInput}
+      tabIndex={tabIndex}
+      autoZIndex={autoZIndex}
+      baseZIndex={baseZIndex}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      onInput={onInput}
+      onSelect={onSelect}
+      onShow={onShow}
+      onHide={onHide}
+      onVisibleChange={onVisibleChange}
     />
   )
 })

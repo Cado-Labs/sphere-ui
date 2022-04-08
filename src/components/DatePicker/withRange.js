@@ -1,4 +1,5 @@
 import React from "react"
+import { classNames as cn } from "primereact/utils"
 
 import { getPartsOfTime } from "../../utils"
 
@@ -48,7 +49,7 @@ export const withRange = Component =>
 
     setWeek = () => {
       const { month, day, year } = getPartsOfTime()
-      const week = new Date(year, month, day - 7)
+      const week = new Date(year, month, day - 6)
 
       const date = [week, new Date(`${month + 1}.${day}.${year}`)]
 
@@ -76,6 +77,8 @@ export const withRange = Component =>
     }
 
     renderFooter = () => {
+      if (!this.props.rangeButtonsBar) return null
+
       const translations = LOCALES_RANGE_BLOCKS[this.props.locale]
       const blocks = [
         { title: translations.today, method: this.setToday },
@@ -86,10 +89,10 @@ export const withRange = Component =>
         { title: translations.clear, method: this.clear },
       ]
 
-      return this.props.rangeButtonsBar && (
-        <div className="flex flex-column">
-          {blocks.map((block, key) => (
-            <div className="p-button mb-2" onClick={block.method} key={key}>
+      return (
+        <div className="flex flex-column p-datepicker-range-buttons">
+          {blocks.map((block, index) => (
+            <div className="p-button mb-2" onClick={block.method} key={index}>
               {block.title}
             </div>
           ))}
@@ -98,9 +101,14 @@ export const withRange = Component =>
     }
 
     render () {
+      const panelClassName = cn(this.props.panelClassName, {
+        "p-datepicker_buttons-bar": this.props.rangeButtonsBar,
+      })
+
       return (
         <Component
           {...this.props}
+          panelClassName={panelClassName}
           selectionMode="range"
           ref={this.refCalendar}
           footerTemplate={this.renderFooter}

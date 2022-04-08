@@ -39,6 +39,29 @@ const onChangeParams = [
   { name: "value", description: "New date" },
 ]
 
+const onFocusParams = [
+  { name: "event", description: "Browser event" },
+]
+
+const onBlurParams = [
+  { name: "event", description: "Browser event" },
+]
+
+const onInputParams = [
+  { name: "event", description: "Browser event" },
+]
+
+const onSelectParams = [
+  { name: "originalEvent", description: "Browser event" },
+  { name: "value", description: "Selected date" },
+]
+
+const onVisibleChangeParams = [
+  { name: "visible", description: "Whether the overlay is visible" },
+  { name: "type", description: "Action type when the overlay is visible/hidden" },
+  { name: "callback", description: "It is used to refocus the input field in some cases when the overlay is hidden." },
+]
+
 export const dateTimePicker = {
   component: "DateTimePicker",
   content: {
@@ -53,9 +76,9 @@ export const dateTimePicker = {
     { name: "value", type: "string", description: `${I18N_PREFIX}.props.value` },
     { name: "placeholder", type: "string", default: "''", description: `${I18N_PREFIX}.props.placeholder` },
     { name: "dateFormat", type: "string", default: "dd.mm.yy", description: `${I18N_PREFIX}.props.dateFormat` },
-    { name: "yearRange", type: "string", description: `${I18N_PREFIX}.props.yearRange` },
     { name: "showIcon", type: "boolean", default: false, description: `${I18N_PREFIX}.props.showIcon` },
-    { name: "monthNavigator", type: "boolean", description: `${I18N_PREFIX}.props.monthNavigator` },
+    { name: "monthNavigator", type: "boolean", default: true, description: `${I18N_PREFIX}.props.monthNavigator` },
+    { name: "yearNavigator", type: "boolean", default: true, description: `${I18N_PREFIX}.props.yearNavigator` },
     { name: "showSeconds", type: "boolean", default: true, description: `${I18N_PREFIX}.props.showSeconds` },
     { name: "showMillisec", type: "boolean", default: false, description: `${I18N_PREFIX}.props.showMillisec` },
     { name: "stepHour", type: "number", default: 1, description: `${I18N_PREFIX}.props.stepHour` },
@@ -64,8 +87,29 @@ export const dateTimePicker = {
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
     { name: "viewDate", type: "date", default: null, description: `${I18N_PREFIX}.props.viewDate` },
     { name: "mask", type: "string", default: null, description: `${I18N_PREFIX}.props.mask` },
+    { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
+    { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
+    { name: "inputClassName", type: "string", description: `${I18N_PREFIX}.props.inputClassName` },
+    { name: "inputStyle", type: "object", description: `${I18N_PREFIX}.props.inputStyle` },
+    { name: "panelClassName", type: "string", description: `${I18N_PREFIX}.props.panelClassName` },
+    { name: "panelStyle", type: "object", description: `${I18N_PREFIX}.props.panelStyle` },
+    { name: "tooltip", type: "any", description: `${I18N_PREFIX}.props.tooltip` },
+    { name: "tooltipOptions", type: "object", description: `${I18N_PREFIX}.props.tooltipOptions` },
+    { name: "required", type: "boolean", default: false, description: `${I18N_PREFIX}.props.required` },
+    { name: "inputId", type: "string", description: `${I18N_PREFIX}.props.inputId` },
+    { name: "readOnlyInput", type: "boolean", default: false, description: `${I18N_PREFIX}.props.readOnlyInput` },
+    { name: "tabIndex", type: "number", description: `${I18N_PREFIX}.props.tabIndex` },
+    { name: "autoZIndex", type: "boolean", default: true, description: `${I18N_PREFIX}.props.autoZIndex` },
+    { name: "baseZIndex", type: "number", default: 50, description: `${I18N_PREFIX}.props.baseZIndex` },
   ],
   eventDescriptionProps: [
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },
+    { name: "onFocus", params: onFocusParams, description: `${I18N_PREFIX}.props.onFocus` },
+    { name: "onBlur", params: onBlurParams, description: `${I18N_PREFIX}.props.onBlur` },
+    { name: "onInput", params: onInputParams, description: `${I18N_PREFIX}.props.onInput` },
+    { name: "onSelect", params: onSelectParams, description: `${I18N_PREFIX}.props.onSelect` },
+    { name: "onShow", description: `${I18N_PREFIX}.props.onShow` },
+    { name: "onHide", description: `${I18N_PREFIX}.props.onHide` },
+    { name: "onVisibleChange", params: onVisibleChangeParams, description: `${I18N_PREFIX}.props.onVisibleChange` },
   ],
 }

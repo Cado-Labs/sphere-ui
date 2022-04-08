@@ -1,18 +1,41 @@
 content: The DatePicker component allows the user to select a date or date range.
 props:
-  id: Unique identificator of the components.
+  id: Unique identificator of the component.
   ref: Ability to access the DOM element and component methods.
   name: Name of the input element.
   value: Value of the component.
   placeholder: Placeholder text for the input.
   locale: DatePicker locale.
   dateFormat: Format of the date.
-  yearRange: Displays available years.
+  yearRange: Displays available years, format "yyyy:yyyy" ("2010:2020").
   mode: Date picker type (range, default).
-  onChange: Event handler.
   showIcon: Displays a button with icon next to input.
   rangeButtonsBar: Displays buttons for selecting different date ranges.
   monthNavigator: Displays a dropdown with months.
+  yearNavigator: Whether the year should be rendered as a dropdown instead of text.
   disabled: Disable the component.
   startRangeOfYears: Start year of years range.
   mask: Mask pattern for input element.
+  style: Inline style of the element.
+  className: Class of the element.
+  inputStyle: Inline style of the input element.
+  inputClassName: Class of the input element.
+  panelStyle: Inline style of the overlay panel.
+  panelClassName: Class of the overlay panel.
+  numberOfMonths: Number of months to display.
+  tooltip: Content of the tooltip.
+  tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
+  required: When present, it specifies that an input field must be filled out before submitting the form.
+  inputId: Identifier of the input element.
+  readOnlyInput: When specified, prevents entering the date manually with keyboard.
+  tabIndex: Index of the element in tabbing order.
+  autoZIndex: Whether to automatically manage layering.
+  baseZIndex: Base zIndex value to use in layering.
+  onChange: Callback to invoke when value changes.
+  onFocus: Callback to invoke on focus event of input field.
+  onBlur: Callback to invoke on blur event of input field.
+  onInput: Callback to invoke on input event of input field.
+  onSelect: Callback to invoke when a date is selected.
+  onShow: Callback to invoke when overlay panel or modal becomes visible.
+  onHide: Callback to invoke when overlay panel or modal becomes hidden.
+  onVisibleChange: Callback to invoke when visible is changed.

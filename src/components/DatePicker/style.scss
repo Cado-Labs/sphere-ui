@@ -1,0 +1,59 @@
+.p-datepicker {
+  &-footer {
+    margin-top: .5rem;
+
+    .p-button {
+      padding: .35em .3em;
+      margin-bottom: .3rem !important;
+      font-size: .7rem;
+    }
+  }
+
+  &-header {
+    padding: 0;
+    font-size: .9rem;
+  }
+
+  table {
+    margin: 0;
+    font-size: .7rem;
+
+    td {
+      padding: 0;
+      > span {
+        width: 1.55rem;
+        height: 1.55rem;
+      }
+    }
+  }
+
+  &_buttons-bar {
+    .p-datepicker-group-container {
+      width: 320px;
+    }
+
+    .p-datepicker-group {
+      width: 220px;
+    }
+
+    .p-datepicker-footer {
+      position: relative;
+      margin-top: .5rem;
+
+      .p-datepicker-range-buttons {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100px;
+        padding: 10px;
+        background: #fff;
+      }
+
+      .p-button {
+        padding: .35em .3em;
+        margin-bottom: .3rem !important;
+        font-size: .7rem;
+      }
+    }
+  }
+}

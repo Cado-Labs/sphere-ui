@@ -9,6 +9,7 @@
 @import "./components/Badge/style.scss";
 @import "./components/BreadCrumb/style.scss";
 @import "./components/Chips/style.scss";
+@import "./components/DatePicker/style.scss";
 @import "./components/Message/style.scss";
 @import "./components/MultiSelect/style.scss";
 @import "./components/Pagination/style.scss";
@@ -33,32 +34,3 @@ html, body {
 .gap-5 { gap: $spacer * 2 !important; }
 
 .gap-6 { gap: $spacer * 3 !important; }
-
-/* datepicker */
-
-.p-datepicker {
-  .p-datepicker-footer {
-    margin-top: .5rem;
-
-    .p-button {
-      padding: .35em .3em;
-      margin-bottom: .3rem !important;
-      font-size: .7rem;
-    }
-  }
-  &-header {
-    padding: 0;
-    font-size: .9rem;
-  }
-  table {
-    margin: 0;
-    font-size: .7rem;
-    td {
-      padding: 0;
-      > span {
-        width: 1.55rem;
-        height: 1.55rem;
-      }
-    }
-  }
-}
