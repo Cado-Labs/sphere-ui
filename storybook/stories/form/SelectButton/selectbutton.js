@@ -21,7 +21,7 @@ function SelectButtonExample () {
   return (
     <div className="p-card s-container">
       <h3>Single Selection</h3>
-      <SelectButton value={value1} options={options} onChange={e => setValue1(e.value)} />
+      <SelectButton value={value1} options={options} onChange={e => (console.log(e), setValue1(e.value))} />
 
       <h3>Multiple Selection</h3>
       <SelectButton value={value2} options={paymentOptions} onChange={e => setValue2(e.value)} multiple />
