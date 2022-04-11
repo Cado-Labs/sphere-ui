@@ -1,11 +1,14 @@
 import React from "react"
 import { Calendar } from "primereact/calendar"
 
+import { getPartsOfTime, filterTooltipOptions } from "../../utils"
+
 export const DateTimePicker = React.forwardRef(({
   id,
   name,
   value,
   onChange,
+  yearRange,
   showSeconds = true,
   showMillisec = false,
   disabled = false,
@@ -25,6 +28,7 @@ export const DateTimePicker = React.forwardRef(({
   dateFormat = "dd.mm.yy",
   monthNavigator = true,
   yearNavigator = true,
+  startRangeOfYears = "2010",
   tooltip,
   tooltipOptions,
   required = false,
@@ -41,6 +45,14 @@ export const DateTimePicker = React.forwardRef(({
   onHide,
   onVisibleChange,
 }, ref) => {
+  const getYearRange = () => {
+    const { year } = getPartsOfTime()
+
+    return yearRange || `${startRangeOfYears}:${year}`
+  }
+
+  const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+
   return (
     <Calendar
       id={id}
@@ -69,8 +81,10 @@ export const DateTimePicker = React.forwardRef(({
       showTime
       monthNavigator={monthNavigator}
       yearNavigator={yearNavigator}
+      startRangeOfYears={startRangeOfYears}
+      yearRange={getYearRange()}
       tooltip={tooltip}
-      tooltipOptions={tooltipOptions}
+      tooltipOptions={filteredTooltipOptions}
       required={required}
       inputId={inputId}
       readOnlyInput={readOnlyInput}
