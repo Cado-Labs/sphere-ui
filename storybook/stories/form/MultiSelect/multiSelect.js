@@ -71,6 +71,7 @@ export const multiSelect = {
     { name: "display", type: "string", description: `${I18N_PREFIX}.props.display` },
     { name: "tooltip", type: "any", description: `${I18N_PREFIX}.props.tooltip` },
     { name: "tooltipOptions", type: "object", description: `${I18N_PREFIX}.props.tooltipOptions` },
+    { name: "dataKey", type: "string", description: `${I18N_PREFIX}.props.dataKey` },
   ],
   eventDescriptionProps: [
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },

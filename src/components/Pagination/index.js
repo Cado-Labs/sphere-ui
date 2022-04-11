@@ -3,16 +3,21 @@ import { Button } from "primereact/button"
 
 export const Pagination = ({ page, pages, onPageClick }) => {
   const prevPage = page > 1 ? page - 1 : 1
-  const nextPage = page < pages ? page + 1 : pages
+  const nextPage = (
+    // eslint-disable-next-line no-nested-ternary
+    pages
+      ? page < pages ? page + 1 : pages
+      : page + 1
+  )
 
   const showPrevPage = prevPage > 1
-  const showNextPage = nextPage < pages
+  const showNextPage = pages ? nextPage < pages : true
 
   const showPrevDots = prevPage - 1 > 1
   const showNextDots = nextPage + 1 < pages
 
   const showFirstPage = page !== 1
-  const showLastPage = page !== pages
+  const showLastPage = pages && page !== pages
 
   const isTheFirstPage = page === 1
   const isTheLastPage = page === pages

@@ -2,7 +2,7 @@ import React, { useMemo } from "react"
 import { Calendar } from "primereact/calendar"
 import { locale as primeLocale } from "primereact/api"
 
-import { getPartsOfTime } from "../../utils"
+import { getPartsOfTime, filterTooltipOptions } from "../../utils"
 
 import { withRange } from "./withRange"
 
@@ -13,16 +13,37 @@ export const DatePicker = React.forwardRef(({
   yearRange,
   name = "",
   placeholder = "",
-  locale = primeLocale().locale,
   mode = "default",
   dateFormat = "dd.mm.yy",
   showIcon = true,
   rangeButtonsBar = false,
   disabled = false,
   monthNavigator = true,
+  yearNavigator = true,
   startRangeOfYears = "2010",
   className = "",
+  style,
+  inputClassName,
+  inputStyle,
+  panelClassName,
+  panelStyle,
   mask = null,
+  numberOfMonths = 1,
+  tooltip,
+  tooltipOptions,
+  required = false,
+  inputId,
+  readOnlyInput = false,
+  tabIndex,
+  autoZIndex = true,
+  baseZIndex = 50,
+  onFocus,
+  onBlur,
+  onInput,
+  onSelect,
+  onShow,
+  onHide,
+  onVisibleChange,
 }, ref) => {
   const getDefaultProps = () => {
     return {
@@ -35,12 +56,34 @@ export const DatePicker = React.forwardRef(({
       dateFormat,
       placeholder,
       yearRange: getYearRange(),
-      locale,
+      locale: primeLocale().locale,
       disabled,
       monthNavigator,
+      yearNavigator,
       startRangeOfYears,
       className,
+      style,
+      inputClassName,
+      inputStyle,
+      panelClassName,
+      panelStyle,
       mask,
+      numberOfMonths,
+      tooltip,
+      tooltipOptions: filterTooltipOptions(tooltipOptions),
+      required,
+      inputId,
+      readOnlyInput,
+      tabIndex,
+      autoZIndex,
+      baseZIndex,
+      onFocus,
+      onBlur,
+      onInput,
+      onSelect,
+      onShow,
+      onHide,
+      onVisibleChange,
     }
   }
 
