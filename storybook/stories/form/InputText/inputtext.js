@@ -16,44 +16,46 @@ function InputTextExample () {
   return (
     <div>
       <div className="p-card s-container">
-        <h3>Basic</h3>
-        <InputText value={value1} onChange={e => setValue1(e.target.value)} />
-        <span className="ml-2">{value1}</span>
+        <div className="col-4">
+          <h3>Basic</h3>
+          <InputText value={value1} onChange={e => setValue1(e.target.value)} />
+          <span className="ml-2">{value1}</span>
 
-        <h3>Left Icon</h3>
-        <span className="p-input-icon-left">
-          <i className="pi pi-search" />
-          <InputText value={value2} onChange={e => setValue2(e.target.value)} placeholder="Search" />
-        </span>
+          <h3>Left Icon</h3>
+          <span className="p-input-icon-left">
+            <i className="pi pi-search" />
+            <InputText value={value2} onChange={e => setValue2(e.target.value)} placeholder="Search" />
+          </span>
 
-        <h3>Right Icon</h3>
-        <span className="p-input-icon-right">
-          <i className="pi pi-spin pi-spinner" />
-          <InputText value={value3} onChange={e => setValue3(e.target.value)} />
-        </span>
+          <h3>Right Icon</h3>
+          <span className="p-input-icon-right">
+            <i className="pi pi-spin pi-spinner" />
+            <InputText value={value3} onChange={e => setValue3(e.target.value)} />
+          </span>
 
-        <h3>Help Text</h3>
-        <div className="field">
-          <label htmlFor="username1" className="block">Username</label>
-          <InputText id="username1" aria-describedby="username1-help" className="block" />
-          <small id="username1-help" className="block">Enter your username to reset your password.</small>
-        </div>
+          <h3>Help Text</h3>
+          <div className="field">
+            <label htmlFor="username1" className="block">Username</label>
+            <InputText id="username1" aria-describedby="username1-help" className="block" />
+            <small id="username1-help" className="block">Enter your username to reset your password.</small>
+          </div>
 
-        <h3>Invalid</h3>
-        <div className="field">
-          <label htmlFor="username2" className="block">Username</label>
-          <InputText id="username2" aria-describedby="username2-help" className="p-invalid block" />
-          <small id="username2-help" className="p-error block">Username is not available.</small>
-        </div>
+          <h3>Invalid</h3>
+          <div className="field">
+            <label htmlFor="username2" className="block">Username</label>
+            <InputText id="username2" aria-describedby="username2-help" className="p-invalid block" />
+            <small id="username2-help" className="p-error block">Username is not available.</small>
+          </div>
 
-        <h3>Disabled</h3>
-        <InputText value={value4} disabled />
+          <h3>Disabled</h3>
+          <InputText value={value4} disabled />
 
-        <h3>Sizes</h3>
-        <div className="sizes">
-          <InputText type="text" className="p-inputtext-sm block mb-2" placeholder="Small" />
-          <InputText type="text" className="block mb-2" placeholder="Normal" />
-          <InputText type="text" className="p-inputtext-lg block" placeholder="Large" />
+          <h3>Sizes</h3>
+          <div className="sizes">
+            <InputText type="text" className="p-inputtext-sm block mb-2" placeholder="Small" />
+            <InputText type="text" className="block mb-2" placeholder="Normal" />
+            <InputText type="text" className="p-inputtext-lg block" placeholder="Large" />
+          </div>
         </div>
       </div>
 

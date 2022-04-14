@@ -10,7 +10,6 @@ export function Description () {
       <h2>{t("title")}</h2>
       <p>{t("description")}</p>
       <p>{t("rules")}</p>
-      <p>{t("future")}</p>
     </div>
   )
 }
