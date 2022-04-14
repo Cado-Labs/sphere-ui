@@ -1,0 +1,21 @@
+.p-toast .p-toast-message .p-toast-message-content {
+  align-items: center;
+  padding: .6rem;
+  margin: 0 0 0 .5rem;
+
+  .p-toast-summary {
+    &:empty {
+      display: none;
+      + .p-toast-detail {
+        margin-top: 0;
+      }
+    }
+  }
+  .p-toast-summary {
+    font-size: .9rem;
+    font-weight: 500;
+  }
+  .p-toast-message-icon {
+    font-size: 1.5rem;
+  }
+}

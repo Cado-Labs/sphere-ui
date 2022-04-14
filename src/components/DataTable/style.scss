@@ -1,0 +1,45 @@
+.p-datatable {
+  & &-header,
+  & &-footer,
+  & &-thead > tr > th,
+  & &-tfoot > tr > td {
+    color: #596a7d;
+    background: #f6f9fc;
+  }
+
+  &-tfoot {
+    td {
+      word-wrap: break-word;
+    }
+  }
+
+  .p-sortable-column {
+    &:focus {
+      box-shadow: none;
+    }
+
+    &.p-highlight {
+      white-space: nowrap;
+      background: #f6f9fc;
+    }
+  }
+
+  &-emptymessage {
+    font-style: italic;
+    color: #999 !important;
+    white-space: nowrap;
+    background: #f7fafc !important;
+  }
+
+  &-sm {
+    font-size: .9rem !important;
+
+    &-tbody > tr > td {
+      line-height: 1;
+    }
+  }
+
+  &-thead > tr > th {
+    line-height: 1;
+  }
+}

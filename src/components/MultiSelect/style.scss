@@ -1,13 +1,32 @@
 .p-multiselect {
   width: 100%;
+  font-size: .8rem;
+
+  &-label {
+    font-size: .9rem;
+  }
+
+  &-trigger {
+    width: 2.2rem;
+  }
+
+  &-clear-icon {
+    margin-top: 0;
+    margin-right: -.5rem;
+    font-size: .8rem;
+    transform: translateY(-50%);
+  }
 }
 
 .p-multiselect-footer {
+  margin-top: 0;
+
   .p-button {
     justify-content: center;
     width: 100%;
-    padding: .5em;
-    font-size: .8em;
+    padding: .5rem;
+    font-size: .9rem;
+    line-height: 1;
     border-radius: 0;
   }
 }
@@ -15,5 +34,25 @@
 .p-multiselect-header {
   .p-multiselect-filter-container {
     width: 100%;
+  }
+}
+
+.p-multiselect-panel {
+  max-width: 400px;
+
+  .p-multiselect-item {
+    align-items: flex-start;
+    font-size: .9rem;
+    line-height: 1.2;
+  }
+
+  .p-multiselect-items {
+    padding: 0;
+  }
+
+  .p-multiselect-item-group {
+    padding: .5rem .75rem;
+    font-size: .9rem;
+    font-weight: normal;
   }
 }

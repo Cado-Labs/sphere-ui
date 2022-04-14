@@ -8,8 +8,12 @@
 @import "./components/Avatar/style.scss";
 @import "./components/Badge/style.scss";
 @import "./components/BreadCrumb/style.scss";
+@import "./components/Button/style.scss";
 @import "./components/Chips/style.scss";
 @import "./components/DatePicker/style.scss";
+@import "./components/DataTable/style.scss";
+@import "./components/Dropdown/style.scss";
+@import "./components/InputText/style.scss";
 @import "./components/Message/style.scss";
 @import "./components/MultiSelect/style.scss";
 @import "./components/Pagination/style.scss";
@@ -18,10 +22,7 @@
 @import "./components/TabView/style.scss";
 @import "./components/Tag/style.scss";
 @import "./components/TieredMenu/style.scss";
-
-html, body {
-  font-family: var(--font-family);
-}
+@import "./components/Toast/style.scss";
 
 .gap-1 { gap: $spacer * .25 !important; }
 
@@ -34,3 +35,26 @@ html, body {
 .gap-5 { gap: $spacer * 2 !important; }
 
 .gap-6 { gap: $spacer * 3 !important; }
+
+.p-component,
+.p-inputtext,
+.p-button,
+.p-datatable,
+.p-multiselect,
+.p-dropdown {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* values colors */
+
+.negative {
+  color: var(--red);
+}
+
+.neutral {
+  color: var(--dark);
+}
+
+.positive {
+  color: var(--green);
+}

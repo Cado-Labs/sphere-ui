@@ -1,18 +1,19 @@
 .p-datepicker {
   min-width: 220px !important;
 
-  &-footer {
-    margin-top: .5rem;
-
-    .p-button {
-      padding: .35em .3em;
-      margin-bottom: .3rem !important;
-      font-size: .7rem;
-    }
+  & &-header {
+    padding: .25rem 0;
+    font-size: .9rem;
   }
 
-  &-header {
-    padding: 0;
+  & &-header &-prev,
+  & &-header &-next {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  &-month,
+  &-year {
     font-size: .9rem;
   }
 
@@ -40,22 +41,41 @@
 
     .p-datepicker-footer {
       position: relative;
-      margin-top: .5rem;
 
       .p-datepicker-range-buttons {
         position: absolute;
         right: 0;
         bottom: 0;
         width: 100px;
-        padding: 10px;
+        padding: .6rem;
+        font-size: .7rem;
         background: #fff;
       }
 
       .p-button {
-        padding: .35em .3em;
+        padding: .3rem .25rem;
         margin-bottom: .3rem !important;
         font-size: .7rem;
+        line-height: 1;
       }
+    }
+  }
+}
+
+.p-calendar {
+  width: 100%;
+
+  .p-button.p-button-icon-only {
+    width: 2.2rem;
+    padding: 0;
+
+    &,
+    &:hover,
+    &:active {
+      color: #495057;
+      background: #e9ecef;
+      border: 1px solid #ced4da;
+      border-left: 0;
     }
   }
 }
