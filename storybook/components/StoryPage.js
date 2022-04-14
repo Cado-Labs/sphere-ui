@@ -10,8 +10,6 @@ import { Highlighter } from "./Highlighter"
 import { LiveExample } from "./LiveExample"
 import { ParamsTable } from "./ParamsTable"
 
-import "./StoryPage.scss"
-
 export function StoryPage ({
   content,
   header,

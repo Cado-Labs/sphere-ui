@@ -20,9 +20,17 @@ function BasicDataTableExample () {
     { id: "1009", code: "cm230f032", name: "Gaming Set", category: "Electronics", quantity: 63 },
   ]
 
+  const renderFooter = data => {
+    const total = data.props.value
+      .map(product => product.quantity)
+      .reduce((acc, value) => acc + value, 0)
+
+    return "Total: " + total
+  }
+
   return (
     <div className="p-card s-container">
-      <DataTable value={products} responsiveLayout="scroll">
+      <DataTable value={products} responsiveLayout="scroll" footer={renderFooter}>
         <Column field="code" header="Code" />
         <Column field="name" header="Name" />
         <Column field="category" header="Category" />

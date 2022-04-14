@@ -1,4 +1,5 @@
 @import "@cadolabs/sphere-ui/dist/index.css";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -14,6 +15,7 @@ body {
 }
 
 .content-layouts {
+  font-size: 14px;
   background: url("https://www.primefaces.org/primeflex/assets/images/tiny-checkers.png");
   background-color: #f2f5f8;
 }
@@ -38,6 +40,10 @@ body {
   flex-direction: column;
   padding: 10px 5px;
   margin-top: 10px;
+
+  .p-component {
+    font-size: 14px;
+  }
 }
 
 .header {
@@ -46,7 +52,11 @@ body {
 }
 
 .live-content {
-  font-size: 1rem;
+  font-size: 14px;
+}
+
+.code-toolbar {
+  font-size: 14px;
 }
 
 p {
