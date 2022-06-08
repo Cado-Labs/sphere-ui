@@ -19,6 +19,8 @@ export const DateTimePicker = React.forwardRef(({
   showIcon = false,
   viewDate = null,
   mask = null,
+  minDate = null,
+  maxDate = null,
   className = "",
   style,
   inputClassName,
@@ -70,6 +72,8 @@ export const DateTimePicker = React.forwardRef(({
       showIcon={showIcon}
       viewDate={viewDate}
       mask={mask}
+      minDate={minDate}
+      maxDate={maxDate}
       className={className}
       style={style}
       inputClassName={inputClassName}
