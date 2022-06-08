@@ -12,6 +12,13 @@ function DatePickerExample () {
     rangeDate: [new Date(), new Date]
   })
 
+  const minDate = new Date()
+
+  const month = new Date().getMonth()
+  const nextMonth = (month === 11) ? 0 : month + 1
+  const maxDate = new Date()
+  maxDate.setMonth(nextMonth)
+
   const onChange = event => {
     const target = event.target
 
@@ -37,6 +44,17 @@ function DatePickerExample () {
             onChange={onChange}
             mode="range"
             rangeButtonsBar
+          />
+        </div>
+        <div className="s-field-col-3">
+          <label htmlFor="minmax">Min / Max</label>
+          <DatePicker
+            name="minmax"
+            value={fields.minmax}
+            onChange={onChange}
+            minDate={minDate}
+            maxDate={maxDate}
+            readOnlyInput
           />
         </div>
       </div>
@@ -96,6 +114,8 @@ export const datePicker = {
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
     { name: "startRangeOfYears", type: "string", default: "2010", description: `${I18N_PREFIX}.props.startRangeOfYears` },
     { name: "mask", type: "string", default: null, description: `${I18N_PREFIX}.props.mask` },
+    { name: "minDate", type: "Date", default: null, description: `${I18N_PREFIX}.props.minDate` },
+    { name: "maxDate", type: "Date", default: null, description: `${I18N_PREFIX}.props.maxDate` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
     { name: "inputClassName", type: "string", description: `${I18N_PREFIX}.props.inputClassName` },
