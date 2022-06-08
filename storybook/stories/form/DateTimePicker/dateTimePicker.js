@@ -11,6 +11,13 @@ function DateTimePickerExample () {
     dateTime: new Date(),
   })
 
+  const minDate = new Date()
+
+  const month = new Date().getMonth()
+  const nextMonth = (month === 11) ? 0 : month + 1
+  const maxDate = new Date()
+  maxDate.setMonth(nextMonth)
+
   const onChange = event => {
     const target = event.target
 
@@ -27,6 +34,17 @@ function DateTimePickerExample () {
               value={fields.dateTime}
               onChange={onChange}
             />
+        </div>
+        <div className="s-field-col-3">
+          <label htmlFor="minmax">Min / Max</label>
+          <DateTimePicker
+            name="minmax"
+            value={fields.minmax}
+            onChange={onChange}
+            minDate={minDate}
+            maxDate={maxDate}
+            readOnlyInput
+          />
         </div>
       </div>
     </div>
@@ -87,6 +105,8 @@ export const dateTimePicker = {
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
     { name: "viewDate", type: "date", default: null, description: `${I18N_PREFIX}.props.viewDate` },
     { name: "mask", type: "string", default: null, description: `${I18N_PREFIX}.props.mask` },
+    { name: "minDate", type: "Date", default: null, description: `${I18N_PREFIX}.props.minDate` },
+    { name: "maxDate", type: "Date", default: null, description: `${I18N_PREFIX}.props.maxDate` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
     { name: "inputClassName", type: "string", description: `${I18N_PREFIX}.props.inputClassName` },

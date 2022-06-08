@@ -17,6 +17,8 @@ props:
   disabled: Disable the component.
   viewDate: Date instance whose month and year are used to display the calendar.
   mask: Mask pattern for input element.
+  minDate: The minimum selectable date.
+  maxDate: The maximum selectable date.
   style: Inline style of the element.
   className: Class of the element.
   inputStyle: Inline style of the input element.
