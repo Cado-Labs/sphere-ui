@@ -58,7 +58,7 @@ export const withRange = Component =>
 
     setLast30Days = () => {
       const { month, day, year } = getPartsOfTime()
-      const week = new Date(year, month, day - 30)
+      const week = new Date(year, month, day - 29)
 
       const date = [week, new Date(`${month + 1}.${day}.${year}`)]
 
