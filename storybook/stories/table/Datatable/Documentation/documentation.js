@@ -259,6 +259,26 @@ const onRowEditCompleteParams = [
   { name: "event.index", description: "Current editing row data index" },
 ]
 
+const onRowToggleParams = [
+  { name: "event.data", description: "Expanded rows" },
+]
+
+const onRowExpandParams = [
+  { name: "event.originalEvent", description: "Browser event" },
+  { name: "event.data", description: "Expanded row data" },
+]
+
+const onRowCollapseParams = [
+  { name: "event.originalEvent", description: "Browser event" },
+  { name: "event.data", description: "Collapsed row data" },
+]
+
+const onRowClickParams = [
+  { name: "event.originalEvent", description: "Browser event" },
+  { name: "event.data", description: "Clicked row data" },
+  { name: "event.index", description: "Clicked row data index" },
+]
+
 const exportFunctionParams = [
   { name: "event.data", description: "Field data" },
   { name: "event.field", description: "Column field" },
@@ -348,6 +368,9 @@ export const documentation = {
     { name: "breakpoint", type: "string", default: "960px", description: `${I18N_PREFIX}.props.breakpoint` },
     { name: "showSelectionElement", type: "function", description: `${I18N_PREFIX}.props.showSelectionElement` },
     { name: "isDataSelectable", type: "function", description: `${I18N_PREFIX}.props.isDataSelectable` },
+    { name: "rowHover", type: "boolean", default: false, description: `${I18N_PREFIX}.props.rowHover` },
+    { name: "expandedRows", type: "array|object", default: null, description: `${I18N_PREFIX}.props.expandedRows` },
+    { name: "rowExpansionTemplate", type: "function", default: null, description: `${I18N_PREFIX}.props.rowExpansionTemplate` },
   ],
   eventDescriptionProps: [
     { name: "onSelectionChange", params: onSelectionChangeParams, description: `${I18N_PREFIX}.props.onSelectionChange` },
@@ -364,6 +387,10 @@ export const documentation = {
     { name: "onRowEditCancel", params: onRowEditCancelParams, description: `${I18N_PREFIX}.props.onRowEditCancel` },
     { name: "onRowEditChange", params: onRowEditChangeParams, description: `${I18N_PREFIX}.props.onRowEditChange` },
     { name: "onRowEditComplete", params: onRowEditCompleteParams, description: `${I18N_PREFIX}.props.onRowEditComplete` },
+    { name: "onRowToggle", params: onRowToggleParams, description: `${I18N_PREFIX}.props.onRowToggle` },
+    { name: "onRowExpand", params: onRowExpandParams, description: `${I18N_PREFIX}.props.onRowExpand` },
+    { name: "onRowCollapse", params: onRowCollapseParams, description: `${I18N_PREFIX}.props.onRowCollapse` },
+    { name: "onRowClick", params: onRowClickParams, description: `${I18N_PREFIX}.props.onRowClick` },
     { name: "exportFunction", params: exportFunctionParams, description: `${I18N_PREFIX}.props.exportFunction` },
   ],
   footer: (

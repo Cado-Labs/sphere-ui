@@ -42,7 +42,6 @@ function ExportDataTableExample () {
   const exportColumns = cols.map(col => ({ title: col.header, dataKey: col.field }))
 
   const exportCSV = selectionOnly => {
-    console.log("selectionOnly", selectionOnly)
     dt.current.exportCSV({ selectionOnly })
   }
 

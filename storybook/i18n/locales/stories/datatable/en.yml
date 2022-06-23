@@ -53,6 +53,13 @@ props:
   onRowEditComplete: Callback to invoke when row edit is completed.
   showSelectionElement: Function that returns a boolean by passing the row data to decide if the radio or checkbox should be displayed per row.
   isDataSelectable: Function that returns a boolean to decide whether the data should be selectable.
+  rowHover: When enabled, background of the rows change on hover.
+  expandedRows: A collection of rows or a map object row data keys that are expanded.
+  rowExpansionTemplate: Function that receives the row data as the parameter and returns the expanded row content.
+  onRowToggle: Callback to invoke when a row is toggled or collapsed.
+  onRowExpand: Callback to invoke when a row is expanded.
+  onRowCollapse: Callback to invoke when a row is collapsed.
+  onRowClick: Callback to invoke when a row is clicked.
   onSort: Callback to invoke on sort.
   onAllRowsSelect: Callback to invoke when all rows are selected using the header checkbox.
   onAllRowsUnselect: Callback to invoke when all rows are unselected using the header checkbox.
@@ -153,3 +160,6 @@ pages:
   colgroup:
     title: DataTable ColumnGroup
     description: Columns can be grouped at header and footer sections by defining a <code>ColumnGroup</code> component as the <code>headerColumnGroup</code> and <code>footerColumnGroup</code> properties.
+  rowExpand:
+    title: DataTable Row Expansion
+    description: A row can be expanded to display extra content.
