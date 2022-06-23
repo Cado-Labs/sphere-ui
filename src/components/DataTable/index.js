@@ -66,6 +66,13 @@ export const DataTable = React.forwardRef(({
   showSelectionElement,
   isDataSelectable,
   columnKey,
+  rowHover,
+  expandedRows,
+  rowExpansionTemplate,
+  onRowToggle,
+  onRowExpand,
+  onRowCollapse,
+  onRowClick,
   onSort,
   onPage,
   onFilter,
@@ -146,6 +153,13 @@ export const DataTable = React.forwardRef(({
       showSelectionElement={showSelectionElement}
       isDataSelectable={isDataSelectable}
       columnKey={columnKey}
+      rowHover={rowHover}
+      expandedRows={expandedRows}
+      rowExpansionTemplate={rowExpansionTemplate}
+      onRowToggle={onRowToggle}
+      onRowExpand={onRowExpand}
+      onRowCollapse={onRowCollapse}
+      onRowClick={onRowClick}
       onSort={onSort}
       onPage={onPage}
       onFilter={onFilter}
