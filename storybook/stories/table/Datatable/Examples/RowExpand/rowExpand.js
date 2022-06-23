@@ -54,7 +54,6 @@ function RowExpandDataTableExample () {
   React.useEffect(() => {
     if (isMounted) {
       const summary = expandedRows !== null ? "All Rows Expanded" : "All Rows Collapsed"
-      console.log("summary", summary)
       toast.current.show({ severity: "success", summary, life: 3000 })
     }
   }, [expandedRows])
@@ -70,7 +69,6 @@ function RowExpandDataTableExample () {
   const expandAll = () => {
     const _expandedRows = {}
     products.forEach(p => _expandedRows[p.id] = true)
-    console.log("_expandedRows", _expandedRows)
     setExpandedRows(_expandedRows)
   }
 
