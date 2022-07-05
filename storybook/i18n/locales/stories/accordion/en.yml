@@ -1,0 +1,36 @@
+content:
+  main: Accordion groups a collection of contents in tabs.
+  start:
+    title: Getting Started
+    body: <code>Accordion</code> element consists of one or more <code>AccordionTab</code> elements and can either be used as a Controlled or Uncontrolled component.
+  controlled:
+    title: Controlled Component
+    body: In controlled mode, <code>activeIndex</code> and <code>onTabChange</code> properties need to be defined to control the state.
+  uncontrolled:
+    title: Uncontrolled Component
+    body: In uncontrolled mode, no additional properties are required.
+  multiple:
+    title: Multiple
+    body: By default only one tab at a time can be active, enabling <code>multiple</code> property changes this behavior to allow multiple tabs be active at the same time.
+props:
+  accordion:
+    id: Unique identifier of the element.
+    activeIndex: Active index or indexes of the element. Use an array of numbers for multiple indexes. the "multiple" prop must be set to true in order to specify multiple indexes.
+    style: Inline style of the element.
+    className: Class of the element.
+    multiple: When enabled, multiple tabs can be activated at the same time.
+  accordionTab:
+    header: Content of tab headers.
+    disabled: Whether the tab is disabled.
+    style: Inline style of the tab header and content.
+    className: Class of the tab header and content.
+    headerClassName: Class of the tab header.
+    contentClassName: Class of the tab content.
+  events:
+    onTabChange: Callback to invoke when state of the accordion changes.
+    onTabClose: Callback to invoke when an active tab is collapsed by clicking on the header.
+    onTabOpen: Callback to invoke when a tab gets expanded.
+header:
+  accordion: Properties For Accordion
+  accordionTab: Properties For AccordionTab
+  events: Events
