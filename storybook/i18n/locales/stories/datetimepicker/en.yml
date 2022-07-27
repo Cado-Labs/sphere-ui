@@ -1,6 +1,6 @@
 content: The DateTimePicker component allows the user to select a date and time.
 props:
-  id: Unique identificator of the component.
+  id: Unique identifier of the component.
   ref: Ability to access the DOM element and component methods.
   name: Name of the input element.
   value: Value of the component.

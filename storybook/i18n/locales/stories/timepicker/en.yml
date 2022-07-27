@@ -1,6 +1,6 @@
 content: The TimePicker component allows the user to select the time (hours, minutes, seconds, milliseconds).
 props:
-  id: Unique identificator of the components.
+  id: Unique identifier of the components.
   ref: Ability to access the DOM element and component methods.
   name: Name of the input element.
   value: Value of the component.
