@@ -11,6 +11,7 @@ export const DateTimePicker = React.forwardRef(({
   yearRange,
   showSeconds = true,
   showMillisec = false,
+  showUTC = false,
   disabled = false,
   stepHour = 1,
   stepSecond = 1,
@@ -53,6 +54,46 @@ export const DateTimePicker = React.forwardRef(({
     return yearRange || `${startRangeOfYears}:${year}`
   }
 
+  const renderFooter = () => {
+    if (!showUTC || !value) return null
+
+    const day = value.getUTCDate()
+    const month = value.getUTCMonth() + 1
+    const year = value.getUTCFullYear()
+
+    const formattedDay = String(day).padStart(2, "0")
+    const formattedMonth = String(month).padStart(2, "0")
+
+    const hours = value.getUTCHours()
+    const minutes = value.getUTCMinutes()
+
+    const formattedHours = String(hours).padStart(2, "0")
+    const formattedMinutes = String(minutes).padStart(2, "0")
+
+    const date = `${formattedDay}.${formattedMonth}.${year}`
+    const baseTime = `${formattedHours}:${formattedMinutes}`
+    let formattedUTCDate = `${date} ${baseTime}`
+
+    if (showSeconds) {
+      const seconds = value.getUTCSeconds()
+      const formattedSeconds = String(seconds).padStart(2, "0")
+      formattedUTCDate += `:${formattedSeconds}`
+
+      if (showMillisec) {
+        const milliseconds = value.getUTCMilliseconds()
+        const formattedMilliseconds = String(milliseconds).padStart(3, "0")
+        formattedUTCDate += `.${formattedMilliseconds}`
+      }
+    }
+
+    return (
+      <div className="text-center">
+        <span className="font-bold">UTC: </span>
+        <span>{formattedUTCDate}</span>
+      </div>
+    )
+  }
+
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
 
   return (
@@ -87,6 +128,7 @@ export const DateTimePicker = React.forwardRef(({
       yearNavigator={yearNavigator}
       startRangeOfYears={startRangeOfYears}
       yearRange={getYearRange()}
+      footerTemplate={renderFooter}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
       required={required}

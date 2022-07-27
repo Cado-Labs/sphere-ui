@@ -46,6 +46,16 @@ function DateTimePickerExample () {
             readOnlyInput
           />
         </div>
+        <div className="s-field-col-3">
+        <label htmlFor="dateTime">DateTimePicker with UTC message</label>
+          <DateTimePicker
+            name="dateTime"
+            value={fields.dateTime}
+            onChange={onChange}
+            showUTC
+            showMillisec
+          />
+      </div>
       </div>
     </div>
   )
@@ -99,6 +109,7 @@ export const dateTimePicker = {
     { name: "yearNavigator", type: "boolean", default: true, description: `${I18N_PREFIX}.props.yearNavigator` },
     { name: "showSeconds", type: "boolean", default: true, description: `${I18N_PREFIX}.props.showSeconds` },
     { name: "showMillisec", type: "boolean", default: false, description: `${I18N_PREFIX}.props.showMillisec` },
+    { name: "showUTC", type: "boolean", default: false, description: `${I18N_PREFIX}.props.showUTC` },
     { name: "stepHour", type: "number", default: 1, description: `${I18N_PREFIX}.props.stepHour` },
     { name: "stepSecond", type: "number", default: 1, description: `${I18N_PREFIX}.props.stepSecond` },
     { name: "stepMinute", type: "number", default: 1, description: `${I18N_PREFIX}.props.stepMinute` },
