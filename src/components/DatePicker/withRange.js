@@ -30,8 +30,8 @@ export const withRange = Component =>
       const lastDayInMonth = new Date(year, month + 1, 0).getDate()
 
       const newDate = [
-        new Date(`${month + 1}.01.${year}`),
-        new Date(`${month + 1}.${lastDayInMonth}.${year}`),
+        new Date(year, month, 1),
+        new Date(year, month, lastDayInMonth),
       ]
 
       this.onChange(newDate)
@@ -39,10 +39,7 @@ export const withRange = Component =>
 
     setAllTime = () => {
       const { month, day, year } = getPartsOfTime()
-      const newDate = [
-        new Date(START_DATE),
-        new Date(`${month + 1}.${day}.${year}`),
-      ]
+      const newDate = [new Date(START_DATE), new Date(year, month, day)]
 
       this.onChange(newDate)
     }
@@ -51,17 +48,15 @@ export const withRange = Component =>
       const { month, day, year } = getPartsOfTime()
       const week = new Date(year, month, day - 6)
 
-      const date = [week, new Date(`${month + 1}.${day}.${year}`)]
-
+      const date = [week, new Date(year, month, day)]
       this.onChange(date)
     }
 
     setLast30Days = () => {
       const { month, day, year } = getPartsOfTime()
-      const week = new Date(year, month, day - 29)
+      const thirtyDays = new Date(year, month, day - 29)
 
-      const date = [week, new Date(`${month + 1}.${day}.${year}`)]
-
+      const date = [thirtyDays, new Date(year, month, day)]
       this.onChange(date)
     }
 

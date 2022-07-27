@@ -2,7 +2,7 @@ const LOCALES_RANGE_BLOCKS = {
   ru: {
     today: "Сегодня",
     week: "Неделя",
-    last30days: "Последние 30 дней",
+    last30days: "30 дней",
     thisMonth: "Этот месяц",
     allTime: "Весь период",
     clear: "Очистить",
@@ -10,14 +10,14 @@ const LOCALES_RANGE_BLOCKS = {
   en: {
     today: "Today",
     week: "Week",
-    last30days: "Last 30 days",
+    last30days: "30 days",
     thisMonth: "This month",
     allTime: "All period",
     clear: "Clear",
   },
 }
 
-const START_DATE = "01.01.2010"
+const START_DATE = "2010-01-01T00:00"
 
 export {
   LOCALES_RANGE_BLOCKS,
