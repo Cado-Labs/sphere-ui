@@ -1,6 +1,6 @@
 content: The MultiSelect component allows to select multiple items from a drop-down list.
 props:
-  id: Unique identificator of the components.
+  id: Unique identifier of the components.
   ref: Ability to access the DOM element and component methods.
   name: Name of the input element.
   value: Value of the component.
