@@ -50,6 +50,7 @@ export { TieredMenu } from "./components/TieredMenu"
 export { TimePicker } from "./components/TimePicker"
 export { Toast } from "./components/Toast"
 export { Tooltip } from "./components/Tooltip"
+export { Tree } from "./components/Tree"
 export { TreeTable } from "./components/TreeTable"
 export { TriStateCheckbox } from "./components/TriStateCheckbox"
 
