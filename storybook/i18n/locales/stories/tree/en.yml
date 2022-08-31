@@ -1,0 +1,69 @@
+content:
+  main: Tree is used to display hierarchical data.
+  start:
+    title: Getting Started
+    body: Tree component requires an array of TreeNode objects as its <code>value</code>.
+  treenode:
+    title: TreeNode API
+  modes:
+    title: Controlled vs Uncontrolled
+    body: Tree expansion state is managed in two ways, in uncontrolled mode only initial expanded state of a node can be defined using <code>expandedKeys</code> property whereas in controlled mode <code>expandedKeys</code> property along with <code>onToggle</code properties are used for full control over the state. If you need to expand or collapse the state of nodes programmatically then controlled mode should be used.
+props:
+  id: Unique identifier of the element.
+  value: An array of treenodes.
+  selectionMode: Defines the selection mode, valid values "single", "multiple", and "checkbox".
+  selectionKeys: A single or an array of keys to control the selection state.
+  expandedKeys: An array of keys to represent the state of the tree expansion state in controlled mode.
+  style: Inline style of the component.
+  className: Class of the component.
+  contentStyle: Inline style of the tree content.
+  contentClassName: Class of the tree content.
+  metaKeySelection: Defines how multiple items can be selected, when true metaKey needs to be pressed to select or unselect an item and when set to false selection of each item can be toggled individually.
+  propagateSelectionUp: Whether checkbox selections propagate to ancestor nodes.
+  propagateSelectionDown: Whether checkbox selections propagate to descendant nodes.
+  loading: Whether to display loading indicator.
+  dragdropScope: Unique key to enable dragdrop functionality.
+  header: The template of header.
+  footer: The template of footer.
+  ariaLabel: Used to define a string that labels the component.
+  ariaLabelledBy: Contains the element IDs of labels.
+  nodeTemplate: Template of node element.
+  togglerTemplate: Template of toggler element.
+  showHeader: Whether to show the header or not.
+  disabled: When present, it specifies that the component should be disabled.
+  onSelect: Callback to invoke when a node is selected.
+  onUnselect: Callback to invoke when a node is unselected.
+  onExpand: Callback to invoke when a node is expanded.
+  onCollapse: Callback to invoke when a node is collapsed.
+  onSelectionChange: Callback to invoke when selection changes.
+  onToggle: Callback to invoke when a node is toggled.
+  onDragDrop: Callback to invoke when a node is selected.
+  onNodeClick: Callback to invoke when the node is clicked.
+treenodeProps:
+  key: Unique key of the node.
+  label: Label of the node.
+  data: Data represented by the node.
+  icon: Icon of the node to display next to content.
+  children: An array of treenodes as children.
+  style: Inline style of the node.
+  className: Style class of the node.
+  draggable: Whether the node is draggable when dragdrop is enabled.
+  droppable: Whether the node is droppable when dragdrop is enabled.
+  selectable: Whether the node is selectable when selection mode is enabled.
+  leaf: Specifies if the node has children. Used in lazy loading.
+pages:
+  selection:
+    title: Tree Selection
+    description: Tree supports "single", "multiple" and "checkbox" as selection modes.
+  events:
+    title: Tree Events
+    description: An event is provided each type of user interaction such as expand, collapse and selection.
+  lazy:
+    title: Tree Lazy
+    description: Lazy loading is useful when dealing with huge datasets.
+  templating:
+    title: Tree Templating
+    description: Tree nodes can be customized to display custom content.
+  dragdrop:
+    title: Tree DragDrop
+    description: Nodes can be reordered using drag and drop.
