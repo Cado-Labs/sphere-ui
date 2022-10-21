@@ -30,6 +30,10 @@
     }
   }
 
+  &-other-month {
+    opacity: .6;
+  }
+
   &_buttons-bar {
     display: flex;
     flex-direction: row-reverse;
@@ -82,10 +86,6 @@
         font-size: .7rem;
         line-height: 1;
       }
-    }
-
-    .p-datepicker-other-month {
-      opacity: .6;
     }
   }
 }

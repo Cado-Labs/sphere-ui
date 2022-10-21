@@ -16978,6 +16978,9 @@
   width: 1.55rem;
   height: 1.55rem;
 }
+.p-datepicker-other-month {
+  opacity: 0.6;
+}
 .p-datepicker_buttons-bar {
   display: flex;
   flex-direction: row-reverse;
@@ -17018,9 +17021,6 @@
   margin-bottom: 0.3rem !important;
   font-size: 0.7rem;
   line-height: 1;
-}
-.p-datepicker_buttons-bar .p-datepicker-other-month {
-  opacity: 0.6;
 }
 
 .p-calendar {
