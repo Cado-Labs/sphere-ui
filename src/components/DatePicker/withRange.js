@@ -60,7 +60,7 @@ export const withRange = Component =>
 
     setAllTime = () => {
       const { month, day, year } = getPartsOfTime()
-      const newDate = [this.props.startDate, new Date(year, month, day)]
+      const newDate = [this.props.startCalendarDate, new Date(year, month, day)]
 
       this.onChange(newDate)
     }

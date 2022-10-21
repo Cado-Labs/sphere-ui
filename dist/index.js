@@ -30815,7 +30815,7 @@ var withRange = function withRange(Component) {
             day = _getPartsOfTime4.day,
             year = _getPartsOfTime4.year;
 
-        var newDate = [_this.props.startDate, new Date(year, month, day)];
+        var newDate = [_this.props.startCalendarDate, new Date(year, month, day)];
 
         _this.onChange(newDate);
       });
@@ -30963,12 +30963,8 @@ var DatePicker = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
       panelStyle = _ref.panelStyle,
       _ref$mask = _ref.mask,
       mask = _ref$mask === void 0 ? null : _ref$mask,
-      _ref$showOtherMonths = _ref.showOtherMonths,
-      showOtherMonths = _ref$showOtherMonths === void 0 ? true : _ref$showOtherMonths,
-      _ref$selectOtherMonth = _ref.selectOtherMonths,
-      selectOtherMonths = _ref$selectOtherMonth === void 0 ? true : _ref$selectOtherMonth,
-      _ref$startDate = _ref.startDate,
-      startDate = _ref$startDate === void 0 ? START_DATE : _ref$startDate,
+      _ref$startCalendarDat = _ref.startCalendarDate,
+      startCalendarDate = _ref$startCalendarDat === void 0 ? START_DATE : _ref$startCalendarDat,
       tooltip = _ref.tooltip,
       tooltipOptions = _ref.tooltipOptions,
       _ref$required = _ref.required,
@@ -31020,8 +31016,8 @@ var DatePicker = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
       panelClassName: panelClassName,
       panelStyle: panelStyle,
       mask: mask,
-      showOtherMonths: showOtherMonths,
-      selectOtherMonths: selectOtherMonths,
+      showOtherMonths: true,
+      selectOtherMonths: true,
       tooltip: tooltip,
       tooltipOptions: filterTooltipOptions(tooltipOptions),
       required: required,
@@ -31063,7 +31059,7 @@ var DatePicker = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
     var _getPartsOfTime = getPartsOfTime(),
         year = _getPartsOfTime.year;
 
-    var startYear = startDate ? startDate.getFullYear() : startRangeOfYears;
+    var startYear = startCalendarDate ? startCalendarDate.getFullYear() : startRangeOfYears;
     return yearRange || "".concat(startYear, ":").concat(year);
   };
 
@@ -31077,7 +31073,7 @@ var DatePicker = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
       viewDate: viewDate,
       onViewDateChange: onViewDateChangeCustom,
       numberOfMonths: 2,
-      startDate: startDate
+      startCalendarDate: startCalendarDate
     }));
   };
 
@@ -31133,6 +31129,8 @@ var DateTimePicker = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
       viewDate = _ref$viewDate === void 0 ? null : _ref$viewDate,
       _ref$mask = _ref.mask,
       mask = _ref$mask === void 0 ? null : _ref$mask,
+      _ref$startCalendarDat = _ref.startCalendarDate,
+      startCalendarDate = _ref$startCalendarDat === void 0 ? START_DATE : _ref$startCalendarDat,
       _ref$minDate = _ref.minDate,
       minDate = _ref$minDate === void 0 ? null : _ref$minDate,
       _ref$maxDate = _ref.maxDate,
@@ -31176,7 +31174,8 @@ var DateTimePicker = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
     var _getPartsOfTime = getPartsOfTime(),
         year = _getPartsOfTime.year;
 
-    return yearRange || "".concat(startRangeOfYears, ":").concat(year);
+    var startYear = startCalendarDate ? startCalendarDate.getFullYear() : startRangeOfYears;
+    return yearRange || "".concat(startYear, ":").concat(year);
   };
 
   var renderFooter = function renderFooter() {

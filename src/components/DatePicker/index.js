@@ -31,9 +31,7 @@ export const DatePicker = React.forwardRef(({
   panelClassName,
   panelStyle,
   mask = null,
-  showOtherMonths = true,
-  selectOtherMonths = true,
-  startDate = START_DATE,
+  startCalendarDate = START_DATE,
   tooltip,
   tooltipOptions,
   required = false,
@@ -78,8 +76,8 @@ export const DatePicker = React.forwardRef(({
       panelClassName,
       panelStyle,
       mask,
-      showOtherMonths,
-      selectOtherMonths,
+      showOtherMonths: true,
+      selectOtherMonths: true,
       tooltip,
       tooltipOptions: filterTooltipOptions(tooltipOptions),
       required,
@@ -114,7 +112,7 @@ export const DatePicker = React.forwardRef(({
 
   const getYearRange = () => {
     const { year } = getPartsOfTime()
-    const startYear = startDate ? startDate.getFullYear() : startRangeOfYears
+    const startYear = startCalendarDate ? startCalendarDate.getFullYear() : startRangeOfYears
 
     return yearRange || `${startYear}:${year}`
   }
@@ -130,7 +128,7 @@ export const DatePicker = React.forwardRef(({
         viewDate={viewDate}
         onViewDateChange={onViewDateChangeCustom}
         numberOfMonths={2}
-        startDate={startDate}
+        startCalendarDate={startCalendarDate}
       />
     )
   }
