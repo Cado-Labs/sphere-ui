@@ -16954,8 +16954,6 @@
 }
 
 .p-datepicker {
-  display: flex;
-  flex-direction: row-reverse;
   min-width: 220px !important;
 }
 .p-datepicker .p-datepicker-header {
@@ -16979,6 +16977,10 @@
 .p-datepicker table td > span {
   width: 1.55rem;
   height: 1.55rem;
+}
+.p-datepicker_buttons-bar {
+  display: flex;
+  flex-direction: row-reverse;
 }
 .p-datepicker_buttons-bar .p-datepicker-group-container {
   padding-left: 0.5rem;

@@ -1,6 +1,4 @@
 .p-datepicker {
-  display: flex;
-  flex-direction: row-reverse;
   min-width: 220px !important;
 
   & &-header {
@@ -33,6 +31,9 @@
   }
 
   &_buttons-bar {
+    display: flex;
+    flex-direction: row-reverse;
+
     .p-datepicker-group-container {
       padding-left: .5rem;
     }
