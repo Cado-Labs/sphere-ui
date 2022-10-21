@@ -44,6 +44,7 @@ function DatePickerExample () {
             onChange={onChange}
             mode="range"
             rangeButtonsBar
+            yearRange="2010:2030"
           />
         </div>
         <div className="s-field-col-3">

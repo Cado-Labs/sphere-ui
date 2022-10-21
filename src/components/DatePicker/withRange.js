@@ -2,8 +2,9 @@ import React from "react"
 import { classNames as cn } from "primereact/utils"
 
 import { getPartsOfTime } from "../../utils"
+import { Button } from "../Button"
 
-import { LOCALES_RANGE_BLOCKS, START_DATE } from "./constants"
+import { LOCALES_RANGE_BLOCKS } from "./constants"
 
 export const withRange = Component =>
   class extends React.Component {
@@ -25,6 +26,14 @@ export const withRange = Component =>
       this.onChange(newDate)
     }
 
+    setYesterday = () => {
+      const { day, month, year } = getPartsOfTime()
+      const yesterday = new Date(year, month, day - 1)
+      const newDate = [yesterday, yesterday]
+
+      this.onChange(newDate)
+    }
+
     setCurrentMonth = () => {
       const { month, year } = getPartsOfTime()
       const lastDayInMonth = new Date(year, month + 1, 0).getDate()
@@ -37,26 +46,43 @@ export const withRange = Component =>
       this.onChange(newDate)
     }
 
+    setLastMonth = () => {
+      const { month, year } = getPartsOfTime()
+      const prevMonth = month - 1
+      const lastDayInPrevMonth = new Date(year, month, 0).getDate()
+
+      const newDate = [
+        new Date(year, prevMonth, 1),
+        new Date(year, prevMonth, lastDayInPrevMonth),
+      ]
+      this.onChange(newDate)
+    }
+
     setAllTime = () => {
       const { month, day, year } = getPartsOfTime()
-      const newDate = [new Date(START_DATE), new Date(year, month, day)]
+      const newDate = [this.props.startDate, new Date(year, month, day)]
 
       this.onChange(newDate)
     }
 
     setWeek = () => {
-      const { month, day, year } = getPartsOfTime()
-      const week = new Date(year, month, day - 6)
-
-      const date = [week, new Date(year, month, day)]
-      this.onChange(date)
+      this.setLastDays(7)
     }
 
     setLast30Days = () => {
-      const { month, day, year } = getPartsOfTime()
-      const thirtyDays = new Date(year, month, day - 29)
+      this.setLastDays(30)
+    }
 
-      const date = [thirtyDays, new Date(year, month, day)]
+    setLast180Days = () => {
+      this.setLastDays(180)
+    }
+
+    setLastDays = days => {
+      const { month, day, year } = getPartsOfTime()
+      const daysDiff = day - (days - 1)
+      const startDate = new Date(year, month, daysDiff)
+
+      const date = [startDate, new Date(year, month, day)]
       this.onChange(date)
     }
 
@@ -77,20 +103,27 @@ export const withRange = Component =>
       const translations = LOCALES_RANGE_BLOCKS[this.props.locale]
       const blocks = [
         { title: translations.today, method: this.setToday },
+        { title: translations.yesterday, method: this.setYesterday },
         { title: translations.week, method: this.setWeek },
         { title: translations.last30days, method: this.setLast30Days },
         { title: translations.thisMonth, method: this.setCurrentMonth },
+        { title: translations.lastMonth, method: this.setLastMonth },
+        { title: translations.last180days, method: this.setLast180Days },
         { title: translations.allTime, method: this.setAllTime },
-        { title: translations.clear, method: this.clear },
       ]
 
       return (
         <div className="flex flex-column p-datepicker-range-buttons">
           {blocks.map((block, index) => (
-            <div className="p-button mb-2" onClick={block.method} key={index}>
-              {block.title}
-            </div>
+            <Button
+              key={index}
+              className="p-button-text p-button-plain"
+              label={block.title}
+              size="small"
+              onClick={block.method}
+            />
           ))}
+          <Button label={translations.clear} size="small" onClick={this.clear} />
         </div>
       )
     }

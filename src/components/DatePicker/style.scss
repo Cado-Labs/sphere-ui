@@ -1,4 +1,6 @@
 .p-datepicker {
+  display: flex;
+  flex-direction: row-reverse;
   min-width: 220px !important;
 
   & &-header {
@@ -32,22 +34,43 @@
 
   &_buttons-bar {
     .p-datepicker-group-container {
-      width: 320px;
+      padding-left: .5rem;
     }
 
     .p-datepicker-group {
       width: 220px;
     }
 
+    .p-datepicker-group:first-child {
+      .p-datepicker-header-custom {
+        display: none;
+      }
+    }
+
+    .p-datepicker-group:nth-child(2) {
+      .p-datepicker-prev,
+      .p-datepicker-title,
+      .p-datepicker-month,
+      .p-datepicker-year {
+        display: none;
+      }
+
+      .p-datepicker-header-custom {
+        margin: 0 auto;
+        line-height: 2rem;
+      }
+
+      .p-datepicker-month-name {
+        margin-right: .5rem;
+      }
+    }
+
     .p-datepicker-footer {
-      position: relative;
+      padding-right: .5rem;
+      border-right: 1px solid #dee2e6;
 
       .p-datepicker-range-buttons {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 100px;
-        padding: .6rem;
+        width: 90px;
         font-size: .7rem;
         background: #fff;
       }
@@ -58,6 +81,10 @@
         font-size: .7rem;
         line-height: 1;
       }
+    }
+
+    .p-datepicker-other-month {
+      opacity: .6;
     }
   }
 }
