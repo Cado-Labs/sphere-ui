@@ -11,6 +11,7 @@ export const Toast = React.forwardRef(({
   onRemove,
   onShow,
   onHide,
+  dataTestId,
 }, ref) => {
   return (
     <PrimeToast
@@ -25,6 +26,7 @@ export const Toast = React.forwardRef(({
       onRemove={onRemove}
       onShow={onShow}
       onHide={onHide}
+      dataTestId={dataTestId}
     />
   )
 })

@@ -88,6 +88,7 @@ export const DataTable = React.forwardRef(({
   onRowEditChange,
   exportFunction,
   children,
+  dataTestId,
 }, ref) => {
   const emptyMessage = customEmptyMessage || EMPTY_MESSAGE[locale().locale]
 
@@ -174,6 +175,7 @@ export const DataTable = React.forwardRef(({
       onRowEditCancel={onRowEditCancel}
       onRowEditChange={onRowEditChange}
       exportFunction={exportFunction}
+      dataTestId={dataTestId}
     >
       {children}
     </PrimeDataTable>

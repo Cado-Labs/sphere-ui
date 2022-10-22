@@ -6,6 +6,7 @@ export const Spinner = React.forwardRef(({
   style,
   className,
   strokeWidth,
+  dataTestId,
   children,
 }, ref) => {
   if (loading) {
@@ -17,6 +18,7 @@ export const Spinner = React.forwardRef(({
           strokeWidth={strokeWidth}
           style={style}
           className={className}
+          dataTestId={dataTestId}
         />
       </div>
     )

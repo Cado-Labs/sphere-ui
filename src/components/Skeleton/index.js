@@ -10,6 +10,7 @@ export const Skeleton = React.forwardRef(({
   animation,
   style,
   className,
+  dataTestId,
 }, ref) => {
   return (
     <PrimeSkeleton
@@ -22,6 +23,7 @@ export const Skeleton = React.forwardRef(({
       animation={animation}
       style={style}
       className={className}
+      dataTestId={dataTestId}
     />
   )
 })

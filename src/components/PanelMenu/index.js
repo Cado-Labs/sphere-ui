@@ -6,6 +6,7 @@ export const PanelMenu = React.forwardRef(({
   model,
   style,
   className,
+  dataTestId,
 }, ref) => {
   return (
     <PrimePanelMenu
@@ -14,6 +15,7 @@ export const PanelMenu = React.forwardRef(({
       model={model}
       style={style}
       className={className}
+      dataTestId={dataTestId}
       multiple
     />
   )

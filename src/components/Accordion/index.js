@@ -7,6 +7,7 @@ import {
 const Accordion = React.forwardRef(({
   id,
   activeIndex,
+  dataTestId,
   onTabChange,
   onTabOpen,
   onTabClose,
@@ -20,6 +21,7 @@ const Accordion = React.forwardRef(({
       ref={ref}
       id={id}
       activeIndex={activeIndex}
+      dataTestId={dataTestId}
       onTabChange={onTabChange}
       onTabOpen={onTabOpen}
       onTabClose={onTabClose}

@@ -20,6 +20,7 @@ export const Checkbox = React.forwardRef(({
   tooltipOptions,
   ariaLabelledBy,
   onChange,
+  dataTestId,
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
 
@@ -42,6 +43,7 @@ export const Checkbox = React.forwardRef(({
       tooltipOptions={filteredTooltipOptions}
       ariaLabelledBy={ariaLabelledBy}
       onChange={onChange}
+      dataTestId={dataTestId}
     />
   )
 })

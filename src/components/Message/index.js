@@ -9,6 +9,7 @@ export const Message = React.forwardRef(({
   severity,
   text,
   content,
+  dataTestId,
 }, ref) => {
   const messageClassName = cn(className, {
     "p-inline-message-secondary": severity === "secondary",
@@ -23,6 +24,7 @@ export const Message = React.forwardRef(({
       severity={severity}
       text={text}
       content={content}
+      dataTestId={dataTestId}
     />
   )
 })

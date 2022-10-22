@@ -41,6 +41,7 @@ export const Dropdown = React.forwardRef(({
   onBlur,
   onShow,
   onHide,
+  dataTestId,
 }, ref) => {
   const emptyMessage = EMPTY_MESSAGE[locale().locale]
   const dropdownClassName = cn(className, "w-full")
@@ -82,6 +83,7 @@ export const Dropdown = React.forwardRef(({
       onBlur={onBlur}
       onShow={onShow}
       onHide={onHide}
+      dataTestId={dataTestId}
     />
   )
 })
