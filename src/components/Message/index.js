@@ -24,7 +24,7 @@ export const Message = React.forwardRef(({
       severity={severity}
       text={text}
       content={content}
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
     />
   )
 })

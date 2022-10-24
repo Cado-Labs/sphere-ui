@@ -35,7 +35,7 @@ export const TriStateCheckbox = React.forwardRef(({
       tooltipOptions={filteredTooltipOptions}
       ariaLabelledBy={ariaLabelledBy}
       onChange={onChange}
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
     />
   )
 })

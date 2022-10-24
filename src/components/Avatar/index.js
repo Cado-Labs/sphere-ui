@@ -20,7 +20,7 @@ export const Avatar = React.forwardRef(({
 
   return (
     <PrimeAvatar
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
       style={style}
       ref={ref}
       className={avatarClassName}

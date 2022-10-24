@@ -93,7 +93,7 @@ export const TreeTable = React.forwardRef(({
       onUnselect={onUnselect}
       onSelectionChange={onSelectionChange}
       alwaysShowPaginator={false}
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
     >
       {children}
     </PrimeTreeTable>

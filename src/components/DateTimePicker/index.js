@@ -145,7 +145,7 @@ export const DateTimePicker = React.forwardRef(({
       onShow={onShow}
       onHide={onHide}
       onVisibleChange={onVisibleChange}
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
     />
   )
 })

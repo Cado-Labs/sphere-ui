@@ -23,7 +23,7 @@ export const Skeleton = React.forwardRef(({
       animation={animation}
       style={style}
       className={className}
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
     />
   )
 })

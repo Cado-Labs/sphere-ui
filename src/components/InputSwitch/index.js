@@ -42,7 +42,7 @@ export const InputSwitch = React.forwardRef(({
       onChange={onChange}
       onFocus={onFocus}
       onBlur={onBlur}
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
     />
   )
 })

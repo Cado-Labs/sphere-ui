@@ -23,7 +23,7 @@ export const ProgressBar = React.forwardRef(({
       color={color}
       style={style}
       className={className}
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
     />
   )
 })

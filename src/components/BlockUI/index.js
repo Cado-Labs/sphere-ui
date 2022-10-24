@@ -13,7 +13,7 @@ export const BlockUI = React.forwardRef(({
 }, ref) => {
   return (
     <PrimeBlockUI
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
       ref={ref}
       id={id}
       blocked={blocked}

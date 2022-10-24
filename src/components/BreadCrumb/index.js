@@ -35,7 +35,7 @@ export const BreadCrumb = React.forwardRef(({
     <PrimeBreadCrumb
       ref={ref}
       id={id}
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
       model={breadCrumbModel}
       home={breadCrumbHome}
       style={style}

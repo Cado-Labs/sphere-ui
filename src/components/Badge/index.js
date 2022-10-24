@@ -18,7 +18,7 @@ export const Badge = React.forwardRef(({
 
   return (
     <PrimeBadge
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
       style={style}
       ref={ref}
       className={badgeClassName}

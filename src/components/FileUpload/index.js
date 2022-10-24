@@ -75,7 +75,7 @@ export const FileUpload = React.forwardRef(({
       onValidationFail={onValidationFail}
       uploadHandler={uploadHandler}
       onRemove={onRemove}
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
     />
   )
 })

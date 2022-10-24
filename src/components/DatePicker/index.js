@@ -90,6 +90,7 @@ export const DatePicker = React.forwardRef(({
       onHide,
       onVisibleChange,
       dataTestId,
+      "data-testid": dataTestId,
     }
   }
 

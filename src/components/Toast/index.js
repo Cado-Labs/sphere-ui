@@ -26,7 +26,7 @@ export const Toast = React.forwardRef(({
       onRemove={onRemove}
       onShow={onShow}
       onHide={onHide}
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
     />
   )
 })

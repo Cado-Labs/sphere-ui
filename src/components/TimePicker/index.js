@@ -33,7 +33,7 @@ export const TimePicker = React.forwardRef(({
       placeholder={placeholder}
       showIcon={showIcon}
       viewDate={viewDate}
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
       hourFormat="24"
       showTime
       timeOnly

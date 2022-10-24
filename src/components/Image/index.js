@@ -31,7 +31,7 @@ export const Image = React.forwardRef(({
       imageClassName={imageClassName}
       onShow={onShow}
       onHide={onHide}
-      dataTestId={dataTestId}
+      data-testid={dataTestId}
     />
   )
 })
