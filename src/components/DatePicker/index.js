@@ -76,7 +76,6 @@ export const DatePicker = React.forwardRef(({
       panelClassName,
       panelStyle,
       mask,
-      showOtherMonths: true,
       selectOtherMonths: true,
       tooltip,
       tooltipOptions: filterTooltipOptions(tooltipOptions),

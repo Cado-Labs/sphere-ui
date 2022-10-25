@@ -117,7 +117,7 @@ export const datePicker = {
     { name: "mask", type: "string", default: null, description: `${I18N_PREFIX}.props.mask` },
     { name: "minDate", type: "Date", default: null, description: `${I18N_PREFIX}.props.minDate` },
     { name: "maxDate", type: "Date", default: null, description: `${I18N_PREFIX}.props.maxDate` },
-    { name: "startCalendarDate", type: "Date", default: null, description: `${I18N_PREFIX}.props.startCalendarDate` },
+    { name: "startCalendarDate", type: "Date", default: new Date("2010-01-01T00:00"), description: `${I18N_PREFIX}.props.startCalendarDate` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
     { name: "inputClassName", type: "string", description: `${I18N_PREFIX}.props.inputClassName` },
