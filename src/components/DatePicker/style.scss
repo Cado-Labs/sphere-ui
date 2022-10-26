@@ -14,6 +14,7 @@
 
   &-month,
   &-year {
+    padding: .4rem !important;
     font-size: .9rem;
   }
 
@@ -34,16 +35,22 @@
     opacity: .6;
   }
 
-  &_buttons-bar {
+  &-title {
     display: flex;
-    flex-direction: row-reverse;
+  }
+
+  &-multiple-month {
+    .p-datepicker-group {
+      // width: 220px;
+      border: none !important;
+    }
+
+    .p-datepicker-group:first-child {
+      border-right: 1px solid #dee2e6 !important;
+    }
 
     .p-datepicker-group-container {
       padding-left: .5rem;
-    }
-
-    .p-datepicker-group {
-      width: 220px;
     }
 
     .p-datepicker-group:first-child {
@@ -68,6 +75,15 @@
       .p-datepicker-month-name {
         margin-right: .5rem;
       }
+    }
+  }
+
+  &_buttons-bar {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .p-datepicker-group {
+      // width: 220px;
     }
 
     .p-datepicker-footer {

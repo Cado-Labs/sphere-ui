@@ -16965,6 +16965,7 @@
   height: 1.75rem;
 }
 .p-datepicker-month, .p-datepicker-year {
+  padding: 0.4rem !important;
   font-size: 0.9rem;
 }
 .p-datepicker table {
@@ -16981,31 +16982,37 @@
 .p-datepicker-other-month {
   opacity: 0.6;
 }
-.p-datepicker_buttons-bar {
+.p-datepicker-title {
   display: flex;
-  flex-direction: row-reverse;
 }
-.p-datepicker_buttons-bar .p-datepicker-group-container {
+.p-datepicker-multiple-month .p-datepicker-group {
+  border: none !important;
+}
+.p-datepicker-multiple-month .p-datepicker-group:first-child {
+  border-right: 1px solid #dee2e6 !important;
+}
+.p-datepicker-multiple-month .p-datepicker-group-container {
   padding-left: 0.5rem;
 }
-.p-datepicker_buttons-bar .p-datepicker-group {
-  width: 220px;
-}
-.p-datepicker_buttons-bar .p-datepicker-group:first-child .p-datepicker-header-custom {
+.p-datepicker-multiple-month .p-datepicker-group:first-child .p-datepicker-header-custom {
   display: none;
 }
-.p-datepicker_buttons-bar .p-datepicker-group:nth-child(2) .p-datepicker-prev,
-.p-datepicker_buttons-bar .p-datepicker-group:nth-child(2) .p-datepicker-title,
-.p-datepicker_buttons-bar .p-datepicker-group:nth-child(2) .p-datepicker-month,
-.p-datepicker_buttons-bar .p-datepicker-group:nth-child(2) .p-datepicker-year {
+.p-datepicker-multiple-month .p-datepicker-group:nth-child(2) .p-datepicker-prev,
+.p-datepicker-multiple-month .p-datepicker-group:nth-child(2) .p-datepicker-title,
+.p-datepicker-multiple-month .p-datepicker-group:nth-child(2) .p-datepicker-month,
+.p-datepicker-multiple-month .p-datepicker-group:nth-child(2) .p-datepicker-year {
   display: none;
 }
-.p-datepicker_buttons-bar .p-datepicker-group:nth-child(2) .p-datepicker-header-custom {
+.p-datepicker-multiple-month .p-datepicker-group:nth-child(2) .p-datepicker-header-custom {
   margin: 0 auto;
   line-height: 2rem;
 }
-.p-datepicker_buttons-bar .p-datepicker-group:nth-child(2) .p-datepicker-month-name {
+.p-datepicker-multiple-month .p-datepicker-group:nth-child(2) .p-datepicker-month-name {
   margin-right: 0.5rem;
+}
+.p-datepicker_buttons-bar {
+  display: flex;
+  flex-direction: row-reverse;
 }
 .p-datepicker_buttons-bar .p-datepicker-footer {
   padding-right: 0.5rem;

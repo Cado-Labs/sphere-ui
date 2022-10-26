@@ -9,7 +9,8 @@ const code = `
 function DatePickerExample () {
   const [fields, setFields] = React.useState({
     date: new Date(),
-    rangeDate: [new Date(), new Date]
+    rangeDate: [new Date(), new Date()],
+    rangeDate2: [new Date(), new Date()]
   })
 
   const minDate = new Date()
@@ -41,6 +42,15 @@ function DatePickerExample () {
           <DatePicker
             name="rangeDate"
             value={fields.rangeDate}
+            onChange={onChange}
+            mode="range"
+          />
+        </div>
+        <div className="s-field-col-3">
+          <label htmlFor="rangeDate2">DateRangePicker with range buttons</label>
+          <DatePicker
+            name="rangeDate2"
+            value={fields.rangeDate2}
             onChange={onChange}
             mode="range"
             rangeButtonsBar
