@@ -1,5 +1,5 @@
 .cache/
 node_modules/
-# dist/
+dist/
 storybook/node_modules
 *.log
