@@ -66,7 +66,6 @@ export const DatePicker = React.forwardRef(({
       disabled,
       monthNavigator,
       yearNavigator,
-      startRangeOfYears,
       minDate,
       maxDate,
       className,
@@ -90,10 +89,8 @@ export const DatePicker = React.forwardRef(({
       onInput,
       onSelect,
       onShow,
-      viewDate,
       onHide,
       onVisibleChange,
-      onViewDateChange: onViewDateChangeCustom,
     }
   }
 

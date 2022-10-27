@@ -26076,12 +26076,52 @@ var withRange = function withRange(Component) {
         var panelClassName = classNames(this.props.panelClassName, {
           "p-datepicker_buttons-bar": this.props.rangeButtonsBar
         });
-        return /*#__PURE__*/React__default.createElement(Component, _extends$J({}, this.props, {
+        return /*#__PURE__*/React__default.createElement(Component, {
+          id: this.props.id,
+          name: this.props.name,
+          value: this.props.value,
+          showIcon: this.props.showIcon,
+          onChange: this.props.onChange,
+          dateFormat: this.props.dateFormat,
+          placeholder: this.props.placeholder,
+          yearRange: this.props.yearRange,
+          locale: this.props.locale,
+          disabled: this.props.disabled,
+          monthNavigator: this.props.monthNavigator,
+          yearNavigator: this.props.yearNavigator,
+          minDate: this.props.minDate,
+          maxDate: this.props.maxDate,
+          className: this.props.className,
+          style: this.props.style,
+          inputClassName: this.props.inputClassName,
+          inputStyle: this.props.inputStyle,
+          panelStyle: this.props.panelStyle,
+          mask: this.props.mask,
+          selectOtherMonths: this.props.selectOtherMonths,
+          tooltip: this.props.tooltip,
+          tooltipOptions: this.props.tooltipOptions,
+          required: this.props.required,
+          inputId: this.props.inputId,
+          readOnlyInput: this.props.readOnlyInput,
+          tabIndex: this.props.tabIndex,
+          autoZIndex: this.props.autoZIndex,
+          baseZIndex: this.props.baseZIndex,
+          onFocus: this.props.onFocus,
+          onBlur: this.props.onBlur,
+          onInput: this.props.onInput,
+          onSelect: this.props.onSelect,
+          onShow: this.props.onShow,
+          viewDate: this.props.viewDate,
+          onHide: this.props.onHide,
+          onVisibleChange: this.props.onVisibleChange,
+          onViewDateChange: this.props.onViewDateChange,
+          headerTemplate: this.props.headerTemplate,
+          numberOfMonths: this.props.numberOfMonths,
           panelClassName: panelClassName,
           selectionMode: "range",
           ref: this.refCalendar,
           footerTemplate: this.renderFooter
-        }));
+        });
       }
     }]);
 
@@ -26170,7 +26210,6 @@ var DatePicker = /*#__PURE__*/React__default.forwardRef(function (_ref, ref) {
       disabled: disabled,
       monthNavigator: monthNavigator,
       yearNavigator: yearNavigator,
-      startRangeOfYears: startRangeOfYears,
       minDate: minDate,
       maxDate: maxDate,
       className: className,
@@ -26194,10 +26233,8 @@ var DatePicker = /*#__PURE__*/React__default.forwardRef(function (_ref, ref) {
       onInput: onInput,
       onSelect: onSelect,
       onShow: onShow,
-      viewDate: viewDate,
       onHide: onHide,
-      onVisibleChange: onVisibleChange,
-      onViewDateChange: onViewDateChangeCustom
+      onVisibleChange: onVisibleChange
     };
   };
 
@@ -26405,7 +26442,6 @@ var DateTimePicker = /*#__PURE__*/React__default.forwardRef(function (_ref, ref)
     showTime: true,
     monthNavigator: monthNavigator,
     yearNavigator: yearNavigator,
-    startRangeOfYears: startRangeOfYears,
     yearRange: getYearRange(),
     footerTemplate: renderFooter,
     tooltip: tooltip,

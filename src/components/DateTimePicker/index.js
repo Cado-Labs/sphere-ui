@@ -130,7 +130,6 @@ export const DateTimePicker = React.forwardRef(({
       showTime
       monthNavigator={monthNavigator}
       yearNavigator={yearNavigator}
-      startRangeOfYears={startRangeOfYears}
       yearRange={getYearRange()}
       footerTemplate={renderFooter}
       tooltip={tooltip}
