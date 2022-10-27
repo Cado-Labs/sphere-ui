@@ -26144,8 +26144,6 @@ var DatePicker = /*#__PURE__*/React__default.forwardRef(function (_ref, ref) {
       dateFormat = _ref$dateFormat === void 0 ? "dd.mm.yy" : _ref$dateFormat,
       _ref$showIcon = _ref.showIcon,
       showIcon = _ref$showIcon === void 0 ? true : _ref$showIcon,
-      _ref$rangeButtonsBar = _ref.rangeButtonsBar,
-      rangeButtonsBar = _ref$rangeButtonsBar === void 0 ? false : _ref$rangeButtonsBar,
       _ref$disabled = _ref.disabled,
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
       _ref$monthNavigator = _ref.monthNavigator,
@@ -26268,7 +26266,7 @@ var DatePicker = /*#__PURE__*/React__default.forwardRef(function (_ref, ref) {
       return withRange(Calendar);
     }, []);
     return /*#__PURE__*/React__default.createElement(RangePicker, _extends$J({}, getDefaultProps(), {
-      rangeButtonsBar: rangeButtonsBar,
+      rangeButtonsBar: true,
       headerTemplate: headerTemplate,
       viewDate: viewDate,
       onViewDateChange: onViewDateChangeCustom,

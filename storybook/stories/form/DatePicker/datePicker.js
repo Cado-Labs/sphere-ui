@@ -10,7 +10,6 @@ function DatePickerExample () {
   const [fields, setFields] = React.useState({
     date: new Date(),
     rangeDate: [new Date(), new Date()],
-    rangeDate2: [new Date(), new Date()]
   })
 
   const minDate = new Date()
@@ -44,16 +43,6 @@ function DatePickerExample () {
             value={fields.rangeDate}
             onChange={onChange}
             mode="range"
-          />
-        </div>
-        <div className="s-field-col-3">
-          <label htmlFor="rangeDate2">DateRangePicker with range buttons</label>
-          <DatePicker
-            name="rangeDate2"
-            value={fields.rangeDate2}
-            onChange={onChange}
-            mode="range"
-            rangeButtonsBar
             yearRange="2010:2030"
           />
         </div>
@@ -119,7 +108,6 @@ export const datePicker = {
     { name: "yearRange", type: "string", description: `${I18N_PREFIX}.props.yearRange` },
     { name: "mode", type: "string", default: "default", description: `${I18N_PREFIX}.props.mode` },
     { name: "showIcon", type: "boolean", default: true, description: `${I18N_PREFIX}.props.showIcon` },
-    { name: "rangeButtonsBar", type: "boolean", default: false, description: `${I18N_PREFIX}.props.rangeButtonsBar` },
     { name: "monthNavigator", type: "boolean", default: true, description: `${I18N_PREFIX}.props.monthNavigator` },
     { name: "yearNavigator", type: "boolean", default: true, description: `${I18N_PREFIX}.props.yearNavigator` },
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },

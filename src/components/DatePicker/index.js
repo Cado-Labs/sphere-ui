@@ -17,7 +17,6 @@ export const DatePicker = React.forwardRef(({
   mode = "default",
   dateFormat = "dd.mm.yy",
   showIcon = true,
-  rangeButtonsBar = false,
   disabled = false,
   monthNavigator = true,
   yearNavigator = true,
@@ -119,7 +118,7 @@ export const DatePicker = React.forwardRef(({
     return (
       <RangePicker
         {...getDefaultProps()}
-        rangeButtonsBar={rangeButtonsBar}
+        rangeButtonsBar
         headerTemplate={headerTemplate}
         viewDate={viewDate}
         onViewDateChange={onViewDateChangeCustom}

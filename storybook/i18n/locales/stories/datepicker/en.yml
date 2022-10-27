@@ -10,7 +10,6 @@ props:
   yearRange: Displays available years, format "yyyy:yyyy" ("2010:2020").
   mode: Date picker type (range, default).
   showIcon: Displays a button with icon next to input.
-  rangeButtonsBar: Displays buttons for selecting different date ranges.
   monthNavigator: Displays a dropdown with months.
   yearNavigator: Whether the year should be rendered as a dropdown instead of text.
   disabled: Disable the component.
