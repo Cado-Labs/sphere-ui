@@ -10,7 +10,6 @@ props:
   yearRange: Displays available years, format "yyyy:yyyy" ("2010:2020").
   mode: Date picker type (range, default).
   showIcon: Displays a button with icon next to input.
-  rangeButtonsBar: Displays buttons for selecting different date ranges.
   monthNavigator: Displays a dropdown with months.
   yearNavigator: Whether the year should be rendered as a dropdown instead of text.
   disabled: Disable the component.
@@ -18,13 +17,13 @@ props:
   mask: Mask pattern for input element.
   minDate: The minimum selectable date.
   maxDate: The maximum selectable date.
+  startCalendarDate: Start date of the calendar.
   style: Inline style of the element.
   className: Class of the element.
   inputStyle: Inline style of the input element.
   inputClassName: Class of the input element.
   panelStyle: Inline style of the overlay panel.
   panelClassName: Class of the overlay panel.
-  numberOfMonths: Number of months to display.
   tooltip: Content of the tooltip.
   tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
   required: When present, it specifies that an input field must be filled out before submitting the form.

@@ -3,6 +3,8 @@ import { Calendar } from "primereact/calendar"
 
 import { getPartsOfTime, filterTooltipOptions } from "../../utils"
 
+import { START_DATE } from "../DatePicker/constants"
+
 export const DateTimePicker = React.forwardRef(({
   id,
   name,
@@ -20,6 +22,7 @@ export const DateTimePicker = React.forwardRef(({
   showIcon = false,
   viewDate = null,
   mask = null,
+  startCalendarDate = START_DATE,
   minDate = null,
   maxDate = null,
   className = "",
@@ -50,8 +53,9 @@ export const DateTimePicker = React.forwardRef(({
 }, ref) => {
   const getYearRange = () => {
     const { year } = getPartsOfTime()
+    const startYear = startCalendarDate ? startCalendarDate.getFullYear() : startRangeOfYears
 
-    return yearRange || `${startRangeOfYears}:${year}`
+    return yearRange || `${startYear}:${year}`
   }
 
   const renderFooter = () => {
@@ -126,7 +130,6 @@ export const DateTimePicker = React.forwardRef(({
       showTime
       monthNavigator={monthNavigator}
       yearNavigator={yearNavigator}
-      startRangeOfYears={startRangeOfYears}
       yearRange={getYearRange()}
       footerTemplate={renderFooter}
       tooltip={tooltip}

@@ -20,6 +20,7 @@ props:
   mask: Mask pattern for input element.
   minDate: The minimum selectable date.
   maxDate: The maximum selectable date.
+  startCalendarDate: Start date of the calendar.
   style: Inline style of the element.
   className: Class of the element.
   inputStyle: Inline style of the input element.

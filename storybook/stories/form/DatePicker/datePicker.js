@@ -9,7 +9,7 @@ const code = `
 function DatePickerExample () {
   const [fields, setFields] = React.useState({
     date: new Date(),
-    rangeDate: [new Date(), new Date]
+    rangeDate: [new Date(), new Date()],
   })
 
   const minDate = new Date()
@@ -43,7 +43,7 @@ function DatePickerExample () {
             value={fields.rangeDate}
             onChange={onChange}
             mode="range"
-            rangeButtonsBar
+            yearRange="2010:2030"
           />
         </div>
         <div className="s-field-col-3">
@@ -108,7 +108,6 @@ export const datePicker = {
     { name: "yearRange", type: "string", description: `${I18N_PREFIX}.props.yearRange` },
     { name: "mode", type: "string", default: "default", description: `${I18N_PREFIX}.props.mode` },
     { name: "showIcon", type: "boolean", default: true, description: `${I18N_PREFIX}.props.showIcon` },
-    { name: "rangeButtonsBar", type: "boolean", default: false, description: `${I18N_PREFIX}.props.rangeButtonsBar` },
     { name: "monthNavigator", type: "boolean", default: true, description: `${I18N_PREFIX}.props.monthNavigator` },
     { name: "yearNavigator", type: "boolean", default: true, description: `${I18N_PREFIX}.props.yearNavigator` },
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
@@ -116,6 +115,7 @@ export const datePicker = {
     { name: "mask", type: "string", default: null, description: `${I18N_PREFIX}.props.mask` },
     { name: "minDate", type: "Date", default: null, description: `${I18N_PREFIX}.props.minDate` },
     { name: "maxDate", type: "Date", default: null, description: `${I18N_PREFIX}.props.maxDate` },
+    { name: "startCalendarDate", type: "Date", default: new Date("2010-01-01T00:00"), description: `${I18N_PREFIX}.props.startCalendarDate` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
     { name: "inputClassName", type: "string", description: `${I18N_PREFIX}.props.inputClassName` },

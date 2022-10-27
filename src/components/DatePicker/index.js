@@ -1,10 +1,11 @@
-import React, { useMemo } from "react"
+import React, { useMemo, useState } from "react"
 import { Calendar } from "primereact/calendar"
 import { locale as primeLocale } from "primereact/api"
 
 import { getPartsOfTime, filterTooltipOptions } from "../../utils"
 
 import { withRange } from "./withRange"
+import { MONTHS, START_DATE } from "./constants"
 
 export const DatePicker = React.forwardRef(({
   id,
@@ -16,7 +17,6 @@ export const DatePicker = React.forwardRef(({
   mode = "default",
   dateFormat = "dd.mm.yy",
   showIcon = true,
-  rangeButtonsBar = false,
   disabled = false,
   monthNavigator = true,
   yearNavigator = true,
@@ -30,7 +30,7 @@ export const DatePicker = React.forwardRef(({
   panelClassName,
   panelStyle,
   mask = null,
-  numberOfMonths = 1,
+  startCalendarDate = START_DATE,
   tooltip,
   tooltipOptions,
   required = false,
@@ -47,6 +47,9 @@ export const DatePicker = React.forwardRef(({
   onHide,
   onVisibleChange,
 }, ref) => {
+  const defaultViewDate = value?.[0] || new Date()
+  const [viewDate, setViewDate] = useState(defaultViewDate)
+
   const getDefaultProps = () => {
     return {
       id,
@@ -62,7 +65,6 @@ export const DatePicker = React.forwardRef(({
       disabled,
       monthNavigator,
       yearNavigator,
-      startRangeOfYears,
       minDate,
       maxDate,
       className,
@@ -72,7 +74,7 @@ export const DatePicker = React.forwardRef(({
       panelClassName,
       panelStyle,
       mask,
-      numberOfMonths,
+      selectOtherMonths: true,
       tooltip,
       tooltipOptions: filterTooltipOptions(tooltipOptions),
       required,
@@ -99,10 +101,15 @@ export const DatePicker = React.forwardRef(({
     }
   }
 
+  const onViewDateChangeCustom = e => {
+    setViewDate(e.value)
+  }
+
   const getYearRange = () => {
     const { year } = getPartsOfTime()
+    const startYear = startCalendarDate ? startCalendarDate.getFullYear() : startRangeOfYears
 
-    return yearRange || `${startRangeOfYears}:${year}`
+    return yearRange || `${startYear}:${year}`
   }
 
   const renderDateRangePicker = () => {
@@ -111,14 +118,35 @@ export const DatePicker = React.forwardRef(({
     return (
       <RangePicker
         {...getDefaultProps()}
-        rangeButtonsBar={rangeButtonsBar}
+        rangeButtonsBar
+        headerTemplate={headerTemplate}
+        viewDate={viewDate}
+        onViewDateChange={onViewDateChangeCustom}
+        numberOfMonths={2}
+        startCalendarDate={startCalendarDate}
       />
+    )
+  }
+
+  const headerTemplate = () => {
+    const month = viewDate.getMonth()
+    const nextMonth = month === 11 ? 0 : month + 1
+    const monthName = MONTHS[primeLocale().locale][nextMonth]
+
+    const year = viewDate.getFullYear()
+    const displayedYear = month === 11 ? year + 1 : year
+
+    return (
+      <div className="p-datepicker-header-custom">
+        <span className="p-datepicker-month-name">{monthName}</span>
+        <span className="p-datepicker-year-name">{displayedYear}</span>
+      </div>
     )
   }
 
   const renderDatePicker = () => {
     return (
-      <Calendar {...getDefaultProps()} />
+      <Calendar {...getDefaultProps()} numberOfMonths={1} />
     )
   }
 
