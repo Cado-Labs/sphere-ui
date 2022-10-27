@@ -41,7 +41,6 @@
 
   &-multiple-month {
     .p-datepicker-group {
-      // width: 220px;
       border: none !important;
     }
 
@@ -81,10 +80,6 @@
   &_buttons-bar {
     display: flex;
     flex-direction: row-reverse;
-
-    .p-datepicker-group {
-      // width: 220px;
-    }
 
     .p-datepicker-footer {
       padding-right: .5rem;
