@@ -2,6 +2,7 @@
   min-width: 220px !important;
 
   & &-header {
+    height: 2.5rem;
     padding: .25rem 0;
     font-size: .9rem;
   }
@@ -14,7 +15,6 @@
 
   &-month,
   &-year {
-    padding: .375rem !important;
     font-size: .9rem;
   }
 
