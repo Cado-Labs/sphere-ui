@@ -4,6 +4,7 @@
   & &-header {
     padding: .25rem 0;
     font-size: .9rem;
+    height: 2.5rem;
   }
 
   & &-header &-prev,
@@ -14,7 +15,6 @@
 
   &-month,
   &-year {
-    padding: .375rem !important;
     font-size: .9rem;
   }
 
