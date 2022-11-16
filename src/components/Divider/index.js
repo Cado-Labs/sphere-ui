@@ -18,7 +18,7 @@ export const Divider = React.forwardRef(({
       type={type}
       style={style}
       className={className}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     >
       {children}
     </PrimeDivider>

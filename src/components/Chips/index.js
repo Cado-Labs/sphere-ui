@@ -55,7 +55,7 @@ export const Chips = React.forwardRef(({
       onChange={onChange}
       onFocus={onFocus}
       onBlur={onBlur}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     />
   )
 })

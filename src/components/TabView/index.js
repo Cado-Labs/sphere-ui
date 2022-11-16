@@ -22,7 +22,7 @@ const TabView = React.forwardRef(({
       style={style}
       onTabChange={onTabChange}
       className={className}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     >
       {children}
     </PrimeTabView>

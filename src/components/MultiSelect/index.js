@@ -123,7 +123,7 @@ export const MultiSelect = React.forwardRef(({
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
       dataKey={dataKey}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     />
   )
 })

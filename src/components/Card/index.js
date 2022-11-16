@@ -22,7 +22,7 @@ export const Card = React.forwardRef(({
       subTitle={subTitle}
       style={style}
       className={className}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     >
       {children}
     </PrimeCard>

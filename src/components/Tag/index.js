@@ -23,7 +23,7 @@ export const Tag = React.forwardRef(({
       icon={icon}
       className={tagClassName}
       style={style}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     />
   )
 })

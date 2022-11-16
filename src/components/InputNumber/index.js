@@ -88,7 +88,7 @@ export const InputNumber = React.forwardRef(({
       onBlur={onBlur}
       onFocus={onFocus}
       onKeyDown={onKeyDown}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     />
   )
 })

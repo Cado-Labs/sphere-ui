@@ -175,7 +175,7 @@ export const DataTable = React.forwardRef(({
       onRowEditCancel={onRowEditCancel}
       onRowEditChange={onRowEditChange}
       exportFunction={exportFunction}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     >
       {children}
     </PrimeDataTable>

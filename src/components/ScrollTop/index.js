@@ -28,7 +28,7 @@ export const ScrollTop = React.forwardRef(({
       onShow={onShow}
       onHide={onHide}
       icon="pi pi-arrow-up"
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     />
   )
 })

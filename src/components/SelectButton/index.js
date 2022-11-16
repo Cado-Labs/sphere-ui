@@ -41,7 +41,7 @@ export const SelectButton = React.forwardRef(({
       ariaLabelledBy={ariaLabelledBy}
       onChange={onChange}
       name={name}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     />
   )
 })

@@ -83,7 +83,7 @@ export const Dropdown = React.forwardRef(({
       onBlur={onBlur}
       onShow={onShow}
       onHide={onHide}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     />
   )
 })

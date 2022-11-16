@@ -15,7 +15,7 @@ export const PanelMenu = React.forwardRef(({
       model={model}
       style={style}
       className={className}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
       multiple
     />
   )

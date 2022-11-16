@@ -19,7 +19,7 @@ export const TieredMenu = React.forwardRef(({
       className={className}
       autoZIndex={autoZIndex}
       baseZIndex={baseZIndex}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     />
   )
 })

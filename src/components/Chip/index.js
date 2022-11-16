@@ -19,7 +19,7 @@ export const Chip = React.forwardRef(({
       style={style}
       className={className}
       onRemove={onRemove}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     />
   )
 })

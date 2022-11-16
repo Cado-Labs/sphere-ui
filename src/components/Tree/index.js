@@ -67,7 +67,7 @@ export const Tree = React.forwardRef(({
       onToggle={onToggle}
       onDragDrop={onDragDrop}
       onNodeClick={onNodeClick}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     />
   )
 })

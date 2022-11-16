@@ -18,7 +18,7 @@ export const Spinner = React.forwardRef(({
           strokeWidth={strokeWidth}
           style={style}
           className={className}
-          data-testid={dataTestId}
+          dataTestId={dataTestId}
         />
       </div>
     )

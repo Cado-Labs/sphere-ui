@@ -44,7 +44,7 @@ export const Tooltip = React.forwardRef(({
       showOnDisabled={showOnDisabled}
       onShow={onShow}
       onHide={onHide}
-      data-testid={dataTestId}
+      dataTestId={dataTestId}
     >
       {children}
     </PrimeTooltip>
