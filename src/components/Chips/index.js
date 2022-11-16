@@ -27,7 +27,6 @@ export const Chips = React.forwardRef(({
   onChange,
   onFocus,
   onBlur,
-  dataTestId,
 }, ref) => {
   const chipsClassName = cn(className, { "p-chips_scrollable": scrollable })
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
@@ -55,7 +54,6 @@ export const Chips = React.forwardRef(({
       onChange={onChange}
       onFocus={onFocus}
       onBlur={onBlur}
-      dataTestId={dataTestId}
     />
   )
 })

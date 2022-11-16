@@ -15,7 +15,6 @@ export const TimePicker = React.forwardRef(({
   placeholder = "",
   showIcon = false,
   viewDate = null,
-  dataTestId,
 }, ref) => {
   return (
     <Calendar
@@ -33,7 +32,6 @@ export const TimePicker = React.forwardRef(({
       placeholder={placeholder}
       showIcon={showIcon}
       viewDate={viewDate}
-      dataTestId={dataTestId}
       hourFormat="24"
       showTime
       timeOnly

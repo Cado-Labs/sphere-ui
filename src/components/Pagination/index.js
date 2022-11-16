@@ -1,7 +1,7 @@
 import React from "react"
 import { Button } from "primereact/button"
 
-export const Pagination = ({ page, pages, onPageClick, dataTestId }) => {
+export const Pagination = ({ page, pages, onPageClick }) => {
   const prevPage = page > 1 ? page - 1 : 1
   const nextPage = (
     // eslint-disable-next-line no-nested-ternary
@@ -32,7 +32,6 @@ export const Pagination = ({ page, pages, onPageClick, dataTestId }) => {
     <div className="p-paginator">
       <div className="p-paginator-pages">
         <Button
-          dataTestId={`${dataTestId}-prev`}
           className="p-paginator-page"
           disabled={isTheFirstPage}
           icon="pi pi-angle-left"
@@ -48,10 +47,7 @@ export const Pagination = ({ page, pages, onPageClick, dataTestId }) => {
             {prevPage}
           </Button>
         )}
-        <Button
-          dataTestId={`${dataTestId}-${page}`}
-          className="p-paginator-page p-highlight"
-        >{page}</Button>
+        <Button className="p-paginator-page p-highlight">{page}</Button>
         {showNextPage && (
           <Button
             className="p-paginator-page"
@@ -67,7 +63,6 @@ export const Pagination = ({ page, pages, onPageClick, dataTestId }) => {
           disabled={isTheLastPage}
           icon="pi pi-angle-right"
           onClick={goToNext}
-          dataTestId={`${dataTestId}-next`}
         />
       </div>
     </div>

@@ -11,7 +11,6 @@ export const ScrollTop = React.forwardRef(({
   className,
   size = "large",
   style,
-  dataTestId,
 }, ref) => {
   const scrollTopClassName = cn(className, "custom-scrolltop", {
     "custom-scrolltop_small": size === "small",
@@ -28,7 +27,6 @@ export const ScrollTop = React.forwardRef(({
       onShow={onShow}
       onHide={onHide}
       icon="pi pi-arrow-up"
-      dataTestId={dataTestId}
     />
   )
 })

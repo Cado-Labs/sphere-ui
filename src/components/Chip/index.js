@@ -8,7 +8,6 @@ export const Chip = React.forwardRef(({
   style,
   className,
   onRemove,
-  dataTestId,
 }, ref) => {
   return (
     <PrimeChip
@@ -19,7 +18,6 @@ export const Chip = React.forwardRef(({
       style={style}
       className={className}
       onRemove={onRemove}
-      dataTestId={dataTestId}
     />
   )
 })

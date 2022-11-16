@@ -3,7 +3,6 @@ import { Badge as PrimeBadge } from "primereact/badge"
 import { classNames as cn } from "primereact/utils"
 
 export const Badge = React.forwardRef(({
-  dataTestId,
   value,
   severity,
   size,
@@ -18,7 +17,6 @@ export const Badge = React.forwardRef(({
 
   return (
     <PrimeBadge
-      dataTestId={dataTestId}
       style={style}
       ref={ref}
       className={badgeClassName}

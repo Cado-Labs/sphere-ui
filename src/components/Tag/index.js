@@ -8,7 +8,6 @@ export const Tag = React.forwardRef(({
   icon,
   style,
   className,
-  dataTestId,
 }, ref) => {
   const tagClassName = cn(className, {
     "p-tag-secondary": severity === "secondary",
@@ -23,7 +22,6 @@ export const Tag = React.forwardRef(({
       icon={icon}
       className={tagClassName}
       style={style}
-      dataTestId={dataTestId}
     />
   )
 })

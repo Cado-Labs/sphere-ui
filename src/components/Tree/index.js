@@ -32,7 +32,6 @@ export const Tree = React.forwardRef(({
   onToggle,
   onDragDrop,
   onNodeClick,
-  dataTestId,
 }, ref) => {
   return (
     <PrimeTree
@@ -67,7 +66,6 @@ export const Tree = React.forwardRef(({
       onToggle={onToggle}
       onDragDrop={onDragDrop}
       onNodeClick={onNodeClick}
-      dataTestId={dataTestId}
     />
   )
 })

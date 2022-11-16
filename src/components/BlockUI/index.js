@@ -6,14 +6,12 @@ export const BlockUI = React.forwardRef(({
   blocked,
   baseZIndex = 50,
   autoZIndex = true,
-  dataTestId,
   className,
   style,
   children,
 }, ref) => {
   return (
     <PrimeBlockUI
-      dataTestId={dataTestId}
       ref={ref}
       id={id}
       blocked={blocked}

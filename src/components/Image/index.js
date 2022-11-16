@@ -14,7 +14,6 @@ export const Image = React.forwardRef(({
   imageClassName,
   onShow,
   onHide,
-  dataTestId,
 }, ref) => {
   return (
     <PrimeImage
@@ -31,7 +30,6 @@ export const Image = React.forwardRef(({
       imageClassName={imageClassName}
       onShow={onShow}
       onHide={onHide}
-      dataTestId={dataTestId}
     />
   )
 })

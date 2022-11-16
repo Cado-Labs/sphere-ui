@@ -7,7 +7,6 @@ export const Divider = React.forwardRef(({
   type,
   style,
   className,
-  dataTestId,
   children,
 }, ref) => {
   return (
@@ -18,7 +17,6 @@ export const Divider = React.forwardRef(({
       type={type}
       style={style}
       className={className}
-      dataTestId={dataTestId}
     >
       {children}
     </PrimeDivider>

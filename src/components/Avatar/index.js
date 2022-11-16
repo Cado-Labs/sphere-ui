@@ -3,7 +3,6 @@ import { Avatar as PrimeAvatar } from "primereact/avatar"
 import { classNames as cn } from "primereact/utils"
 
 export const Avatar = React.forwardRef(({
-  dataTestId,
   label,
   icon,
   image,
@@ -20,7 +19,6 @@ export const Avatar = React.forwardRef(({
 
   return (
     <PrimeAvatar
-      dataTestId={dataTestId}
       style={style}
       ref={ref}
       className={avatarClassName}

@@ -10,7 +10,6 @@ export const Card = React.forwardRef(({
   style,
   className,
   children,
-  dataTestId,
 }, ref) => {
   return (
     <PrimeCard
@@ -22,7 +21,6 @@ export const Card = React.forwardRef(({
       subTitle={subTitle}
       style={style}
       className={className}
-      dataTestId={dataTestId}
     >
       {children}
     </PrimeCard>

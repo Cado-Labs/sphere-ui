@@ -46,7 +46,6 @@ export const DatePicker = React.forwardRef(({
   onShow,
   onHide,
   onVisibleChange,
-  dataTestId,
 }, ref) => {
   const getDefaultProps = () => {
     return {
@@ -89,7 +88,6 @@ export const DatePicker = React.forwardRef(({
       onShow,
       onHide,
       onVisibleChange,
-      dataTestId,
     }
   }
 
