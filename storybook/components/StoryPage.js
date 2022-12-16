@@ -1,6 +1,7 @@
-import { Fragment } from "react"
+import { Fragment, useEffect } from "react"
 
 import { useTranslation } from "@i18n"
+import { updateLocaleOptions } from "@cadolabs/sphere-ui"
 
 import { Content } from "./Content"
 import { EventTable } from "./EventTable"
@@ -22,6 +23,10 @@ export function StoryPage ({
 }) {
   const renderContent = () => {
     const { t } = useTranslation()
+
+    useEffect(() => {
+      updateLocaleOptions({ firstDayOfWeek: 1 }, "en")
+    }, [])
 
     return (
       <Content>
