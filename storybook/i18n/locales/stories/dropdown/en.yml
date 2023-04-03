@@ -10,6 +10,7 @@ props:
   optionDisabled: Property name or getter function to use as the disabled flag of an option, defaults to false when not defined.
   optionGroupLabel: Property name or getter function to use as the label of an option group.
   optionGroupChildren: Property name or getter function that refers to the children options of option group.
+  itemTemplate: The template of items.
   style: Inline style of the element.
   className: Class of the element.
   filter: When specified, displays an input field to filter the items on keyup.
@@ -29,8 +30,11 @@ props:
   onChange: Callback to invoke on value change.
   onFocus: Callback to invoke when the element receives focus.
   onBlur: Callback to invoke when the element loses focus.
+  onMouseDown: Callback to invoke to when a mouse button is pressed.
+  onContextMenu: Callback to invoke on right-click.
   onShow: Callback to invoke when overlay panel becomes visible.
   onHide: Callback to invoke when overlay panel becomes hidden.
+  onFilter: Callback to invoke when the value is filtered.
 header:
   selectItem: SelectItem API
 selectItem:

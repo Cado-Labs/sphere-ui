@@ -38,6 +38,24 @@ const onChangeParams = [
   { name: "event.value", description: "Current selected values" },
 ]
 
+const onFocusParams = [
+  { name: "event", description: "Browser event" },
+]
+
+const onBlurParams = [
+  { name: "event", description: "Browser event" },
+]
+
+const onFilterParams = [
+  { name: "event.originalEvent", description: "Browser event" },
+  { name: "event.filter", description: "Filter value" },
+]
+
+const onSelectAllParams = [
+  { name: "event.originalEvent", description: "Browser event" },
+  { name: "event.checked", description: "Whether all data is selected" },
+]
+
 export const multiSelect = {
   component: "MultiSelect",
   content: {
@@ -75,5 +93,11 @@ export const multiSelect = {
   ],
   eventDescriptionProps: [
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },
+    { name: "onFocus", params: onFocusParams, description: `${I18N_PREFIX}.props.onFocus` },
+    { name: "onBlur", params: onBlurParams, description: `${I18N_PREFIX}.props.onBlur` },
+    { name: "onShow", description: `${I18N_PREFIX}.props.onShow` },
+    { name: "onHide", description: `${I18N_PREFIX}.props.onHide` },
+    { name: "onFilter", params: onFilterParams, description: `${I18N_PREFIX}.props.onFilter` },
+    { name: "onSelectAll", params: onSelectAllParams, description: `${I18N_PREFIX}.props.onSelectAll` },
   ],
 }

@@ -114,6 +114,19 @@ const onBlurParams = [
   { name: "event", description: "Browser event" },
 ]
 
+const onMouseDownParams = [
+  { name: "event", description: "Browser event" },
+]
+
+const onContextMenuParams = [
+  { name: "event", description: "Browser event" },
+]
+
+const onFilterParams = [
+  { name: "event.originalEvent", description: "Original event" },
+  { name: "event.filter", description: "Value of the filter input" },
+]
+
 export const dropdown = {
   component: "Dropdown",
   content: {
@@ -131,6 +144,7 @@ export const dropdown = {
     { name: "optionDisabled", type: "function | string", description: `${I18N_PREFIX}.props.optionDisabled` },
     { name: "optionGroupLabel", type: "string", description: `${I18N_PREFIX}.props.optionGroupLabel` },
     { name: "optionGroupChildren", type: "string", description: `${I18N_PREFIX}.props.optionGroupChildren` },
+    { name: "itemTemplate", type: "any", description: `${I18N_PREFIX}.props.itemTemplate` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
     { name: "filter", type: "boolean", default: false, description: `${I18N_PREFIX}.props.filter` },
@@ -152,8 +166,11 @@ export const dropdown = {
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },
     { name: "onFocus", params: onFocusParams, description: `${I18N_PREFIX}.props.onFocus` },
     { name: "onBlur", params: onBlurParams, description: `${I18N_PREFIX}.props.onBlur` },
+    { name: "onMouseDown", params: onMouseDownParams, description: `${I18N_PREFIX}.props.onMouseDown` },
+    { name: "onContextMenu", params: onContextMenuParams, description: `${I18N_PREFIX}.props.onContextMenu` },
     { name: "onShow", description: `${I18N_PREFIX}.props.onShow` },
     { name: "onHide", description: `${I18N_PREFIX}.props.onHide` },
+    { name: "onFilter", params: onFilterParams, description: `${I18N_PREFIX}.props.onFilter` },
   ],
   footer: (
     <ParamsTable

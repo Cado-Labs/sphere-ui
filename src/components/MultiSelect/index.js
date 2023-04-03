@@ -10,6 +10,12 @@ export const MultiSelect = React.forwardRef(({
   options,
   value,
   onChange,
+  onFocus,
+  onBlur,
+  onShow,
+  onHide,
+  onFilter,
+  onSelectAll,
   filter,
   filterBy,
   className,
@@ -98,6 +104,12 @@ export const MultiSelect = React.forwardRef(({
       optionGroupChildren={optionGroupChildren}
       value={value}
       onChange={onChange}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      onShow={onShow}
+      onHide={onHide}
+      onFilter={onFilter}
+      onSelectAll={onSelectAll}
       filter={filter}
       filterBy={filterBy}
       selectAll={false}
