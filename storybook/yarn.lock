@@ -1210,10 +1210,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cadolabs/sphere-ui@4.9.1":
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/@cadolabs/sphere-ui/-/sphere-ui-4.9.1.tgz#c001a11284f7fd84852568781d71136d52988269"
-  integrity sha512-3M6vzMBw6iZDBqSNbOWnVfTWvoC70vwSrciVzu05ZeJFTErvTsRcJmIrBXdhBj5JZ2VI2L/LQa0iDDo4I8VIBg==
+"@cadolabs/sphere-ui@4.10.0":
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/@cadolabs/sphere-ui/-/sphere-ui-4.10.0.tgz#ebd5c7966a59134ecd93b56d2d2b6b1f067f01af"
+  integrity sha512-D0snfDDTYE+T9PMF9sEqxmxWjv8YeSjVkx11nOy7csV3ST2U3ASXrg4Lh5/SaLPts0EQe/wl+gZb0WK8WtEXdw==
   dependencies:
     bignumber.js "^9.0.2"
     primeflex "^3.1.3"
