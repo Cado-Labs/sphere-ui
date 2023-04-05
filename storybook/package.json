@@ -35,7 +35,7 @@
     "yaml-loader": "^0.6.0"
   },
   "dependencies": {
-    "@cadolabs/sphere-ui": "4.9.1",
+    "@cadolabs/sphere-ui": "4.10.0",
     "file-saver": "^2.0.5",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.5.23",
