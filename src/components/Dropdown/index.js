@@ -20,6 +20,7 @@ export const Dropdown = React.forwardRef(({
   optionDisabled,
   optionGroupLabel,
   optionGroupChildren,
+  itemTemplate,
   style,
   className,
   filter,
@@ -39,8 +40,11 @@ export const Dropdown = React.forwardRef(({
   onChange,
   onFocus,
   onBlur,
+  onMouseDown,
+  onContextMenu,
   onShow,
   onHide,
+  onFilter,
 }, ref) => {
   const emptyMessage = EMPTY_MESSAGE[locale().locale]
   const dropdownClassName = cn(className, "w-full")
@@ -58,6 +62,7 @@ export const Dropdown = React.forwardRef(({
       optionDisabled={optionDisabled}
       optionGroupLabel={optionGroupLabel}
       optionGroupChildren={optionGroupChildren}
+      itemTemplate={itemTemplate}
       style={style}
       className={dropdownClassName}
       filter={filter}
@@ -80,8 +85,11 @@ export const Dropdown = React.forwardRef(({
       onChange={onChange}
       onFocus={onFocus}
       onBlur={onBlur}
+      onMouseDown={onMouseDown}
+      onContextMenu={onContextMenu}
       onShow={onShow}
       onHide={onHide}
+      onFilter={onFilter}
     />
   )
 })

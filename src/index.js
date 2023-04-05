@@ -4,6 +4,7 @@ export * from "primereact/utils"
 export * from "primereact/api"
 
 export { Accordion, AccordionTab } from "./components/Accordion"
+export { AutoComplete } from "./components/AutoComplete"
 export { Avatar } from "./components/Avatar"
 export { Badge } from "./components/Badge"
 export { BlockUI } from "./components/BlockUI"

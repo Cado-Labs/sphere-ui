@@ -6,6 +6,12 @@ props:
   value: Value of the component.
   placeholder: Placeholder text for the input.
   onChange: Event handler.
+  onFocus: Callback to invoke when the element receives focus.
+  onBlur: Callback to invoke when the element loses focus.
+  onShow: Callback to invoke when overlay panel becomes visible.
+  onHide: Callback to invoke when overlay panel becomes hidden.
+  onFilter: Callback to invoke on filtering.
+  onSelectAll: Callback to invoke when all data is selected.
   disabled: Disable the component.
   options: An array of selectitems to display as the available options.
   filter: Display an input field to filter the items on keyup.
