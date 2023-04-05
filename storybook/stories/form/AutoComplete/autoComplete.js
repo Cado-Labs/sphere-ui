@@ -28,6 +28,7 @@ function AutoCompleteExample () {
   return (
     <div className="p-card s-container">
       <div className="s-field-col-3">
+        <h3>Basic</h3>
         <AutoComplete
           value={value}
           suggestions={filteredCities}
