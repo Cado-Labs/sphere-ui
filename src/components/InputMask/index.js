@@ -24,7 +24,6 @@ export const InputMask = React.forwardRef(({
   validateOnly = false,
   tooltip,
   tooltipOptions,
-  ariaLabelledBy,
   onComplete,
   onChange,
   onFocus,
@@ -55,7 +54,6 @@ export const InputMask = React.forwardRef(({
       validateOnly={validateOnly}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
-      ariaLabelledBy={ariaLabelledBy}
       onComplete={onComplete}
       onChange={onChange}
       onFocus={onFocus}

@@ -17,7 +17,6 @@ export const SelectButton = React.forwardRef(({
   className,
   tooltip,
   tooltipOptions,
-  ariaLabelledBy,
   onChange,
   name,
 }, ref) => {
@@ -39,7 +38,6 @@ export const SelectButton = React.forwardRef(({
       className={className}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
-      ariaLabelledBy={ariaLabelledBy}
       onChange={onChange}
       name={name}
     />

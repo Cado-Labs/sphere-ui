@@ -16,7 +16,6 @@ export const RadioButton = React.forwardRef(({
   tabIndex,
   tooltip,
   tooltipOptions,
-  ariaLabelledBy,
   onChange,
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
@@ -36,7 +35,6 @@ export const RadioButton = React.forwardRef(({
       tabIndex={tabIndex}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
-      ariaLabelledBy={ariaLabelledBy}
       onChange={onChange}
     />
   )

@@ -44,12 +44,10 @@ export const DataTable = React.forwardRef(({
   filterLocale,
   scrollable = false,
   scrollHeight,
-  scrollDirection = "vertical",
   frozenWidth,
   frozenValue,
   csvSeparator = ",",
   exportFilename = "download",
-  autoLayout = false,
   rowClassName,
   cellClassName,
   loading = false,
@@ -65,7 +63,6 @@ export const DataTable = React.forwardRef(({
   globalFilterFields,
   showSelectionElement,
   isDataSelectable,
-  columnKey,
   rowHover,
   expandedRows,
   rowExpansionTemplate,
@@ -86,7 +83,6 @@ export const DataTable = React.forwardRef(({
   onRowEditSave,
   onRowEditCancel,
   onRowEditChange,
-  onRowBlur,
   onRowMouseEnter,
   onRowMouseLeave,
   exportFunction,
@@ -134,12 +130,10 @@ export const DataTable = React.forwardRef(({
       filterLocale={filterLocale}
       scrollable={scrollable}
       scrollHeight={scrollHeight}
-      scrollDirection={scrollDirection}
       frozenWidth={frozenWidth}
       frozenValue={frozenValue}
       csvSeparator={csvSeparator}
       exportFilename={exportFilename}
-      autoLayout={autoLayout}
       rowClassName={rowClassName}
       cellClassName={cellClassName}
       loading={loading}
@@ -155,7 +149,6 @@ export const DataTable = React.forwardRef(({
       globalFilterFields={globalFilterFields}
       showSelectionElement={showSelectionElement}
       isDataSelectable={isDataSelectable}
-      columnKey={columnKey}
       rowHover={rowHover}
       expandedRows={expandedRows}
       rowExpansionTemplate={rowExpansionTemplate}
@@ -176,7 +169,6 @@ export const DataTable = React.forwardRef(({
       onRowEditSave={onRowEditSave}
       onRowEditCancel={onRowEditCancel}
       onRowEditChange={onRowEditChange}
-      onRowBlur={onRowBlur}
       onRowMouseEnter={onRowMouseEnter}
       onRowMouseLeave={onRowMouseLeave}
       exportFunction={exportFunction}

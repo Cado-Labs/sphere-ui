@@ -118,12 +118,12 @@ function ScrollTreeTableExample () {
         <h3>Frozen Columns</h3>
         <TreeTable value={nodes} scrollable frozenWidth="200px" scrollHeight="250px">
           <Column field="name" header="Name" expander frozen style={{ width: "250px", height: "57px" }} />
-          <Column field="size" header="Size" style={{ width: "250px", height: "57px" }} columnKey="size_0" />
-          <Column field="type" header="Type" style={{ width: "250px", height: "57px" }} columnKey="type_0" />
-          <Column field="size" header="Size" style={{ width: "250px", height: "57px" }} columnKey="size_1" />
-          <Column field="type" header="Type" style={{ width: "250px", height: "57px" }} columnKey="type_1" />
-          <Column field="size" header="Size" style={{ width: "250px", height: "57px" }} columnKey="size_2" />
-          <Column field="type" header="Type" style={{ width: "250px", height: "57px" }} columnKey="type_2" />
+          <Column field="size" header="Size" style={{ width: "250px", height: "57px" }} />
+          <Column field="type" header="Type" style={{ width: "250px", height: "57px" }} />
+          <Column field="size" header="Size" style={{ width: "250px", height: "57px" }} />
+          <Column field="type" header="Type" style={{ width: "250px", height: "57px" }} />
+          <Column field="size" header="Size" style={{ width: "250px", height: "57px" }} />
+          <Column field="type" header="Type" style={{ width: "250px", height: "57px" }} />
         </TreeTable>
       </div>
     </div>

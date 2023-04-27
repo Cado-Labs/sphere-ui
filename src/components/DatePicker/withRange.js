@@ -87,7 +87,6 @@ export const withRange = Component =>
     }
 
     onChange = value => {
-      this.refCalendar.current.onButtonClick()
       this.props.onChange({
         target: {
           name: this.props.name || null,
@@ -95,6 +94,7 @@ export const withRange = Component =>
           value,
         },
       })
+      this.refCalendar.current.hide()
     }
 
     renderFooter = () => {

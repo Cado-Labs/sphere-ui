@@ -5,8 +5,6 @@ import { filterTooltipOptions } from "../../utils"
 
 export const TriStateCheckbox = React.forwardRef(({
   id,
-  inputRef,
-  inputId,
   value,
   name,
   style,
@@ -15,7 +13,6 @@ export const TriStateCheckbox = React.forwardRef(({
   readOnly = false,
   tooltip,
   tooltipOptions,
-  ariaLabelledBy,
   onChange,
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
@@ -24,8 +21,6 @@ export const TriStateCheckbox = React.forwardRef(({
     <PrimeTriStateCheckbox
       ref={ref}
       id={id}
-      inputRef={inputRef}
-      inputId={inputId}
       value={value}
       name={name}
       style={style}
@@ -34,7 +29,6 @@ export const TriStateCheckbox = React.forwardRef(({
       readOnly={readOnly}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
-      ariaLabelledBy={ariaLabelledBy}
       onChange={onChange}
     />
   )
