@@ -7,7 +7,6 @@ import { ParamsTable, Highlighter } from "@components"
 const I18N_PREFIX = "stories.fileupload"
 
 const code = `
-
 function FileUploadExample () {
   const uploadUrl = "https://primefaces.org/primereact/upload.php"
   const toast = React.useRef(null)
@@ -49,7 +48,6 @@ function FileUploadExample () {
       />
     </div>
   )
-
 
   const renderUploadButton = () => (
     <FileUpload

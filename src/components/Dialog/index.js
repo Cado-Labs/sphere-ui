@@ -12,7 +12,7 @@ export const Dialog = React.forwardRef(({
   contentClassName,
   style,
   className,
-  showHeader,
+  showHeader = true,
   baseZIndex = 100,
   breakpoints,
   onClick,

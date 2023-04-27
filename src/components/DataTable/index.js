@@ -86,6 +86,9 @@ export const DataTable = React.forwardRef(({
   onRowEditSave,
   onRowEditCancel,
   onRowEditChange,
+  onRowBlur,
+  onRowMouseEnter,
+  onRowMouseLeave,
   exportFunction,
   children,
 }, ref) => {
@@ -173,6 +176,9 @@ export const DataTable = React.forwardRef(({
       onRowEditSave={onRowEditSave}
       onRowEditCancel={onRowEditCancel}
       onRowEditChange={onRowEditChange}
+      onRowBlur={onRowBlur}
+      onRowMouseEnter={onRowMouseEnter}
+      onRowMouseLeave={onRowMouseLeave}
       exportFunction={exportFunction}
     >
       {children}

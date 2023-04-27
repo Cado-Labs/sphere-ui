@@ -3,7 +3,7 @@ import { BlockUI as PrimeBlockUI } from "primereact/blockui"
 
 export const BlockUI = React.forwardRef(({
   id,
-  blocked,
+  blocked = false,
   baseZIndex = 50,
   autoZIndex = true,
   className,

@@ -2,12 +2,12 @@ import React from "react"
 import { Skeleton as PrimeSkeleton } from "primereact/skeleton"
 
 export const Skeleton = React.forwardRef(({
-  shape,
+  shape = "rectangle",
   size,
-  width,
-  height,
+  width = "100%",
+  height = "1rem",
   borderRadius,
-  animation,
+  animation = "wave",
   style,
   className,
 }, ref) => {

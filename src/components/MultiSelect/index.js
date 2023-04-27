@@ -16,8 +16,8 @@ export const MultiSelect = React.forwardRef(({
   onHide,
   onFilter,
   onSelectAll,
-  filter,
-  filterBy,
+  filter = false,
+  filterBy = "label",
   className,
   placeholder,
   optionLabel,
@@ -31,7 +31,8 @@ export const MultiSelect = React.forwardRef(({
   panelStyle,
   style,
   selectedItemsLabel,
-  display,
+  display = "comma",
+  overlayVisible = false,
   tooltip,
   tooltipOptions,
   dataKey,
@@ -130,6 +131,7 @@ export const MultiSelect = React.forwardRef(({
       selectedItemsLabel={selectedItemsLabel}
       showClear={showClear}
       display={display}
+      overlayVisible={overlayVisible}
       removeIcon={removeIcon()}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}

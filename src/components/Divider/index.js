@@ -3,8 +3,8 @@ import { Divider as PrimeDivider } from "primereact/divider"
 
 export const Divider = React.forwardRef(({
   align,
-  layout,
-  type,
+  layout = "horizontal",
+  type = "solid",
   style,
   className,
   children,

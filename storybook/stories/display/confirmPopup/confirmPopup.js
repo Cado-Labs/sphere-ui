@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { confirmPopup, Button, Toast } from "@cadolabs/sphere-ui"
+import { confirmPopup, ConfirmPopup, Button, Toast } from "@cadolabs/sphere-ui"
 
 import i18n from "@i18n"
 
@@ -41,7 +41,7 @@ function confirmPopupExample () {
   return (
     <div>
       <Toast ref={toast} />
-
+      <ConfirmPopup />
       <div className="p-card s-container">
         <h3>Basic</h3>
         <Button onClick={confirm1} icon="pi pi-check" label="Confirm" className="mr-2" />
@@ -63,12 +63,12 @@ const onHideParams = [
 ]
 
 export const confirmPopupPage = {
-  component: "confirmPopup",
+  component: "ConfirmPopup",
   content: {
     description: i18n.t(`${I18N_PREFIX}.content`),
   },
   code,
-  scope: { confirmPopup, Button, Toast },
+  scope: { confirmPopup, ConfirmPopup, Button, Toast },
   descriptionProps: [
     { name: "target", type: "DomElement", description: `${I18N_PREFIX}.props.target` },
     { name: "message", type: "string", description: `${I18N_PREFIX}.props.message` },

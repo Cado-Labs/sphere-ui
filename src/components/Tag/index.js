@@ -4,8 +4,9 @@ import { classNames as cn } from "primereact/utils"
 
 export const Tag = React.forwardRef(({
   value,
-  severity,
+  severity = null,
   icon,
+  rounded = false,
   style,
   className,
 }, ref) => {
@@ -20,6 +21,7 @@ export const Tag = React.forwardRef(({
       value={value}
       severity={severity}
       icon={icon}
+      rounded={rounded}
       className={tagClassName}
       style={style}
     />

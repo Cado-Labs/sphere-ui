@@ -27,6 +27,10 @@ export const InputNumber = React.forwardRef(({
   pattern,
   inputMode,
   placeholder,
+  mode = "decimal",
+  currency,
+  currencyDisplay,
+  maxLength,
   readOnly = false,
   size,
   style,
@@ -71,6 +75,10 @@ export const InputNumber = React.forwardRef(({
       pattern={pattern}
       inputMode={inputMode}
       placeholder={placeholder}
+      mode={mode}
+      currency={currency}
+      currencyDisplay={currencyDisplay}
+      maxLength={maxLength}
       readOnly={readOnly}
       size={size}
       style={style}

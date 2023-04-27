@@ -13,8 +13,9 @@ export const FileUpload = React.forwardRef(({
   id,
   name,
   url,
+  mode = "basic",
   multiple = false,
-  accept,
+  accept = false,
   disabled = false,
   auto = false,
   maxFileSize,
@@ -22,10 +23,32 @@ export const FileUpload = React.forwardRef(({
   className,
   withCredentials = false,
   chooseLabel,
-  chooseOptions,
+  chooseOptions = {
+    label: null,
+    icon: null,
+    iconOnly: false,
+    className: null,
+    style: null,
+  },
+  uploadOptions = {
+    label: null,
+    icon: null,
+    iconOnly: false,
+    className: null,
+    style: null,
+  },
+  cancelOptions = {
+    label: null,
+    icon: null,
+    iconOnly: false,
+    className: null,
+    style: null,
+  },
   customUpload = false,
   onBeforeUpload,
   onBeforeSend,
+  onBeforeSelect,
+  onBeforeDrop,
   onUpload,
   onError,
   onClear,
@@ -49,7 +72,7 @@ export const FileUpload = React.forwardRef(({
   return (
     <PrimeFileUpload
       ref={ref}
-      mode="basic"
+      mode={mode}
       id={id}
       name={name}
       url={url}
@@ -63,9 +86,13 @@ export const FileUpload = React.forwardRef(({
       withCredentials={withCredentials}
       chooseLabel={chooseLabel}
       chooseOptions={chooseOptions}
+      uploadOptions={uploadOptions}
+      cancelOptions={cancelOptions}
       customUpload={customUpload}
       onBeforeUpload={onBeforeUpload}
+      onBeforeSelect={onBeforeSelect}
       onBeforeSend={onBeforeSend}
+      onBeforeDrop={onBeforeDrop}
       onUpload={onUpload}
       onError={onError}
       onClear={onClear}

@@ -3,7 +3,7 @@ import { TabView as PrimeTabView, TabPanel } from "primereact/tabview"
 
 const TabView = React.forwardRef(({
   id,
-  activeIndex,
+  activeIndex = 0,
   style,
   className,
   renderActiveOnly,

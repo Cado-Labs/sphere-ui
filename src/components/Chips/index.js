@@ -12,16 +12,17 @@ export const Chips = React.forwardRef(({
   placeholder,
   value,
   max,
-  disabled,
-  readOnly,
-  removable,
+  disabled = false,
+  readOnly = false,
+  removable = true,
   style,
   className,
   tooltip,
   tooltipOptions,
   ariaLabelledBy,
-  allowDuplicate,
+  allowDuplicate = true,
   scrollable,
+  addOnBlur = false,
   onAdd,
   onRemove,
   onChange,
@@ -49,6 +50,7 @@ export const Chips = React.forwardRef(({
       ariaLabelledBy={ariaLabelledBy}
       separator={SEPARATOR}
       allowDuplicate={allowDuplicate}
+      addOnBlur={addOnBlur}
       onAdd={onAdd}
       onRemove={onRemove}
       onChange={onChange}

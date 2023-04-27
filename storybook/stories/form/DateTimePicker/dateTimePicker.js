@@ -9,6 +9,7 @@ const code = `
 function DateTimePickerExample () {
   const [fields, setFields] = React.useState({
     dateTime: new Date(),
+    dateTime2: new Date(),
   })
 
   const minDate = new Date()
@@ -49,9 +50,10 @@ function DateTimePickerExample () {
         <div className="s-field-col-3">
         <label htmlFor="dateTime">DateTimePicker with UTC message</label>
           <DateTimePicker
-            name="dateTime"
-            value={fields.dateTime}
+            name="dateTime2"
+            value={fields.dateTime2}
             onChange={onChange}
+            keepInvalid={false}
             showUTC
             showMillisec
           />

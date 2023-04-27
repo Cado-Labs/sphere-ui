@@ -7,7 +7,7 @@ export const Avatar = React.forwardRef(({
   icon,
   image,
   size,
-  shape,
+  shape = "square",
   imageAlt,
   style,
   className,

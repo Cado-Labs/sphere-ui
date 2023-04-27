@@ -116,7 +116,7 @@ export const dialog = {
     { name: "contentClassName", type: "string", description: `${I18N_PREFIX}.props.contentClassName` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
-    { name: "showHeader", type: "boolean", default: false, description: `${I18N_PREFIX}.props.showHeader` },
+    { name: "showHeader", type: "boolean", default: true, description: `${I18N_PREFIX}.props.showHeader` },
     { name: "baseZIndex", type: "number", default: 100, description: `${I18N_PREFIX}.props.baseZIndex` },
     { name: "breakpoints", type: "object", description: `${I18N_PREFIX}.props.breakpoints` },
   ],

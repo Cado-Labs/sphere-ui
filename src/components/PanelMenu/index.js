@@ -4,6 +4,7 @@ import { PanelMenu as PrimePanelMenu } from "primereact/panelmenu"
 export const PanelMenu = React.forwardRef(({
   id,
   model,
+  multiple = true,
   style,
   className,
 }, ref) => {
@@ -14,7 +15,7 @@ export const PanelMenu = React.forwardRef(({
       model={model}
       style={style}
       className={className}
-      multiple
+      multiple={multiple}
     />
   )
 })

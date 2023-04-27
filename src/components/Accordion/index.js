@@ -12,7 +12,7 @@ const Accordion = React.forwardRef(({
   onTabClose,
   style,
   className,
-  multiple,
+  multiple = false,
   children,
 }, ref) => {
   return (

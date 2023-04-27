@@ -5,7 +5,8 @@ export const Spinner = React.forwardRef(({
   loading = true,
   style,
   className,
-  strokeWidth,
+  strokeWidth = "2",
+  animationDuration = "2s",
   children,
 }, ref) => {
   if (loading) {
@@ -15,6 +16,7 @@ export const Spinner = React.forwardRef(({
           ref={ref}
           loading={loading}
           strokeWidth={strokeWidth}
+          animationDuration={animationDuration}
           style={style}
           className={className}
         />

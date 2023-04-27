@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { confirmDialog, Button, Toast } from "@cadolabs/sphere-ui"
+import { confirmDialog, ConfirmDialog, Button, Toast } from "@cadolabs/sphere-ui"
 
 import i18n, { Trans } from "@i18n"
 
@@ -42,7 +42,7 @@ function confirmDialogExample () {
   return (
     <div>
       <Toast ref={toast} />
-
+      <ConfirmDialog />
       <div className="p-card s-container">
         <h3>Basic</h3>
         <Button onClick={confirm1} icon="pi pi-check" label="Confirm" className="mr-2" />
@@ -54,12 +54,12 @@ function confirmDialogExample () {
 `
 
 export const confirmDialogPage = {
-  component: "confirmDialog",
+  component: "ConfirmDialog, confirmDialog",
   content: {
     description: i18n.t(`${I18N_PREFIX}.content`),
   },
   code,
-  scope: { confirmDialog, Button, Toast },
+  scope: { confirmDialog, ConfirmDialog, Button, Toast },
   descriptionProps: [
     { name: "message", type: "string", description: `${I18N_PREFIX}.props.message` },
     { name: "acceptLabel", type: "string", description: `${I18N_PREFIX}.props.acceptLabel` },

@@ -11,7 +11,8 @@ export const TriStateCheckbox = React.forwardRef(({
   name,
   style,
   className,
-  disabled,
+  disabled = false,
+  readOnly = false,
   tooltip,
   tooltipOptions,
   ariaLabelledBy,
@@ -30,6 +31,7 @@ export const TriStateCheckbox = React.forwardRef(({
       style={style}
       className={className}
       disabled={disabled}
+      readOnly={readOnly}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
       ariaLabelledBy={ariaLabelledBy}

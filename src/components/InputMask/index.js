@@ -5,7 +5,6 @@ import { filterTooltipOptions } from "../../utils"
 
 export const InputMask = React.forwardRef(({
   id,
-  inputRef,
   value,
   type = "text",
   mask,
@@ -22,6 +21,7 @@ export const InputMask = React.forwardRef(({
   readOnly = false,
   name,
   required = false,
+  validateOnly = false,
   tooltip,
   tooltipOptions,
   ariaLabelledBy,
@@ -29,13 +29,13 @@ export const InputMask = React.forwardRef(({
   onChange,
   onFocus,
   onBlur,
+  onInput,
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
   return (
     <PrimeInputMask
       ref={ref}
       id={id}
-      inputRef={inputRef}
       value={value}
       type={type}
       mask={mask}
@@ -52,6 +52,7 @@ export const InputMask = React.forwardRef(({
       readOnly={readOnly}
       name={name}
       required={required}
+      validateOnly={validateOnly}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
       ariaLabelledBy={ariaLabelledBy}
@@ -59,6 +60,7 @@ export const InputMask = React.forwardRef(({
       onChange={onChange}
       onFocus={onFocus}
       onBlur={onBlur}
+      onInput={onInput}
     />
   )
 })

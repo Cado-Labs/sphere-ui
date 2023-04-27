@@ -9,9 +9,10 @@ export const SelectButton = React.forwardRef(({
   options,
   optionDisabled,
   tabIndex,
-  multiple,
-  unselectable,
-  disabled,
+  multiple = false,
+  unselectable = true,
+  disabled = false,
+  itemTemplate,
   style,
   className,
   tooltip,
@@ -33,6 +34,7 @@ export const SelectButton = React.forwardRef(({
       multiple={multiple}
       unselectable={unselectable}
       disabled={disabled}
+      itemTemplate={itemTemplate}
       style={style}
       className={className}
       tooltip={tooltip}

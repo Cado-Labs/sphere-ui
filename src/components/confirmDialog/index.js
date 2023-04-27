@@ -1,6 +1,6 @@
-import { confirmDialog as primeConfirmDialog } from "primereact/confirmdialog"
+import { confirmDialog as primeConfirmDialog, ConfirmDialog } from "primereact/confirmdialog"
 
-export const confirmDialog = ({
+const confirmDialog = ({
   // confirmDialog params
   message,
   acceptLabel,
@@ -22,7 +22,7 @@ export const confirmDialog = ({
   contentClassName,
   style,
   className,
-  showHeader,
+  showHeader = true,
   baseZIndex = 100,
   breakpoints,
   onClick,
@@ -71,4 +71,9 @@ export const confirmDialog = ({
   }
 
   return primeConfirmDialog(params)
+}
+
+export {
+  confirmDialog,
+  ConfirmDialog,
 }

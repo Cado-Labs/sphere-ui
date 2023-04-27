@@ -1,6 +1,6 @@
-import { confirmPopup as primeConfirmPopup } from "primereact/confirmpopup"
+import { confirmPopup as primeConfirmPopup, ConfirmPopup } from "primereact/confirmpopup"
 
-export const confirmPopup = ({
+const confirmPopup = ({
   target,
   message,
   rejectLabel,
@@ -35,4 +35,9 @@ export const confirmPopup = ({
   }
 
   return primeConfirmPopup(params)
+}
+
+export {
+  confirmPopup,
+  ConfirmPopup,
 }

@@ -3,9 +3,9 @@ import { ScrollTop as PrimeScrollTop } from "primereact/scrolltop"
 import { classNames as cn } from "primereact/utils"
 
 export const ScrollTop = React.forwardRef(({
-  target,
-  threshold,
-  behavior,
+  target = "window",
+  threshold = 400,
+  behavior = "smooth",
   onShow,
   onHide,
   className,
