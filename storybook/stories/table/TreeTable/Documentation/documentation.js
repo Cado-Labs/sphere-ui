@@ -269,6 +269,7 @@ export const documentation = {
     { name: "onSelect", params: onSelectParams, description: `${I18N_PREFIX}.props.onSelect` },
     { name: "onUnselect", params: onUnselectParams, description: `${I18N_PREFIX}.props.onUnselect` },
     { name: "onSelectionChange", params: onSelectionChangeParams, description: `${I18N_PREFIX}.props.onSelectionChange` },
+    { name: "onRowClick", params: onSelectParams, description: `${I18N_PREFIX}.props.onRowClick` },
   ],
   footer: (
     <ParamsTable

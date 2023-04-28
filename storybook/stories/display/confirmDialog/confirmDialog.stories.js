@@ -10,4 +10,4 @@ export default {
 
 export const ConfirmDialog = context => <StoryPage {...confirmDialogPage} {...context} />
 
-ConfirmDialog.storyName = "confirmDialog"
+ConfirmDialog.storyName = "ConfirmDialog"

@@ -10,5 +10,5 @@ props:
   disabled: When present, it specifies that the element value cannot be altered.
   tooltip: Content of the tooltip.
   tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
-  ariaLabelledBy: Establishes relationships between the component and label(s) where its value should be one or more element IDs.
   onChange: Callback to invoke on value change
+  readOnly: When present, it specifies that the value cannot be changed.

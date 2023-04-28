@@ -135,6 +135,7 @@ export const dateTimePicker = {
     { name: "tabIndex", type: "number", description: `${I18N_PREFIX}.props.tabIndex` },
     { name: "autoZIndex", type: "boolean", default: true, description: `${I18N_PREFIX}.props.autoZIndex` },
     { name: "baseZIndex", type: "number", default: 50, description: `${I18N_PREFIX}.props.baseZIndex` },
+    { name: "keepInvalid", type: "boolean", default: false, description: `${I18N_PREFIX}.props.keepInvalid` },
   ],
   eventDescriptionProps: [
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },

@@ -53,10 +53,25 @@ function confirmDialogExample () {
 }
 `
 
+const dialogExtra = (
+  <div>
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.start.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.start.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+    </div>
+  </div>
+)
+
 export const confirmDialogPage = {
   component: "ConfirmDialog, confirmDialog",
   content: {
-    description: i18n.t(`${I18N_PREFIX}.content`),
+    description: i18n.t(`${I18N_PREFIX}.content.main`),
+    extra: dialogExtra,
   },
   code,
   scope: { confirmDialog, ConfirmDialog, Button, Toast },

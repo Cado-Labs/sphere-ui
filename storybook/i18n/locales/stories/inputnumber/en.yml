@@ -58,3 +58,7 @@ props:
   onFocus: Callback to invoke when input receives focus.
   onBlur: Callback to invoke when input loses focus.
   onKeyDown: Callback to invoke when the key pressed.
+  mode: Defines the behavior of the component.
+  maxLength: Maximum value length.
+  currency: The currency to use in currency formatting. Possible values are the currency codes according to ISO 4217
+  currencyDisplay: How to display the currency in currency formatting.

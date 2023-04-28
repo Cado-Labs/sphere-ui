@@ -151,6 +151,8 @@ export const panelMenu = {
     { name: "model", type: "Array<Model>", description: `${I18N_PREFIX}.props.model` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
+    { name: "multiple", type: "boolean", default: true, description: `${I18N_PREFIX}.props.multiple` },
+    { name: "submenuIcon", type: "string", description: `${I18N_PREFIX}.props.submenuIcon` },
   ],
   footer: (
     <ParamsTable

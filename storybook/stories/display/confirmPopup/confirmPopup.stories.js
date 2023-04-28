@@ -10,4 +10,4 @@ export default {
 
 export const ConfirmPopup = context => <StoryPage {...confirmPopupPage} {...context} />
 
-ConfirmPopup.storyName = "confirmPopup"
+ConfirmPopup.storyName = "ConfirmPopup"

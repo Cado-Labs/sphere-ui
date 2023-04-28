@@ -1,4 +1,8 @@
-content: ConfirmPopup displays a confirmation overlay displayed relatively to its target.
+content:
+  main: ConfirmPopup displays a confirmation overlay displayed relatively to its target.
+  start:
+    title: Basic
+    body: A <code>ConfirmPopup</code> component needs to be present on the page that is interacted with the <code>confirmPopup</code> function that takes a configuration object for customization. In order to align the popover, <code>target</code> property must be provided referring to the source element.
 props:
   target: Element to align the overlay. (Required)
   message: Message of the confirmation.

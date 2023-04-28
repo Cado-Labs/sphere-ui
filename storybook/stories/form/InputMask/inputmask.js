@@ -169,7 +169,7 @@ export const inputmask = {
     { name: "required", type: "boolean", default: false, description: `${I18N_PREFIX}.props.required` },
     { name: "tooltip", type: "any", description: `${I18N_PREFIX}.props.tooltip` },
     { name: "tooltipOptions", type: "object", description: `${I18N_PREFIX}.props.tooltipOptions` },
-    { name: "ariaLabelledBy", type: "string", description: `${I18N_PREFIX}.props.ariaLabelledBy` },
+    { name: "validateOnly", type: "boolean", default: false, description: `${I18N_PREFIX}.props.validateOnly` },
   ],
   eventDescriptionProps: [
     { name: "onComplete", params: onCompleteParams, description: `${I18N_PREFIX}.props.onComplete` },

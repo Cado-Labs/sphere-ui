@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import { confirmPopup, ConfirmPopup, Button, Toast } from "@cadolabs/sphere-ui"
 
-import i18n from "@i18n"
+import i18n, { Trans } from "@i18n"
 
 const I18N_PREFIX = "stories.confirmpopup"
 
@@ -62,10 +62,25 @@ const onHideParams = [
   },
 ]
 
+const popupExtra = (
+  <div>
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.start.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.start.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+    </div>
+  </div>
+)
+
 export const confirmPopupPage = {
   component: "ConfirmPopup",
   content: {
-    description: i18n.t(`${I18N_PREFIX}.content`),
+    description: i18n.t(`${I18N_PREFIX}.content.main`),
+    extra: popupExtra,
   },
   code,
   scope: { confirmPopup, ConfirmPopup, Button, Toast },

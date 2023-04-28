@@ -4,6 +4,8 @@ props:
   model: An array of Model items.
   style: Inline style of the component.
   className: Class of the component.
+  multiple: Whether multiple tabs can be activated at the same time or not.
+  submenuIcon: Icon of the submenu.
 header:
   model: Model structure
 model:

@@ -41,3 +41,4 @@ message:
   sticky: When enabled, message is not removed automatically.
   className: Class of the message.
   style: Inline style of the message.
+  content: Custom content of the message. If enabled, summary and details properties are ignored.

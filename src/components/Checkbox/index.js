@@ -19,6 +19,8 @@ export const Checkbox = React.forwardRef(({
   tooltip,
   tooltipOptions,
   onChange,
+  trueValue = true,
+  falseValue = false,
   dataCy,
   dataTestId,
 }, ref) => {
@@ -40,6 +42,8 @@ export const Checkbox = React.forwardRef(({
       readOnly={readOnly}
       tabIndex={tabIndex}
       tooltip={tooltip}
+      trueValue={trueValue}
+      falseValue={falseValue}
       tooltipOptions={filteredTooltipOptions}
       onChange={onChange}
       data-cy={dataCy}

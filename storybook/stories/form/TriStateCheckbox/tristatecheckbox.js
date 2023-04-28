@@ -44,7 +44,7 @@ export const tristatecheckbox = {
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
     { name: "tooltip", type: "any", description: `${I18N_PREFIX}.props.tooltip` },
     { name: "tooltipOptions", type: "object", description: `${I18N_PREFIX}.props.tooltipOptions` },
-    { name: "ariaLabelledBy", type: "string", description: `${I18N_PREFIX}.props.ariaLabelledBy` },
+    { name: "readOnly", type: "boolean", default: false, description: `${I18N_PREFIX}.props.readOnly` },
   ],
   eventDescriptionProps: [
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },

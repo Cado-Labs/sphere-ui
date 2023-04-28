@@ -69,6 +69,7 @@ export const chips = {
     { name: "tooltipOptions", type: "object", description: `${I18N_PREFIX}.props.tooltipOptions` },
     { name: "ariaLabelledBy", type: "string", description: `${I18N_PREFIX}.props.ariaLabelledBy` },
     { name: "allowDuplicate", type: "boolean", default: true, description: `${I18N_PREFIX}.props.removable` },
+    { name: "addOnBlur", type: "boolean", default: false, description: `${I18N_PREFIX}.props.addOnBlur` },
   ],
   eventDescriptionProps: [
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },

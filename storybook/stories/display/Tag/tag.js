@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { Tag } from "@cadolabs/sphere-ui"
 
 import i18n, { Trans } from "@i18n"
@@ -10,22 +11,26 @@ function TagExample () {
   return (
     <div className="p-card s-container">
       <h3>Tags</h3>
-      <Tag className="mr-2" value="Primary" />
-      <Tag className="mr-2" severity="secondary" value="Secondary" />
-      <Tag className="mr-2" severity="success" value="Success" />
-      <Tag className="mr-2" severity="info" value="Info" />
-      <Tag className="mr-2" severity="warning" value="Warning" />
-      <Tag className="mr-2" severity="help" value="Help" />
-      <Tag severity="danger" value="Danger" />
+      <div className="flex gap-2">
+        <Tag value="Primary" />
+        <Tag severity="secondary" value="Secondary" />
+        <Tag severity="success" value="Success" />
+        <Tag severity="info" value="Info" />
+        <Tag severity="warning" value="Warning" />
+        <Tag severity="help" value="Help" />
+        <Tag severity="danger" value="Danger" />
+      </div>
 
       <h3>Icons</h3>
-      <Tag className="mr-2" icon="pi pi-user" value="Primary" />
-      <Tag className="mr-2" icon="pi pi-eye" severity="secondary" value="Secondary" />
-      <Tag className="mr-2" icon="pi pi-check" severity="success" value="Success" />
-      <Tag className="mr-2" icon="pi pi-info-circle" severity="info" value="Info" />
-      <Tag className="mr-2" icon="pi pi-exclamation-triangle" severity="warning" value="Warning" />
-      <Tag className="mr-2" icon="pi pi-heart-fill" severity="help" value="Help" />
-      <Tag icon="pi pi-times" severity="danger" value="Danger" />
+      <div className="flex gap-2">
+        <Tag icon="pi pi-user" value="Primary" />
+        <Tag icon="pi pi-eye" severity="secondary" value="Secondary" />
+        <Tag icon="pi pi-check" severity="success" value="Success" />
+        <Tag icon="pi pi-info-circle" severity="info" value="Info" />
+        <Tag icon="pi pi-exclamation-triangle" severity="warning" value="Warning" />
+        <Tag icon="pi pi-heart-fill" severity="help" value="Help" />
+        <Tag icon="pi pi-times" severity="danger" value="Danger" />
+      </div>
     </div>
   )
 }
@@ -73,7 +78,7 @@ const tagExtra = (
         <li className="line-height-3">info</li>
         <li className="line-height-3">warning</li>
         <li className="line-height-3">help</li>
-        <li className="line-height-3">error</li>
+        <li className="line-height-3">danger</li>
       </ul>
     </div>
   </div>
@@ -93,5 +98,6 @@ export const tag = {
     { name: "icon", type: "string", description: `${I18N_PREFIX}.props.icon` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
+    { name: "rounded", type: "boolean", default: false, description: `${I18N_PREFIX}.props.rounded` },
   ],
 }

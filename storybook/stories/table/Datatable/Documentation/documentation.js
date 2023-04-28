@@ -350,12 +350,10 @@ export const documentation = {
     { name: "footerColumnGroup", type: "ColumnGroup", description: `${I18N_PREFIX}.props.footerColumnGroup` },
     { name: "scrollable", type: "boolean", default: false, description: `${I18N_PREFIX}.props.scrollable` },
     { name: "scrollHeight", type: "string", description: `${I18N_PREFIX}.props.scrollHeight` },
-    { name: "scrollDirection", type: "string", default: "vertiacal", description: `${I18N_PREFIX}.props.scrollDirection` },
     { name: "frozenWidth", type: "string", description: `${I18N_PREFIX}.props.frozenWidth` },
     { name: "frozenValue", type: "string", description: `${I18N_PREFIX}.props.frozenValue` },
     { name: "csvSeparator", type: "string", default: ",", description: `${I18N_PREFIX}.props.csvSeparator` },
     { name: "exportFilename", type: "string", default: "download", description: `${I18N_PREFIX}.props.exportFilename` },
-    { name: "autoLayout", type: "boolean", default: false, description: `${I18N_PREFIX}.props.autoLayout` },
     { name: "rowClassName", type: "function", description: `${I18N_PREFIX}.props.rowClassName` },
     { name: "cellClassName", type: "function", description: `${I18N_PREFIX}.props.cellClassName` },
     { name: "loading", type: "boolean", default: false, description: `${I18N_PREFIX}.props.loading` },
@@ -392,6 +390,8 @@ export const documentation = {
     { name: "onRowCollapse", params: onRowCollapseParams, description: `${I18N_PREFIX}.props.onRowCollapse` },
     { name: "onRowClick", params: onRowClickParams, description: `${I18N_PREFIX}.props.onRowClick` },
     { name: "exportFunction", params: exportFunctionParams, description: `${I18N_PREFIX}.props.exportFunction` },
+    { name: "onRowMouseEnter", params: onRowClickParams, description: `${I18N_PREFIX}.props.onRowMouseEnter` },
+    { name: "onRowMouseLeave", params: onRowClickParams, description: `${I18N_PREFIX}.props.onRowMouseLeave` },
   ],
   footer: (
     <ParamsTable

@@ -1,4 +1,8 @@
-content: confirmDialog method for advanced confirmation messages. Uses a Dialog UI.
+content:
+  main: confirmDialog method for advanced confirmation messages. Uses a Dialog UI.
+  start:
+    title: Basic
+    body: A <code>ConfirmDialog</code> component needs to be present on the page that is interacted with the <code>confirmDialog</code> function that takes a configuration object for customization.
 props:
   message: Message of the confirmation.
   acceptLabel: Label of the accept button.

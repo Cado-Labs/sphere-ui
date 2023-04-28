@@ -13,3 +13,4 @@ props:
   autoResize: When present, height of textarea changes as being typed.
   tooltip: Content of the tooltip.
   tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
+  keyfilter: Format definition of the keys to block.

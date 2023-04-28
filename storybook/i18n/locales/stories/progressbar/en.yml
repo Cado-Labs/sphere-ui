@@ -8,3 +8,4 @@ props:
   style: Inline style of the element.
   className: Class of the element.
   displayValueTemplate: Custom display value template.
+  mode: Defines the mode of the progress.

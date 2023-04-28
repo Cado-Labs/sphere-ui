@@ -56,5 +56,6 @@ export const spinner = {
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
     { name: "strokeWidth", type: "string", default: "2", description: `${I18N_PREFIX}.props.strokeWidth` },
+    { name: "animationDuration", type: "string", default: "2s", description: `${I18N_PREFIX}.props.animationDuration` },
   ],
 }

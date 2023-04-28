@@ -77,7 +77,8 @@ export const checkbox = {
     { name: "tabIndex", type: "number", description: `${I18N_PREFIX}.props.tabIndex` },
     { name: "tooltip", type: "any", description: `${I18N_PREFIX}.props.tooltip` },
     { name: "tooltipOptions", type: "object", description: `${I18N_PREFIX}.props.tooltipOptions` },
-    { name: "ariaLabelledBy", type: "string", description: `${I18N_PREFIX}.props.ariaLabelledBy` },
+    { name: "trueValue", type: "any", default: true, description: `${I18N_PREFIX}.props.trueValue` },
+    { name: "falseValue", type: "any", default: false, description: `${I18N_PREFIX}.props.falseValue` },
   ],
   eventDescriptionProps: [
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },

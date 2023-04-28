@@ -53,6 +53,7 @@ props:
   onSelect: Callback to invoke when a node is selected.
   onUnselect: Callback to invoke when a node is unselected.
   onSelectionChange: Callback to invoke when selection changes.
+  onRowClick: Callback to invoke when a row is clicked.
 header:
   column: Properties of Column component
   treenode: TreeNode API

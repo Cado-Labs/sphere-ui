@@ -28,7 +28,6 @@ export const InputMask = React.forwardRef(({
   onChange,
   onFocus,
   onBlur,
-  onInput,
   dataCy,
   dataTestId,
 }, ref) => {
@@ -60,7 +59,6 @@ export const InputMask = React.forwardRef(({
       onChange={onChange}
       onFocus={onFocus}
       onBlur={onBlur}
-      onInput={onInput}
       data-cy={dataCy}
       data-testid={dataTestId}
     />
