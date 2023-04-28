@@ -29,6 +29,8 @@ export const InputMask = React.forwardRef(({
   onFocus,
   onBlur,
   onInput,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
   return (
@@ -59,6 +61,8 @@ export const InputMask = React.forwardRef(({
       onFocus={onFocus}
       onBlur={onBlur}
       onInput={onInput}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

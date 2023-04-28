@@ -57,6 +57,8 @@ export const FileUpload = React.forwardRef(({
   onValidationFail: handleFailedValidation,
   uploadHandler,
   onRemove,
+  dataCy,
+  dataTestId,
 }, ref) => {
   // adding validation message because Prime don't do it in basic mode
   const onValidationFail = file => {
@@ -101,6 +103,8 @@ export const FileUpload = React.forwardRef(({
       onValidationFail={onValidationFail}
       uploadHandler={uploadHandler}
       onRemove={onRemove}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

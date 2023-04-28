@@ -51,6 +51,8 @@ export const DateTimePicker = React.forwardRef(({
   onShow,
   onHide,
   onVisibleChange,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const getYearRange = () => {
     const { year } = getPartsOfTime()
@@ -149,6 +151,8 @@ export const DateTimePicker = React.forwardRef(({
       onShow={onShow}
       onHide={onHide}
       onVisibleChange={onVisibleChange}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

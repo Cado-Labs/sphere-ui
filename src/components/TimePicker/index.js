@@ -16,6 +16,8 @@ export const TimePicker = React.forwardRef(({
   showIcon = false,
   viewDate = null,
   keepInvalid = true,
+  dataCy,
+  dataTestId,
 }, ref) => {
   return (
     <Calendar
@@ -37,6 +39,8 @@ export const TimePicker = React.forwardRef(({
       hourFormat="24"
       showTime
       timeOnly
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

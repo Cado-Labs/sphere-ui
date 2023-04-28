@@ -13,6 +13,8 @@ export const Avatar = React.forwardRef(({
   className,
   onImageError,
   onClick,
+  dataCy,
+  dataTestId,
   children,
 }, ref) => {
   const avatarClassName = cn(className, { "p-avatar-sm": size === "small" })
@@ -30,6 +32,8 @@ export const Avatar = React.forwardRef(({
       imageAlt={imageAlt}
       onImageError={onImageError}
       onClick={onClick}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     >
       {children}
     </PrimeAvatar>

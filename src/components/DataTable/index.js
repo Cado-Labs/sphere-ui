@@ -86,6 +86,8 @@ export const DataTable = React.forwardRef(({
   onRowMouseEnter,
   onRowMouseLeave,
   exportFunction,
+  dataCy,
+  dataTestId,
   children,
 }, ref) => {
   const emptyMessage = customEmptyMessage || EMPTY_MESSAGE[locale().locale]
@@ -172,6 +174,8 @@ export const DataTable = React.forwardRef(({
       onRowMouseEnter={onRowMouseEnter}
       onRowMouseLeave={onRowMouseLeave}
       exportFunction={exportFunction}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     >
       {children}
     </PrimeDataTable>

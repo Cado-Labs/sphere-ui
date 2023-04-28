@@ -45,6 +45,8 @@ export const Dropdown = React.forwardRef(({
   onShow,
   onHide,
   onFilter,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const emptyMessage = EMPTY_MESSAGE[locale().locale]
   const dropdownClassName = cn(className, "w-full")
@@ -90,6 +92,8 @@ export const Dropdown = React.forwardRef(({
       onShow={onShow}
       onHide={onHide}
       onFilter={onFilter}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

@@ -11,6 +11,8 @@ export const ProgressBar = React.forwardRef(({
   className,
   displayValueTemplate,
   mode = "determinate",
+  dataCy,
+  dataTestId,
 }, ref) => {
   return (
     <PrimeProgressBar
@@ -24,6 +26,8 @@ export const ProgressBar = React.forwardRef(({
       style={style}
       className={className}
       mode={mode}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

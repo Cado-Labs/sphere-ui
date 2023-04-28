@@ -10,8 +10,18 @@ export const Button = React.forwardRef(({
   badgeClassName,
   tooltipOptions,
   /* eslint-enable no-unused-vars */
+  dataCy,
+  dataTestId,
   ...props
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
-  return <PrimeButton {...props} tooltipOptions={filteredTooltipOptions} ref={ref} />
+  return (
+    <PrimeButton
+      {...props}
+      tooltipOptions={filteredTooltipOptions}
+      ref={ref}
+      data-cy={dataCy}
+      data-testid={dataTestId}
+    />
+  )
 })

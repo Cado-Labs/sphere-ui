@@ -9,6 +9,8 @@ const TabView = React.forwardRef(({
   renderActiveOnly,
   scrollable,
   onTabChange,
+  dataCy,
+  dataTestId,
   children,
 }, ref) => {
   return (
@@ -21,6 +23,8 @@ const TabView = React.forwardRef(({
       style={style}
       onTabChange={onTabChange}
       className={className}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     >
       {children}
     </PrimeTabView>

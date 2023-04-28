@@ -17,6 +17,8 @@ export const Dialog = React.forwardRef(({
   breakpoints,
   onClick,
   onMaskClick,
+  dataCy,
+  dataTestId,
   children,
 }, ref) => {
   return (
@@ -37,6 +39,8 @@ export const Dialog = React.forwardRef(({
       breakpoints={breakpoints}
       onClick={onClick}
       onMaskClick={onMaskClick}
+      data-cy={dataCy}
+      data-testid={dataTestId}
       // props below are unavailable for users
       draggable={false}
       resizable={false}

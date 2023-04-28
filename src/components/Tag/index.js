@@ -9,6 +9,8 @@ export const Tag = React.forwardRef(({
   rounded = false,
   style,
   className,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const tagClassName = cn(className, {
     "p-tag-secondary": severity === "secondary",
@@ -24,6 +26,8 @@ export const Tag = React.forwardRef(({
       rounded={rounded}
       className={tagClassName}
       style={style}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

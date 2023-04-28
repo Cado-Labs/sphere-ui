@@ -14,6 +14,8 @@ export const TriStateCheckbox = React.forwardRef(({
   tooltip,
   tooltipOptions,
   onChange,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
 
@@ -30,6 +32,8 @@ export const TriStateCheckbox = React.forwardRef(({
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
       onChange={onChange}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

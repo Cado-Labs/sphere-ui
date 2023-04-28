@@ -46,6 +46,8 @@ export const TreeTable = React.forwardRef(({
   onSelectionChange,
   onRowClick,
   onSort,
+  dataCy,
+  dataTestId,
   children,
 }, ref) => {
   return (
@@ -96,6 +98,8 @@ export const TreeTable = React.forwardRef(({
       onRowClick={onRowClick}
       onSort={onSort}
       alwaysShowPaginator={false}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     >
       {children}
     </PrimeTreeTable>

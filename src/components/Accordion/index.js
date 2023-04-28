@@ -13,6 +13,8 @@ const Accordion = React.forwardRef(({
   style,
   className,
   multiple = false,
+  dataCy,
+  dataTestId,
   children,
 }, ref) => {
   return (
@@ -26,6 +28,8 @@ const Accordion = React.forwardRef(({
       style={style}
       className={className}
       multiple={multiple}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     >
       {children}
     </PrimeAccordion>
