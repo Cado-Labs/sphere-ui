@@ -1,8 +1,8 @@
 import React, { useRef } from "react"
-import { MultiSelect as Select } from "primereact/multiselect"
+import { MultiSelect as PrimeMultiSelect } from "primereact/multiselect"
 import { locale } from "primereact/api"
 
-import { filterTooltipOptions } from "../../utils"
+import { filterTooltipOptions, shouldFilterSelectOptions } from "../../utils"
 
 import { LOCALES_BUTTONS_SET } from "./constants"
 
@@ -16,7 +16,7 @@ export const MultiSelect = React.forwardRef(({
   onHide,
   onFilter,
   onSelectAll,
-  filter = false,
+  filter,
   filterBy = "label",
   className,
   placeholder,
@@ -46,6 +46,7 @@ export const MultiSelect = React.forwardRef(({
 }, ref) => {
   const multiselectRef = useRef(ref)
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+  const hasFilter = filter ?? shouldFilterSelectOptions(options)
 
   const getRef = () => {
     return ref || multiselectRef
@@ -74,7 +75,7 @@ export const MultiSelect = React.forwardRef(({
   }
 
   const renderHeader = () => {
-    return filter ? null : <React.Fragment />
+    return hasFilter ? null : <React.Fragment />
   }
 
   const renderFooter = () => {
@@ -97,7 +98,7 @@ export const MultiSelect = React.forwardRef(({
   }
 
   return (
-    <Select
+    <PrimeMultiSelect
       ref={getRef()}
       options={options}
       optionDisabled={optionDisabled}
@@ -113,7 +114,7 @@ export const MultiSelect = React.forwardRef(({
       onHide={onHide}
       onFilter={onFilter}
       onSelectAll={onSelectAll}
-      filter={filter}
+      filter={hasFilter}
       filterBy={filterBy}
       selectAll={false}
       showSelectAll={false}

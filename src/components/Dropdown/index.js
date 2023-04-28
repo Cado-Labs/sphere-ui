@@ -3,7 +3,7 @@ import { Dropdown as PrimeDropdown } from "primereact/dropdown"
 import { locale } from "primereact/api"
 import { classNames as cn } from "primereact/utils"
 
-import { filterTooltipOptions } from "../../utils"
+import { filterTooltipOptions, shouldFilterSelectOptions } from "../../utils"
 
 const EMPTY_MESSAGE = {
   ru: "Ничего не найдено",
@@ -23,7 +23,7 @@ export const Dropdown = React.forwardRef(({
   itemTemplate,
   style,
   className,
-  filter = false,
+  filter,
   filterBy = "label",
   placeholder,
   required = false,
@@ -51,6 +51,7 @@ export const Dropdown = React.forwardRef(({
   const emptyMessage = EMPTY_MESSAGE[locale().locale]
   const dropdownClassName = cn(className, "w-full")
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+  const hasFilter = filter ?? shouldFilterSelectOptions(options)
 
   return (
     <PrimeDropdown
@@ -67,7 +68,7 @@ export const Dropdown = React.forwardRef(({
       itemTemplate={itemTemplate}
       style={style}
       className={dropdownClassName}
-      filter={filter}
+      filter={hasFilter}
       filterBy={filterBy}
       placeholder={placeholder}
       required={required}
