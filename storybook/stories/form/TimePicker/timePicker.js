@@ -63,6 +63,7 @@ export const timePicker = {
     { name: "stepMinute", type: "number", description: `${I18N_PREFIX}.props.stepMinute` },
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
     { name: "viewDate", type: "date", default: null, description: `${I18N_PREFIX}.props.viewDate` },
+    { name: "keepInvalid", type: "boolean", default: false, description: `${I18N_PREFIX}.props.keepInvalid` },
   ],
   eventDescriptionProps: [
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },

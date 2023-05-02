@@ -76,5 +76,6 @@ export const progressBar = {
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
     { name: "displayValueTemplate", type: "ReactNode", description: `${I18N_PREFIX}.props.displayValueTemplate` },
+    { name: "mode", type: `"determinate" | "indeterminate"`, default: "determinate", description: `${I18N_PREFIX}.props.displayValueTemplate` },
   ],
 }

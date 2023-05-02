@@ -1,8 +1,8 @@
 import React, { useRef } from "react"
-import { MultiSelect as Select } from "primereact/multiselect"
+import { MultiSelect as PrimeMultiSelect } from "primereact/multiselect"
 import { locale } from "primereact/api"
 
-import { filterTooltipOptions } from "../../utils"
+import { filterTooltipOptions, shouldFilterSelectOptions } from "../../utils"
 
 import { LOCALES_BUTTONS_SET } from "./constants"
 
@@ -17,7 +17,7 @@ export const MultiSelect = React.forwardRef(({
   onFilter,
   onSelectAll,
   filter,
-  filterBy,
+  filterBy = "label",
   className,
   placeholder,
   optionLabel,
@@ -31,7 +31,8 @@ export const MultiSelect = React.forwardRef(({
   panelStyle,
   style,
   selectedItemsLabel,
-  display,
+  display = "comma",
+  overlayVisible = false,
   tooltip,
   tooltipOptions,
   dataKey,
@@ -40,9 +41,12 @@ export const MultiSelect = React.forwardRef(({
   id = null,
   disabled = false,
   showClear = false,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const multiselectRef = useRef(ref)
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+  const hasFilter = filter ?? shouldFilterSelectOptions(options)
 
   const getRef = () => {
     return ref || multiselectRef
@@ -71,7 +75,7 @@ export const MultiSelect = React.forwardRef(({
   }
 
   const renderHeader = () => {
-    return filter ? null : <React.Fragment />
+    return hasFilter ? null : <React.Fragment />
   }
 
   const renderFooter = () => {
@@ -94,7 +98,7 @@ export const MultiSelect = React.forwardRef(({
   }
 
   return (
-    <Select
+    <PrimeMultiSelect
       ref={getRef()}
       options={options}
       optionDisabled={optionDisabled}
@@ -110,7 +114,7 @@ export const MultiSelect = React.forwardRef(({
       onHide={onHide}
       onFilter={onFilter}
       onSelectAll={onSelectAll}
-      filter={filter}
+      filter={hasFilter}
       filterBy={filterBy}
       selectAll={false}
       showSelectAll={false}
@@ -130,10 +134,13 @@ export const MultiSelect = React.forwardRef(({
       selectedItemsLabel={selectedItemsLabel}
       showClear={showClear}
       display={display}
+      overlayVisible={overlayVisible}
       removeIcon={removeIcon()}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
       dataKey={dataKey}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

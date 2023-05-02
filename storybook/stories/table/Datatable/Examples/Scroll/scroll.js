@@ -82,41 +82,42 @@ function ScrollDataTableExample () {
 
       <div className="p-card s-container mb-3">
         <h3>Horizontal and Vertical with Footer</h3>
-        <DataTable loading={loading} value={items} scrollable scrollHeight="400px" scrollDirection="both">
-          <Column field="id" header="ID" footer="ID" style={{ flexGrow: 1, flexBasis: "100px" }} />
-          <Column field="API" header="API" footer="API" style={{ flexGrow: 1, flexBasis: "200px" }} body={renderApiName} />
-          <Column field="Description" header="Description" footer="Description" style={{ flexGrow: 1, flexBasis: "250px" }} />
-          <Column field="Category" header="Category" footer="Category" style={{ flexGrow: 1, flexBasis: "200px" }} />
-          <Column field="Auth" header="Auth" footer="Auth" body={renderAuth} style={{ flexGrow: 1, flexBasis: "200px" }} />
-          <Column field="HTTPS" header="HTTPS" footer="HTTPS" body={renderHTTPS} style={{ flexGrow: 1, flexBasis: "200px" }} />
-          <Column field="Cors" header="Cors" footer="Cors" style={{ flexGrow: 1, flexBasis: "200px" }} />
+        <p>Horizontal scrollbar is displayed when table width exceeds the parent width.</p>
+        <DataTable loading={loading} value={items} scrollable scrollHeight="400px">
+          <Column field="id" header="ID" footer="ID" style={{ minWidth: "200px" }} />
+          <Column field="API" header="API" footer="API" style={{ minWidth: "200px" }} body={renderApiName} />
+          <Column field="Description" header="Description" footer="Description" style={{ minWidth: "200px" }} />
+          <Column field="Category" header="Category" footer="Category" style={{ minWidth: "200px" }} />
+          <Column field="Auth" header="Auth" footer="Auth" body={renderAuth} style={{ minWidth: "200px" }} />
+          <Column field="HTTPS" header="HTTPS" footer="HTTPS" body={renderHTTPS} style={{ minWidth: "200px" }} />
+          <Column field="Cors" header="Cors" footer="Cors" style={{ minWidth: "200px" }} />
         </DataTable>
       </div>
 
       <div className="p-card s-container mb-3">
         <h3>Frozen Rows</h3>
         <DataTable loading={loading} value={unlockedItems} frozenValue={lockedItems} scrollable scrollHeight="400px">
-          <Column field="id" header="ID" footer="ID" style={{ flexGrow: 1, flexBasis: "100px" }} />
-          <Column field="API" header="API" footer="API" style={{ flexGrow: 1, flexBasis: "200px" }} body={renderApiName} />
-          <Column field="Description" header="Description" footer="Description" style={{ flexGrow: 1, flexBasis: "250px" }} />
-          <Column field="Category" header="Category" footer="Category" style={{ flexGrow: 1, flexBasis: "200px" }} />
-          <Column field="Auth" header="Auth" footer="Auth" body={renderAuth} style={{ flexGrow: 1, flexBasis: "200px" }} />
-          <Column field="HTTPS" header="HTTPS" footer="HTTPS" body={renderHTTPS} style={{ flexGrow: 1, flexBasis: "200px" }} />
-          <Column field="Cors" header="Cors" footer="Cors" style={{ flexGrow: 1, flexBasis: "200px" }} />
-          <Column style={{ flex: "0 0 4rem" }} body={renderLock} />
+          <Column field="id" header="ID" footer="ID" />
+          <Column field="API" header="API" footer="API" body={renderApiName} />
+          <Column field="Description" header="Description" footer="Description" />
+          <Column field="Category" header="Category" footer="Category" />
+          <Column field="Auth" header="Auth" footer="Auth" body={renderAuth} />
+          <Column field="HTTPS" header="HTTPS" footer="HTTPS" body={renderHTTPS} />
+          <Column field="Cors" header="Cors" footer="Cors" />
+          <Column body={renderLock} />
         </DataTable>
       </div>
 
       <div className="p-card s-container">
         <h3>Frozen Columns</h3>
-        <DataTable loading={loading} value={items} scrollable scrollHeight="400px" scrollDirection="both">
-          <Column field="id" header="ID" style={{ flexGrow: 1, flexBasis: "100px" }} frozen />
-          <Column field="API" header="API" style={{ flexGrow: 1, flexBasis: "200px" }} body={renderApiName} frozen />
-          <Column field="Description" header="Description" style={{ flexGrow: 1, flexBasis: "250px" }} />
-          <Column field="Category" header="Category" style={{ flexGrow: 1, flexBasis: "200px" }} />
-          <Column field="Auth" header="Auth" body={renderAuth} style={{ flexGrow: 1, flexBasis: "200px" }} />
-          <Column field="HTTPS" header="HTTPS" body={renderHTTPS} style={{ flexGrow: 1, flexBasis: "200px" }} />
-          <Column field="Cors" header="Cors" style={{ flexGrow: 1, flexBasis: "200px" }} />
+        <DataTable loading={loading} value={items} scrollable scrollHeight="400px">
+          <Column field="id" header="ID" style={{ minWidth: "200px" }} frozen />
+          <Column field="API" header="API" style={{ minWidth: "200px" }} body={renderApiName} frozen />
+          <Column field="Description" header="Description" style={{ minWidth: "200px" }} />
+          <Column field="Category" header="Category" style={{ minWidth: "200px" }} />
+          <Column field="Auth" header="Auth" body={renderAuth} style={{ minWidth: "200px" }} />
+          <Column field="HTTPS" header="HTTPS" body={renderHTTPS} style={{ minWidth: "200px" }} />
+          <Column field="Cors" header="Cors" style={{ minWidth: "200px" }} />
         </DataTable>
       </div>
     </div>

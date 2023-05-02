@@ -147,7 +147,7 @@ export const dropdown = {
     { name: "itemTemplate", type: "any", description: `${I18N_PREFIX}.props.itemTemplate` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
-    { name: "filter", type: "boolean", default: false, description: `${I18N_PREFIX}.props.filter` },
+    { name: "filter", type: "boolean", description: `${I18N_PREFIX}.props.filter` },
     { name: "filterBy", type: "string", description: `${I18N_PREFIX}.props.filterBy` },
     { name: "placeholder", type: "string", description: `${I18N_PREFIX}.props.placeholder` },
     { name: "required", type: "boolean", default: false, description: `${I18N_PREFIX}.props.required` },

@@ -16,7 +16,6 @@ props:
   disabled: When present, it specifies that the component should be disabled.
   tooltip: Content of the tooltip.
   tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
-  ariaLabelledBy: Establishes relationships between the component and label(s) where its value should be one or more element IDs.
   onChange: Callback to invoke on value change.
   onFocus: Callback to invoke when the element receives focus.
   onBlur: Callback to invoke when the element loses focus.

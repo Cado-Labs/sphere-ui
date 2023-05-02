@@ -13,8 +13,8 @@ props:
   className: Class of the element.
   tooltip: Content of the tooltip.
   tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
-  ariaLabelledBy: Establishes relationships between the component and label(s) where its value should be one or more element IDs.
   onChange: Callback to invoke on value change.
+  itemTemplate: Function that gets the option and returns the content.
 header:
   selectItem: SelectItem API
 selectItem:

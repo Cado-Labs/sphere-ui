@@ -4,10 +4,12 @@ import { Chip as PrimeChip } from "primereact/chip"
 export const Chip = React.forwardRef(({
   label,
   icon,
-  removable,
+  removable = false,
   style,
   className,
   onRemove,
+  dataCy,
+  dataTestId,
 }, ref) => {
   return (
     <PrimeChip
@@ -18,6 +20,8 @@ export const Chip = React.forwardRef(({
       style={style}
       className={className}
       onRemove={onRemove}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

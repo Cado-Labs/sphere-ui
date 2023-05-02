@@ -33,7 +33,7 @@ props:
   required: When present, it specifies that the element must be filled out before submitting the form.
   tooltip: Content of the tooltip.
   tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
-  ariaLabelledBy: Establishes relationships between the component and label(s) where its value should be one or more element IDs.
+  validateOnly: When enabled, instead of blocking keys, input is validated internally to test against the regular expression.
   onComplete: Callback to invoke on when user completes the mask pattern.
   onChange: Callback to invoke on value change.
   onFocus: Callback to invoke when input receives focus.

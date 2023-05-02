@@ -12,21 +12,24 @@ export const Chips = React.forwardRef(({
   placeholder,
   value,
   max,
-  disabled,
-  readOnly,
-  removable,
+  disabled = false,
+  readOnly = false,
+  removable = true,
   style,
   className,
   tooltip,
   tooltipOptions,
   ariaLabelledBy,
-  allowDuplicate,
+  allowDuplicate = true,
   scrollable,
+  addOnBlur = false,
   onAdd,
   onRemove,
   onChange,
   onFocus,
   onBlur,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const chipsClassName = cn(className, { "p-chips_scrollable": scrollable })
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
@@ -49,11 +52,14 @@ export const Chips = React.forwardRef(({
       ariaLabelledBy={ariaLabelledBy}
       separator={SEPARATOR}
       allowDuplicate={allowDuplicate}
+      addOnBlur={addOnBlur}
       onAdd={onAdd}
       onRemove={onRemove}
       onChange={onChange}
       onFocus={onFocus}
       onBlur={onBlur}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

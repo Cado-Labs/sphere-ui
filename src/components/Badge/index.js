@@ -8,6 +8,8 @@ export const Badge = React.forwardRef(({
   size,
   className,
   style,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const badgeClassName = cn(className, {
     "p-badge-sm": size === "small",
@@ -23,6 +25,8 @@ export const Badge = React.forwardRef(({
       value={value}
       severity={severity}
       size={size}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

@@ -15,12 +15,21 @@
 
   &-month,
   &-year {
+    padding: .125rem !important;
     font-size: .9rem;
+
+    &:hover {
+      color: var(--text-color) !important;
+    }
   }
 
   table {
     margin: 0;
     font-size: .7rem;
+
+    th {
+      padding: .5rem;
+    }
 
     td {
       padding: 0;
@@ -111,7 +120,7 @@
     &,
     &:hover,
     &:active {
-      color: #495057;
+      color: var(--text-color);
       background: #e9ecef;
       border: 1px solid #ced4da;
       border-left: 0;

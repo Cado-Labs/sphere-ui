@@ -3,7 +3,7 @@ import { Dropdown as PrimeDropdown } from "primereact/dropdown"
 import { locale } from "primereact/api"
 import { classNames as cn } from "primereact/utils"
 
-import { filterTooltipOptions } from "../../utils"
+import { filterTooltipOptions, shouldFilterSelectOptions } from "../../utils"
 
 const EMPTY_MESSAGE = {
   ru: "Ничего не найдено",
@@ -24,17 +24,17 @@ export const Dropdown = React.forwardRef(({
   style,
   className,
   filter,
-  filterBy,
+  filterBy = "label",
   placeholder,
-  required,
-  disabled,
+  required = false,
+  disabled = false,
   panelClassName,
   panelStyle,
   inputId,
-  showClear,
+  showClear = false,
   ariaLabel,
   ariaLabelledBy,
-  autoFocus,
+  autoFocus = false,
   tooltip,
   tooltipOptions,
   onChange,
@@ -45,10 +45,13 @@ export const Dropdown = React.forwardRef(({
   onShow,
   onHide,
   onFilter,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const emptyMessage = EMPTY_MESSAGE[locale().locale]
   const dropdownClassName = cn(className, "w-full")
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+  const hasFilter = filter ?? shouldFilterSelectOptions(options)
 
   return (
     <PrimeDropdown
@@ -65,7 +68,7 @@ export const Dropdown = React.forwardRef(({
       itemTemplate={itemTemplate}
       style={style}
       className={dropdownClassName}
-      filter={filter}
+      filter={hasFilter}
       filterBy={filterBy}
       placeholder={placeholder}
       required={required}
@@ -90,6 +93,8 @@ export const Dropdown = React.forwardRef(({
       onShow={onShow}
       onHide={onHide}
       onFilter={onFilter}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

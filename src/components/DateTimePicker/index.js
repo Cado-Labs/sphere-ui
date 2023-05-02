@@ -43,6 +43,7 @@ export const DateTimePicker = React.forwardRef(({
   tabIndex,
   autoZIndex = true,
   baseZIndex = 50,
+  keepInvalid = true,
   onFocus,
   onBlur,
   onInput,
@@ -50,6 +51,8 @@ export const DateTimePicker = React.forwardRef(({
   onShow,
   onHide,
   onVisibleChange,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const getYearRange = () => {
     const { year } = getPartsOfTime()
@@ -140,6 +143,7 @@ export const DateTimePicker = React.forwardRef(({
       tabIndex={tabIndex}
       autoZIndex={autoZIndex}
       baseZIndex={baseZIndex}
+      keepInvalid={keepInvalid}
       onFocus={onFocus}
       onBlur={onBlur}
       onInput={onInput}
@@ -147,6 +151,8 @@ export const DateTimePicker = React.forwardRef(({
       onShow={onShow}
       onHide={onHide}
       onVisibleChange={onVisibleChange}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

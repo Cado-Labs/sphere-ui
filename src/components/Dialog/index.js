@@ -12,11 +12,13 @@ export const Dialog = React.forwardRef(({
   contentClassName,
   style,
   className,
-  showHeader,
+  showHeader = true,
   baseZIndex = 100,
   breakpoints,
   onClick,
   onMaskClick,
+  dataCy,
+  dataTestId,
   children,
 }, ref) => {
   return (
@@ -37,6 +39,8 @@ export const Dialog = React.forwardRef(({
       breakpoints={breakpoints}
       onClick={onClick}
       onMaskClick={onMaskClick}
+      data-cy={dataCy}
+      data-testid={dataTestId}
       // props below are unavailable for users
       draggable={false}
       resizable={false}

@@ -18,6 +18,8 @@ export const BreadCrumb = React.forwardRef(({
   home,
   style,
   className,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const breadCrumbModel = model.map(options => filterOptions(options, POSSIBLE_PARAMS))
 
@@ -38,6 +40,8 @@ export const BreadCrumb = React.forwardRef(({
       home={breadCrumbHome}
       style={style}
       className={className}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

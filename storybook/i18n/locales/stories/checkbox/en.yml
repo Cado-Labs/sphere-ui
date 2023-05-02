@@ -14,5 +14,6 @@ props:
   tabIndex: Index of the element in tabbing order.
   tooltip: Content of the tooltip.
   tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
-  ariaLabelledBy: Establishes relationships between the component and label(s) where its value should be one or more element IDs.
   onChange: Callback to invoke on value change
+  trueValue: Value in checked state.
+  falseValue: Value in unchecked state.

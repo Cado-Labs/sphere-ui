@@ -15,3 +15,4 @@ props:
   icon: Icon of the tag to display next to the value.
   style: Inline style of the component.
   className: Class of the component.
+  rounded: Whether the corners of the tag are rounded.

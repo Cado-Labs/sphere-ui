@@ -86,13 +86,13 @@ function AccordionExample () {
             <div className="p-card s-container mb-3">
                 <h5>Custom Headers</h5>
                 <Accordion className="accordion-custom" activeIndex={0}>
-                    <AccordionTab header={<React.Fragment><i className="pi pi-calendar"></i><span>Header I</span></React.Fragment>}>
+                    <AccordionTab header={<div className="flex gap-2"><i className="pi pi-calendar"></i><span>Header I</span></div>}>
                         <p>Lorem ipsum dolor sit amet.</p>
                     </AccordionTab>
-                    <AccordionTab header={<React.Fragment><i className="pi pi-user"></i><span>Header II</span></React.Fragment>}>
+                    <AccordionTab header={<div className="flex gap-2"><i className="pi pi-user"></i><span>Header II</span></div>}>
                         <p>Sed ut perspiciatis unde omnis.</p>
                     </AccordionTab>
-                    <AccordionTab header={<React.Fragment><i className="pi pi-search"></i><span>Header III</span><i className="pi pi-cog"></i></React.Fragment>}>
+                    <AccordionTab header={<div className="flex gap-2"><i className="pi pi-search"></i><span>Header III</span><i className="pi pi-cog"></i></div>}>
                         <p>At vero eos et accusamus et iusto odio.</p>
                     </AccordionTab>
                 </Accordion>
@@ -168,7 +168,7 @@ const accordionExtra = (
       <Highlighter language="jsx" code={controlledExample} />
     </div>
     <div className="mb-3">
-      <div className="title"h3>{i18n.t(`${I18N_PREFIX}.content.uncontrolled.title`)}</div>
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.uncontrolled.title`)}</div>
       <p>{i18n.t(`${I18N_PREFIX}.content.uncontrolled.body`)}</p>
       <Highlighter language="jsx" code={uncontrolledExample} />
     </div>

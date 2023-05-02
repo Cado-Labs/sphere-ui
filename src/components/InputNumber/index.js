@@ -27,6 +27,10 @@ export const InputNumber = React.forwardRef(({
   pattern,
   inputMode,
   placeholder,
+  mode = "decimal",
+  currency,
+  currencyDisplay,
+  maxLength,
   readOnly = false,
   size,
   style,
@@ -43,6 +47,8 @@ export const InputNumber = React.forwardRef(({
   onBlur,
   onFocus,
   onKeyDown,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
   return (
@@ -71,6 +77,10 @@ export const InputNumber = React.forwardRef(({
       pattern={pattern}
       inputMode={inputMode}
       placeholder={placeholder}
+      mode={mode}
+      currency={currency}
+      currencyDisplay={currencyDisplay}
+      maxLength={maxLength}
       readOnly={readOnly}
       size={size}
       style={style}
@@ -87,6 +97,8 @@ export const InputNumber = React.forwardRef(({
       onBlur={onBlur}
       onFocus={onFocus}
       onKeyDown={onKeyDown}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

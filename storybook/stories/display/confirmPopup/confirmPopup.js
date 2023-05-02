@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
-import { confirmPopup, Button, Toast } from "@cadolabs/sphere-ui"
+import { confirmPopup, ConfirmPopup, Button, Toast } from "@cadolabs/sphere-ui"
 
-import i18n from "@i18n"
+import i18n, { Trans } from "@i18n"
 
 const I18N_PREFIX = "stories.confirmpopup"
 
@@ -41,7 +41,7 @@ function confirmPopupExample () {
   return (
     <div>
       <Toast ref={toast} />
-
+      <ConfirmPopup />
       <div className="p-card s-container">
         <h3>Basic</h3>
         <Button onClick={confirm1} icon="pi pi-check" label="Confirm" className="mr-2" />
@@ -62,13 +62,28 @@ const onHideParams = [
   },
 ]
 
+const popupExtra = (
+  <div>
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.start.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.start.body`}
+          components={{ code: <code className="inline-code" /> }}
+        />
+      </p>
+    </div>
+  </div>
+)
+
 export const confirmPopupPage = {
-  component: "confirmPopup",
+  component: "ConfirmPopup",
   content: {
-    description: i18n.t(`${I18N_PREFIX}.content`),
+    description: i18n.t(`${I18N_PREFIX}.content.main`),
+    extra: popupExtra,
   },
   code,
-  scope: { confirmPopup, Button, Toast },
+  scope: { confirmPopup, ConfirmPopup, Button, Toast },
   descriptionProps: [
     { name: "target", type: "DomElement", description: `${I18N_PREFIX}.props.target` },
     { name: "message", type: "string", description: `${I18N_PREFIX}.props.message` },

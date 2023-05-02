@@ -125,15 +125,15 @@ export const responsive = {
               layoutLink: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout" target="_blank" />,
             }}
           />
-          <Highlighter language="jsx" code={scrollExample} />
         </p>
+        <Highlighter language="jsx" code={scrollExample} />
         <p>
           <Trans
             i18nKey={`${I18N_PREFIX}.layouts.stack`}
             components={{ code: <code className="inline-code" /> }}
           />
-          <Highlighter language="jsx" code={stackExample} />
         </p>
+        <Highlighter language="jsx" code={stackExample} />
       </div>
     ),
   },

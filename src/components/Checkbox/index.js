@@ -9,17 +9,20 @@ export const Checkbox = React.forwardRef(({
   inputId,
   value,
   name,
-  checked,
+  checked = false,
   style,
   className,
-  disabled,
-  required,
-  readOnly,
+  disabled = false,
+  required = false,
+  readOnly = false,
   tabIndex,
   tooltip,
   tooltipOptions,
-  ariaLabelledBy,
   onChange,
+  trueValue = true,
+  falseValue = false,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
 
@@ -39,9 +42,12 @@ export const Checkbox = React.forwardRef(({
       readOnly={readOnly}
       tabIndex={tabIndex}
       tooltip={tooltip}
+      trueValue={trueValue}
+      falseValue={falseValue}
       tooltipOptions={filteredTooltipOptions}
-      ariaLabelledBy={ariaLabelledBy}
       onChange={onChange}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

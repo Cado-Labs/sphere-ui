@@ -5,7 +5,10 @@ export const Spinner = React.forwardRef(({
   loading = true,
   style,
   className,
-  strokeWidth,
+  strokeWidth = "2",
+  animationDuration = "2s",
+  dataCy,
+  dataTestId,
   children,
 }, ref) => {
   if (loading) {
@@ -13,10 +16,12 @@ export const Spinner = React.forwardRef(({
       <div className="flex justify-content-center">
         <ProgressSpinner
           ref={ref}
-          loading={loading}
           strokeWidth={strokeWidth}
+          animationDuration={animationDuration}
           style={style}
           className={className}
+          data-cy={dataCy}
+          data-testid={dataTestId}
         />
       </div>
     )

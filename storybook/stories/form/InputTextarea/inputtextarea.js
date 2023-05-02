@@ -73,5 +73,6 @@ export const inputtextarea = {
     { name: "autoResize", type: "boolean", default: false, description: `${I18N_PREFIX}.props.autoResize` },
     { name: "tooltip", type: "any", description: `${I18N_PREFIX}.props.tooltip` },
     { name: "tooltipOptions", type: "object", description: `${I18N_PREFIX}.props.tooltipOptions` },
+    { name: "keyfilter", type: "string/regex", description: `${I18N_PREFIX}.props.keyfilter` },
   ],
 }

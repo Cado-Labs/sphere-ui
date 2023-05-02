@@ -9,16 +9,18 @@ export const SelectButton = React.forwardRef(({
   options,
   optionDisabled,
   tabIndex,
-  multiple,
-  unselectable,
-  disabled,
+  multiple = false,
+  unselectable = true,
+  disabled = false,
+  itemTemplate,
   style,
   className,
   tooltip,
   tooltipOptions,
-  ariaLabelledBy,
   onChange,
   name,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
 
@@ -33,13 +35,15 @@ export const SelectButton = React.forwardRef(({
       multiple={multiple}
       unselectable={unselectable}
       disabled={disabled}
+      itemTemplate={itemTemplate}
       style={style}
       className={className}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
-      ariaLabelledBy={ariaLabelledBy}
       onChange={onChange}
       name={name}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

@@ -4,12 +4,15 @@ import { ProgressBar as PrimeProgressBar } from "primereact/progressbar"
 export const ProgressBar = React.forwardRef(({
   id,
   value,
-  showValue,
-  unit,
+  showValue = true,
+  unit = "%",
   color,
   style,
   className,
   displayValueTemplate,
+  mode = "determinate",
+  dataCy,
+  dataTestId,
 }, ref) => {
   return (
     <PrimeProgressBar
@@ -22,6 +25,9 @@ export const ProgressBar = React.forwardRef(({
       color={color}
       style={style}
       className={className}
+      mode={mode}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

@@ -15,7 +15,41 @@ function MultiSelectExample () {
     { label: "Paris", value: "PRS" }
   ]
 
+  const groupedCities = [
+    {
+        label: 'Germany',
+        code: 'DE',
+        items: [
+            { label: 'Berlin', value: 'Berlin' },
+            { label: 'Frankfurt', value: 'Frankfurt' },
+            { label: 'Hamburg', value: 'Hamburg' },
+            { label: 'Munich', value: 'Munich' }
+        ]
+    },
+    {
+        label: 'USA',
+        code: 'US',
+        items: [
+            { label: 'Chicago', value: 'Chicago' },
+            { label: 'Los Angeles', value: 'Los Angeles' },
+            { label: 'New York', value: 'New York' },
+            { label: 'San Francisco', value: 'San Francisco' }
+        ]
+    },
+    {
+        label: 'Japan',
+        code: 'JP',
+        items: [
+            { label: 'Kyoto', value: 'Kyoto' },
+            { label: 'Osaka', value: 'Osaka' },
+            { label: 'Tokyo', value: 'Tokyo' },
+            { label: 'Yokohama', value: 'Yokohama' }
+        ]
+    }
+  ];
+
   const [value, setValue] = React.useState(null)
+  const [selectedCities, setSelectedCities] = React.useState(null);
 
   return (
     <div className="p-card s-container">
@@ -27,6 +61,20 @@ function MultiSelectExample () {
             onChange={(e) => setValue(e.value)}
             options={citySelectItems}
           />
+      </div>
+      <div className="s-field-col-3">
+        <label htmlFor="city">MultiSelect with groups</label>
+        <MultiSelect
+          value={selectedCities}
+          options={groupedCities}
+          onChange={(e) => setSelectedCities(e.value)}
+          optionLabel="label"
+          optionGroupLabel="label"
+          optionGroupChildren="items"
+          placeholder="Select Cities"
+          display="chip"
+          className="w-full md:w-20rem"
+        />
       </div>
     </div>
   )
@@ -90,6 +138,7 @@ export const multiSelect = {
     { name: "tooltip", type: "any", description: `${I18N_PREFIX}.props.tooltip` },
     { name: "tooltipOptions", type: "object", description: `${I18N_PREFIX}.props.tooltipOptions` },
     { name: "dataKey", type: "string", description: `${I18N_PREFIX}.props.dataKey` },
+    { name: "overlayVisible", type: "boolean", default: false, description: `${I18N_PREFIX}.props.overlayVisible` },
   ],
   eventDescriptionProps: [
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },

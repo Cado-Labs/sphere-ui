@@ -39,6 +39,7 @@ export const DatePicker = React.forwardRef(({
   tabIndex,
   autoZIndex = true,
   baseZIndex = 50,
+  keepInvalid = true,
   onFocus,
   onBlur,
   onInput,
@@ -46,6 +47,8 @@ export const DatePicker = React.forwardRef(({
   onShow,
   onHide,
   onVisibleChange,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const defaultViewDate = value?.[0] || new Date()
   const [viewDate, setViewDate] = useState(defaultViewDate)
@@ -83,6 +86,7 @@ export const DatePicker = React.forwardRef(({
       tabIndex,
       autoZIndex,
       baseZIndex,
+      keepInvalid,
       onFocus,
       onBlur,
       onInput,
@@ -90,6 +94,8 @@ export const DatePicker = React.forwardRef(({
       onShow,
       onHide,
       onVisibleChange,
+      "data-cy": dataCy,
+      "data-testid": dataTestId,
     }
   }
 

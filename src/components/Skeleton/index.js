@@ -2,14 +2,16 @@ import React from "react"
 import { Skeleton as PrimeSkeleton } from "primereact/skeleton"
 
 export const Skeleton = React.forwardRef(({
-  shape,
+  shape = "rectangle",
   size,
-  width,
-  height,
+  width = "100%",
+  height = "1rem",
   borderRadius,
-  animation,
+  animation = "wave",
   style,
   className,
+  dataCy,
+  dataTestId,
 }, ref) => {
   return (
     <PrimeSkeleton
@@ -22,6 +24,8 @@ export const Skeleton = React.forwardRef(({
       animation={animation}
       style={style}
       className={className}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

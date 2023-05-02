@@ -9,6 +9,8 @@ export const Card = React.forwardRef(({
   subTitle,
   style,
   className,
+  dataCy,
+  dataTestId,
   children,
 }, ref) => {
   return (
@@ -21,6 +23,8 @@ export const Card = React.forwardRef(({
       subTitle={subTitle}
       style={style}
       className={className}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     >
       {children}
     </PrimeCard>

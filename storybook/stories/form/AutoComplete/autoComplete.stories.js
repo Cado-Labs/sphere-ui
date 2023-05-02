@@ -9,3 +9,5 @@ export default {
 }
 
 export const AutoComplete = context => <StoryPage {...autoComplete} {...context} />
+
+AutoComplete.storyName = "AutoComplete"

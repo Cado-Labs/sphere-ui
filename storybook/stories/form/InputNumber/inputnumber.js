@@ -275,7 +275,10 @@ export const inputnumber = {
     { name: "inputClassName", type: "string", description: `${I18N_PREFIX}.props.inputClassName` },
     { name: "tooltip", type: "any", description: `${I18N_PREFIX}.props.tooltip` },
     { name: "tooltipOptions", type: "object", description: `${I18N_PREFIX}.props.tooltipOptions` },
-    { name: "ariaLabelledBy", type: "string", description: `${I18N_PREFIX}.props.ariaLabelledBy` },
+    { name: "mode", type: `"decimal" | "currency"`, default: "decimal", description: `${I18N_PREFIX}.props.mode` },
+    { name: "maxLength", type: "number", description: `${I18N_PREFIX}.props.maxLength` },
+    { name: "currency", type: "string", description: `${I18N_PREFIX}.props.currency` },
+    { name: "currencyDisplay", type: `"symbol" | "code" | "name"`, description: `${I18N_PREFIX}.props.currencyDisplay` },
   ],
   eventDescriptionProps: [
     { name: "onValueChange", params: onValueChangeParams, description: `${I18N_PREFIX}.props.onValueChange` },

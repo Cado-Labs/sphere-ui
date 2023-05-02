@@ -3,14 +3,16 @@ import { ScrollTop as PrimeScrollTop } from "primereact/scrolltop"
 import { classNames as cn } from "primereact/utils"
 
 export const ScrollTop = React.forwardRef(({
-  target,
-  threshold,
-  behavior,
+  target = "window",
+  threshold = 400,
+  behavior = "smooth",
   onShow,
   onHide,
   className,
   size = "large",
   style,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const scrollTopClassName = cn(className, "custom-scrolltop", {
     "custom-scrolltop_small": size === "small",
@@ -27,6 +29,8 @@ export const ScrollTop = React.forwardRef(({
       onShow={onShow}
       onHide={onHide}
       icon="pi pi-arrow-up"
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

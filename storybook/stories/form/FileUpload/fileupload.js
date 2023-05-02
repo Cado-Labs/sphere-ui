@@ -7,7 +7,6 @@ import { ParamsTable, Highlighter } from "@components"
 const I18N_PREFIX = "stories.fileupload"
 
 const code = `
-
 function FileUploadExample () {
   const uploadUrl = "https://primefaces.org/primereact/upload.php"
   const toast = React.useRef(null)
@@ -49,7 +48,6 @@ function FileUploadExample () {
       />
     </div>
   )
-
 
   const renderUploadButton = () => (
     <FileUpload
@@ -175,6 +173,15 @@ const onRemoveParams = [
   { name: "event.file", description: "Selected file." },
 ]
 
+const onBeforeSelectParams = [
+  { name: "event.xhr", description: "XmlHttpRequest instance." },
+  { name: "event.files", description: "Uploaded files." },
+]
+
+const onBeforeDropParams = [
+  { name: "event", description: "DragEvent." },
+]
+
 const fileuploadExtra = (
   <div>
     <div className="mb-3">
@@ -291,6 +298,7 @@ export const fileupload = {
   scope: { FileUpload, Toast, InputText, Button },
   descriptionProps: [
     { name: "id", type: "string", description: `${I18N_PREFIX}.props.id` },
+    { name: "mode", type: `"basic" | "advanced"`, default: "basic", description: `${I18N_PREFIX}.props.name` },
     { name: "name", type: "string", description: `${I18N_PREFIX}.props.name` },
     { name: "url", type: "string", description: `${I18N_PREFIX}.props.url` },
     { name: "multiple", type: "boolean", default: false, description: `${I18N_PREFIX}.props.multiple` },
@@ -302,7 +310,9 @@ export const fileupload = {
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
     { name: "withCredentials", type: "boolean", default: false, description: `${I18N_PREFIX}.props.withCredentials` },
     { name: "chooseLabel", type: "string", description: `${I18N_PREFIX}.props.chooseLabel` },
-    { name: "chooseOptions", type: "ChooseOptions", description: `${I18N_PREFIX}.props.chooseOptions` },
+    { name: "chooseOptions", type: "Options", description: `${I18N_PREFIX}.props.chooseOptions` },
+    { name: "uploadOptions", type: "Options", description: `${I18N_PREFIX}.props.uploadOptions` },
+    { name: "cancelOptions", type: "Options", description: `${I18N_PREFIX}.props.cancelOptions` },
     { name: "customUpload", type: "boolean", default: false, description: `${I18N_PREFIX}.props.customUpload` },
   ],
   eventDescriptionProps: [
@@ -316,16 +326,18 @@ export const fileupload = {
     { name: "onValidationFail", params: onValidationFailParams, description: `${I18N_PREFIX}.props.onValidationFail` },
     { name: "uploadHandler", params: uploadHandlerParams, description: `${I18N_PREFIX}.props.uploadHandler` },
     { name: "onRemove", params: onRemoveParams, description: `${I18N_PREFIX}.props.onRemove` },
+    { name: "onBeforeSelect", params: onBeforeSelectParams, description: `${I18N_PREFIX}.props.onBeforeSelect` },
+    { name: "onBeforeDrop", params: onBeforeDropParams, description: `${I18N_PREFIX}.props.onBeforeDrop` },
   ],
   footer: (
     <ParamsTable
       title={i18n.t(`${I18N_PREFIX}.header.chooseOptions`)}
       description={[
-        { name: "label", type: "string", description: `${I18N_PREFIX}.chooseOptions.label` },
-        { name: "icon", type: "string", description: `${I18N_PREFIX}.chooseOptions.icon` },
-        { name: "className", type: "string", description: `${I18N_PREFIX}.chooseOptions.className` },
-        { name: "iconOnly", type: "boolean", default: false, description: `${I18N_PREFIX}.chooseOptions.iconOnly` },
-        { name: "style", type: "object", description: `${I18N_PREFIX}.chooseOptions.style` },
+        { name: "label", type: "string", description: `${I18N_PREFIX}.options.label` },
+        { name: "icon", type: "string", description: `${I18N_PREFIX}.options.icon` },
+        { name: "className", type: "string", description: `${I18N_PREFIX}.options.className` },
+        { name: "iconOnly", type: "boolean", default: false, description: `${I18N_PREFIX}.options.iconOnly` },
+        { name: "style", type: "object", description: `${I18N_PREFIX}.options.style` },
       ]}
     />
   ),

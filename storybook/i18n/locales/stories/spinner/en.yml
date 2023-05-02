@@ -4,3 +4,4 @@ props:
   style: Inline style of the element.
   className: Class of the element.
   strokeWidth: Width of the circle stroke.
+  animationDuration: Duration of the rotate animation.

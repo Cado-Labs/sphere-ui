@@ -3,12 +3,14 @@ import { TabView as PrimeTabView, TabPanel } from "primereact/tabview"
 
 const TabView = React.forwardRef(({
   id,
-  activeIndex,
+  activeIndex = 0,
   style,
   className,
   renderActiveOnly,
   scrollable,
   onTabChange,
+  dataCy,
+  dataTestId,
   children,
 }, ref) => {
   return (
@@ -21,6 +23,8 @@ const TabView = React.forwardRef(({
       style={style}
       onTabChange={onTabChange}
       className={className}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     >
       {children}
     </PrimeTabView>

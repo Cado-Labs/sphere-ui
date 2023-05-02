@@ -16,10 +16,11 @@ export const InputSwitch = React.forwardRef(({
   disabled = false,
   tooltip,
   tooltipOptions,
-  ariaLabelledBy,
   onChange,
   onFocus,
   onBlur,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
   return (
@@ -37,10 +38,11 @@ export const InputSwitch = React.forwardRef(({
       name={name}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
-      ariaLabelledBy={ariaLabelledBy}
       onChange={onChange}
       onFocus={onFocus}
       onBlur={onBlur}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

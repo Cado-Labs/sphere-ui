@@ -181,7 +181,7 @@ export const documentation = {
     { name: "id", type: "string", description: `${I18N_PREFIX}.props.id` },
     { name: "selectionMode", type: "string", description: `${I18N_PREFIX}.props.selectionMode` },
     { name: "selectionKeys", type: "any", description: `${I18N_PREFIX}.props.selectionKeys` },
-    { name: "expandedKeys", type: "array", description: `${I18N_PREFIX}.props.expandedKeys` },
+    { name: "expandedKeys", type: "object", description: `${I18N_PREFIX}.props.expandedKeys` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
     { name: "contentStyle", type: "object", description: `${I18N_PREFIX}.props.contentStyle` },

@@ -24,6 +24,7 @@ content:
     onSelect: Or you can omit <code>url</code> and <code>name</code> properties and manually handle file in <code>onSelect</code> property.
 props:
   id: Unique identifier of the element.
+  mode: Defines the UI of the component.
   name: Name of the request parameter to identify the files at backend.
   url: Remote url to upload the files.
   multiple: Used to select multiple files at once from file dialog.
@@ -36,6 +37,8 @@ props:
   withCredentials: Cross-site Access-Control requests should be made using credentials such as cookies, authorization headers or TLS client certificates.
   chooseLabel: Label of the choose button. Defaults to global value in Locale configuration.
   chooseOptions: Options used to customize the choose button. See properties below.
+  uploadOptions: Options used to customize the upload button. See properties below.
+  cancelOptions: Options used to customize the cancel button. See properties below.
   customUpload: Whether to use the default upload or a manual implementation defined in uploadHandler callback.
   onBeforeUpload: Callback to invoke before file upload begins to customize the request such as post parameters before the files.
   onBeforeSend: Callback to invoke before file send begins to customize the request such as adding headers.
@@ -47,9 +50,11 @@ props:
   onValidationFail: Callback to invoke when a validation file fails.
   uploadHandler: Callback to invoke in custom upload mode to upload the files manually.
   onRemove: Callback to invoke when a file is removed without uploading using clear button of a file.
+  onBeforeSelect: Callback to invoke before files are selected. Return false from callback to prevent selection.
+  onBeforeDrop: Callback to invoke before files dropped. Return false from callback to prevent drop.
 header:
-  chooseOptions: ChooseOptions API
-chooseOptions:
+  options: Options API
+options:
   label: Label of the button
   icon: Icon of button.
   iconOnly: When defined, only icon of the button is shown.

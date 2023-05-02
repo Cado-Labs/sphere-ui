@@ -33,3 +33,4 @@ props:
   tooltip: Content of the tooltip.
   tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
   dataKey: A property to uniquely match the value in options for better performance.
+  overlayVisible: Specifies the visibility of the overlay panel.

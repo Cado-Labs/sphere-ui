@@ -8,16 +8,17 @@ export const RadioButton = React.forwardRef(({
   inputId,
   name,
   value,
-  checked,
+  checked = false,
   style,
   className,
-  disabled,
-  required,
+  disabled = false,
+  required = false,
   tabIndex,
   tooltip,
   tooltipOptions,
-  ariaLabelledBy,
   onChange,
+  dataCy,
+  dataTestId,
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
 
@@ -36,8 +37,9 @@ export const RadioButton = React.forwardRef(({
       tabIndex={tabIndex}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
-      ariaLabelledBy={ariaLabelledBy}
       onChange={onChange}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     />
   )
 })

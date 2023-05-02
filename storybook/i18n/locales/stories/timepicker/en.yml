@@ -17,3 +17,4 @@ props:
   stepMinute: Minutes to change per step.
   disabled: Disable the component.
   viewDate: Date instance whose month and year are used to display the calendar.
+  keepInvalid: Keep invalid value when input blur.

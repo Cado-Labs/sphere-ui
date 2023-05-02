@@ -44,12 +44,10 @@ export const DataTable = React.forwardRef(({
   filterLocale,
   scrollable = false,
   scrollHeight,
-  scrollDirection = "vertical",
   frozenWidth,
   frozenValue,
   csvSeparator = ",",
   exportFilename = "download",
-  autoLayout = false,
   rowClassName,
   cellClassName,
   loading = false,
@@ -65,7 +63,6 @@ export const DataTable = React.forwardRef(({
   globalFilterFields,
   showSelectionElement,
   isDataSelectable,
-  columnKey,
   rowHover,
   expandedRows,
   rowExpansionTemplate,
@@ -86,7 +83,11 @@ export const DataTable = React.forwardRef(({
   onRowEditSave,
   onRowEditCancel,
   onRowEditChange,
+  onRowMouseEnter,
+  onRowMouseLeave,
   exportFunction,
+  dataCy,
+  dataTestId,
   children,
 }, ref) => {
   const emptyMessage = customEmptyMessage || EMPTY_MESSAGE[locale().locale]
@@ -131,12 +132,10 @@ export const DataTable = React.forwardRef(({
       filterLocale={filterLocale}
       scrollable={scrollable}
       scrollHeight={scrollHeight}
-      scrollDirection={scrollDirection}
       frozenWidth={frozenWidth}
       frozenValue={frozenValue}
       csvSeparator={csvSeparator}
       exportFilename={exportFilename}
-      autoLayout={autoLayout}
       rowClassName={rowClassName}
       cellClassName={cellClassName}
       loading={loading}
@@ -152,7 +151,6 @@ export const DataTable = React.forwardRef(({
       globalFilterFields={globalFilterFields}
       showSelectionElement={showSelectionElement}
       isDataSelectable={isDataSelectable}
-      columnKey={columnKey}
       rowHover={rowHover}
       expandedRows={expandedRows}
       rowExpansionTemplate={rowExpansionTemplate}
@@ -173,7 +171,11 @@ export const DataTable = React.forwardRef(({
       onRowEditSave={onRowEditSave}
       onRowEditCancel={onRowEditCancel}
       onRowEditChange={onRowEditChange}
+      onRowMouseEnter={onRowMouseEnter}
+      onRowMouseLeave={onRowMouseLeave}
       exportFunction={exportFunction}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     >
       {children}
     </PrimeDataTable>

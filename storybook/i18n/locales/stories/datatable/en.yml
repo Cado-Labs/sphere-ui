@@ -34,12 +34,10 @@ props:
   footerColumnGroup: ColumnGroup component for footer.
   scrollable: When specified, enables horizontal and/or vertical scrolling.
   scrollHeight: Height of the scroll viewport.
-  scrollDirection: Orientation of the scrolling, options are "vertical", "horizontal" and "both".
   frozenWidth: Width of the frozen part in scrollable DataTable.
   frozenValue: Items of the frozen part in scrollable DataTable.
   csvSeparator: Character to use as the csv separator.
   exportFilename: Name of the exported file.
-  autoLayout: Whether the cell widths scale according to their content or not.
   rowClassName: "Function that takes the row data and returns an object in \"{'styleclass' : condition}\" format to define a classname for a particular now."
   cellClassName: "Function that takes the cell data and returns an object in \"{'styleclass' : condition}\" format to define a classname for a particular now."
   loading: Displays a loader to indicate data load is in progress.
@@ -73,6 +71,8 @@ props:
   onRowEditCancel: Callback to invoke when the cancel icon is clicked on row editing mode.
   onRowEditChange: Callback to invoke when the row editor is programmatically shown/hidden on row editing mode.
   exportFunction: A function to implement custom export. Need to return string value.
+  onRowMouseEnter: Callback to invoke when a row is hovered with mouse.
+  onRowMouseLeave: Callback to invoke when a row is navigated away from with mouse.
 header:
   column: Properties of Column component
 columnProps:

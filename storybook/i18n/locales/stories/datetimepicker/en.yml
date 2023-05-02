@@ -35,6 +35,7 @@ props:
   tabIndex: Index of the element in tabbing order.
   autoZIndex: Whether to automatically manage layering.
   baseZIndex: Base zIndex value to use in layering.
+  keepInvalid: Keep invalid value when input blur.
   onChange: Callback to invoke when value changes.
   onFocus: Callback to invoke on focus event of input field.
   onBlur: Callback to invoke on blur event of input field.

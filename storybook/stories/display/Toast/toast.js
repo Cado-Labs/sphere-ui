@@ -266,12 +266,13 @@ export const toast = {
       title={i18n.t(`${I18N_PREFIX}.header.message`)}
       description={[
         { name: "severity", type: "string", description: `${I18N_PREFIX}.message.severity` },
-        { name: "summary", type: "element/string", description: `${I18N_PREFIX}.message.summary` },
-        { name: "detail", type: "element/string", description: `${I18N_PREFIX}.message.detail` },
+        { name: "summary", type: "ReactNode", description: `${I18N_PREFIX}.message.summary` },
+        { name: "detail", type: "ReactNode", description: `${I18N_PREFIX}.message.detail` },
         { name: "closable", type: "boolean", default: true, description: `${I18N_PREFIX}.message.closable` },
         { name: "sticky", type: "boolean", default: false, description: `${I18N_PREFIX}.message.sticky` },
         { name: "style", type: "object", description: `${I18N_PREFIX}.message.style` },
         { name: "className", type: "string", description: `${I18N_PREFIX}.message.className` },
+        { name: "content", type: "ReactNode", description: `${I18N_PREFIX}.message.content` },
       ]}
     />
   ),

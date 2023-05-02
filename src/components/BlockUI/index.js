@@ -3,11 +3,13 @@ import { BlockUI as PrimeBlockUI } from "primereact/blockui"
 
 export const BlockUI = React.forwardRef(({
   id,
-  blocked,
+  blocked = false,
   baseZIndex = 50,
   autoZIndex = true,
   className,
   style,
+  dataCy,
+  dataTestId,
   children,
 }, ref) => {
   return (
@@ -19,6 +21,8 @@ export const BlockUI = React.forwardRef(({
       autoZIndex={autoZIndex}
       className={className}
       style={style}
+      data-cy={dataCy}
+      data-testid={dataTestId}
     >
       {children}
     </PrimeBlockUI>
