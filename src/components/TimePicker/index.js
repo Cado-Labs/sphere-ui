@@ -1,6 +1,8 @@
 import React from "react"
 import { Calendar } from "primereact/calendar"
 
+import { pickDataAttributes } from "../../utils"
+
 export const TimePicker = React.forwardRef(({
   id,
   name,
@@ -16,9 +18,9 @@ export const TimePicker = React.forwardRef(({
   showIcon = false,
   viewDate = null,
   keepInvalid = true,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
   return (
     <Calendar
       id={id}
@@ -39,8 +41,7 @@ export const TimePicker = React.forwardRef(({
       hourFormat="24"
       showTime
       timeOnly
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

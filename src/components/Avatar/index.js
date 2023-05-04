@@ -2,6 +2,8 @@ import React from "react"
 import { Avatar as PrimeAvatar } from "primereact/avatar"
 import { classNames as cn } from "primereact/utils"
 
+import { pickDataAttributes } from "../../utils"
+
 export const Avatar = React.forwardRef(({
   label,
   icon,
@@ -13,11 +15,11 @@ export const Avatar = React.forwardRef(({
   className,
   onImageError,
   onClick,
-  dataCy,
-  dataTestId,
   children,
+  ...props
 }, ref) => {
   const avatarClassName = cn(className, { "p-avatar-sm": size === "small" })
+  const dataAttributes = pickDataAttributes(props)
 
   return (
     <PrimeAvatar
@@ -32,8 +34,7 @@ export const Avatar = React.forwardRef(({
       imageAlt={imageAlt}
       onImageError={onImageError}
       onClick={onClick}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     >
       {children}
     </PrimeAvatar>

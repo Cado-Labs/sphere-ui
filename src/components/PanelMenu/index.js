@@ -1,15 +1,17 @@
 import React from "react"
 import { PanelMenu as PrimePanelMenu } from "primereact/panelmenu"
 
+import { pickDataAttributes } from "../../utils"
+
 export const PanelMenu = React.forwardRef(({
   id,
   model,
   multiple = true,
   style,
   className,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
   return (
     <PrimePanelMenu
       ref={ref}
@@ -18,8 +20,7 @@ export const PanelMenu = React.forwardRef(({
       style={style}
       className={className}
       multiple={multiple}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

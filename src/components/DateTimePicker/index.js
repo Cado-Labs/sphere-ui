@@ -1,7 +1,7 @@
 import React from "react"
 import { Calendar } from "primereact/calendar"
 
-import { getPartsOfTime, filterTooltipOptions } from "../../utils"
+import { getPartsOfTime, filterTooltipOptions, pickDataAttributes } from "../../utils"
 
 import { START_DATE } from "../DatePicker/constants"
 
@@ -51,8 +51,7 @@ export const DateTimePicker = React.forwardRef(({
   onShow,
   onHide,
   onVisibleChange,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
   const getYearRange = () => {
     const { year } = getPartsOfTime()
@@ -102,6 +101,7 @@ export const DateTimePicker = React.forwardRef(({
   }
 
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+  const dataAttributes = pickDataAttributes(props)
 
   return (
     <Calendar
@@ -151,8 +151,7 @@ export const DateTimePicker = React.forwardRef(({
       onShow={onShow}
       onHide={onHide}
       onVisibleChange={onVisibleChange}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

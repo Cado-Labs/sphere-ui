@@ -1,6 +1,8 @@
 import React from "react"
 import { Tree as PrimeTree } from "primereact/tree"
 
+import { pickDataAttributes } from "../../utils"
+
 export const Tree = React.forwardRef(({
   id,
   value,
@@ -32,9 +34,9 @@ export const Tree = React.forwardRef(({
   onToggle,
   onDragDrop,
   onNodeClick,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
   return (
     <PrimeTree
       ref={ref}
@@ -68,8 +70,7 @@ export const Tree = React.forwardRef(({
       onToggle={onToggle}
       onDragDrop={onDragDrop}
       onNodeClick={onNodeClick}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

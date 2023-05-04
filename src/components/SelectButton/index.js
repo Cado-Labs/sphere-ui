@@ -1,7 +1,7 @@
 import React from "react"
 import { SelectButton as PrimeSelectButton } from "primereact/selectbutton"
 
-import { filterTooltipOptions } from "../../utils"
+import { filterTooltipOptions, pickDataAttributes } from "../../utils"
 
 export const SelectButton = React.forwardRef(({
   id,
@@ -19,10 +19,10 @@ export const SelectButton = React.forwardRef(({
   tooltipOptions,
   onChange,
   name,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+  const dataAttributes = pickDataAttributes(props)
 
   return (
     <PrimeSelectButton
@@ -42,8 +42,7 @@ export const SelectButton = React.forwardRef(({
       tooltipOptions={filteredTooltipOptions}
       onChange={onChange}
       name={name}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

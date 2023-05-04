@@ -1,17 +1,19 @@
 import React from "react"
 import { ProgressSpinner } from "primereact/progressspinner"
 
+import { pickDataAttributes } from "../../utils"
+
 export const Spinner = React.forwardRef(({
   loading = true,
   style,
   className,
   strokeWidth = "2",
   animationDuration = "2s",
-  dataCy,
-  dataTestId,
   children,
+  ...props
 }, ref) => {
   if (loading) {
+    const dataAttributes = pickDataAttributes(props)
     return (
       <div className="flex justify-content-center">
         <ProgressSpinner
@@ -20,8 +22,7 @@ export const Spinner = React.forwardRef(({
           animationDuration={animationDuration}
           style={style}
           className={className}
-          data-cy={dataCy}
-          data-testid={dataTestId}
+          {...dataAttributes}
         />
       </div>
     )

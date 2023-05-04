@@ -1,7 +1,7 @@
 import React from "react"
 import { BreadCrumb as PrimeBreadCrumb } from "primereact/breadcrumb"
 
-import { filterOptions } from "../../utils"
+import { filterOptions, pickDataAttributes } from "../../utils"
 
 const POSSIBLE_PARAMS = [
   "label",
@@ -18,8 +18,7 @@ export const BreadCrumb = React.forwardRef(({
   home,
   style,
   className,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
   const breadCrumbModel = model.map(options => filterOptions(options, POSSIBLE_PARAMS))
 
@@ -32,6 +31,8 @@ export const BreadCrumb = React.forwardRef(({
     className: home.className,
   }
 
+  const dataAttributes = pickDataAttributes(props)
+
   return (
     <PrimeBreadCrumb
       ref={ref}
@@ -40,8 +41,7 @@ export const BreadCrumb = React.forwardRef(({
       home={breadCrumbHome}
       style={style}
       className={className}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

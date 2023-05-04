@@ -2,6 +2,8 @@ import React from "react"
 import { ScrollTop as PrimeScrollTop } from "primereact/scrolltop"
 import { classNames as cn } from "primereact/utils"
 
+import { pickDataAttributes } from "../../utils"
+
 export const ScrollTop = React.forwardRef(({
   target = "window",
   threshold = 400,
@@ -11,12 +13,12 @@ export const ScrollTop = React.forwardRef(({
   className,
   size = "large",
   style,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
   const scrollTopClassName = cn(className, "custom-scrolltop", {
     "custom-scrolltop_small": size === "small",
   })
+  const dataAttributes = pickDataAttributes(props)
 
   return (
     <PrimeScrollTop
@@ -29,8 +31,7 @@ export const ScrollTop = React.forwardRef(({
       onShow={onShow}
       onHide={onHide}
       icon="pi pi-arrow-up"
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

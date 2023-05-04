@@ -2,6 +2,8 @@ import React from "react"
 import { Tag as PrimeTag } from "primereact/tag"
 import { classNames as cn } from "primereact/utils"
 
+import { pickDataAttributes } from "../../utils"
+
 export const Tag = React.forwardRef(({
   value,
   severity = null,
@@ -9,13 +11,13 @@ export const Tag = React.forwardRef(({
   rounded = false,
   style,
   className,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
   const tagClassName = cn(className, {
     "p-tag-secondary": severity === "secondary",
     "p-tag-help": severity === "help",
   })
+  const dataAttributes = pickDataAttributes(props)
 
   return (
     <PrimeTag
@@ -26,8 +28,7 @@ export const Tag = React.forwardRef(({
       rounded={rounded}
       className={tagClassName}
       style={style}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

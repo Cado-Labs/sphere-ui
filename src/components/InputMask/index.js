@@ -1,7 +1,7 @@
 import React from "react"
 import { InputMask as PrimeInputMask } from "primereact/inputmask"
 
-import { filterTooltipOptions } from "../../utils"
+import { filterTooltipOptions, pickDataAttributes } from "../../utils"
 
 export const InputMask = React.forwardRef(({
   id,
@@ -28,10 +28,11 @@ export const InputMask = React.forwardRef(({
   onChange,
   onFocus,
   onBlur,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+  const dataAttributes = pickDataAttributes(props)
+
   return (
     <PrimeInputMask
       ref={ref}
@@ -59,8 +60,7 @@ export const InputMask = React.forwardRef(({
       onChange={onChange}
       onFocus={onFocus}
       onBlur={onBlur}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

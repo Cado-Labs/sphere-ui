@@ -1,6 +1,8 @@
 import React from "react"
 import { Dialog as PrimeDialog } from "primereact/dialog"
 
+import { pickDataAttributes } from "../../utils"
+
 export const Dialog = React.forwardRef(({
   id,
   header,
@@ -17,10 +19,10 @@ export const Dialog = React.forwardRef(({
   breakpoints,
   onClick,
   onMaskClick,
-  dataCy,
-  dataTestId,
   children,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
   return (
     <PrimeDialog
       ref={ref}
@@ -39,9 +41,6 @@ export const Dialog = React.forwardRef(({
       breakpoints={breakpoints}
       onClick={onClick}
       onMaskClick={onMaskClick}
-      data-cy={dataCy}
-      data-testid={dataTestId}
-      // props below are unavailable for users
       draggable={false}
       resizable={false}
       modal
@@ -53,6 +52,7 @@ export const Dialog = React.forwardRef(({
       blockScroll
       keepInViewport
       maximized={false}
+      {...dataAttributes}
     >
       {children}
     </PrimeDialog>

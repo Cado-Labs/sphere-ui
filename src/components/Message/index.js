@@ -2,6 +2,8 @@ import React from "react"
 import { Message as PrimeMessage } from "primereact/message"
 import { classNames as cn } from "primereact/utils"
 
+import { pickDataAttributes } from "../../utils"
+
 export const Message = React.forwardRef(({
   id,
   className,
@@ -9,13 +11,14 @@ export const Message = React.forwardRef(({
   severity,
   text,
   content,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
   const messageClassName = cn(className, {
     "p-inline-message-secondary": severity === "secondary",
     "p-inline-message-help": severity === "help",
   })
+  const dataAttributes = pickDataAttributes(props)
+
   return (
     <PrimeMessage
       ref={ref}
@@ -25,8 +28,7 @@ export const Message = React.forwardRef(({
       severity={severity}
       text={text}
       content={content}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

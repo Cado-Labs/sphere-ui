@@ -1,4 +1,5 @@
 export { getPartsOfTime } from "./getDate"
 export { filterTooltipOptions } from "./filterTooltipOptions"
 export { filterOptions } from "./filterOptions"
+export { pickDataAttributes } from "./pickDataAttributes"
 export { shouldFilterSelectOptions } from "./shouldFilterSelectOptions"

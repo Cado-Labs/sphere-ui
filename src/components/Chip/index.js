@@ -1,6 +1,8 @@
 import React from "react"
 import { Chip as PrimeChip } from "primereact/chip"
 
+import { pickDataAttributes } from "../../utils"
+
 export const Chip = React.forwardRef(({
   label,
   icon,
@@ -8,9 +10,9 @@ export const Chip = React.forwardRef(({
   style,
   className,
   onRemove,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
   return (
     <PrimeChip
       ref={ref}
@@ -20,8 +22,7 @@ export const Chip = React.forwardRef(({
       style={style}
       className={className}
       onRemove={onRemove}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

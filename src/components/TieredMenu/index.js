@@ -1,6 +1,8 @@
 import React from "react"
 import { TieredMenu as PrimeTieredMenu } from "primereact/tieredmenu"
 
+import { pickDataAttributes } from "../../utils"
+
 export const TieredMenu = React.forwardRef(({
   id,
   model,
@@ -8,9 +10,9 @@ export const TieredMenu = React.forwardRef(({
   className,
   autoZIndex = true,
   baseZIndex = 150,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
   return (
     <PrimeTieredMenu
       ref={ref}
@@ -20,8 +22,7 @@ export const TieredMenu = React.forwardRef(({
       className={className}
       autoZIndex={autoZIndex}
       baseZIndex={baseZIndex}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

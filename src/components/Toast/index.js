@@ -1,6 +1,8 @@
 import React from "react"
 import { Toast as PrimeToast } from "primereact/toast"
 
+import { pickDataAttributes } from "../../utils"
+
 export const Toast = React.forwardRef(({
   id,
   className,
@@ -11,9 +13,9 @@ export const Toast = React.forwardRef(({
   onRemove,
   onShow,
   onHide,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
   return (
     <PrimeToast
       ref={ref}
@@ -27,8 +29,7 @@ export const Toast = React.forwardRef(({
       onRemove={onRemove}
       onShow={onShow}
       onHide={onHide}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

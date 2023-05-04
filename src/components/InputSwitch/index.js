@@ -1,7 +1,7 @@
 import React from "react"
 import { InputSwitch as PrimeInputSwitch } from "primereact/inputswitch"
 
-import { filterTooltipOptions } from "../../utils"
+import { filterTooltipOptions, pickDataAttributes } from "../../utils"
 
 export const InputSwitch = React.forwardRef(({
   id,
@@ -19,10 +19,11 @@ export const InputSwitch = React.forwardRef(({
   onChange,
   onFocus,
   onBlur,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+  const dataAttributes = pickDataAttributes(props)
+
   return (
     <PrimeInputSwitch
       ref={ref}
@@ -41,8 +42,7 @@ export const InputSwitch = React.forwardRef(({
       onChange={onChange}
       onFocus={onFocus}
       onBlur={onBlur}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

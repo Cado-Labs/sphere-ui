@@ -1,6 +1,8 @@
 import React from "react"
 import { Image as PrimeImage } from "primereact/image"
 
+import { pickDataAttributes } from "../../utils"
+
 export const Image = React.forwardRef(({
   preview = false,
   src,
@@ -14,9 +16,9 @@ export const Image = React.forwardRef(({
   imageClassName,
   onShow,
   onHide,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
   return (
     <PrimeImage
       ref={ref}
@@ -32,8 +34,7 @@ export const Image = React.forwardRef(({
       imageClassName={imageClassName}
       onShow={onShow}
       onHide={onHide}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })
