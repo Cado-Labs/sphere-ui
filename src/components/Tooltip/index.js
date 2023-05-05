@@ -1,6 +1,8 @@
 import React from "react"
 import { Tooltip as PrimeTooltip } from "primereact/tooltip"
 
+import { pickDataAttributes } from "../../utils"
+
 export const Tooltip = React.forwardRef(({
   id,
   target,
@@ -20,10 +22,10 @@ export const Tooltip = React.forwardRef(({
   showOnDisabled = false,
   onShow,
   onHide,
-  dataCy,
-  dataTestId,
   children,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
   return (
     <PrimeTooltip
       ref={ref}
@@ -45,8 +47,7 @@ export const Tooltip = React.forwardRef(({
       showOnDisabled={showOnDisabled}
       onShow={onShow}
       onHide={onHide}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     >
       {children}
     </PrimeTooltip>

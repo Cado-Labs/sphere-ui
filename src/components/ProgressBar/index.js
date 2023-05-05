@@ -1,6 +1,8 @@
 import React from "react"
 import { ProgressBar as PrimeProgressBar } from "primereact/progressbar"
 
+import { pickDataAttributes } from "../../utils"
+
 export const ProgressBar = React.forwardRef(({
   id,
   value,
@@ -11,9 +13,9 @@ export const ProgressBar = React.forwardRef(({
   className,
   displayValueTemplate,
   mode = "determinate",
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
   return (
     <PrimeProgressBar
       ref={ref}
@@ -26,8 +28,7 @@ export const ProgressBar = React.forwardRef(({
       style={style}
       className={className}
       mode={mode}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

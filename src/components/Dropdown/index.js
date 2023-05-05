@@ -3,7 +3,7 @@ import { Dropdown as PrimeDropdown } from "primereact/dropdown"
 import { locale } from "primereact/api"
 import { classNames as cn } from "primereact/utils"
 
-import { filterTooltipOptions, shouldFilterSelectOptions } from "../../utils"
+import { filterTooltipOptions, shouldFilterSelectOptions, pickDataAttributes } from "../../utils"
 
 const EMPTY_MESSAGE = {
   ru: "Ничего не найдено",
@@ -45,13 +45,13 @@ export const Dropdown = React.forwardRef(({
   onShow,
   onHide,
   onFilter,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
   const emptyMessage = EMPTY_MESSAGE[locale().locale]
   const dropdownClassName = cn(className, "w-full")
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
   const hasFilter = filter ?? shouldFilterSelectOptions(options)
+  const dataAttributes = pickDataAttributes(props)
 
   return (
     <PrimeDropdown
@@ -93,8 +93,7 @@ export const Dropdown = React.forwardRef(({
       onShow={onShow}
       onHide={onHide}
       onFilter={onFilter}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

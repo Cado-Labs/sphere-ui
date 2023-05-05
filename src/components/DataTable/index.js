@@ -2,6 +2,8 @@ import React from "react"
 import { DataTable as PrimeDataTable } from "primereact/datatable"
 import { locale } from "primereact/api"
 
+import { pickDataAttributes } from "../../utils"
+
 const EMPTY_MESSAGE = {
   ru: "Ничего не найдено",
   en: "Nothing found",
@@ -86,11 +88,11 @@ export const DataTable = React.forwardRef(({
   onRowMouseEnter,
   onRowMouseLeave,
   exportFunction,
-  dataCy,
-  dataTestId,
   children,
+  ...props
 }, ref) => {
   const emptyMessage = customEmptyMessage || EMPTY_MESSAGE[locale().locale]
+  const dataAttributes = pickDataAttributes(props)
 
   return (
     <PrimeDataTable
@@ -174,8 +176,7 @@ export const DataTable = React.forwardRef(({
       onRowMouseEnter={onRowMouseEnter}
       onRowMouseLeave={onRowMouseLeave}
       exportFunction={exportFunction}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     >
       {children}
     </PrimeDataTable>

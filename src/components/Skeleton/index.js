@@ -1,6 +1,8 @@
 import React from "react"
 import { Skeleton as PrimeSkeleton } from "primereact/skeleton"
 
+import { pickDataAttributes } from "../../utils"
+
 export const Skeleton = React.forwardRef(({
   shape = "rectangle",
   size,
@@ -10,9 +12,10 @@ export const Skeleton = React.forwardRef(({
   animation = "wave",
   style,
   className,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
+
   return (
     <PrimeSkeleton
       ref={ref}
@@ -24,8 +27,7 @@ export const Skeleton = React.forwardRef(({
       animation={animation}
       style={style}
       className={className}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

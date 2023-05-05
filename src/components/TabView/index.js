@@ -1,6 +1,8 @@
 import React from "react"
 import { TabView as PrimeTabView, TabPanel } from "primereact/tabview"
 
+import { pickDataAttributes } from "../../utils"
+
 const TabView = React.forwardRef(({
   id,
   activeIndex = 0,
@@ -9,10 +11,10 @@ const TabView = React.forwardRef(({
   renderActiveOnly,
   scrollable,
   onTabChange,
-  dataCy,
-  dataTestId,
   children,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
   return (
     <PrimeTabView
       ref={ref}
@@ -23,8 +25,7 @@ const TabView = React.forwardRef(({
       style={style}
       onTabChange={onTabChange}
       className={className}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     >
       {children}
     </PrimeTabView>

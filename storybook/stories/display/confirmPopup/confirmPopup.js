@@ -77,7 +77,7 @@ const popupExtra = (
 )
 
 export const confirmPopupPage = {
-  component: "ConfirmPopup",
+  component: "ConfirmPopup, confirmPopup",
   content: {
     description: i18n.t(`${I18N_PREFIX}.content.main`),
     extra: popupExtra,

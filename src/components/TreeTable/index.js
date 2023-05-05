@@ -1,6 +1,8 @@
 import React from "react"
 import { TreeTable as PrimeTreeTable } from "primereact/treetable"
 
+import { pickDataAttributes } from "../../utils"
+
 export const TreeTable = React.forwardRef(({
   id,
   value,
@@ -46,10 +48,10 @@ export const TreeTable = React.forwardRef(({
   onSelectionChange,
   onRowClick,
   onSort,
-  dataCy,
-  dataTestId,
   children,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
   return (
     <PrimeTreeTable
       ref={ref}
@@ -98,8 +100,7 @@ export const TreeTable = React.forwardRef(({
       onRowClick={onRowClick}
       onSort={onSort}
       alwaysShowPaginator={false}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     >
       {children}
     </PrimeTreeTable>

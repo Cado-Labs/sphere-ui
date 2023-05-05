@@ -8,8 +8,6 @@ export const InputTextarea = React.forwardRef(({
   tooltip,
   tooltipOptions,
   keyfilter,
-  dataCy,
-  dataTestId,
   // props below needed as attributes for the native input
   ...props
 }, ref) => {
@@ -22,8 +20,6 @@ export const InputTextarea = React.forwardRef(({
       keyfilter={keyfilter}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
-      data-cy={dataCy}
-      data-testid={dataTestId}
     />
   )
 })

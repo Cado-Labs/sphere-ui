@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react"
 import { Calendar } from "primereact/calendar"
 import { locale as primeLocale } from "primereact/api"
 
-import { getPartsOfTime, filterTooltipOptions } from "../../utils"
+import { getPartsOfTime, filterTooltipOptions, pickDataAttributes } from "../../utils"
 
 import { withRange } from "./withRange"
 import { MONTHS, START_DATE } from "./constants"
@@ -47,11 +47,11 @@ export const DatePicker = React.forwardRef(({
   onShow,
   onHide,
   onVisibleChange,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
   const defaultViewDate = value?.[0] || new Date()
   const [viewDate, setViewDate] = useState(defaultViewDate)
+  const dataAttributes = pickDataAttributes(props)
 
   const getDefaultProps = () => {
     return {
@@ -94,8 +94,7 @@ export const DatePicker = React.forwardRef(({
       onShow,
       onHide,
       onVisibleChange,
-      "data-cy": dataCy,
-      "data-testid": dataTestId,
+      ...dataAttributes,
     }
   }
 

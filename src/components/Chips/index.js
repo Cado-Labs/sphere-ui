@@ -2,7 +2,7 @@ import React from "react"
 import { Chips as PrimeChips } from "primereact/chips"
 import { classNames as cn } from "primereact/utils"
 
-import { filterTooltipOptions } from "../../utils"
+import { filterTooltipOptions, pickDataAttributes } from "../../utils"
 
 const SEPARATOR = ","
 
@@ -28,11 +28,11 @@ export const Chips = React.forwardRef(({
   onChange,
   onFocus,
   onBlur,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
   const chipsClassName = cn(className, { "p-chips_scrollable": scrollable })
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+  const dataAttributes = pickDataAttributes(props)
 
   return (
     <PrimeChips
@@ -58,8 +58,7 @@ export const Chips = React.forwardRef(({
       onChange={onChange}
       onFocus={onFocus}
       onBlur={onBlur}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

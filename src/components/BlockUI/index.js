@@ -1,6 +1,8 @@
 import React from "react"
 import { BlockUI as PrimeBlockUI } from "primereact/blockui"
 
+import { pickDataAttributes } from "../../utils"
+
 export const BlockUI = React.forwardRef(({
   id,
   blocked = false,
@@ -8,10 +10,10 @@ export const BlockUI = React.forwardRef(({
   autoZIndex = true,
   className,
   style,
-  dataCy,
-  dataTestId,
   children,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
   return (
     <PrimeBlockUI
       ref={ref}
@@ -21,8 +23,7 @@ export const BlockUI = React.forwardRef(({
       autoZIndex={autoZIndex}
       className={className}
       style={style}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     >
       {children}
     </PrimeBlockUI>

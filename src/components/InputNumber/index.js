@@ -1,7 +1,7 @@
 import React from "react"
 import { InputNumber as PrimeInputNumber } from "primereact/inputnumber"
 
-import { filterTooltipOptions } from "../../utils"
+import { filterTooltipOptions, pickDataAttributes } from "../../utils"
 
 export const InputNumber = React.forwardRef(({
   value,
@@ -47,10 +47,11 @@ export const InputNumber = React.forwardRef(({
   onBlur,
   onFocus,
   onKeyDown,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+  const dataAttributes = pickDataAttributes(props)
+
   return (
     <PrimeInputNumber
       ref={ref}
@@ -97,8 +98,7 @@ export const InputNumber = React.forwardRef(({
       onBlur={onBlur}
       onFocus={onFocus}
       onKeyDown={onKeyDown}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

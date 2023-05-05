@@ -1,8 +1,8 @@
-import React, { useRef } from "react"
+import React from "react"
 import { MultiSelect as PrimeMultiSelect } from "primereact/multiselect"
 import { locale } from "primereact/api"
 
-import { filterTooltipOptions, shouldFilterSelectOptions } from "../../utils"
+import { filterTooltipOptions, shouldFilterSelectOptions, pickDataAttributes } from "../../utils"
 
 import { LOCALES_BUTTONS_SET } from "./constants"
 
@@ -30,7 +30,7 @@ export const MultiSelect = React.forwardRef(({
   panelClassName,
   panelStyle,
   style,
-  selectedItemsLabel,
+  selectedItemsLabel = "{0} items selected",
   display = "comma",
   overlayVisible = false,
   tooltip,
@@ -41,25 +41,35 @@ export const MultiSelect = React.forwardRef(({
   id = null,
   disabled = false,
   showClear = false,
-  dataCy,
-  dataTestId,
+  inputRef,
+  ...props
 }, ref) => {
-  const multiselectRef = useRef(ref)
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
   const hasFilter = filter ?? shouldFilterSelectOptions(options)
+  const dataAttributes = pickDataAttributes(props)
 
-  const getRef = () => {
-    return ref || multiselectRef
+  const onFooterButtonClick = newValue => {
+    const newEvent = {
+      target: { name, value: newValue, id },
+      value: newValue,
+    }
+
+    onChange(newEvent)
   }
 
-  const handleSelectAll = event => {
-    return getRef()?.current?.onSelectAll(event)
+  const handleSelectAll = () => {
+    const newValue = options.map(option => {
+      if (optionValue) return option[optionValue]
+      if (option.hasOwnProperty("value")) return option.value
+      return option
+    })
+
+    onFooterButtonClick(newValue)
   }
 
   const handleClearAll = () => {
-    const newValue = { target: { name, value: [], id } }
-
-    onChange(newValue)
+    const newValue = []
+    onFooterButtonClick(newValue)
   }
 
   const isOptionDisabled = () => {
@@ -99,7 +109,8 @@ export const MultiSelect = React.forwardRef(({
 
   return (
     <PrimeMultiSelect
-      ref={getRef()}
+      ref={ref}
+      inputRef={inputRef}
       options={options}
       optionDisabled={optionDisabled}
       optionLabel={optionLabel}
@@ -139,8 +150,7 @@ export const MultiSelect = React.forwardRef(({
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
       dataKey={dataKey}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

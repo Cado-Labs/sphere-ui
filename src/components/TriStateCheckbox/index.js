@@ -1,7 +1,7 @@
 import React from "react"
 import { TriStateCheckbox as PrimeTriStateCheckbox } from "primereact/tristatecheckbox"
 
-import { filterTooltipOptions } from "../../utils"
+import { filterTooltipOptions, pickDataAttributes } from "../../utils"
 
 export const TriStateCheckbox = React.forwardRef(({
   id,
@@ -14,10 +14,10 @@ export const TriStateCheckbox = React.forwardRef(({
   tooltip,
   tooltipOptions,
   onChange,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+  const dataAttributes = pickDataAttributes(props)
 
   return (
     <PrimeTriStateCheckbox
@@ -32,8 +32,7 @@ export const TriStateCheckbox = React.forwardRef(({
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
       onChange={onChange}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

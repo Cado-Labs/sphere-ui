@@ -10,9 +10,9 @@
     width: 2.2rem;
   }
 
-  &-clear-icon {
+  & &-clear-icon {
+    right: 1rem;
     margin-top: 0;
-    margin-right: -.5rem;
     font-size: .8rem;
     transform: translateY(-50%);
   }

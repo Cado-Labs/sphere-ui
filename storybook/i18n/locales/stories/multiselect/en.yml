@@ -23,7 +23,7 @@ props:
   optionGroupChildren: Property name or getter function that refers to the children options of option group.
   inputId: Identifier of the focusable input.
   dropdownIcon: Icon class of the dropdown icon.
-  maxSelectedLabels: Many selected item labels to show at most.
+  maxSelectedLabels: Show how many selected item labels to show at most.
   panelClassName: Style class of the overlay panel element.
   panelStyle: Inline style of the overlay panel element.
   style: Inline style of the element.

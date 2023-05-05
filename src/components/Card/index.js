@@ -1,6 +1,8 @@
 import React from "react"
 import { Card as PrimeCard } from "primereact/card"
 
+import { pickDataAttributes } from "../../utils"
+
 export const Card = React.forwardRef(({
   id,
   header,
@@ -9,10 +11,10 @@ export const Card = React.forwardRef(({
   subTitle,
   style,
   className,
-  dataCy,
-  dataTestId,
   children,
+  ...props
 }, ref) => {
+  const dataAttributes = pickDataAttributes(props)
   return (
     <PrimeCard
       ref={ref}
@@ -23,8 +25,7 @@ export const Card = React.forwardRef(({
       subTitle={subTitle}
       style={style}
       className={className}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     >
       {children}
     </PrimeCard>

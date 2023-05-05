@@ -2,6 +2,8 @@ import React from "react"
 import { FileUpload as PrimeFileUpload } from "primereact/fileupload"
 import { locale } from "primereact/api"
 
+import { pickDataAttributes } from "../../utils"
+
 const getValidationMessage = (file, maxFileSize) => ({
   /* eslint-disable max-len */
   en: `${file.name}: Invalid file size (${file.size} bytes), maximum upload size is ${maxFileSize} bytes.`,
@@ -57,8 +59,7 @@ export const FileUpload = React.forwardRef(({
   onValidationFail: handleFailedValidation,
   uploadHandler,
   onRemove,
-  dataCy,
-  dataTestId,
+  ...props
 }, ref) => {
   // adding validation message because Prime don't do it in basic mode
   const onValidationFail = file => {
@@ -70,6 +71,7 @@ export const FileUpload = React.forwardRef(({
 
     handleFailedValidation && handleFailedValidation({ file, message })
   }
+  const dataAttributes = pickDataAttributes(props)
 
   return (
     <PrimeFileUpload
@@ -103,8 +105,7 @@ export const FileUpload = React.forwardRef(({
       onValidationFail={onValidationFail}
       uploadHandler={uploadHandler}
       onRemove={onRemove}
-      data-cy={dataCy}
-      data-testid={dataTestId}
+      {...dataAttributes}
     />
   )
 })

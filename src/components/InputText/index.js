@@ -7,8 +7,6 @@ export const InputText = React.forwardRef(({
   keyfilter,
   tooltip,
   tooltipOptions,
-  dataCy,
-  dataTestId,
   /* eslint-disable no-unused-vars */
   // omitting validateOnly prop cause we need to block typing of invalid data
   validateOnly,
@@ -25,8 +23,6 @@ export const InputText = React.forwardRef(({
       keyfilter={keyfilter}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
-      data-cy={dataCy}
-      data-testid={dataTestId}
     />
   )
 })
