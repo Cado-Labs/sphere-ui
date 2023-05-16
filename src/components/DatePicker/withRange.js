@@ -1,7 +1,7 @@
 import React from "react"
 import { classNames as cn } from "primereact/utils"
 
-import { getPartsOfTime } from "../../utils"
+import { getPartsOfTime, pickDataAttributes } from "../../utils"
 import { Button } from "../Button"
 
 import { LOCALES_RANGE_BLOCKS } from "./constants"
@@ -132,6 +132,7 @@ export const withRange = Component =>
       const panelClassName = cn(this.props.panelClassName, {
         "p-datepicker_buttons-bar": this.props.rangeButtonsBar,
       })
+      const dataAttributes = pickDataAttributes(this.props)
 
       return (
         <Component
@@ -179,6 +180,7 @@ export const withRange = Component =>
           selectionMode="range"
           ref={this.refCalendar}
           footerTemplate={this.renderFooter}
+          {...dataAttributes}
         />
       )
     }
