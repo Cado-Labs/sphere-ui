@@ -33,6 +33,8 @@ props:
   autoZIndex: Whether to automatically manage layering.
   baseZIndex: Base zIndex value to use in layering.
   keepInvalid: Keep invalid value when input blur.
+  formatDateTime: Function for overriding default behavior that formats a Date to the string representation.
+  parseDateTime: Function for overriding default behavior that parses text into the Date.
   onChange: Callback to invoke when value changes.
   onFocus: Callback to invoke on focus event of input field.
   onBlur: Callback to invoke on blur event of input field.

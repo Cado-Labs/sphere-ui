@@ -18,3 +18,5 @@ props:
   disabled: Disable the component.
   viewDate: Date instance whose month and year are used to display the calendar.
   keepInvalid: Keep invalid value when input blur.
+  formatDateTime: Function for overriding default behavior that formats a Date to the string representation.
+  parseDateTime: Function for overriding default behavior that parses text into the Date.
