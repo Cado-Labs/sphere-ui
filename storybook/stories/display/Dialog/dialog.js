@@ -119,6 +119,12 @@ export const dialog = {
     { name: "showHeader", type: "boolean", default: true, description: `${I18N_PREFIX}.props.showHeader` },
     { name: "baseZIndex", type: "number", default: 100, description: `${I18N_PREFIX}.props.baseZIndex` },
     { name: "breakpoints", type: "object", description: `${I18N_PREFIX}.props.breakpoints` },
+    { name: "blockScroll", type: "boolean", default: true, description: `${I18N_PREFIX}.props.blockScroll` },
+    { name: "maximizable", type: "boolean", default: false, description: `${I18N_PREFIX}.props.maximizable` },
+    { name: "keepInViewport", type: "boolean", default: true, description: `${I18N_PREFIX}.props.keepInViewport` },
+    { name: "maximized", type: "boolean", default: false, description: `${I18N_PREFIX}.props.maximized` },
+    { name: "dismissableMask", type: "boolean", default: true, description: `${I18N_PREFIX}.props.dismissableMask` },
+    { name: "modal", type: "boolean", default: true, description: `${I18N_PREFIX}.props.modal` },
   ],
   eventDescriptionProps: [
     { name: "onHide", description: `${I18N_PREFIX}.props.onHide` },

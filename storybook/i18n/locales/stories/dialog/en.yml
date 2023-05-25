@@ -11,6 +11,12 @@ props:
   showHeader: Whether to show the header or not.
   baseZIndex: Base zIndex value to use in layering.
   breakpoints: Object literal to define widths per screen size.
+  blockScroll: Whether background scroll should be blocked when dialog is visible.
+  maximizable: Whether the dialog can be displayed full screen.
+  keepInViewport: Keeps dialog in the viewport.
+  maximized: When enabled, the dialog is initially displayed full screen.
+  dismissableMask: Specifies if clicking the modal background should hide the dialog.
+  modal: Defines if background should be blocked when dialog is displayed.
   onHide: Callback to invoke when dialog is hidden (Required).
   onShow: Callback to invoke when dialog is showed.
   onClick: Callback to invoke when dialog is clicked.

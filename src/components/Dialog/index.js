@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Dialog as PrimeDialog } from "primereact/dialog"
 
 import { pickDataAttributes } from "../../utils"
@@ -19,9 +19,21 @@ export const Dialog = React.forwardRef(({
   breakpoints,
   onClick,
   onMaskClick,
+  blockScroll = true,
+  maximizable = false,
+  keepInViewport = true,
+  maximized = false,
+  dismissableMask = true,
+  modal = true,
   children,
   ...props
 }, ref) => {
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove("p-overflow-hidden")
+    }
+  })
+
   const dataAttributes = pickDataAttributes(props)
   return (
     <PrimeDialog
@@ -43,15 +55,15 @@ export const Dialog = React.forwardRef(({
       onMaskClick={onMaskClick}
       draggable={false}
       resizable={false}
-      modal
+      modal={modal}
       closeOnEscape
-      dismissableMask
+      dismissableMask={dismissableMask}
       rtl={false}
       closable
-      maximizable={false}
-      blockScroll
-      keepInViewport
-      maximized={false}
+      maximizable={maximizable}
+      blockScroll={blockScroll}
+      keepInViewport={keepInViewport}
+      maximized={maximized}
       {...dataAttributes}
     >
       {children}
