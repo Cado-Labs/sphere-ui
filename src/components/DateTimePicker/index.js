@@ -44,6 +44,8 @@ export const DateTimePicker = React.forwardRef(({
   autoZIndex = true,
   baseZIndex = 50,
   keepInvalid = true,
+  formatDateTime,
+  parseDateTime,
   onFocus,
   onBlur,
   onInput,
@@ -144,6 +146,8 @@ export const DateTimePicker = React.forwardRef(({
       autoZIndex={autoZIndex}
       baseZIndex={baseZIndex}
       keepInvalid={keepInvalid}
+      formatDateTime={formatDateTime}
+      parseDateTime={parseDateTime}
       onFocus={onFocus}
       onBlur={onBlur}
       onInput={onInput}

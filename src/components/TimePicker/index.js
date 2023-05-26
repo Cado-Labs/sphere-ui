@@ -18,6 +18,8 @@ export const TimePicker = React.forwardRef(({
   showIcon = false,
   viewDate = null,
   keepInvalid = true,
+  formatDateTime,
+  parseDateTime,
   ...props
 }, ref) => {
   const dataAttributes = pickDataAttributes(props)
@@ -41,6 +43,8 @@ export const TimePicker = React.forwardRef(({
       hourFormat="24"
       showTime
       timeOnly
+      formatDateTime={formatDateTime}
+      parseDateTime={parseDateTime}
       {...dataAttributes}
     />
   )

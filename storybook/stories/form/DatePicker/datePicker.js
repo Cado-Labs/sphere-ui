@@ -63,6 +63,14 @@ function DatePickerExample () {
 }
 `
 
+const formatDateTimeParams = [
+  { name: "date", description: "Selected date" },
+]
+
+const parseDateTimeParams = [
+  { name: "text", description: "Input text" },
+]
+
 const onChangeParams = [
   { name: "originalEvent", description: "Browser event" },
   { name: "value", description: "New date" },
@@ -134,6 +142,8 @@ export const datePicker = {
     { name: "keepInvalid", type: "boolean", default: false, description: `${I18N_PREFIX}.props.keepInvalid` },
   ],
   eventDescriptionProps: [
+    { name: "formatDateTime", params: formatDateTimeParams, description: `${I18N_PREFIX}.props.formatDateTime` },
+    { name: "parseDateTime", params: parseDateTimeParams, description: `${I18N_PREFIX}.props.parseDateTime` },
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },
     { name: "onFocus", params: onFocusParams, description: `${I18N_PREFIX}.props.onFocus` },
     { name: "onBlur", params: onBlurParams, description: `${I18N_PREFIX}.props.onBlur` },

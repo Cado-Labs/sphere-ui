@@ -10,6 +10,7 @@ function DateTimePickerExample () {
   const [fields, setFields] = React.useState({
     dateTime: new Date(),
     dateTime2: new Date(),
+    dateTime3: new Date(),
   })
 
   const minDate = new Date()
@@ -23,6 +24,19 @@ function DateTimePickerExample () {
     const target = event.target
 
     setFields(prev => ({ ...prev, [target.name]: target.value }))
+  }
+
+  const formatDateToUTC = date => {
+    const utcDate = new Date(
+      date.getUTCFullYear(),
+      date.getUTCMonth(),
+      date.getUTCDate(),
+      date.getUTCHours(),
+      date.getUTCMinutes(),
+      date.getUTCSeconds()
+    );
+
+    return utcDate.toLocaleString();
   }
 
   return (
@@ -57,12 +71,31 @@ function DateTimePickerExample () {
             showUTC
             showMillisec
           />
-      </div>
+        </div>
+          <div className="s-field-col-3">
+            <label htmlFor="dateTime">DateTimePicker with custom formatting</label>
+            <DateTimePicker
+              name="dateTime3"
+              value={fields.dateTime3}
+              onChange={onChange}
+              keepInvalid={false}
+              formatDateTime={formatDateToUTC}
+            />
+            <small>Another workaround for displaying UTC time, but TimePicker shows local time (Prime issue)</small>
+        </div>
       </div>
     </div>
   )
 }
 `
+
+const formatDateTimeParams = [
+  { name: "date", description: "Selected date" },
+]
+
+const parseDateTimeParams = [
+  { name: "text", description: "Input text" },
+]
 
 const onChangeParams = [
   { name: "originalEvent", description: "Browser event" },
@@ -138,6 +171,8 @@ export const dateTimePicker = {
     { name: "keepInvalid", type: "boolean", default: false, description: `${I18N_PREFIX}.props.keepInvalid` },
   ],
   eventDescriptionProps: [
+    { name: "formatDateTime", params: formatDateTimeParams, description: `${I18N_PREFIX}.props.formatDateTime` },
+    { name: "parseDateTime", params: parseDateTimeParams, description: `${I18N_PREFIX}.props.parseDateTime` },
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },
     { name: "onFocus", params: onFocusParams, description: `${I18N_PREFIX}.props.onFocus` },
     { name: "onBlur", params: onBlurParams, description: `${I18N_PREFIX}.props.onBlur` },
