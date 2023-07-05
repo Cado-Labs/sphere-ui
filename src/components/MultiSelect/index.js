@@ -58,17 +58,19 @@ export const MultiSelect = React.forwardRef(({
   }
 
   const handleSelectAll = () => {
-    const selectAll = options => options.map(option => {
+    const prepareOptions = options => options.map(option => {
       if (optionValue) {
         return option[optionValue]
       } else if (option.hasOwnProperty("value")) {
         return option.value
+      } else if (option.items) {
+        return prepareOptions(option.items)
       } else {
-        return selectAll(option.items)
+        return option
       }
     }).flat()
 
-    const newValue = selectAll(options)
+    const newValue = prepareOptions(options)
     onFooterButtonClick(newValue)
   }
 
