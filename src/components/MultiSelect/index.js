@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { MultiSelect as PrimeMultiSelect } from "primereact/multiselect"
 import { locale } from "primereact/api"
 
