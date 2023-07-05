@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { MultiSelect as PrimeMultiSelect } from "primereact/multiselect"
 import { locale } from "primereact/api"
 
@@ -58,12 +58,17 @@ export const MultiSelect = React.forwardRef(({
   }
 
   const handleSelectAll = () => {
-    const newValue = options.map(option => {
-      if (optionValue) return option[optionValue]
-      if (option.hasOwnProperty("value")) return option.value
-      return option
-    })
+    const selectAll = options => options.map(option => {
+      if (optionValue) {
+        return option[optionValue]
+      } else if (option.hasOwnProperty("value")) {
+        return option.value
+      } else {
+        return selectAll(option.items)
+      }
+    }).flat()
 
+    const newValue = selectAll(options)
     onFooterButtonClick(newValue)
   }
 
