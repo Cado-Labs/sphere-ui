@@ -21,6 +21,7 @@ export const Dropdown = React.forwardRef(({
   optionGroupLabel,
   optionGroupChildren,
   itemTemplate,
+  valueTemplate,
   style,
   className,
   filter,
@@ -66,6 +67,7 @@ export const Dropdown = React.forwardRef(({
       optionGroupLabel={optionGroupLabel}
       optionGroupChildren={optionGroupChildren}
       itemTemplate={itemTemplate}
+      valueTemplate={valueTemplate}
       style={style}
       className={dropdownClassName}
       filter={hasFilter}

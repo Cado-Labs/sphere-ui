@@ -11,6 +11,7 @@ props:
   optionGroupLabel: Property name or getter function to use as the label of an option group.
   optionGroupChildren: Property name or getter function that refers to the children options of option group.
   itemTemplate: The template of items.
+  valueTemplate: The template of selected item.
   style: Inline style of the element.
   className: Class of the element.
   filter: When specified, displays an input field to filter the items on keyup.
