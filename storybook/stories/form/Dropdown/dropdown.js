@@ -145,6 +145,7 @@ export const dropdown = {
     { name: "optionGroupLabel", type: "string", description: `${I18N_PREFIX}.props.optionGroupLabel` },
     { name: "optionGroupChildren", type: "string", description: `${I18N_PREFIX}.props.optionGroupChildren` },
     { name: "itemTemplate", type: "any", description: `${I18N_PREFIX}.props.itemTemplate` },
+    { name: "valueTemplate", type: "any", description: `${I18N_PREFIX}.props.valueTemplate` },
     { name: "style", type: "object", description: `${I18N_PREFIX}.props.style` },
     { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
     { name: "filter", type: "boolean", description: `${I18N_PREFIX}.props.filter` },
