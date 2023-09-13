@@ -5,3 +5,4 @@ props:
   enforcePrecision: Do we need to enforce precision.
   delimiter: Delimiter for fractional portion.
   separator: Separator for thousands.
+  moneySeparator: Separator between amount and currency.
