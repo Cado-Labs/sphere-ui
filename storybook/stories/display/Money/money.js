@@ -18,14 +18,14 @@ function MoneyExample () {
         separator={" "}
       />
 
-      <h3>with moneySeparator</h3>
+      <h3>with currencySeparator</h3>
       <Money
         money={[1000.1000, "USD"]}
         precision={2}
         enforcePrecision
         delimiter={"."}
         separator={" "}
-        moneySeparator={"_"}
+        currencySeparator={"_"}
       />
     </div>
   )
@@ -45,6 +45,6 @@ export const money = {
     { name: "enforcePrecision", type: "boolean", default: false, description: `${I18N_PREFIX}.props.enforcePrecision` },
     { name: "delimiter", type: "string", default: ",", description: `${I18N_PREFIX}.props.delimiter` },
     { name: "separator", type: "string", default: "'\xA0'", description: `${I18N_PREFIX}.props.separator` },
-    { name: "moneySeparator", type: "string", default: "' '", description: `${I18N_PREFIX}.props.moneySeparator` },
+    { name: "currencySeparator", type: "string", default: "' '", description: `${I18N_PREFIX}.props.currencySeparator` },
   ],
 }

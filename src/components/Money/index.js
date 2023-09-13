@@ -2,10 +2,15 @@ import React, { Fragment } from "react"
 
 import { Number } from "../Number"
 
-const Money = ({ money: [amount, currency], precision = 2, moneySeparator = " ", ...options }) => {
+const Money = ({
+  money: [amount, currency],
+  precision = 2,
+  currencySeparator = " ",
+  ...options
+}) => {
   return (
     <Fragment>
-      <Number value={amount} {...options} precision={precision} />{moneySeparator}{currency}
+      <Number value={amount} {...options} precision={precision} />{currencySeparator}{currency}
     </Fragment>
   )
 }
