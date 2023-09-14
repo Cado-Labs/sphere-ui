@@ -19,6 +19,11 @@ function DatePickerExample () {
   const maxDate = new Date()
   maxDate.setMonth(nextMonth)
 
+  const minDate2 = new Date()
+  minDate2.setYear(minDate2.getFullYear() - 1)
+  const maxDate2 = new Date()
+  maxDate2.setYear(maxDate2.getFullYear() + 5)
+
   const onChange = event => {
     const target = event.target
 
@@ -43,7 +48,6 @@ function DatePickerExample () {
             value={fields.rangeDate}
             onChange={onChange}
             mode="range"
-            yearRange="2010:2030"
           />
         </div>
         <div className="s-field-col-3">
@@ -54,6 +58,18 @@ function DatePickerExample () {
             onChange={onChange}
             minDate={minDate}
             maxDate={maxDate}
+            readOnlyInput
+          />
+        </div>
+        <div className="s-field-col-3">
+          <label htmlFor="minmax">Min / Max with yearRange</label>
+          <DatePicker
+            name="minmax2"
+            value={fields.minmax2}
+            onChange={onChange}
+            minDate={minDate2}
+            maxDate={maxDate2}
+            yearRange="2010:2040"
             readOnlyInput
           />
         </div>
