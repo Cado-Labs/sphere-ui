@@ -23,7 +23,7 @@
     "eslint-formatter-table": "^7.32.1",
     "eslint-plugin-yml": "^0.14.0",
     "i18next": "^21.6.14",
-    "postcss": "^8.4.12",
+    "postcss": "^8.4.31",
     "postcss-scss": "^4.0.3",
     "react-i18next": "^11.16.2",
     "sass": "^1.49.11",
