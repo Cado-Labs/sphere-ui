@@ -1,6 +1,6 @@
 {
   "name": "@cadolabs/sphere-ui",
-  "version": "5.0.3",
+  "version": "5.1.0",
   "main": "dist/index.js",
   "license": "MIT",
   "repository": "https://github.com/Cado-Labs/sphere-ui",

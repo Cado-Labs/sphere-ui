@@ -1,0 +1,13 @@
+content: OverlayPanel, also known as Popover, is a container component that can overlay other components on page.
+props:
+  ariaCloseLabel: Aria label of the close icon.
+  breakpoints: Object literal to define widths per screen size.
+  children: Used to get the child elements of the component.
+  closeIcon: Icon to display as close icon.
+  closeOnEscape: Specifies if pressing escape key should hide the preview.
+  dismissable: Enables to hide the overlay when outside is clicked.
+  showCloseIcon: When enabled, displays a close icon at top right corner.
+  transitionOptions: The properties of CSSTransition can be customized, except for "nodeRef" and "in" properties.
+  unstyled: When enabled, it removes component related styles in the core.
+  onHide: Callback to invoke when overlay becomes hidden.
+  onShow: Callback to invoke when overlay becomes visible.
