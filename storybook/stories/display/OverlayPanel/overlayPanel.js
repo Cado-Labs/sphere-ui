@@ -34,8 +34,6 @@ export const overlayPanel = {
     { name: "closeIcon", type: "IconType<OverlayPanelProps>", default: null, description: `${I18N_PREFIX}.props.closeIcon` },
     { name: "closeOnEscape", type: "boolean", default: true, description: `${I18N_PREFIX}.props.closeOnEscape` },
     { name: "dismissable", type: "boolean", default: true, description: `${I18N_PREFIX}.props.dismissable` },
-    { name: "pt", type: "OverlayPanelPassThroughOptions", default: null, description: `${I18N_PREFIX}.props.pt` },
-    { name: "ptOptions", type: "PassThroughOptions", default: null, description: `${I18N_PREFIX}.props.ptOptions` },
     { name: "showCloseIcon", type: "boolean", default: false, description: `${I18N_PREFIX}.props.showCloseIcon` },
     { name: "transitionOptions", type: "CSSTransitionProps", default: null, description: `${I18N_PREFIX}.props.transitionOptions` },
     { name: "unstyled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.unstyled` },

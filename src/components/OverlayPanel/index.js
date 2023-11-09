@@ -11,8 +11,6 @@ export const OverlayPanel = React.forwardRef(
       closeIcon,
       closeOnEscape = true,
       dismissable = true,
-      pt,
-      ptOptions,
       showCloseIcon = false,
       transitionOptions,
       unstyled = false,
@@ -32,8 +30,6 @@ export const OverlayPanel = React.forwardRef(
         closeIcon={closeIcon}
         closeOnEscape={closeOnEscape}
         dismissable={dismissable}
-        pt={pt}
-        ptOptions={ptOptions}
         showCloseIcon={showCloseIcon}
         transitionOptions={transitionOptions}
         unstyled={unstyled}
