@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { OverlayPanel as PrimeOverlayPanel } from "primereact/overlaypanel"
 
 import { pickDataAttributes } from "../../utils"
@@ -22,12 +22,6 @@ export const OverlayPanel = React.forwardRef(
       ...props
     },
     ref) => {
-    useEffect(() => {
-      return () => {
-        document.body.classList.remove("p-overflow-hidden")
-      }
-    })
-
     const dataAttributes = pickDataAttributes(props)
 
     return (
