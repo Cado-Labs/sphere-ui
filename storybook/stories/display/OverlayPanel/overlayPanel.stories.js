@@ -9,3 +9,5 @@ export default {
 }
 
 export const OverlayPanel = context => <StoryPage {...overlayPanel} {...context} />
+
+OverlayPanel.storyName = "OverlayPanel"
