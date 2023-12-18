@@ -117,8 +117,9 @@ export const DatePicker = React.forwardRef(({
   const getYearRange = () => {
     const { year } = getPartsOfTime()
     const startYear = startCalendarDate ? startCalendarDate.getFullYear() : startRangeOfYears
+    const endYear = year + 1
 
-    return yearRange || `${startYear}:${year}`
+    return yearRange || `${startYear}:${endYear}`
   }
 
   const renderDateRangePicker = () => {
