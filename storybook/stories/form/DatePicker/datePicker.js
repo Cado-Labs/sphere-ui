@@ -15,9 +15,8 @@ function DatePickerExample () {
   const minDate = new Date()
 
   const month = new Date().getMonth()
-  const nextMonth = (month === 11) ? 0 : month + 1
   const maxDate = new Date()
-  maxDate.setMonth(nextMonth)
+  maxDate.setMonth(maxDate.getMonth() + 1)
 
   const minDate2 = new Date()
   minDate2.setYear(minDate2.getFullYear() - 1)
