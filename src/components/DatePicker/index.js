@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react"
 import { Calendar } from "primereact/calendar"
 import { locale as primeLocale } from "primereact/api"
 
-import { getPartsOfTime, filterTooltipOptions, pickDataAttributes } from "../../utils"
+import { getYearRange, filterTooltipOptions, pickDataAttributes } from "../../utils"
 
 import { withRange } from "./withRange"
 import { MONTHS, START_DATE } from "./constants"
@@ -65,7 +65,7 @@ export const DatePicker = React.forwardRef(({
       onChange,
       dateFormat,
       placeholder,
-      yearRange: getYearRange(),
+      yearRange: yearRange || getYearRange({ startCalendarDate, startRangeOfYears }),
       locale: primeLocale().locale,
       disabled,
       monthNavigator,
@@ -112,13 +112,6 @@ export const DatePicker = React.forwardRef(({
 
   const onViewDateChangeCustom = e => {
     setViewDate(e.value)
-  }
-
-  const getYearRange = () => {
-    const { year } = getPartsOfTime()
-    const startYear = startCalendarDate ? startCalendarDate.getFullYear() : startRangeOfYears
-
-    return yearRange || `${startYear}:${year}`
   }
 
   const renderDateRangePicker = () => {
