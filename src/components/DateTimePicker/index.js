@@ -1,7 +1,7 @@
 import React from "react"
 import { Calendar } from "primereact/calendar"
 
-import { getPartsOfTime, filterTooltipOptions, pickDataAttributes } from "../../utils"
+import { getYearRange, filterTooltipOptions, pickDataAttributes } from "../../utils"
 
 import { START_DATE } from "../DatePicker/constants"
 
@@ -55,13 +55,6 @@ export const DateTimePicker = React.forwardRef(({
   onVisibleChange,
   ...props
 }, ref) => {
-  const getYearRange = () => {
-    const { year } = getPartsOfTime()
-    const startYear = startCalendarDate ? startCalendarDate.getFullYear() : startRangeOfYears
-
-    return yearRange || `${startYear}:${year}`
-  }
-
   const renderFooter = () => {
     if (!showUTC || !value) return null
 
@@ -135,7 +128,7 @@ export const DateTimePicker = React.forwardRef(({
       showTime
       monthNavigator={monthNavigator}
       yearNavigator={yearNavigator}
-      yearRange={getYearRange()}
+      yearRange={yearRange || getYearRange({ startCalendarDate, startRangeOfYears })}
       footerTemplate={renderFooter}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}

@@ -1,4 +1,4 @@
-export { getPartsOfTime } from "./getDate"
+export { getPartsOfTime, getYearRange } from "./date"
 export { filterTooltipOptions } from "./filterTooltipOptions"
 export { filterOptions } from "./filterOptions"
 export { pickDataAttributes } from "./pickDataAttributes"
