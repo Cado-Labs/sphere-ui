@@ -63,8 +63,8 @@ export const MultiSelect = React.forwardRef(({
         return option[optionValue]
       } else if (option.hasOwnProperty("value")) {
         return option.value
-      } else if (option.items) {
-        return prepareOptions(option.items)
+      } else if (optionGroupChildren && option[optionGroupChildren]) {
+        return prepareOptions(option[optionGroupChildren])
       } else {
         return option
       }

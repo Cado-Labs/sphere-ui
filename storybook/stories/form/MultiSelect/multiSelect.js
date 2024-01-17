@@ -19,31 +19,31 @@ function MultiSelectExample () {
     {
         label: 'Germany',
         code: 'DE',
-        items: [
-            { label: 'Berlin', value: 'Berlin' },
-            { label: 'Frankfurt', value: 'Frankfurt' },
-            { label: 'Hamburg', value: 'Hamburg' },
-            { label: 'Munich', value: 'Munich' }
+        cities: [
+            { city: 'Berlin', value: 'Berlin' },
+            { city: 'Frankfurt', value: 'Frankfurt' },
+            { city: 'Hamburg', value: 'Hamburg' },
+            { city: 'Munich', value: 'Munich' }
         ]
     },
     {
         label: 'USA',
         code: 'US',
-        items: [
-            { label: 'Chicago', value: 'Chicago' },
-            { label: 'Los Angeles', value: 'Los Angeles' },
-            { label: 'New York', value: 'New York' },
-            { label: 'San Francisco', value: 'San Francisco' }
+        cities: [
+            { city: 'Chicago', value: 'Chicago' },
+            { city: 'Los Angeles', value: 'Los Angeles' },
+            { city: 'New York', value: 'New York' },
+            { city: 'San Francisco', value: 'San Francisco' }
         ]
     },
     {
         label: 'Japan',
         code: 'JP',
-        items: [
-            { label: 'Kyoto', value: 'Kyoto' },
-            { label: 'Osaka', value: 'Osaka' },
-            { label: 'Tokyo', value: 'Tokyo' },
-            { label: 'Yokohama', value: 'Yokohama' }
+        cities: [
+            { city: 'Kyoto', value: 'Kyoto' },
+            { city: 'Osaka', value: 'Osaka' },
+            { city: 'Tokyo', value: 'Tokyo' },
+            { city: 'Yokohama', value: 'Yokohama' }
         ]
     }
   ];
@@ -68,9 +68,9 @@ function MultiSelectExample () {
           value={selectedCities}
           options={groupedCities}
           onChange={(e) => setSelectedCities(e.value)}
-          optionLabel="label"
+          optionLabel="city"
           optionGroupLabel="label"
-          optionGroupChildren="items"
+          optionGroupChildren="cities"
           placeholder="Select Cities"
           display="chip"
           className="w-full md:w-20rem"
