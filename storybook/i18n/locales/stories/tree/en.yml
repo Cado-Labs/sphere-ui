@@ -43,7 +43,7 @@ props:
   filterBy: When filtering is enabled, filterBy decides which field or fields (comma separated) to search against.
   filterMode: Mode for filtering valid values are "lenient" and "strict". Default is lenient.
   filterPlaceholder: Placeholder text to show when filter input is empty.
-  filterValue: 	When filtering is enabled, the value of input field.
+  filterValue: When filtering is enabled, the value of input field.
 treenodeProps:
   key: Unique key of the node.
   label: Label of the node.
