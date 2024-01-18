@@ -199,6 +199,11 @@ export const documentation = {
     { name: "togglerTemplate", type: "string", description: `${I18N_PREFIX}.props.togglerTemplate` },
     { name: "showHeader", type: "boolean", default: true, description: `${I18N_PREFIX}.props.showHeader` },
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
+    { name: "filter", type: "boolean", default: false, description: `${I18N_PREFIX}.props.filter` },
+    { name: "filterBy", type: "boolean", default: "label", description: `${I18N_PREFIX}.props.filterBy` },
+    { name: "filterMode", type: "strict" | "lenient", default: "lenient", description: `${I18N_PREFIX}.props.filterMode` },
+    { name: "filterPlaceholder", type: "string", default: null, description: `${I18N_PREFIX}.props.filterPlaceholder` },
+    { name: "filterValue", type: "string", default: null, description: `${I18N_PREFIX}.props.filterValue` },
   ],
   eventDescriptionProps: [
     { name: "onSelect", params: onSelectParams, description: `${I18N_PREFIX}.props.onSelect` },

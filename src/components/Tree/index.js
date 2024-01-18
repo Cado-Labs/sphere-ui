@@ -34,6 +34,11 @@ export const Tree = React.forwardRef(({
   onToggle,
   onDragDrop,
   onNodeClick,
+  filter,
+  filterBy,
+  filterMode,
+  filterValue,
+  filterPlaceholder,
   ...props
 }, ref) => {
   const dataAttributes = pickDataAttributes(props)
@@ -70,6 +75,11 @@ export const Tree = React.forwardRef(({
       onToggle={onToggle}
       onDragDrop={onDragDrop}
       onNodeClick={onNodeClick}
+      filter={filter}
+      filterBy={filterBy}
+      filterMode={filterMode}
+      filterValue={filterValue}
+      filterPlaceholder={filterPlaceholder}
       {...dataAttributes}
     />
   )

@@ -39,6 +39,11 @@ props:
   onToggle: Callback to invoke when a node is toggled.
   onDragDrop: Callback to invoke when a node is selected.
   onNodeClick: Callback to invoke when the node is clicked.
+  filter: When specified, displays an input field to filter the items.
+  filterBy: When filtering is enabled, filterBy decides which field or fields (comma separated) to search against.
+  filterMode: Mode for filtering valid values are "lenient" and "strict". Default is lenient.
+  filterPlaceholder: Placeholder text to show when filter input is empty.
+  filterValue: When filtering is enabled, the value of input field.
 treenodeProps:
   key: Unique key of the node.
   label: Label of the node.
@@ -67,3 +72,6 @@ pages:
   dragdrop:
     title: Tree DragDrop
     description: Nodes can be reordered using drag and drop.
+  filter:
+    title: Tree Filter
+    description: Adds filtering by tree elements.
