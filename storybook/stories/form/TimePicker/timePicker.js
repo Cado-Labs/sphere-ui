@@ -72,6 +72,7 @@ export const timePicker = {
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
     { name: "viewDate", type: "date", default: null, description: `${I18N_PREFIX}.props.viewDate` },
     { name: "keepInvalid", type: "boolean", default: false, description: `${I18N_PREFIX}.props.keepInvalid` },
+    { name: "className", type: "string", description: `${I18N_PREFIX}.props.className` },
   ],
   eventDescriptionProps: [
     { name: "formatDateTime", params: formatDateTimeParams, description: `${I18N_PREFIX}.props.formatDateTime` },

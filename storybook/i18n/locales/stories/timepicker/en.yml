@@ -20,3 +20,4 @@ props:
   keepInvalid: Keep invalid value when input blur.
   formatDateTime: Function for overriding default behavior that formats a Date to the string representation.
   parseDateTime: Function for overriding default behavior that parses text into the Date.
+  className: Class of the component.
