@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { FileUpload, Toast, InputText, Button } from "@cadolabs/sphere-ui"
+import { FileUpload, Toast, InputText, Button, Tooltip, ProgressBar, Tag } from "@cadolabs/sphere-ui"
 
 import i18n, { Trans } from "@i18n"
 import { ParamsTable, Highlighter } from "@components"
@@ -12,6 +12,8 @@ function FileUploadExample () {
   const toast = React.useRef(null)
   const [formValues, setFormValues] = React.useState({ reportName: "", reportFile: null })
   const [fileName, setFileName] = React.useState("")
+  const [totalSize, setTotalSize] = React.useState(0)
+  const fileUploadRef = React.useRef(null)
 
   const setValue = (name, value) => {
     setFormValues(s => ({ ...s, [name]: value }))
@@ -63,59 +65,161 @@ function FileUploadExample () {
     setFileName("")
   }
 
-  const sendReport = (e) => {
+  const sendReport = e => {
     e.preventDefault()
     if (!formValues.reportName || !formValues.reportFile) {
       onFailedFormSend("The form is incomplete")
       return
     }
 
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-      method: 'POST',
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
       body: JSON.stringify(formValues),
       headers: {
-        'Content-type': 'application/json; charset=UTF-8',
+        "Content-type": "application/json; charset=UTF-8",
       },
     })
-    .then(() => {
-      onSuccessUpload()
-      resetForm()
-    })
-    .catch(onFailedFormSend)
+      .then(() => {
+        onSuccessUpload()
+        resetForm()
+      })
+      .catch(onFailedFormSend)
   }
+
+  const onTemplateSelect = e => {
+    let _totalSize = totalSize
+    const files = e.files
+
+    Object.keys(files).forEach(key => {
+      _totalSize += files[key].size || 0
+    })
+
+    setTotalSize(_totalSize)
+  }
+
+  const onTemplateUpload = e => {
+    let _totalSize = 0
+
+    e.files.forEach(file => {
+      _totalSize += file.size || 0
+    })
+
+    setTotalSize(_totalSize)
+    toast.current.show({ severity: "info", summary: "Success", detail: "File Uploaded" })
+  }
+
+  const onTemplateRemove = (file, callback) => {
+    setTotalSize(totalSize - file.size)
+    callback()
+  }
+
+  const onTemplateClear = () => {
+    setTotalSize(0)
+  }
+
+  const headerTemplate = options => {
+    const { className, chooseButton, uploadButton, cancelButton } = options
+    const value = totalSize / 10000
+    const formatedValue = fileUploadRef && fileUploadRef.current ? fileUploadRef.current.formatSize(totalSize) : "0 B"
+
+    return (
+      <div className={className} style={{ backgroundColor: "transparent", display: "flex", alignItems: "center" }}>
+        {chooseButton}
+        {uploadButton}
+        {cancelButton}
+        <div className="flex align-items-center gap-3 ml-auto">
+          <span>{formatedValue} / 1 MB</span>
+          <ProgressBar value={value} showValue={false} style={{ width: "10rem", height: "12px" }} />
+        </div>
+      </div>
+    )
+  }
+
+  const itemTemplate = (file, props) => {
+    return (
+      <div className="flex align-items-center flex-wrap">
+        <div className="flex align-items-center" style={{ width: "40%" }}>
+          <img alt={file.name} role="presentation" src={file.objectURL} width={100} />
+          <span className="flex flex-column text-left ml-3">
+            {file.name}
+            <small>{new Date().toLocaleDateString()}</small>
+          </span>
+        </div>
+        <Tag value={props.formatSize} severity="warning" className="px-3 py-2" />
+        <Button type="button" icon="pi pi-times" className="p-button-outlined p-button-rounded p-button-danger ml-auto" onClick={() => onTemplateRemove(file, props.onRemove)} />
+      </div>
+    )
+  }
+
+  const emptyTemplate = () => {
+    return (
+      <div className="flex align-items-center flex-column">
+        <i className="pi pi-image mt-3 p-5" style={{ fontSize: "5em", borderRadius: "50%", backgroundColor: "var(--surface-b)", color: "var(--surface-d)" }} />
+        <span style={{ fontSize: "1.2em", color: "var(--text-color-secondary)" }} className="my-5">
+          Drag and Drop Image Here
+        </span>
+      </div>
+    )
+  }
+
+  const chooseOptions = { icon: "pi pi-fw pi-images", iconOnly: true, className: "custom-choose-btn p-button-rounded p-button-outlined" }
+  const uploadOptions = { icon: "pi pi-fw pi-cloud-upload", iconOnly: true, className: "custom-upload-btn p-button-success p-button-rounded p-button-outlined" }
+  const cancelOptions = { icon: "pi pi-fw pi-times", iconOnly: true, className: "custom-cancel-btn p-button-danger p-button-rounded p-button-outlined" }
 
   return (
     <div>
-    <Toast ref={toast} />
-    <div className="p-card s-container">
+      <Toast ref={toast} />
+      <div className="p-card s-container">
 
-      <h3>Basic</h3>
-      <FileUpload name="demo[]" url={uploadUrl} accept="image/*" maxFileSize={1000000} onUpload={onSuccessUpload} />
+        <h3>Basic</h3>
+        <FileUpload name="demo[]" url={uploadUrl} accept="image/*" maxFileSize={1000000} onUpload={onSuccessUpload} />
 
-      <h3>Basic with Auto</h3>
-      <FileUpload name="demo[]" url={uploadUrl} accept="image/*" maxFileSize={1000000} onUpload={() => onSuccessUpload("File Uploaded with Auto Mode")} auto chooseLabel="Browse" />
+        <h3>Basic with Auto</h3>
+        <FileUpload name="demo[]" url={uploadUrl} accept="image/*" maxFileSize={1000000} onUpload={() => onSuccessUpload("File Uploaded with Auto Mode")} auto chooseLabel="Browse" />
 
-      <h3>With too small maxFileSize</h3>
-      <FileUpload name="demo[]" url={uploadUrl} accept="image/*" maxFileSize={10} onUpload={onSuccessUpload} onValidationFail={onFileValidationFail} />
+        <h3>With too small maxFileSize</h3>
+        <FileUpload name="demo[]" url={uploadUrl} accept="image/*" maxFileSize={10} onUpload={onSuccessUpload} onValidationFail={onFileValidationFail} />
 
-      <h3>With adding file to a form</h3>
-      <form className="mb-3 w-20rem">
-        <div className="flex flex-column mb-3">
-          <label htmlFor="report-name" className="mb-1 font-bold">Report name</label>
-          <InputText
-            id="report-name"
-            value={formValues.reportName}
-            onChange={e => setValue("reportName", e.target.value)}
-          />
-        </div>
+        <h3>With adding file to a form</h3>
+        <form className="mb-3 w-20rem">
+          <div className="flex flex-column mb-3">
+            <label htmlFor="report-name" className="mb-1 font-bold">Report name</label>
+            <InputText
+              id="report-name"
+              value={formValues.reportName}
+              onChange={e => setValue("reportName", e.target.value)}
+            />
+          </div>
 
-        <div className="flex flex-column mb-3">
-          <label className="mb-1 font-bold">Report file</label>
-          {formValues.reportFile ? renderReportFile() : renderUploadButton() }
-        </div>
+          <div className="flex flex-column mb-3">
+            <label className="mb-1 font-bold">Report file</label>
+            {formValues.reportFile ? renderReportFile() : renderUploadButton() }
+          </div>
 
-        <Button type="submit" onClick={sendReport}>Send</Button>
-      </form>
+          <Button type="submit" onClick={sendReport}>Send</Button>
+        </form>
+
+        <h3>Advanced</h3>
+        <FileUpload
+          mode="advanced"
+          name="demo[]"
+          url={"/api/upload"}
+          multiple
+          accept="image/*"
+          maxFileSize={1000000}
+          emptyTemplate={<p className="m-0">Drag and drop files to here to upload.</p>}
+        />
+
+        <h3>Template</h3>
+        <Tooltip target=".custom-choose-btn" content="Choose" position="bottom" />
+        <Tooltip target=".custom-upload-btn" content="Upload" position="bottom" />
+        <Tooltip target=".custom-cancel-btn" content="Clear" position="bottom" />
+
+        <FileUpload mode="advanced" ref={fileUploadRef} name="demo[]" url="/api/upload" multiple accept="image/*" maxFileSize={1000000}
+          onUpload={onTemplateUpload} onSelect={onTemplateSelect} onError={onTemplateClear} onClear={onTemplateClear}
+          headerTemplate={headerTemplate} itemTemplate={itemTemplate} emptyTemplate={emptyTemplate}
+          chooseOptions={chooseOptions} uploadOptions={uploadOptions} cancelOptions={cancelOptions}
+        />
       </div>
     </div>
   )
@@ -295,7 +399,7 @@ export const fileupload = {
     extra: fileuploadExtra,
   },
   code,
-  scope: { FileUpload, Toast, InputText, Button },
+  scope: { FileUpload, Toast, InputText, Button, Tooltip, ProgressBar, Tag },
   descriptionProps: [
     { name: "id", type: "string", description: `${I18N_PREFIX}.props.id` },
     { name: "mode", type: `"basic" | "advanced"`, default: "basic", description: `${I18N_PREFIX}.props.name` },
@@ -314,6 +418,9 @@ export const fileupload = {
     { name: "uploadOptions", type: "Options", description: `${I18N_PREFIX}.props.uploadOptions` },
     { name: "cancelOptions", type: "Options", description: `${I18N_PREFIX}.props.cancelOptions` },
     { name: "customUpload", type: "boolean", default: false, description: `${I18N_PREFIX}.props.customUpload` },
+    { name: "emptyTemplate", type: "ReactNode | Function", default: null, description: `${I18N_PREFIX}.props.emptyTemplate` },
+    { name: "headerTemplate", type: "ReactNode | Function", default: null, description: `${I18N_PREFIX}.props.headerTemplate` },
+    { name: "itemTemplate", type: "ReactNode | Function", default: null, description: `${I18N_PREFIX}.props.itemTemplate` },
   ],
   eventDescriptionProps: [
     { name: "onBeforeUpload", params: onBeforeUploadParams, description: `${I18N_PREFIX}.props.onBeforeUpload` },

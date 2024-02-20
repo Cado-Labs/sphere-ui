@@ -39,6 +39,7 @@ export const Tree = React.forwardRef(({
   filterMode,
   filterValue,
   filterPlaceholder,
+  emptyMessage,
   ...props
 }, ref) => {
   const dataAttributes = pickDataAttributes(props)
@@ -80,6 +81,7 @@ export const Tree = React.forwardRef(({
       filterMode={filterMode}
       filterValue={filterValue}
       filterPlaceholder={filterPlaceholder}
+      emptyMessage={emptyMessage}
       {...dataAttributes}
     />
   )

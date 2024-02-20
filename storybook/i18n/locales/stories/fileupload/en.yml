@@ -40,6 +40,9 @@ props:
   uploadOptions: Options used to customize the upload button. See properties below.
   cancelOptions: Options used to customize the cancel button. See properties below.
   customUpload: Whether to use the default upload or a manual implementation defined in uploadHandler callback.
+  emptyTemplate: Custom template of empty content in the container.
+  headerTemplate: Custom template of the header.
+  itemTemplate: Custom template of each item content in the container.
   onBeforeUpload: Callback to invoke before file upload begins to customize the request such as post parameters before the files.
   onBeforeSend: Callback to invoke before file send begins to customize the request such as adding headers.
   onUpload: Callback to invoke when file upload is complete.

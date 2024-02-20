@@ -47,6 +47,9 @@ export const FileUpload = React.forwardRef(({
     style: null,
   },
   customUpload = false,
+  emptyTemplate,
+  headerTemplate,
+  itemTemplate,
   onBeforeUpload,
   onBeforeSend,
   onBeforeSelect,
@@ -89,6 +92,9 @@ export const FileUpload = React.forwardRef(({
       className={className}
       withCredentials={withCredentials}
       chooseLabel={chooseLabel}
+      emptyTemplate={emptyTemplate}
+      headerTemplate={headerTemplate}
+      itemTemplate={itemTemplate}
       chooseOptions={chooseOptions}
       uploadOptions={uploadOptions}
       cancelOptions={cancelOptions}
