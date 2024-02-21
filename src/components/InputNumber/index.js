@@ -19,7 +19,7 @@ export const InputNumber = React.forwardRef(({
   type = "text",
   allowEmpty = true,
   step = 1,
-  min,
+  min = -Infinity,
   max,
   disabled = false,
   required = false,
