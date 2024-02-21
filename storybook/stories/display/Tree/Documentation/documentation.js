@@ -204,7 +204,6 @@ export const documentation = {
     { name: "filterMode", type: "strict" | "lenient", default: "lenient", description: `${I18N_PREFIX}.props.filterMode` },
     { name: "filterPlaceholder", type: "string", default: null, description: `${I18N_PREFIX}.props.filterPlaceholder` },
     { name: "filterValue", type: "string", default: null, description: `${I18N_PREFIX}.props.filterValue` },
-    { name: "emptyMessage", type: "ReactNode | Function", default: "No results found", description: `${I18N_PREFIX}.props.emptyMessage` },
   ],
   eventDescriptionProps: [
     { name: "onSelect", params: onSelectParams, description: `${I18N_PREFIX}.props.onSelect` },

@@ -12,7 +12,6 @@ props:
   onHide: Callback to invoke when overlay panel becomes hidden.
   onFilter: Callback to invoke on filtering.
   onSelectAll: Callback to invoke when all data is selected.
-  onRemove: Callback to invoke when a chip is removed.
   disabled: Disable the component.
   options: An array of selectitems to display as the available options.
   filter: Display an input field to filter the items on keyup.

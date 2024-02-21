@@ -104,11 +104,6 @@ const onSelectAllParams = [
   { name: "event.checked", description: "Whether all data is selected" },
 ]
 
-const onRemoveParams = [
-  { name: "event.originalEvent", description: "Browser event" },
-  { name: "event.value", description: "Removed item value" },
-]
-
 export const multiSelect = {
   component: "MultiSelect",
   content: {
@@ -153,6 +148,5 @@ export const multiSelect = {
     { name: "onHide", description: `${I18N_PREFIX}.props.onHide` },
     { name: "onFilter", params: onFilterParams, description: `${I18N_PREFIX}.props.onFilter` },
     { name: "onSelectAll", params: onSelectAllParams, description: `${I18N_PREFIX}.props.onSelectAll` },
-    { name: "onRemove", params: onRemoveParams, description: `${I18N_PREFIX}.props.onRemove` },
   ],
 }
