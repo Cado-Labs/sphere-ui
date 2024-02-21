@@ -22056,12 +22056,6 @@
 .p-multiselect-trigger {
   width: 2.2rem;
 }
-.p-multiselect .p-multiselect-clear-icon {
-  right: 1rem;
-  margin-top: 0;
-  font-size: 0.8rem;
-  transform: translateY(-50%);
-}
 
 .p-multiselect-footer {
   margin-top: 0;
