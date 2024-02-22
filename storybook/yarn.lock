@@ -1210,15 +1210,15 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cadolabs/sphere-ui@5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@cadolabs/sphere-ui/-/sphere-ui-5.3.0.tgz#b98fcf8a80643be2e16e10bb93b8360325a6fb14"
-  integrity sha512-d1itKXPrEnYbCj8MtVVZVvkY4TmcjMNNMC+dw5o3f2XpZwqMb7KI/rUws5+V8h/CgsFjyGrqkGNAR+r/6xmIeA==
+"@cadolabs/sphere-ui@5.4.0":
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/@cadolabs/sphere-ui/-/sphere-ui-5.4.0.tgz#2db5c472ade368225b00baa9c49a97a110542a1f"
+  integrity sha512-U04gWIbZOpMfLyuFu7M2AzGbOvz3OT6qeOk6x/nnHWQEXKykNghA/oz54x251sE8ICcKdoaqngWqJerIT0DToA==
   dependencies:
     bignumber.js "^9.1.1"
     primeflex "^3.3.1"
     primeicons "^6.0.1"
-    primereact "^10.5.1"
+    primereact "9.6.4"
     react-transition-group "^4.4.5"
 
 "@cnakazawa/watch@^1.0.3":
@@ -8632,10 +8632,10 @@ primeicons@^6.0.1:
   resolved "https://registry.yarnpkg.com/primeicons/-/primeicons-6.0.1.tgz#431fa7c79825934eefd62087d8e1faa6a9e376ad"
   integrity sha512-KDeO94CbWI4pKsPnYpA1FPjo79EsY9I+M8ywoPBSf9XMXoe/0crjbUK7jcQEDHuc0ZMRIZsxH3TYLv4TUtHmAA==
 
-primereact@^10.5.1:
-  version "10.5.1"
-  resolved "https://registry.yarnpkg.com/primereact/-/primereact-10.5.1.tgz#ddc8e433240eaac0d37104af9fbd0473d572f1af"
-  integrity sha512-v+JpIisXmqUHWwYDojWibB4Kx8n6KOliBYhmRUQ2nzQAz14i53paU6YfSXe8zOSX3uNnbJAZF76hCKlXsUDlbQ==
+primereact@9.6.4:
+  version "9.6.4"
+  resolved "https://registry.yarnpkg.com/primereact/-/primereact-9.6.4.tgz#df535bf00c0b7e825d454ff4e4671c9848f37416"
+  integrity sha512-jW5t1Ct1coMGi1e+GWyLgVmxHQpEGtP3Pu2S/zsX8/yUgzDvn/ef0gaQ8l9/gihSnt/n4z4lFsHmn8Vb3j89yg==
   dependencies:
     "@types/react-transition-group" "^4.4.1"
     react-transition-group "^4.4.1"
