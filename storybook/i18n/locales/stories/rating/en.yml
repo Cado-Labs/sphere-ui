@@ -1,0 +1,19 @@
+content: Rating component is a star based selection input.
+props:
+  id: Unique identifier of the component.
+  value: Value of the rating.
+  disabled: When present, it specifies that the element should be disabled.
+  readOnly: When present, it specifies that the input cannot be typed.
+  stars: Number of stars.
+  cancel: When specified a cancel icon is displayed to allow removing the value.
+  style: Inline style of the element.
+  className: Class of the element.
+  tooltip: Content of the tooltip.
+  tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
+  onChange: Callback to invoke on value change.
+  onIcon: Icon for the on state.
+  onIconProps: Properties of the on icon.
+  offIcon: Icon for the off state.
+  offIconProps: Properties of the off icon.
+  cancelIcon: Icon for the cancelable state.
+  cancelIconProps: Properties of the cancel icon.
