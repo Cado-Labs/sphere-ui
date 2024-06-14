@@ -1,13 +1,17 @@
-import React from "react"
+import React, { useMemo, useState } from "react"
 import { Calendar } from "primereact/calendar"
+import { locale as primeLocale } from "primereact/api"
 
 import { getYearRange, filterTooltipOptions, pickDataAttributes } from "../../utils"
 
-import { START_DATE } from "../DatePicker/constants"
+
+import { withRange } from "../Util/withRange"
+import { MONTHS, START_DATE } from "../Util/constants"
 
 export const DateTimePicker = React.forwardRef(({
   id,
   name,
+  mode = "default",
   value,
   onChange,
   yearRange,
@@ -20,7 +24,6 @@ export const DateTimePicker = React.forwardRef(({
   stepMinute = 1,
   placeholder = "",
   showIcon = false,
-  viewDate = null,
   mask = null,
   startCalendarDate = START_DATE,
   minDate = null,
@@ -31,6 +34,7 @@ export const DateTimePicker = React.forwardRef(({
   inputStyle,
   panelClassName,
   panelStyle,
+  showTime = true,
   dateFormat = "dd.mm.yy",
   monthNavigator = true,
   yearNavigator = true,
@@ -55,7 +59,15 @@ export const DateTimePicker = React.forwardRef(({
   onVisibleChange,
   ...props
 }, ref) => {
+  const defaultViewDate = value?.[0] || new Date()
+  const [viewDate, setViewDate] = useState(defaultViewDate)
+  const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
+  const dataAttributes = pickDataAttributes(props)
+
   const renderFooter = () => {
+    console.log(showUTC)
+    console.log(value)
+
     if (!showUTC || !value) return null
 
     const day = value.getUTCDate()
@@ -95,60 +107,110 @@ export const DateTimePicker = React.forwardRef(({
     )
   }
 
-  const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
-  const dataAttributes = pickDataAttributes(props)
+  const getDefaultProps = () => {
+    return {
+      id,
+      name,
+      ref,
+      value,
+      onChange,
+      showSeconds,
+      showMillisec,
+      stepHour,
+      stepSecond,
+      stepMinute,
+      placeholder,
+      disabled,
+      showIcon,
+      viewDate,
+      mask,
+      minDate,
+      maxDate,
+      className,
+      style,
+      inputClassName,
+      inputStyle,
+      panelClassName,
+      panelStyle,
+      dateFormat,
+      hourFormat: "24",
+      showTime,
+      monthNavigator,
+      yearNavigator,
+      yearRange: yearRange || getYearRange({ startCalendarDate, startRangeOfYears }),
+      locale: primeLocale().locale,
+      footerTemplate: renderFooter,
+      tooltip,
+      tooltipOptions: filteredTooltipOptions,
+      required,
+      inputId,
+      readOnlyInput,
+      tabIndex,
+      autoZIndex,
+      baseZIndex,
+      keepInvalid,
+      formatDateTime,
+      parseDateTime,
+      onFocus,
+      onBlur,
+      onInput,
+      onSelect,
+      onShow,
+      onHide,
+      onVisibleChange,
+      ...dataAttributes,
+    }
+  }
 
-  return (
-    <Calendar
-      id={id}
-      name={name}
-      ref={ref}
-      value={value}
-      onChange={onChange}
-      showSeconds={showSeconds}
-      showMillisec={showMillisec}
-      stepHour={stepHour}
-      stepSecond={stepSecond}
-      stepMinute={stepMinute}
-      placeholder={placeholder}
-      disabled={disabled}
-      showIcon={showIcon}
-      viewDate={viewDate}
-      mask={mask}
-      minDate={minDate}
-      maxDate={maxDate}
-      className={className}
-      style={style}
-      inputClassName={inputClassName}
-      inputStyle={inputStyle}
-      panelClassName={panelClassName}
-      panelStyle={panelStyle}
-      dateFormat={dateFormat}
-      hourFormat="24"
-      showTime
-      monthNavigator={monthNavigator}
-      yearNavigator={yearNavigator}
-      yearRange={yearRange || getYearRange({ startCalendarDate, startRangeOfYears })}
-      footerTemplate={renderFooter}
-      tooltip={tooltip}
-      tooltipOptions={filteredTooltipOptions}
-      required={required}
-      inputId={inputId}
-      readOnlyInput={readOnlyInput}
-      tabIndex={tabIndex}
-      autoZIndex={autoZIndex}
-      baseZIndex={baseZIndex}
-      keepInvalid={keepInvalid}
-      formatDateTime={formatDateTime}
-      parseDateTime={parseDateTime}
-      onFocus={onFocus}
-      onBlur={onBlur}
-      onInput={onInput}
-      onSelect={onSelect}
-      onShow={onShow}
-      onHide={onHide}
-      onVisibleChange={onVisibleChange}
-      {...dataAttributes}
-    />
-  )
+  const factory = () => {
+    switch (mode) {
+      case "range": return renderDateTimeRangePicker()
+      case "default": return renderDateTimePicker()
+      default: throw new Error("Invalid mode")
+    }
+  }
+
+  const onViewDateTimeChangeCustom = e => {
+    setViewDate(e.value)
+  }
+
+  const renderDateTimeRangePicker = () => {
+    const RangePicker = useMemo(() => withRange(Calendar), [])
+
+    return (
+      <RangePicker
+        {...getDefaultProps()}
+        rangeButtonsBar
+        headerTemplate={headerTemplate}
+        viewDate={viewDate}
+        onViewDateChange={onViewDateTimeChangeCustom}
+        numberOfMonths={2}
+        startCalendarDate={startCalendarDate}
+      />
+    )
+  }
+
+  const headerTemplate = () => {
+    const month = viewDate.getMonth()
+    const nextMonth = month === 11 ? 0 : month + 1
+    const monthName = MONTHS[primeLocale().locale][nextMonth]
+
+    const year = viewDate.getFullYear()
+    const displayedYear = month === 11 ? year + 1 : year
+
+    return (
+      <div className="p-datepicker-header-custom">
+        <span className="p-datepicker-month-name">{monthName}</span>
+        <span className="p-datepicker-year-name">{displayedYear}</span>
+      </div>
+    )
+  }
+
+  const renderDateTimePicker = () => {
+    return (
+      <Calendar {...getDefaultProps()} numberOfMonths={1} />
+    )
+  }
+
+  return factory()
 })
