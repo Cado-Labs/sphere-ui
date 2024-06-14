@@ -87,7 +87,7 @@ export const withRange = Component =>
     }
 
     onChange = value => {
-      this.props.onChange({
+      this.onCustomChange({
         target: {
           name: this.props.name || null,
           id: this.props.id || null,
@@ -95,6 +95,34 @@ export const withRange = Component =>
         },
       })
       this.refCalendar.current.hide()
+    }
+
+    onCustomChange = e => {
+      // let val = e.target.value
+      // if (Array.isArray(val) && val[1] !== null) {
+      //   const secondDate = new Date(val[1])
+      //   val = [new Date(val[0]), new Date(secondDate.getFullYear(), secondDate.getMonth(), secondDate.getDate(), 23, 59)]
+      // }
+
+      // if (Array.isArray(val) && val[1] == null) {
+      //   const firstDate = new Date(val[0])
+      //   val = [new Date(firstDate.getFullYear(), firstDate.getMonth(), firstDate.getDate(), 0, 0), null]
+      // }
+
+      // this.props.onChange({
+      //   target: {
+      //     name: this.props.name || null,
+      //     id: this.props.id || null,
+      //     value: val,
+      //   },
+      // })
+      this.props.onChange({
+        target: {
+          name: this.props.name || null,
+          id: this.props.id || null,
+          value: e.target.value,
+        },
+      })
     }
 
     renderFooter = () => {
@@ -140,7 +168,7 @@ export const withRange = Component =>
           name={this.props.name}
           value={this.props.value}
           showIcon={this.props.showIcon}
-          onChange={this.props.onChange}
+          onChange={this.onCustomChange}
           dateFormat={this.props.dateFormat}
           placeholder={this.props.placeholder}
           yearRange={this.props.yearRange}
@@ -176,6 +204,8 @@ export const withRange = Component =>
           onViewDateChange={this.props.onViewDateChange}
           headerTemplate={this.props.headerTemplate}
           numberOfMonths={this.props.numberOfMonths}
+          showTime={this.props.showTime}
+          showUTC={this.props.showUTC}
           panelClassName={panelClassName}
           selectionMode="range"
           ref={this.refCalendar}

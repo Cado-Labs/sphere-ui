@@ -4,8 +4,8 @@ import { locale as primeLocale } from "primereact/api"
 
 import { getYearRange, filterTooltipOptions, pickDataAttributes } from "../../utils"
 
-import { withRange } from "./withRange"
-import { MONTHS, START_DATE } from "./constants"
+import { withRange } from "../Util/withRange"
+import { MONTHS, START_DATE } from "../Util/constants"
 
 export const DatePicker = React.forwardRef(({
   id,
