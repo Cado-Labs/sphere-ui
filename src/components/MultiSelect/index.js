@@ -6,6 +6,19 @@ import { filterTooltipOptions, shouldFilterSelectOptions, pickDataAttributes } f
 
 import { LOCALES_BUTTONS_SET } from "./constants"
 
+const proxyDisplay = display => {
+  const isChip = display === "chip"
+
+  if (isChip) {
+    // eslint-disable-next-line
+    console.warn(`The "display" prop value has been replaced with "comma"
+      to avoid incorrect behavior caused by a bug in the primereact library.
+      issue: https://github.com/primefaces/primereact/issues/7125`)
+  }
+
+  return isChip ? "comma" : display
+}
+
 export const MultiSelect = React.forwardRef(({
   options,
   value,
@@ -151,7 +164,7 @@ export const MultiSelect = React.forwardRef(({
       disabled={disabled}
       selectedItemsLabel={selectedItemsLabel}
       showClear={showClear}
-      display={display}
+      display={proxyDisplay(display)}
       overlayVisible={overlayVisible}
       removeIcon={removeIcon()}
       tooltip={tooltip}
