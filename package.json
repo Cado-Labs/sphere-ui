@@ -48,7 +48,7 @@
     "rollup": "^2.70.1",
     "rollup-plugin-scss": "^3.0.0",
     "sass": "^1.49.11",
-    "stylelint": "^14.6.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-umbrellio": "^0.1.2"
   },
