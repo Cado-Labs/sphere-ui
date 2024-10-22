@@ -2906,15 +2906,15 @@ primeflex@^3.3.1:
   resolved "https://registry.yarnpkg.com/primeflex/-/primeflex-3.3.1.tgz#361dddf6eb5db50d733e4cddd4b6e376a3d7bd68"
   integrity sha512-zaOq3YvcOYytbAmKv3zYc+0VNS9Wg5d37dfxZnveKBFPr7vEIwfV5ydrpiouTft8MVW6qNjfkaQphHSnvgQbpQ==
 
-primeicons@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/primeicons/-/primeicons-6.0.1.tgz#431fa7c79825934eefd62087d8e1faa6a9e376ad"
-  integrity sha512-KDeO94CbWI4pKsPnYpA1FPjo79EsY9I+M8ywoPBSf9XMXoe/0crjbUK7jcQEDHuc0ZMRIZsxH3TYLv4TUtHmAA==
+primeicons@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/primeicons/-/primeicons-7.0.0.tgz#6b25c3fdcb29bb745a3035bdc1ed5902f4a419cf"
+  integrity sha512-jK3Et9UzwzTsd6tzl2RmwrVY/b8raJ3QZLzoDACj+oTJ0oX7L9Hy+XnVwgo4QVKlKpnP/Ur13SXV/pVh4LzaDw==
 
-primereact@9.6.4:
-  version "9.6.4"
-  resolved "https://registry.yarnpkg.com/primereact/-/primereact-9.6.4.tgz#df535bf00c0b7e825d454ff4e4671c9848f37416"
-  integrity sha512-jW5t1Ct1coMGi1e+GWyLgVmxHQpEGtP3Pu2S/zsX8/yUgzDvn/ef0gaQ8l9/gihSnt/n4z4lFsHmn8Vb3j89yg==
+primereact@^10.8.4:
+  version "10.8.4"
+  resolved "https://registry.yarnpkg.com/primereact/-/primereact-10.8.4.tgz#c90938cd0575a2a21762bff4c65a5e93f24eafb3"
+  integrity sha512-jwkSzq6pOHayzEh+9dgk2M71gEZtoQakwPKVo3FUJO3eEX3SoAOchON+Xm1tGCNqtd66ca8RgOWQcpv3AQoMvg==
   dependencies:
     "@types/react-transition-group" "^4.4.1"
     react-transition-group "^4.4.1"
