@@ -29,7 +29,7 @@
     "sass": "^1.49.11",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
-    "stylelint": "^14.6.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-umbrellio": "^0.1.2",
     "yaml-loader": "^0.6.0"
