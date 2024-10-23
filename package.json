@@ -1,6 +1,6 @@
 {
   "name": "@cadolabs/sphere-ui",
-  "version": "6.0.0",
+  "version": "6.0.0-no-deps.1",
   "main": "dist/index.js",
   "license": "MIT",
   "repository": "https://github.com/Cado-Labs/sphere-ui",
@@ -21,8 +21,8 @@
   "dependencies": {
     "bignumber.js": "^9.1.1",
     "primeflex": "^3.3.1",
-    "primeicons": "^7.0.0",
-    "primereact": "^10.8.4",
+    "primeicons": "^6.0.1",
+    "primereact": "9.6.4",
     "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
