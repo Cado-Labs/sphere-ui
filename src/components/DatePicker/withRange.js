@@ -60,7 +60,13 @@ export const withRange = Component => {
 
     setAllTime = () => {
       const { month, day, year } = getPartsOfTime()
-      const newDate = [this.props.startCalendarDate, new Date(year, month, day)]
+      const startDate = new Date(this.props.startCalendarDate)
+
+      const startDay = startDate.getUTCDate()
+      const startMonth = startDate.getUTCMonth()
+      const startYear = startDate.getUTCFullYear()
+
+      const newDate = [new Date(startYear, startMonth, startDay), new Date(year, month, day)]
 
       this.onChange(newDate)
     }

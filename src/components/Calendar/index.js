@@ -12,7 +12,7 @@ export const Calendar = React.forwardRef((props, ref) => {
     }
 
     setTimeout(() => {
-      if (calendarRef.current) {
+      if (calendarRef?.current) {
         calendarRef.current.focus()
       }
     }, 0)
