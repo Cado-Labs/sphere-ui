@@ -13,18 +13,18 @@
 .p-paginator-first,
 .p-paginator-prev,
 .p-paginator-current {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   line-height: 1;
   user-select: none;
-  overflow: hidden;
-  position: relative;
 }
 
 .p-paginator {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
 }
