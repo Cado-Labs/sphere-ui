@@ -1,9 +1,9 @@
 .p-multiselect {
   width: 100%;
-  font-size: 0.8rem;
+  font-size: .8rem;
 
   &-label {
-    font-size: 0.9rem;
+    font-size: .9rem;
   }
 
   &-trigger {
@@ -11,7 +11,7 @@
   }
 
   & .p-multiselect-label {
-    padding-right: 0.9rem;
+    padding-right: .9rem;
   }
 
   & .p-multiselect-clear-icon {
@@ -26,8 +26,8 @@
   .p-button {
     justify-content: center;
     width: 100%;
-    padding: 0.5rem;
-    font-size: 0.9rem;
+    padding: .5rem;
+    font-size: .9rem;
     line-height: 1;
     border-radius: 0;
   }
@@ -44,7 +44,7 @@
 
   .p-multiselect-item {
     align-items: flex-start;
-    font-size: 0.9rem;
+    font-size: .9rem;
     line-height: 1.2;
   }
 
@@ -53,8 +53,8 @@
   }
 
   .p-multiselect-item-group {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.9rem;
+    padding: .5rem .75rem;
+    font-size: .9rem;
     font-weight: normal;
   }
 }
