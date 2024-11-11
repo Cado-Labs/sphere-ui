@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useRef, useImperativeHandle } from "react"
 import { Tree as PrimeTree } from "primereact/tree"
 
 import { pickDataAttributes } from "../../utils"
@@ -42,9 +42,22 @@ export const Tree = React.forwardRef(({
   ...props
 }, ref) => {
   const dataAttributes = pickDataAttributes(props)
+
+  const treeRef = useRef(null)
+
+  useImperativeHandle(ref, () => treeRef.current)
+
+  useEffect(() => {
+    const treeElement = treeRef.current?.getElement()
+    if (treeElement) {
+      treeElement.removeAttribute("role")
+      treeElement.querySelectorAll("[role]").forEach(el => el.removeAttribute("role"))
+    }
+  })
+
   return (
     <PrimeTree
-      ref={ref}
+      ref={treeRef}
       id={id}
       value={value}
       selectionMode={selectionMode}

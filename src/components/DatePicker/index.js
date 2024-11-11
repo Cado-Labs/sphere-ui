@@ -1,8 +1,9 @@
 import React, { useMemo, useState } from "react"
-import { Calendar } from "primereact/calendar"
 import { locale as primeLocale } from "primereact/api"
 
 import { getYearRange, filterTooltipOptions, pickDataAttributes } from "../../utils"
+
+import { Calendar } from "../Calendar"
 
 import { withRange } from "./withRange"
 import { MONTHS, START_DATE } from "./constants"
@@ -148,7 +149,10 @@ export const DatePicker = React.forwardRef(({
 
   const renderDatePicker = () => {
     return (
-      <Calendar {...getDefaultProps()} numberOfMonths={1} />
+      <Calendar
+        {...getDefaultProps()}
+        numberOfMonths={1}
+      />
     )
   }
 

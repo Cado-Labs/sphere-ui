@@ -6,19 +6,6 @@ import { filterTooltipOptions, shouldFilterSelectOptions, pickDataAttributes } f
 
 import { LOCALES_BUTTONS_SET } from "./constants"
 
-const proxyDisplay = display => {
-  const isChip = display === "chip"
-
-  if (isChip) {
-    // eslint-disable-next-line
-    console.warn(`The "display" prop value has been replaced with "comma"
-      to avoid incorrect behavior caused by a bug in the primereact library.
-      issue: https://github.com/primefaces/primereact/issues/7125`)
-  }
-
-  return isChip ? "comma" : display
-}
-
 export const MultiSelect = React.forwardRef(({
   options,
   value,
@@ -55,6 +42,8 @@ export const MultiSelect = React.forwardRef(({
   disabled = false,
   showClear = false,
   inputRef,
+  virtualizationThreshold = 30,
+  itemSize = 35,
   ...props
 }, ref) => {
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
@@ -127,6 +116,15 @@ export const MultiSelect = React.forwardRef(({
     )
   }
 
+  const virtualScrollProps = () => {
+    const hasMoreOptions = options && options.length > virtualizationThreshold
+    const isGroupDisplay = optionGroupLabel && optionGroupChildren
+
+    if (!hasMoreOptions || isGroupDisplay) return {}
+
+    return { virtualScrollerOptions: { itemSize } }
+  }
+
   return (
     <PrimeMultiSelect
       ref={ref}
@@ -164,13 +162,15 @@ export const MultiSelect = React.forwardRef(({
       disabled={disabled}
       selectedItemsLabel={selectedItemsLabel}
       showClear={showClear}
-      display={proxyDisplay(display)}
+      display={display}
       overlayVisible={overlayVisible}
       removeIcon={removeIcon()}
       tooltip={tooltip}
       tooltipOptions={filteredTooltipOptions}
       dataKey={dataKey}
       {...dataAttributes}
+      {...props}
+      {...virtualScrollProps()}
     />
   )
 })

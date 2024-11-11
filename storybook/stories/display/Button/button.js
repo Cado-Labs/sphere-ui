@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-import { Button } from "@cadolabs/sphere-ui"
+import { Button, ButtonGroup } from "@cadolabs/sphere-ui"
 import i18n from "@i18n"
 
 const I18N_PREFIX = "stories.button"
@@ -125,11 +125,11 @@ function ButtonExample () {
       <Button icon="pi pi-times" className="p-button-rounded p-button-danger p-button-outlined" />
 
       <h3>Button Set</h3>
-      <span className="p-buttonset">
+      <ButtonGroup>
         <Button label="Save" icon="pi pi-check" />
         <Button label="Delete" icon="pi pi-trash" />
         <Button label="Cancel" icon="pi pi-times" />
-      </span>
+      </ButtonGroup>
 
       <h3>Sizes</h3>
       <Button label="Small" icon="pi pi-check" className="p-button-sm"  />
@@ -146,7 +146,7 @@ export const button = {
     description: i18n.t(`${I18N_PREFIX}.content`),
   },
   code,
-  scope: { Button },
+  scope: { Button, ButtonGroup },
   descriptionProps: [
     { name: "label", type: "string", description: `${I18N_PREFIX}.props.label` },
     { name: "icon", type: "any", description: `${I18N_PREFIX}.props.icon` },

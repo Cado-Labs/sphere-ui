@@ -6,11 +6,11 @@ import { Button } from "../Button"
 
 import { LOCALES_RANGE_BLOCKS } from "./constants"
 
-export const withRange = Component =>
-  class extends React.Component {
+export const withRange = Component => {
+  const WrappedComponent = class extends React.Component {
     constructor (props) {
       super(props)
-      this.refCalendar = React.createRef()
+      this.refCalendar = props.forwardedRef || React.createRef()
     }
 
     clear = () => {
@@ -185,3 +185,8 @@ export const withRange = Component =>
       )
     }
   }
+
+  return React.forwardRef((props, ref) => (
+    <WrappedComponent {...props} forwardedRef={ref} />
+  ))
+}

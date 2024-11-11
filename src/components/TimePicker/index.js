@@ -1,7 +1,8 @@
 import React from "react"
-import { Calendar } from "primereact/calendar"
 
 import { pickDataAttributes } from "../../utils"
+
+import { Calendar } from "../Calendar"
 
 export const TimePicker = React.forwardRef(({
   id,

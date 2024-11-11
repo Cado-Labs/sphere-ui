@@ -77,7 +77,7 @@ pre[class*="language-"] {
 }
 
 .button-demo {
-  .p-button {
+  .p-button:not(.p-button-group .p-button) {
     margin-right: .5rem;
   }
 
