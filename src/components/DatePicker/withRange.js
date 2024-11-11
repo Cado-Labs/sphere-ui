@@ -6,11 +6,11 @@ import { Button } from "../Button"
 
 import { LOCALES_RANGE_BLOCKS } from "./constants"
 
-export const withRange = Component =>
-  class extends React.Component {
+export const withRange = Component => {
+  const WrappedComponent = class extends React.Component {
     constructor (props) {
       super(props)
-      this.refCalendar = React.createRef()
+      this.refCalendar = props.forwardedRef || React.createRef()
     }
 
     clear = () => {
@@ -60,7 +60,13 @@ export const withRange = Component =>
 
     setAllTime = () => {
       const { month, day, year } = getPartsOfTime()
-      const newDate = [this.props.startCalendarDate, new Date(year, month, day)]
+      const startDate = new Date(this.props.startCalendarDate)
+
+      const startDay = startDate.getUTCDate()
+      const startMonth = startDate.getUTCMonth()
+      const startYear = startDate.getUTCFullYear()
+
+      const newDate = [new Date(startYear, startMonth, startDay), new Date(year, month, day)]
 
       this.onChange(newDate)
     }
@@ -185,3 +191,8 @@ export const withRange = Component =>
       )
     }
   }
+
+  return React.forwardRef((props, ref) => (
+    <WrappedComponent {...props} forwardedRef={ref} />
+  ))
+}

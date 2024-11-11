@@ -1,8 +1,8 @@
 import React from "react"
-import { Calendar } from "primereact/calendar"
 
 import { getYearRange, filterTooltipOptions, pickDataAttributes } from "../../utils"
 
+import { Calendar } from "../Calendar"
 import { START_DATE } from "../DatePicker/constants"
 
 export const DateTimePicker = React.forwardRef(({

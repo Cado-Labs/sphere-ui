@@ -3,6 +3,10 @@ import "./index.scss"
 export * from "primereact/utils"
 export * from "primereact/api"
 
+export { IconField } from "primereact/iconfield"
+export { InputIcon } from "primereact/inputicon"
+export { ButtonGroup } from "primereact/buttongroup"
+
 export { Accordion, AccordionTab } from "./components/Accordion"
 export { AutoComplete } from "./components/AutoComplete"
 export { Avatar } from "./components/Avatar"

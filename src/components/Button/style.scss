@@ -1,14 +1,19 @@
-.p-button.p-component {
+.p-button:not(.p-paginator-page).p-component:not(.p-button-icon-only) {
   padding: .35rem .75rem;
   font-size: .9rem;
+
+  &.p-button-sm {
+    padding: .25rem .65rem;
+    font-size: .8rem;
+  }
+
+  &.p-button-lg {
+    padding: .5rem 1rem;
+    font-size: 1rem;
+  }
 }
 
-.p-button.p-button-sm.p-component {
-  padding: .25rem .65rem;
-  font-size: .8rem;
-}
-
-.p-button.p-button-lg.p-component {
-  padding: .5rem 1rem;
-  font-size: 1rem;
+.p-calendar .p-inputtext {
+  flex: 1 1 auto;
+  width: 1%;
 }
