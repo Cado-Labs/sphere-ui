@@ -1,7 +1,7 @@
 import React from "react"
 import { classNames as cn } from "primereact/utils"
 
-import { getPartsOfTime, pickDataAttributes } from "../../utils"
+import { getPartsOfTime, pickDataAttributes, getUTCPartsOfTime } from "../../utils"
 import { Button } from "../Button"
 
 import { LOCALES_RANGE_BLOCKS } from "./constants"
@@ -11,6 +11,18 @@ export const withRange = Component => {
     constructor (props) {
       super(props)
       this.refCalendar = props.forwardedRef || React.createRef()
+    }
+
+    componentDidMount () {
+      const { day, month, year } = getPartsOfTime()
+      const {
+        day: startDay,
+        month: startMonth,
+        year: startYear,
+      } = getUTCPartsOfTime(this.props.startCalendarDate)
+
+      const newValue = [new Date(startYear, startMonth, startDay), new Date(year, month, day)]
+      this.onChange(newValue)
     }
 
     clear = () => {
@@ -60,11 +72,11 @@ export const withRange = Component => {
 
     setAllTime = () => {
       const { month, day, year } = getPartsOfTime()
-      const startDate = new Date(this.props.startCalendarDate)
-
-      const startDay = startDate.getUTCDate()
-      const startMonth = startDate.getUTCMonth()
-      const startYear = startDate.getUTCFullYear()
+      const {
+        day: startDay,
+        month: startMonth,
+        year: startYear,
+      } = getUTCPartsOfTime(this.props.startCalendarDate)
 
       const newDate = [new Date(startYear, startMonth, startDay), new Date(year, month, day)]
 
@@ -185,6 +197,7 @@ export const withRange = Component => {
           panelClassName={panelClassName}
           selectionMode="range"
           ref={this.refCalendar}
+          startCalendarDate={this.props.startCalendarDate}
           footerTemplate={this.renderFooter}
           {...dataAttributes}
         />
