@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react"
 import { locale as primeLocale } from "primereact/api"
 
-import { getYearRange, filterTooltipOptions, pickDataAttributes } from "../../utils"
+import { getYearRange, filterTooltipOptions, pickDataAttributes, getTime } from "../../utils"
 
 import { Calendar } from "../Calendar"
 
@@ -50,11 +50,13 @@ export const DatePicker = React.forwardRef(({
   onShow,
   onHide,
   onVisibleChange,
+  utc,
   ...props
 }, ref) => {
   const defaultViewDate = value?.[0] || new Date()
   const [viewDate, setViewDate] = useState(defaultViewDate)
   const dataAttributes = pickDataAttributes(props)
+  const startDate = minDate || getTime(startCalendarDate, utc)
 
   const getDefaultProps = () => {
     return {
@@ -71,7 +73,7 @@ export const DatePicker = React.forwardRef(({
       disabled,
       monthNavigator,
       yearNavigator,
-      minDate,
+      minDate: startDate,
       maxDate,
       className,
       style,
@@ -126,7 +128,7 @@ export const DatePicker = React.forwardRef(({
         viewDate={viewDate}
         onViewDateChange={onViewDateChangeCustom}
         numberOfMonths={2}
-        startCalendarDate={startCalendarDate}
+        startCalendarDate={startDate}
       />
     )
   }
