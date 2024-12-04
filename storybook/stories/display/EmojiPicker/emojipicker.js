@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
-import i18n, {Trans} from "@i18n"
-import {Button, EmojiPicker, InputTextarea} from "@cadolabs/sphere-ui"
+import i18n, { Trans } from "@i18n"
+import { Button, EmojiPicker, InputTextarea } from "@cadolabs/sphere-ui"
 import React from "react"
 
 const I18N_PREFIX = "stories.emoji"
@@ -83,7 +83,7 @@ const emojiPickerExtra = (
         <Trans
           i18nKey={`${I18N_PREFIX}.content.start.body`}
           components={{
-            code: <code className="inline-code"/>,
+            code: <code className="inline-code" />,
             a: emojimartLink,
           }}
         />
