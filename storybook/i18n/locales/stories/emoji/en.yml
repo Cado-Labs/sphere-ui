@@ -1,0 +1,7 @@
+content:
+  main: Emoji is used to show emoji.
+  start:
+    title: Getting Started
+    body: The <code>EmojiPicker</code> component is based on <a>emoji-mart</a> Picker but is extended with additional translations.
+props:
+  language: "Available values: en, bs, bg, hr , ro, sr, sv, de, fi, fr, ja, nl, pt, ru, tr"
