@@ -60,5 +60,6 @@ export { Tooltip } from "./components/Tooltip"
 export { Tree } from "./components/Tree"
 export { TreeTable } from "./components/TreeTable"
 export { TriStateCheckbox } from "./components/TriStateCheckbox"
+export { EmojiPicker } from "./components/EmojiPicker"
 
 export { initLocales, changeLocale } from "./locales"
