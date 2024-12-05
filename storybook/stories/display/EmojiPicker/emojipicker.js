@@ -118,7 +118,7 @@ export const emojipicker = {
     { name: "noCountryFlags", type: "boolean", default: "false", description: `${I18N_PREFIX}.props.noCountryFlags` },
     { name: "noResultsEmoji", type: "string", default: "cry", description: `${I18N_PREFIX}.props.noResultsEmoji` },
     { name: "perLine", type: "number", default: 9, description: `${I18N_PREFIX}.props.perLine` },
-    { name: "previewEmoji", type: "number", default: "point_up", description: `${I18N_PREFIX}.props.previewEmoji` },
+    { name: "previewEmoji", type: "string", default: "point_up", description: `${I18N_PREFIX}.props.previewEmoji` },
     { name: "previewPosition", type: "string", default: "bottom", description: `${I18N_PREFIX}.props.previewPosition` },
     { name: "searchPosition", type: "string", default: "sticky", description: `${I18N_PREFIX}.props.searchPosition` },
     { name: "set", type: "string", default: "native", description: `${I18N_PREFIX}.props.set` },
