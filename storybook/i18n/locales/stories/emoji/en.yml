@@ -13,7 +13,7 @@ props:
   autoFocus: Whether the picker should automatically focus on the search input.
   categoryIcons: Custom category icons.
   dynamicWidth: Whether the picker should calculate perLine dynamically based on the width of <em-emoji-picker>. When enabled, perLine is ignored.
-  emojiButtonColors: 'An array of colors that affects the hover background color. f.e.: #f00, pink, rgba(155,223,88,.7)'
+  emojiButtonColors: "An array of colors that affects the hover background color. f.e.: #f00, pink, rgba(155,223,88,.7)"
   emojiButtonRadius: 'The radius of the emoji buttons. f.e.: 6px, 1em, 100%'
   emojiButtonSize: The size of the emoji buttons.
   emojiSize: The size of the emojis (inside the buttons).
@@ -28,8 +28,7 @@ props:
   previewPosition: 'The position of the preview. Available values: "top", "bottom", "none"'
   searchPosition: 'The position of the search input. Available values: "sticky", "static", "none"'
   set: 'The set of emojis to use for the picker. native being the most performant, others rely on spritesheets. Available values: "native", "apple", "facebook", "google", "twitter"'
-  skin: 'The emoji skin tone. Available values: 1, 2, 3, 4, 5, 6'
+  skin: "The emoji skin tone. Available values: 1, 2, 3, 4, 5, 6"
   skinTonePosition: 'The position of the skin tone selector. Available values: "preview", "search", "none"'
   theme: 'The color theme of the picker. Available values: "auto", "light", "dark"'
   getSpritesheetURL: A function that returns the URL of the spritesheet to use for the picker. It should be compatible with the data provided.
-
