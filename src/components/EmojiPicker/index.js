@@ -14,7 +14,6 @@ export const EmojiPicker = ({
   <Picker
     data={data}
     i18n={translations[language]}
-    searchPosition="none"
     exceptEmojis={EXCLUDED_EMOJIS}
     {...props}
   />

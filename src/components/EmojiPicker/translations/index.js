@@ -1,5 +1,18 @@
 import de from "@emoji-mart/data/i18n/de.json"
 import en from "@emoji-mart/data/i18n/en.json"
+import ar from "@emoji-mart/data/i18n/ar.json"
+import be from "@emoji-mart/data/i18n/be.json"
+import cs from "@emoji-mart/data/i18n/cs.json"
+import es from "@emoji-mart/data/i18n/es.json"
+import fa from "@emoji-mart/data/i18n/fa.json"
+import hi from "@emoji-mart/data/i18n/hi.json"
+import it from "@emoji-mart/data/i18n/it.json"
+import ko from "@emoji-mart/data/i18n/ko.json"
+import pl from "@emoji-mart/data/i18n/pl.json"
+import sa from "@emoji-mart/data/i18n/sa.json"
+import uk from "@emoji-mart/data/i18n/uk.json"
+import vi from "@emoji-mart/data/i18n/vi.json"
+import zh from "@emoji-mart/data/i18n/zh.json"
 import fi from "@emoji-mart/data/i18n/fi.json"
 import fr from "@emoji-mart/data/i18n/fr.json"
 import ja from "@emoji-mart/data/i18n/ja.json"
@@ -31,4 +44,17 @@ export default {
   pt,
   ru,
   tr,
+  ar,
+  be,
+  cs,
+  es,
+  fa,
+  hi,
+  it,
+  ko,
+  pl,
+  sa,
+  uk,
+  vi,
+  zh,
 }

@@ -4,4 +4,32 @@ content:
     title: Getting Started
     body: The <code>EmojiPicker</code> component is based on <a>emoji-mart</a> Picker but is extended with additional translations.
 props:
-  language: "Available values: en, bs, bg, hr , ro, sr, sv, de, fi, fr, ja, nl, pt, ru, tr"
+  language: 'Available values: "en","bs","bg","hr","ro","sr","sv","de","fi","fr","ja","nl","pt","ru","tr","ar","be","cs","es","fa","hi","it","ko","pl","sa","uk","vi","zh",'
+  categories: 'Categories to show in the picker. Order is respected. Available values: "frequent", "people", "nature", "foods", "activity", "places", "objects", "symbols", "flags"'
+  custom: Custom emojis.
+  onEmojiSelect: Callback when an emoji is selected.
+  onClickOutside: Callback when a click outside of the picker happens.
+  onAddCustomEmoji: Callback when the Add custom emoji button is clicked. The button will only be displayed if this callback is provided. It is displayed when search returns no results.
+  autoFocus: Whether the picker should automatically focus on the search input.
+  categoryIcons: Custom category icons.
+  dynamicWidth: Whether the picker should calculate perLine dynamically based on the width of <em-emoji-picker>. When enabled, perLine is ignored.
+  emojiButtonColors: 'An array of colors that affects the hover background color. f.e.: #f00, pink, rgba(155,223,88,.7)'
+  emojiButtonRadius: 'The radius of the emoji buttons. f.e.: 6px, 1em, 100%'
+  emojiButtonSize: The size of the emoji buttons.
+  emojiSize: The size of the emojis (inside the buttons).
+  exceptEmojis: List of emoji IDs that will be excluded from the picker.
+  icons: 'The type of icons to use for the picker. outline with light theme and solid with dark theme. Available values: "auto", "outline", "solid"'
+  maxFrequentRows: The maximum number of frequent rows to show. 0 will disable frequent category.
+  navPosition: 'The position of the navigation bar. Available values: "top", "bottom", "none"'
+  noCountryFlags: Whether to show country flags or not. If not provided, this is handled automatically (Windows doesn’t support country flags).
+  noResultsEmoji: The id of the emoji to use for the no results emoji.
+  perLine: The number of emojis to show per line.
+  previewEmoji: 'The id of the emoji to use for the preview when not hovering any emoji. "point_up" when preview position is bottom and "point_down" when preview position is top.'
+  previewPosition: 'The position of the preview. Available values: "top", "bottom", "none"'
+  searchPosition: 'The position of the search input. Available values: "sticky", "static", "none"'
+  set: 'The set of emojis to use for the picker. native being the most performant, others rely on spritesheets. Available values: "native", "apple", "facebook", "google", "twitter"'
+  skin: 'The emoji skin tone. Available values: 1, 2, 3, 4, 5, 6'
+  skinTonePosition: 'The position of the skin tone selector. Available values: "preview", "search", "none"'
+  theme: 'The color theme of the picker. Available values: "auto", "light", "dark"'
+  getSpritesheetURL: A function that returns the URL of the spritesheet to use for the picker. It should be compatible with the data provided.
+
