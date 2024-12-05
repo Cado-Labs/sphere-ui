@@ -14,7 +14,7 @@ props:
   categoryIcons: Custom category icons.
   dynamicWidth: Whether the picker should calculate perLine dynamically based on the width of <em-emoji-picker>. When enabled, perLine is ignored.
   emojiButtonColors: "An array of colors that affects the hover background color. f.e.: #f00, pink, rgba(155,223,88,.7)"
-  emojiButtonRadius: 'The radius of the emoji buttons. f.e.: 6px, 1em, 100%'
+  emojiButtonRadius: "The radius of the emoji buttons. f.e.: 6px, 1em, 100%"
   emojiButtonSize: The size of the emoji buttons.
   emojiSize: The size of the emojis (inside the buttons).
   exceptEmojis: List of emoji IDs that will be excluded from the picker.
