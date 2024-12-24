@@ -17,6 +17,7 @@ props:
   filter: Display an input field to filter the items on keyup.
   filterBy: Decides which field or fields (comma separated) to search against.
   optionDisabled: Disable of an option.
+  readOnly: Disables options (also removes the delete icon from chips when using display="chip").
   optionValue: "!DEPRECATED – use SelectItem API instead!Property name or getter function to use as the value of an option, defaults to the option itself when not defined."
   optionLabel: "!DEPRECATED – use SelectItem API instead! Name of the label field of an option when an arbitrary objects instead of SelectItems are used as options."
   optionGroupLabel: Property name or getter function to use as the label of an option group.

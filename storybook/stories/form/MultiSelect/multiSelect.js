@@ -122,6 +122,7 @@ export const multiSelect = {
     { name: "filter", type: "boolean", description: `${I18N_PREFIX}.props.filter` },
     { name: "filterBy", type: "string", description: `${I18N_PREFIX}.props.filterBy` },
     { name: "optionDisabled", type: "string/function", description: `${I18N_PREFIX}.props.optionDisabled` },
+    { name: "readOnly", type: "boolean", description: `${I18N_PREFIX}.props.readOnly` },
     { name: "optionLabel", type: "string", description: `${I18N_PREFIX}.props.optionLabel` },
     { name: "optionValue", type: "string", description: `${I18N_PREFIX}.props.optionValue` },
     { name: "optionGroupLabel", type: "string", description: `${I18N_PREFIX}.props.optionGroupLabel` },
