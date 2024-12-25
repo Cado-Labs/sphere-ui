@@ -1,0 +1,29 @@
+{
+  "search": "Pretraga",
+  "search_no_results_1": "O, ne!",
+  "search_no_results_2": "Taj emotikon se ne može pronaći",
+  "pick": "Odaberite emotikon...",
+  "add_custom": "Dodaj prilagođeni emotikon",
+  "categories": {
+    "activity": "Aktivnost",
+    "custom": "Prilagođeno",
+    "flags": "Zastave",
+    "foods": "Hrana i piće",
+    "frequent": "Često korišteni",
+    "nature": "Životinje i priroda",
+    "objects": "Predmeti",
+    "people": "Smajlići i ljudi",
+    "places": "Putovanja i mjesta",
+    "search": "Rezultati pretrage",
+    "symbols": "Simboli"
+  },
+  "skins": {
+    "choose": "Odaberite zadanu boju kože",
+    "1": "Zadano",
+    "2": "Svijetla",
+    "3": "Srednje svijetla",
+    "4": "Srednja",
+    "5": "Srednje tamna",
+    "6": "Tamna"
+  }
+}

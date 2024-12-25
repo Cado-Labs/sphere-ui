@@ -1,0 +1,29 @@
+{
+  "search": "Căutare",
+  "search_no_results_1": "O, nu!",
+  "search_no_results_2": "Acel emoji nu a putut fi găsit",
+  "pick": "Alegere emoji...",
+  "add_custom": "Adăugare emoji personalizat",
+  "categories": {
+    "activity": "Activitate",
+    "custom": "Personalizate",
+    "flags": "Drapele",
+    "foods": "Mâncare și Băutură",
+    "frequent": "Utilizate frecvent",
+    "nature": "Animale și Natură",
+    "objects": "Obiecte",
+    "people": "Zâmbete și Oameni",
+    "places": "Călătorii și Locuri",
+    "search": "Rezultate căutare",
+    "symbols": "Simboluri"
+  },
+  "skins": {
+    "choose": "Alegere nuanță de piele prestabilită",
+    "1": "Ton Prestabilit",
+    "2": "Ton Deschis",
+    "3": "Ton Semi-deschis",
+    "4": "Ton Mediu",
+    "5": "Ton Semi-închis",
+    "6": "Ton Închis"
+  }
+}
