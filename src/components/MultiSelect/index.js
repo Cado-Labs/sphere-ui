@@ -37,6 +37,7 @@ export const MultiSelect = React.forwardRef(({
   tooltipOptions,
   dataKey,
   optionDisabled = null,
+  readOnly = false,
   name = null,
   id = null,
   disabled = false,
@@ -82,11 +83,14 @@ export const MultiSelect = React.forwardRef(({
   }
 
   const isOptionDisabled = () => {
-    if (!optionDisabled) return false
-
     const isFunction = optionDisabled instanceof Function
+    const isDisabled = isFunction ? optionDisabled() : !!optionDisabled
 
-    return isFunction ? optionDisabled() : optionDisabled
+    return isDisabled || readOnly
+  }
+
+  const optionDisabledWithReadOnly = () => {
+    return readOnly ? () => false : optionDisabled
   }
 
   const removeIcon = () => {
@@ -125,12 +129,23 @@ export const MultiSelect = React.forwardRef(({
     return { virtualScrollerOptions: { itemSize } }
   }
 
+  const selectedItemTemplateProp = () => {
+    const isTemplateUsed = display === "chip" && isOptionDisabled()
+
+    const templateFunction = option => {
+      if (!option) return null
+      return <div className="p-multiselect-token">{option}</div>
+    }
+
+    return { selectedItemTemplate: isTemplateUsed ? templateFunction : null }
+  }
+
   return (
     <PrimeMultiSelect
       ref={ref}
       inputRef={inputRef}
       options={options}
-      optionDisabled={optionDisabled}
+      optionDisabled={optionDisabledWithReadOnly}
       optionLabel={optionLabel}
       optionValue={optionValue}
       optionGroupLabel={optionGroupLabel}
@@ -169,6 +184,7 @@ export const MultiSelect = React.forwardRef(({
       tooltipOptions={filteredTooltipOptions}
       dataKey={dataKey}
       {...dataAttributes}
+      {...selectedItemTemplateProp()}
       {...props}
       {...virtualScrollProps()}
     />
