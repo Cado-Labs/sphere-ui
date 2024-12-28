@@ -3,6 +3,8 @@ import { Picker } from "emoji-mart"
 import data from "@emoji-mart/data"
 
 import translations from "./translations"
+
+// because it has broken and unnecessary
 const EXCLUDED_EMOJIS = ["relaxed"]
 
 // @emoji-mart/react has a bug described in https://github.com/missive/emoji-mart/issues/812
