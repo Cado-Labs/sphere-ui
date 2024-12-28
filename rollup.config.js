@@ -4,10 +4,12 @@ import commonjs from "@rollup/plugin-commonjs"
 import json from "@rollup/plugin-json"
 import { nodeResolve } from "@rollup/plugin-node-resolve"
 
-export default {
-  input: "src/index.js",
+const components = ["EmojiPicker"]
+
+const createConfig = (input, output) => ({
+  input,
   output: {
-    file: "dist/index.js",
+    file: output,
     format: "es",
     inlineDynamicImports: true,
   },
@@ -21,4 +23,11 @@ export default {
     commonjs(),
     scss(),
   ],
-}
+})
+
+const config = [
+  ...components.map(name => createConfig(`src/components/${name}/index.js`, `dist/${name}.js`)),
+  createConfig("src/index.js", "dist/index.js"),
+]
+
+export default config
