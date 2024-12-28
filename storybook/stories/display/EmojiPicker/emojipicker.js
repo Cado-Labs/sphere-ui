@@ -3,7 +3,7 @@ import i18n, { Trans } from "@i18n"
 import { Button, EmojiPicker, InputTextarea } from "@cadolabs/sphere-ui"
 import React from "react"
 
-const I18N_PREFIX = "stories.emoji"
+const I18N_PREFIX = "stories.emojiPicker"
 
 const code = `
 function Example () {

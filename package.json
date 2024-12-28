@@ -2,6 +2,11 @@
   "name": "@cadolabs/sphere-ui",
   "version": "6.2.1",
   "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./dist/index.css": "./dist/index.css",
+    "./EmojiPicker": "./dist/EmojiPicker.js"
+  },
   "license": "MIT",
   "repository": "https://github.com/Cado-Labs/sphere-ui",
   "homepage": "https://cado-labs.github.io/sphere-ui",
