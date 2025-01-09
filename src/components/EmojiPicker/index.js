@@ -9,7 +9,7 @@ const EXCLUDED_EMOJIS = ["relaxed"]
 
 // @emoji-mart/react has a bug described in https://github.com/missive/emoji-mart/issues/812
 // it`s a custom react-wrapper with fix from https://github.com/missive/emoji-mart/pull/958
-export const EmojiPicker = props => {
+const EmojiPicker = props => {
   const language = props?.language || "en"
   const propsWithExtras = {
     data,

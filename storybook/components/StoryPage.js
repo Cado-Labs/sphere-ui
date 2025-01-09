@@ -23,6 +23,8 @@ export function StoryPage ({
 }) {
   const renderContent = () => {
     const { t } = useTranslation()
+    const importPath =
+      content?.customImportPath ?? `import { ${component} } from "@cadolabs/sphere-ui"`
 
     useEffect(() => {
       updateLocaleOptions({ firstDayOfWeek: 1 }, "en")
@@ -39,7 +41,7 @@ export function StoryPage ({
             <div className="title">{t("components.content.import")}</div>
             <Highlighter
               language="jsx"
-              code={`import { ${component} } from "@cadolabs/sphere-ui"`}
+              code={importPath}
             />
           </div>
         )}

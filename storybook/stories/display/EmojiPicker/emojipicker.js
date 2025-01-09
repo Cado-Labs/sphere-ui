@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import i18n, { Trans } from "@i18n"
-import { Button, EmojiPicker, InputTextarea } from "@cadolabs/sphere-ui"
+import { Button, InputTextarea } from "@cadolabs/sphere-ui"
+import EmojiPicker from "@cadolabs/sphere-ui/EmojiPicker"
 import React from "react"
 
 const I18N_PREFIX = "stories.emojiPicker"
@@ -97,6 +98,7 @@ export const emojipicker = {
   content: {
     description: i18n.t(`${I18N_PREFIX}.content.main`),
     extra: emojiPickerExtra,
+    customImportPath: `import EmojiPicker from "@cadolabs/sphere-ui/EmojiPicker"`,
   },
   code,
   scope: { EmojiPicker, Button, InputTextarea },
