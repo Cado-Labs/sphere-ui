@@ -1,8 +1,6 @@
 /* eslint-disable max-len */
 import { IconField, InputIcon, InputText } from "@cadolabs/sphere-ui"
-import { Highlighter } from "@components"
-
-import i18n, { Trans } from "@i18n"
+import i18n from "@i18n"
 
 const I18N_PREFIX = "stories.iconfield"
 
