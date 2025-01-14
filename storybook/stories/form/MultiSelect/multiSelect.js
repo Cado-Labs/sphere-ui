@@ -49,6 +49,7 @@ function MultiSelectExample () {
   ];
 
   const [value, setValue] = React.useState(null)
+  const [valueWithVirt, setValueWithVirt] = React.useState(null)
   const [selectedCities, setSelectedCities] = React.useState(null);
 
   return (
@@ -60,6 +61,17 @@ function MultiSelectExample () {
             value={value}
             onChange={(e) => setValue(e.value)}
             options={citySelectItems}
+          />
+      </div>
+      <div className="s-field-col-3">
+        <label htmlFor="city">MultiSelect with options virtualization</label>
+          <MultiSelect
+            name="city"
+            value={valueWithVirt}
+            onChange={(e) => setValueWithVirt(e.value)}
+            options={citySelectItems}
+            virtualizationThreshold={3}
+            itemSize={60}
           />
       </div>
       <div className="s-field-col-3">
@@ -140,6 +152,8 @@ export const multiSelect = {
     { name: "tooltipOptions", type: "object", description: `${I18N_PREFIX}.props.tooltipOptions` },
     { name: "dataKey", type: "string", description: `${I18N_PREFIX}.props.dataKey` },
     { name: "overlayVisible", type: "boolean", default: false, description: `${I18N_PREFIX}.props.overlayVisible` },
+    { name: "virtualizationThreshold", type: "number", default: 30, description: `${I18N_PREFIX}.props.virtualizationThreshold` },
+    { name: "itemSize", type: "number", default: 35, description: `${I18N_PREFIX}.props.itemSize` },
   ],
   eventDescriptionProps: [
     { name: "onChange", params: onChangeParams, description: `${I18N_PREFIX}.props.onChange` },

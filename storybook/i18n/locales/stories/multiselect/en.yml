@@ -35,3 +35,5 @@ props:
   tooltipOptions: Configuration of the tooltip, refer to the tooltip documentation for more information.
   dataKey: A property to uniquely match the value in options for better performance.
   overlayVisible: Specifies the visibility of the overlay panel.
+  virtualizationThreshold: The number of elements after which the options list will be virtualized
+  itemSize: Dimensions of an item (works only for virtualized options list)

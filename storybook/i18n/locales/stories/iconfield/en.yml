@@ -1,0 +1,6 @@
+content:
+  main: IconField is an extension to standard input element with theming and keyfiltering.
+props:
+  children: Used to get the child elements of the component
+  iconPosition: Position of the icon
+  unstyled: When enabled, it removes component related styles in the core
