@@ -3,7 +3,7 @@ import { Picker } from "emoji-mart"
 
 import data from "@emoji-mart/data"
 
-import { replaceAsciiWithNativeEmoji } from "./asciiToEmojiConverter"
+import { asciiToEmoji } from "./asciiToEmoji"
 
 import translations from "./translations"
 
@@ -43,4 +43,4 @@ const EmojiPicker = props => {
 }
 
 export default EmojiPicker
-export { replaceAsciiWithNativeEmoji }
+export { asciiToEmoji }

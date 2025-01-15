@@ -135,7 +135,14 @@ const getByAscii = asciiKey => {
   return data.emojis[id]?.skins[0]?.native
 }
 
-export const replaceAsciiWithNativeEmoji = (inputString, options = {}) => {
+/**
+ * @param {string} inputString text that might contain ascii emoji
+ * @param {Object} [options]
+ * @param {"before" | "after" | "around"} [options.needSpacing]
+ * @returns {string} text with replacements
+ */
+export const asciiToEmoji = (inputString, options = {}) => {
+  if (typeof inputString !== "string") throw Error("inputString must be a string!")
   const { needSpacing } = options
 
   const needSpacingBeforeRegex = "(?<=\\s|^)"
@@ -150,7 +157,7 @@ export const replaceAsciiWithNativeEmoji = (inputString, options = {}) => {
     case "after":
       condition = `(${asciiKeysRegex})${needSpacingAfterRegex}`
       break
-    case "both":
+    case "around":
       condition = `${needSpacingBeforeRegex}(${asciiKeysRegex})${needSpacingAfterRegex}`
       break
   }

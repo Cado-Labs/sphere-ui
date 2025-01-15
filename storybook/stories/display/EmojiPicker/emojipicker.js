@@ -1,15 +1,18 @@
 /* eslint-disable max-len */
 import i18n, { Trans } from "@i18n"
-import { Button, InputTextarea } from "@cadolabs/sphere-ui"
-import EmojiPicker from "@cadolabs/sphere-ui/EmojiPicker"
+import { Button, InputTextarea, InputSwitch, Dropdown } from "@cadolabs/sphere-ui"
+import { Highlighter } from "@components"
+import EmojiPicker, { asciiToEmoji } from "@cadolabs/sphere-ui/EmojiPicker"
 import React from "react"
 
 const I18N_PREFIX = "stories.emojiPicker"
 
 const code = `
 function Example () {
+  const textWithAscii = "te=)st =)test test=) =)"
   const inputRef = React.useRef()
   const [show, setShow] = React.useState(false)
+  const [isAsciiReplaceEnable, setAsciiReplaceEnable] = React.useState(false)
   const [inputValue, setInputValue] = React.useState("")
   
   const handleEmojiPick = event => {
@@ -32,34 +35,42 @@ function Example () {
   }
   
   return (
-    <div className="p-card s-container mb-3 p-3">
-      <div className="flex">
-        <InputTextarea
-          ref={inputRef}
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          className="w-30rem h-5rem"
-        />
-        <div className="inline-block relative">
-          <Button
-            type="button"
-            icon="pi pi-face-smile"
-            rounded
-            text
-            raised
-            severity="secondary"
-            aria-label="Emoji"
-            onClick={() => setShow(!show)}
-            className="ml-4"
+    <div>
+      <div className="p-card s-container mb-3 p-3">
+        <h3>Picker</h3>
+        <div className="flex">
+          <InputTextarea
+            ref={inputRef}
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            className="w-30rem h-5rem"
           />
-          {show && (
-            <div className="absolute z-2 right-0">
-              <EmojiPicker
-                onEmojiSelect={handleEmojiPick}
-              />
-            </div>
-          )}
+          <div className="inline-block relative">
+            <Button
+              type="button"
+              icon="pi pi-face-smile"
+              rounded
+              text
+              raised
+              severity="secondary"
+              aria-label="Emoji"
+              onClick={() => setShow(!show)}
+              className="ml-4"
+            />
+            {show && (
+              <div className="absolute z-2 right-0">
+                <EmojiPicker
+                  onEmojiSelect={handleEmojiPick}
+                />
+              </div>
+            )}
+          </div>
         </div>
+      </div>
+      <div className="p-card s-container mb-3 p-3">
+        <h3>ASCII replacement utility</h3>
+        <InputSwitch checked={isAsciiReplaceEnable} onChange={e => setAsciiReplaceEnable(e.value)} />
+        <p>{isAsciiReplaceEnable ? asciiToEmoji(textWithAscii) : textWithAscii}</p>
       </div>
     </div>
   )
@@ -76,19 +87,49 @@ const emojimartLink = (
   </a>
 )
 
+const asciiConverterExamples = `
+import { asciiToEmoji } from "@cadolabs/sphere-ui/EmojiPicker"
+
+const TEXT_EXAMPLE = "te=)st =)test test=) =)"
+
+asciiToEmoji(text)
+// "te🙂st 🙂test test🙂 🙂"
+
+asciiToEmoji(text, { needSpacing: "before" })
+// "te=)st 🙂test test=) 🙂"
+
+asciiToEmoji(text, { needSpacing: "after" })
+// "te=)st =)test test🙂 🙂"
+
+asciiToEmoji(text, { needSpacing: "around" })
+// "te=)st =)test test=) 🙂"
+`
+
 const emojiPickerExtra = (
   <div>
     <div className="mb-3">
       <div className="title">{i18n.t(`${I18N_PREFIX}.content.start.title`)}</div>
       <p>
         <Trans
-          i18nKey={`${I18N_PREFIX}.content.start.body`}
+          i18nKey={`${I18N_PREFIX}.content.start.component`}
           components={{
             code: <code className="inline-code" />,
             a: emojimartLink,
           }}
         />
       </p>
+    </div>
+    <div className="mb-3">
+      <div className="title">{i18n.t(`${I18N_PREFIX}.content.converter.title`)}</div>
+      <p>
+        <Trans
+          i18nKey={`${I18N_PREFIX}.content.converter.description`}
+          components={{
+            code: <code className="inline-code" />,
+          }}
+        />
+      </p>
+      <Highlighter language="js" code={asciiConverterExamples}/>
     </div>
   </div>
 )
@@ -101,7 +142,7 @@ export const emojipicker = {
     customImportPath: `import EmojiPicker from "@cadolabs/sphere-ui/EmojiPicker"`,
   },
   code,
-  scope: { EmojiPicker, Button, InputTextarea },
+  scope: { EmojiPicker, Button, InputTextarea, InputSwitch, Dropdown, asciiToEmoji },
   descriptionProps: [
     { name: "language", type: "string", default: "en", description: `${I18N_PREFIX}.props.language` },
     { name: "categories", type: "array", default: "[ ]", description: `${I18N_PREFIX}.props.categories` },
