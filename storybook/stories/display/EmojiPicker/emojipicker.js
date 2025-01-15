@@ -129,7 +129,7 @@ const emojiPickerExtra = (
           }}
         />
       </p>
-      <Highlighter language="js" code={asciiConverterExamples}/>
+      <Highlighter language="js" code={asciiConverterExamples} />
     </div>
   </div>
 )
