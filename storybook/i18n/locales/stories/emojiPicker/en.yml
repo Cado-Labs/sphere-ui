@@ -2,7 +2,10 @@ content:
   main: Emoji is used to show emoji.
   start:
     title: Getting Started
-    body: The <code>EmojiPicker</code> component is based on <a>emoji-mart</a> Picker but is extended with additional translations.
+    component: The <code>EmojiPicker</code> component is based on <a>emoji-mart</a> Picker but is extended with additional translations.
+  converter:
+    title: Additional utility
+    description: The <code>asciiToEmoji</code> function replaces ASCII emojis with native browser emojis in the text.
 props:
   language: 'Available values: "en","bs","bg","hr","ro","sr","sv","de","fi","fr","ja","nl","pt","ru","tr","ar","be","cs","es","fa","hi","it","ko","pl","sa","uk","vi","zh",'
   categories: 'Categories to show in the picker. Order is respected. Available values: "frequent", "people", "nature", "foods", "activity", "places", "objects", "symbols", "flags"'

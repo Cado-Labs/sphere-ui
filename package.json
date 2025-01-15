@@ -1,6 +1,6 @@
 {
   "name": "@cadolabs/sphere-ui",
-  "version": "6.2.2",
+  "version": "6.2.3",
   "main": "dist/index.js",
   "exports": {
     ".": "./dist/index.js",
@@ -21,7 +21,8 @@
     "sb:lint": "bin/storybook lint",
     "sb:eslint": "bin/storybook eslint",
     "sb:stylelint": "bin/storybook stylelint",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "test": "jest"
   },
   "dependencies": {
     "@emoji-mart/data": "^1.2.1",
@@ -46,11 +47,13 @@
     "eslint-config-umbrellio": "^5.0.1",
     "eslint-formatter-table": "^7.32.1",
     "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "25.3.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prefer-object-spread": "^1.2.1",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.29.4",
+    "jest": "^29.7.0",
     "postcss": "^8.4.31",
     "postcss-scss": "^4.0.3",
     "rollup": "^2.79.2",
