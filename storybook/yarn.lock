@@ -1217,10 +1217,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cadolabs/sphere-ui@6.2.2":
-  version "6.2.2"
-  resolved "https://registry.yarnpkg.com/@cadolabs/sphere-ui/-/sphere-ui-6.2.2.tgz#a65b424aea27fd7f5955df47f28a08b502196614"
-  integrity sha512-n6DoE30/D8QgdKIZ4dD434OCHFICcxS+vgLw1oAqH8PsF+o/kOW9g/fsvQYYFBKdHdnbHwqOOU08839tJfwglw==
+"@cadolabs/sphere-ui@6.2.3":
+  version "6.2.3"
+  resolved "https://registry.yarnpkg.com/@cadolabs/sphere-ui/-/sphere-ui-6.2.3.tgz#421c1ee2d01f717336b4ea7d9062416bbf685de0"
+  integrity sha512-AQlOf9u2Dv/SykIVssQcldUUpIw3b81UbW1aSgfMAdGFKEp8b039VrmewpfrHQFwTn/UDWgGe9DhDaFi6HZA+Q==
   dependencies:
     "@emoji-mart/data" "^1.2.1"
     bignumber.js "^9.1.1"
