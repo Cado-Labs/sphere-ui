@@ -82,19 +82,12 @@ export const MultiSelect = React.forwardRef(({
     onFooterButtonClick(newValue)
   }
 
-  const isOptionDisabled = () => {
-    const isFunction = optionDisabled instanceof Function
-    const isDisabled = isFunction ? optionDisabled() : !!optionDisabled
-
-    return isDisabled || readOnly
-  }
-
   const optionDisabledWithReadOnly = () => {
-    return readOnly ? () => false : optionDisabled
+    return readOnly ? () => true : optionDisabled
   }
 
   const removeIcon = () => {
-    return isOptionDisabled() ? false : "pi pi-times-circle"
+    return readOnly ? false : "pi pi-times-circle"
   }
 
   const renderHeader = () => {
@@ -104,7 +97,7 @@ export const MultiSelect = React.forwardRef(({
   const renderFooter = () => {
     const translations = LOCALES_BUTTONS_SET[locale().locale]
 
-    if (isOptionDisabled()) {
+    if (readOnly) {
       return null
     }
 
@@ -130,7 +123,7 @@ export const MultiSelect = React.forwardRef(({
   }
 
   const selectedItemTemplateProp = () => {
-    const isTemplateUsed = display === "chip" && isOptionDisabled()
+    const isTemplateUsed = display === "chip" && readOnly
 
     const templateFunction = option => {
       if (!option) return null
@@ -145,7 +138,7 @@ export const MultiSelect = React.forwardRef(({
       ref={ref}
       inputRef={inputRef}
       options={options}
-      optionDisabled={optionDisabledWithReadOnly}
+      optionDisabled={optionDisabledWithReadOnly()}
       optionLabel={optionLabel}
       optionValue={optionValue}
       optionGroupLabel={optionGroupLabel}
