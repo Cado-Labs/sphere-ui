@@ -1,6 +1,6 @@
 {
   "name": "@cadolabs/sphere-ui",
-  "version": "6.2.3",
+  "version": "6.3.0",
   "main": "dist/index.js",
   "exports": {
     ".": "./dist/index.js",
