@@ -1,0 +1,28 @@
+content: Menubar also known as Navbar, is a horizontal menu component.
+props:
+  children: Used to get the child elements of the component.
+  start: The template of starting element.
+  end: The template of trailing element.
+  model: An array of menuitems.
+  menuIcon: Icon of the menu.
+  submenuIcon: Icon of the submenu.
+events:
+  original: Browser event.
+  item: Selected item instance.
+footer:
+  title: Defines model of MenuItem API.
+menuitems:
+  id: Unique identifier of the menuitem.
+  label: Text of the menuitem.
+  icon: Icon of the item. It can be a string, JSX.Element or method.
+  url: External link to navigate when item is clicked.
+  items: An array of children the menuitems.
+  expanded: Visibility of submenu.
+  disabled: When set as true, disables the menuitem.
+  visible: When set as false, hides the menuitem.
+  target: Specifies where to open the linked document.
+  separator: Defines the item as a separator.
+  style: Inline style of the menuitem.
+  className: Style class of the menuitem.
+  template: Template of the menuitem.
+  data: The data of the menuitem.

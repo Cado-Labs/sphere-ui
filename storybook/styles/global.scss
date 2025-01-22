@@ -8,14 +8,13 @@
 html,
 body {
   font-family: var(--font-family);
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 14px;
   color: var(--text-color);
   background: var(--surface-cart);
 }
 
 .content-layouts {
-  font-size: 14px;
+  font-size: 1rem;
   background: url("https://www.primefaces.org/primeflex/assets/images/tiny-checkers.png");
   background-color: #f2f5f8;
 }
@@ -42,7 +41,7 @@ body {
   margin-top: 10px;
 
   .p-chip-text {
-    font-size: 14px;
+    font-size: 1rem;
   }
 }
 
@@ -52,11 +51,15 @@ body {
 }
 
 .live-content {
-  font-size: 14px;
+  font-size: 1rem;
+
+  .p-tag .p-tag-icon {
+    margin-right: 0;
+  }
 }
 
 .code-toolbar {
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 p {
@@ -65,8 +68,7 @@ p {
   text-align: justify;
 }
 
-a {
-  color: var(--blue-700);
+a:not(.p-menuitem-content a) {
   text-decoration: none;
   cursor: pointer;
   border-bottom: .5px solid var(--surface-500);
@@ -138,4 +140,8 @@ pre[class*="language-"] {
     display: inline;
     margin-right: .5rem;
   }
+}
+
+.p-datatable-sm {
+  font-size: 1rem !important;
 }

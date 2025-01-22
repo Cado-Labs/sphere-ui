@@ -209,7 +209,7 @@ export const accordion = {
         title={i18n.t(`${I18N_PREFIX}.header.events`)}
         description={[
           { name: "onTabOpen", params: [{ name: "event.originalEvent", description: "browser event" }, { name: "event.index", description: "Index or indexes of the tab (number or array of numbers)" }], description: `${I18N_PREFIX}.props.events.onTabOpen` },
-          { name: "onTabClosed", params: [{ name: "event.originalEvent", description: "browser event" }, { name: "event.index", description: "Index or indexes of the tab" }], description: `${I18N_PREFIX}.props.events.onTabClosed` },
+          { name: "onTabClose", params: [{ name: "event.originalEvent", description: "browser event" }, { name: "event.index", description: "Index or indexes of the tab" }], description: `${I18N_PREFIX}.props.events.onTabClose` },
           { name: "onTabChange", params: [{ name: "event.originalEvent", description: "browser event" }, { name: "event.index", description: "Index or indexes of the tab" }], description: `${I18N_PREFIX}.props.events.onTabChange` },
         ]}
       />
