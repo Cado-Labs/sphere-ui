@@ -24,8 +24,10 @@ export function LiveExample ({ code, scope }) {
         <LivePreview className="content-layouts p-5" />
         <br />
         <div className="live-content">
-          <UI.Tooltip target=".tag" />
-          <span className="tag" data-pr-tooltip={t("hover.description")}>
+          <UI.Tooltip target=".tag">
+            {t("hover.description")}
+          </UI.Tooltip>
+          <span>
             <UI.Tag className="border-noround tag" icon="pi pi-info-circle" severity="info">
               {t("hover.title")}
             </UI.Tag>
