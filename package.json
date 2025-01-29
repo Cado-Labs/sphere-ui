@@ -5,7 +5,8 @@
   "exports": {
     ".": "./dist/index.js",
     "./dist/index.css": "./dist/index.css",
-    "./EmojiPicker": "./dist/EmojiPicker.js"
+    "./EmojiPicker": "./dist/EmojiPicker.js",
+    "./themes/*": "./dist/themes/*"
   },
   "license": "MIT",
   "repository": "https://github.com/Cado-Labs/sphere-ui",
@@ -54,9 +55,9 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.29.4",
     "jest": "^29.7.0",
-    "postcss": "^8.4.31",
     "postcss-scss": "^4.0.3",
     "rollup": "^2.79.2",
+    "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-scss": "^3.0.0",
     "sass": "^1.49.11",
     "stylelint": "^15.10.1",

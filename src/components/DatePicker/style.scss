@@ -3,8 +3,8 @@
 
   & &-header {
     height: 2.5rem;
-    padding: .25rem 0;
-    font-size: .9rem;
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
   }
 
   & &-header &-prev,
@@ -15,8 +15,8 @@
 
   &-month,
   &-year {
-    padding: .125rem !important;
-    font-size: .9rem;
+    padding: 0.125rem !important;
+    font-size: 0.9rem;
 
     &:hover {
       color: var(--text-color) !important;
@@ -25,10 +25,10 @@
 
   table {
     margin: 0;
-    font-size: .7rem;
+    font-size: 0.7rem;
 
     th {
-      padding: .5rem;
+      padding: 0.5rem;
     }
 
     td {
@@ -41,7 +41,7 @@
   }
 
   &-other-month {
-    opacity: .6;
+    opacity: 0.6;
   }
 
   &-title {
@@ -54,11 +54,11 @@
     }
 
     .p-datepicker-group:first-child {
-      border-right: 1px solid #dee2e6 !important;
+      border-right: 1px solid var(--surface-d) !important;
     }
 
     .p-datepicker-group-container {
-      padding-left: .5rem;
+      padding-left: 0.5rem;
     }
 
     .p-datepicker-group:first-child {
@@ -81,7 +81,7 @@
       }
 
       .p-datepicker-month-name {
-        margin-right: .5rem;
+        margin-right: 0.5rem;
       }
     }
   }
@@ -91,20 +91,24 @@
     flex-direction: row-reverse;
 
     .p-datepicker-footer {
-      padding-right: .5rem;
-      border-right: 1px solid #dee2e6;
+      padding-right: 0.5rem;
+      border-right: 1px solid var(--surface-d);
 
       .p-datepicker-range-buttons {
         width: 90px;
-        font-size: .7rem;
-        background: #fff;
+        font-size: 0.7rem;
+        background: var(--surface-a);
       }
 
       .p-button {
-        padding: .3rem .25rem;
-        margin-bottom: .3rem !important;
-        font-size: .7rem;
+        padding: 0.3rem 0.25rem;
+        margin-bottom: 0.3rem !important;
+        font-size: 0.7rem;
         line-height: 1;
+
+        &-label {
+          font-size: 0.8rem;
+        }
       }
     }
   }
@@ -121,8 +125,8 @@
     &:hover,
     &:active {
       color: var(--text-color);
-      background: #e9ecef;
-      border: 1px solid #ced4da;
+      background: var(--surface-50);
+      border: 1px solid var(--surface-d);
       border-left: 0;
     }
   }
