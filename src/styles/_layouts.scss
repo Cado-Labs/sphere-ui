@@ -2,7 +2,7 @@
   @extend .p-2;
   @extend .border-noround;
   @extend .border-bottom-1;
-  border-bottom-color: #e6e9ec;
+  border-bottom-color: var(--surface-d);
 }
 
 .s-grid {

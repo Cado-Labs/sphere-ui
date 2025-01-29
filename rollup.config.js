@@ -3,8 +3,19 @@ import babel from "@rollup/plugin-babel"
 import commonjs from "@rollup/plugin-commonjs"
 import json from "@rollup/plugin-json"
 import { nodeResolve } from "@rollup/plugin-node-resolve"
+import copy from "rollup-plugin-copy"
 
 const components = ["EmojiPicker"]
+const themes = [
+  "blue",
+  "green",
+  "indigo",
+  "pink",
+  "amber",
+  "cyan",
+]
+
+const mode = ["dark", "light"]
 
 const createConfig = (input, output) => ({
   input,
@@ -22,6 +33,14 @@ const createConfig = (input, output) => ({
     babel({ babelHelpers: "runtime", plugins: ["@babel/plugin-transform-runtime"] }),
     commonjs(),
     scss(),
+    copy({
+      targets: themes.flatMap(theme =>
+        mode.map(type => ({
+          src: `node_modules/primereact/resources/themes/lara-${type}-${theme}/*`,
+          dest: `dist/themes/${type}/${theme}`
+        }))
+      )
+    })
   ],
 })
 
