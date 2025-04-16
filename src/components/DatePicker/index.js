@@ -42,7 +42,6 @@ export const DatePicker = React.forwardRef(({
   baseZIndex = 50,
   keepInvalid = true,
   includeRangeButtons = [],
-  excludeRangeButtons = [],
   formatDateTime,
   parseDateTime,
   onFocus,
@@ -132,7 +131,6 @@ export const DatePicker = React.forwardRef(({
         numberOfMonths={2}
         startCalendarDate={startDate}
         includeRangeButtons={includeRangeButtons}
-        excludeRangeButtons={excludeRangeButtons}
       />
     )
   }

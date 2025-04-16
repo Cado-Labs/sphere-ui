@@ -115,9 +115,6 @@ export const withRange = Component => {
 
       const translations = LOCALES_RANGE_BLOCKS[this.props.locale]
 
-      const includesButtons = this.props.includeRangeButtons
-      const excludesButtons = this.props.excludeRangeButtons
-
       const blocks = [
         { title: translations.today, method: this.setToday, name: "today" },
         { title: translations.last24Hours, method: this.setLast24Hours, name: "last24hours" },
@@ -130,11 +127,9 @@ export const withRange = Component => {
         { title: translations.allTime, method: this.setAllTime, name: "allTime" },
       ]
 
-      const availableBlocks = blocks.filter(({ name }) => {
-        return includesButtons?.length
-          ? includesButtons.includes(name)
-          : !excludesButtons.includes(name)
-      })
+      const availableBlocks = this.props.includeRangeButtons?.length
+        ? blocks.filter(({ name }) => this.props.includeRangeButtons.includes(name))
+        : blocks
 
       return (
         <div className="flex flex-column justify-content-between p-datepicker-range-buttons h-full">
