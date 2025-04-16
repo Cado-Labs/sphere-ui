@@ -26,6 +26,19 @@ export const withRange = Component => {
       this.onChange(newDate)
     }
 
+    setLast24Hours = () => {
+      const startDate = new Date()
+
+      startDate.setDate(startDate.getDate() - 1)
+
+      const newDate = [
+        startDate,
+        new Date(),
+      ]
+
+      this.onChange(newDate)
+    }
+
     setYesterday = () => {
       const { day, month, year } = getPartsOfTime()
       const yesterday = new Date(year, month, day - 1)
@@ -101,28 +114,41 @@ export const withRange = Component => {
       if (!this.props.rangeButtonsBar) return null
 
       const translations = LOCALES_RANGE_BLOCKS[this.props.locale]
+
+      const includesButtons = this.props.includeRangeButtons
+      const excludesButtons = this.props.excludeRangeButtons
+
       const blocks = [
-        { title: translations.today, method: this.setToday },
-        { title: translations.yesterday, method: this.setYesterday },
-        { title: translations.week, method: this.setWeek },
-        { title: translations.last30days, method: this.setLast30Days },
-        { title: translations.thisMonth, method: this.setCurrentMonth },
-        { title: translations.lastMonth, method: this.setLastMonth },
-        { title: translations.last180days, method: this.setLast180Days },
-        { title: translations.allTime, method: this.setAllTime },
+        { title: translations.today, method: this.setToday, name: "today" },
+        { title: translations.last24Hours, method: this.setLast24Hours, name: "last24hours" },
+        { title: translations.yesterday, method: this.setYesterday, name: "yesterday" },
+        { title: translations.week, method: this.setWeek, name: "week" },
+        { title: translations.last30days, method: this.setLast30Days, name: "last30days" },
+        { title: translations.thisMonth, method: this.setCurrentMonth, name: "thisMonth" },
+        { title: translations.lastMonth, method: this.setLastMonth, name: "lastMonth" },
+        { title: translations.last180days, method: this.setLast180Days, name: "last180days" },
+        { title: translations.allTime, method: this.setAllTime, name: "allTime" },
       ]
 
+      const availableBlocks = blocks.filter(({ name }) => {
+        return includesButtons?.length
+          ? includesButtons.includes(name)
+          : !excludesButtons.includes(name)
+      })
+
       return (
-        <div className="flex flex-column p-datepicker-range-buttons">
-          {blocks.map((block, index) => (
-            <Button
-              key={index}
-              className="p-button-text p-button-plain"
-              label={block.title}
-              size="small"
-              onClick={block.method}
-            />
-          ))}
+        <div className="flex flex-column justify-content-between p-datepicker-range-buttons h-full">
+          <div className="flex flex-column p-datepicker-range-buttons">
+            {availableBlocks.map((block, index) => (
+              <Button
+                key={index}
+                className="p-button-text p-button-plain"
+                label={block.title}
+                size="small"
+                onClick={block.method}
+              />
+            ))}
+          </div>
           <Button label={translations.clear} size="small" onClick={this.clear} />
         </div>
       )

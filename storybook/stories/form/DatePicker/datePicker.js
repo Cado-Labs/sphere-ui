@@ -156,6 +156,8 @@ export const datePicker = {
     { name: "baseZIndex", type: "number", default: 50, description: `${I18N_PREFIX}.props.baseZIndex` },
     { name: "keepInvalid", type: "boolean", default: true, description: `${I18N_PREFIX}.props.keepInvalid` },
     { name: "utc", type: "boolean", default: false, description: `${I18N_PREFIX}.props.utc` },
+    { name: "includeRangeButtons", type: "array", default: "[ ]", description: `${I18N_PREFIX}.props.includeRangeButtons` },
+    { name: "excludeRangeButtons", type: "array", default: "[ ]", description: `${I18N_PREFIX}.props.excludeRangeButtons` },
   ],
   eventDescriptionProps: [
     { name: "formatDateTime", params: formatDateTimeParams, description: `${I18N_PREFIX}.props.formatDateTime` },

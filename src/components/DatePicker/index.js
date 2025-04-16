@@ -41,6 +41,8 @@ export const DatePicker = React.forwardRef(({
   autoZIndex = true,
   baseZIndex = 50,
   keepInvalid = true,
+  includeRangeButtons = [],
+  excludeRangeButtons = [],
   formatDateTime,
   parseDateTime,
   onFocus,
@@ -129,6 +131,8 @@ export const DatePicker = React.forwardRef(({
         onViewDateChange={onViewDateChangeCustom}
         numberOfMonths={2}
         startCalendarDate={startDate}
+        includeRangeButtons={includeRangeButtons}
+        excludeRangeButtons={excludeRangeButtons}
       />
     )
   }
