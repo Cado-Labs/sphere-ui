@@ -1,6 +1,7 @@
 const LOCALES_RANGE_BLOCKS = {
   ru: {
     today: "Сегодня",
+    last24Hours: "Последние 24 часа",
     yesterday: "Вчера",
     week: "Неделя",
     last30days: "30 дней",
@@ -12,6 +13,7 @@ const LOCALES_RANGE_BLOCKS = {
   },
   en: {
     today: "Today",
+    last24Hours: "Last 24h",
     yesterday: "Yesterday",
     week: "Week",
     last30days: "30 days",

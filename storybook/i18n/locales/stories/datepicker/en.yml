@@ -44,3 +44,4 @@ props:
   onHide: Callback to invoke when overlay panel or modal becomes hidden.
   onVisibleChange: Callback to invoke when visible is changed.
   utc: To change the start of the date with UTC format
+  includeRangeButtons: "Array of preset buttons that will be displayed in range mode. Available values: \"today\", \"last24hours\", \"yesterday\", \"week\", \"last30days\", \"thisMonth\", \"lastMonth\", \"last180days\", \"allTime\""
