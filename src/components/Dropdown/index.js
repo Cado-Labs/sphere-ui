@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import { Dropdown as PrimeDropdown } from "primereact/dropdown"
 import { locale } from "primereact/api"
 import { classNames as cn } from "primereact/utils"
@@ -48,15 +48,29 @@ export const Dropdown = React.forwardRef(({
   onFilter,
   ...props
 }, ref) => {
+  const localRef = useRef(null)
+  const dropdownRef = ref || localRef
+
   const emptyMessage = EMPTY_MESSAGE[locale().locale]
   const dropdownClassName = cn(className, "w-full")
   const filteredTooltipOptions = filterTooltipOptions(tooltipOptions)
   const hasFilter = filter ?? shouldFilterSelectOptions(options)
   const dataAttributes = pickDataAttributes(props)
 
+  const handleShow = event => {
+    onShow?.(event)
+
+    if (hasFilter) {
+      setTimeout(() => {
+        const searchInput = dropdownRef?.current?.getOverlay()?.querySelector(".p-dropdown-filter")
+        searchInput?.focus()
+      }, 0)
+    }
+  }
+
   return (
     <PrimeDropdown
-      ref={ref}
+      ref={dropdownRef}
       id={id}
       name={name}
       value={value}
@@ -92,7 +106,7 @@ export const Dropdown = React.forwardRef(({
       onBlur={onBlur}
       onMouseDown={onMouseDown}
       onContextMenu={onContextMenu}
-      onShow={onShow}
+      onShow={handleShow}
       onHide={onHide}
       onFilter={onFilter}
       {...dataAttributes}
