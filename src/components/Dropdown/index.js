@@ -10,6 +10,21 @@ const EMPTY_MESSAGE = {
   en: "Nothing found",
 }
 
+// Collection to track opened dropdowns
+const collections = (() => {
+  const dropdowns = []
+
+  return {
+    set: ref => dropdowns.push(ref),
+    hide: ref => dropdowns.forEach(dropdown => {
+      if (ref.getInput() !== dropdown.getInput()) {
+        dropdown.hide()
+      }
+    }),
+    remove: ref => dropdowns.filter(dropdown => dropdown.getInput() !== ref.getInput()),
+  }
+})()
+
 export const Dropdown = React.forwardRef(({
   id,
   name,
@@ -58,14 +73,20 @@ export const Dropdown = React.forwardRef(({
   const dataAttributes = pickDataAttributes(props)
 
   const handleShow = event => {
+    collections.hide(dropdownRef?.current)
+    collections.set(dropdownRef?.current)
+
     onShow?.(event)
 
     if (hasFilter) {
-      setTimeout(() => {
-        const searchInput = dropdownRef?.current?.getOverlay()?.querySelector(".p-dropdown-filter")
-        searchInput?.focus()
-      }, 0)
+      const searchInput = dropdownRef?.current?.getOverlay()?.querySelector(".p-dropdown-filter")
+      searchInput?.focus()
     }
+  }
+
+  const handleHide = () => {
+    collections.remove(dropdownRef?.current)
+    onHide?.()
   }
 
   return (
@@ -107,7 +128,7 @@ export const Dropdown = React.forwardRef(({
       onMouseDown={onMouseDown}
       onContextMenu={onContextMenu}
       onShow={handleShow}
-      onHide={onHide}
+      onHide={handleHide}
       onFilter={onFilter}
       {...dataAttributes}
     />
