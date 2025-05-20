@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef, useEffect, useImperativeHandle } from "react"
 import { Dropdown as PrimeDropdown } from "primereact/dropdown"
 import { locale } from "primereact/api"
 import { classNames as cn } from "primereact/utils"
@@ -21,7 +21,11 @@ const collections = (() => {
         dropdown.hide()
       }
     }),
-    remove: ref => dropdowns.filter(dropdown => dropdown.getInput() !== ref.getInput()),
+    remove: ref => {
+      const input = ref.getInput()
+      const index = dropdowns.findIndex(dropdown => dropdown.getInput() === input)
+      if (index !== -1) dropdowns.splice(index, 1)
+    },
   }
 })()
 
@@ -63,8 +67,8 @@ export const Dropdown = React.forwardRef(({
   onFilter,
   ...props
 }, ref) => {
-  const localRef = useRef(null)
-  const dropdownRef = ref || localRef
+  const dropdownRef = useRef(null)
+  useImperativeHandle(ref, () => dropdownRef.current)
 
   const emptyMessage = EMPTY_MESSAGE[locale().locale]
   const dropdownClassName = cn(className, "w-full")
@@ -73,21 +77,35 @@ export const Dropdown = React.forwardRef(({
   const dataAttributes = pickDataAttributes(props)
 
   const handleShow = event => {
-    collections.hide(dropdownRef?.current)
-    collections.set(dropdownRef?.current)
+    const current = dropdownRef?.current
+    if (current) {
+      collections.hide(current)
+      collections.set(current)
+    }
 
     onShow?.(event)
 
-    if (hasFilter) {
-      const searchInput = dropdownRef?.current?.getOverlay()?.querySelector(".p-dropdown-filter")
+    if (hasFilter && current) {
+      const searchInput = current?.getOverlay()?.querySelector(".p-dropdown-filter")
       searchInput?.focus()
     }
   }
 
   const handleHide = () => {
-    collections.remove(dropdownRef?.current)
+    if (dropdownRef?.current) {
+      collections.remove(dropdownRef.current)
+    }
+
     onHide?.()
   }
+
+  useEffect(() => {
+    return () => {
+      if (dropdownRef?.current) {
+        collections.remove(dropdownRef.current)
+      }
+    }
+  }, [])
 
   return (
     <PrimeDropdown
