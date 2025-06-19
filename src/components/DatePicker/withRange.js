@@ -6,6 +6,13 @@ import { Button } from "../Button"
 
 import { LOCALES_RANGE_BLOCKS } from "./constants"
 
+const createEndOfDayDate = (...args) => {
+  const date = new Date(...args)
+  date.setHours(23, 59, 59, 999)
+
+  return date
+}
+
 export const withRange = Component => {
   const WrappedComponent = class extends React.Component {
     constructor (props) {
@@ -18,9 +25,13 @@ export const withRange = Component => {
     }
 
     setToday = () => {
+      const { day, month, year } = getPartsOfTime()
+      const startDate = new Date(year, month, day)
+      const endDate = createEndOfDayDate(year, month, day)
+
       const newDate = [
-        new Date(),
-        new Date(),
+        startDate,
+        endDate,
       ]
 
       this.onChange(newDate)
@@ -41,8 +52,13 @@ export const withRange = Component => {
 
     setYesterday = () => {
       const { day, month, year } = getPartsOfTime()
-      const yesterday = new Date(year, month, day - 1)
-      const newDate = [yesterday, yesterday]
+      const startDate = new Date(year, month, day - 1)
+      const endDate = createEndOfDayDate(year, month, day - 1)
+
+      const newDate = [
+        startDate,
+        endDate,
+      ]
 
       this.onChange(newDate)
     }
@@ -53,7 +69,7 @@ export const withRange = Component => {
 
       const newDate = [
         new Date(year, month, 1),
-        new Date(year, month, lastDayInMonth),
+        createEndOfDayDate(year, month, lastDayInMonth),
       ]
 
       this.onChange(newDate)
@@ -66,15 +82,20 @@ export const withRange = Component => {
 
       const newDate = [
         new Date(year, prevMonth, 1),
-        new Date(year, prevMonth, lastDayInPrevMonth),
+        createEndOfDayDate(year, prevMonth, lastDayInPrevMonth),
       ]
+
       this.onChange(newDate)
     }
 
     setAllTime = () => {
       const { month, day, year } = getPartsOfTime()
 
-      const newDate = [this.props.startCalendarDate, new Date(year, month, day)]
+      const newDate = [
+        this.props.startCalendarDate,
+        createEndOfDayDate(year, month, day),
+      ]
+
       this.onChange(newDate)
     }
 
@@ -94,9 +115,14 @@ export const withRange = Component => {
       const { month, day, year } = getPartsOfTime()
       const daysDiff = day - (days - 1)
       const startDate = new Date(year, month, daysDiff)
+      const endDate = createEndOfDayDate(year, month, day)
 
-      const date = [startDate, new Date(year, month, day)]
-      this.onChange(date)
+      const newDate = [
+        startDate,
+        endDate,
+      ]
+
+      this.onChange(newDate)
     }
 
     onChange = value => {
