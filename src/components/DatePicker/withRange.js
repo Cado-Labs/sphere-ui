@@ -13,6 +13,23 @@ const createEndOfDayDate = (...args) => {
   return date
 }
 
+const getWeekRange = (offset = 0) => {
+  const now = new Date()
+
+  const dayOfWeek = now.getDay()
+  const diffToMonday = (dayOfWeek === 0 ? -6 : 1 - dayOfWeek)
+
+  const monday = new Date(now)
+  monday.setDate(now.getDate() + diffToMonday + offset * 7)
+  monday.setHours(0, 0, 0, 0)
+
+  const sunday = new Date(monday)
+  sunday.setDate(monday.getDate() + 6)
+  sunday.setHours(23, 59, 59, 999)
+
+  return [monday, sunday]
+}
+
 export const withRange = Component => {
   const WrappedComponent = class extends React.Component {
     constructor (props) {
@@ -103,6 +120,18 @@ export const withRange = Component => {
       this.setLastDays(7)
     }
 
+    setCurrentWeek = () => {
+      this.onChange(getWeekRange(0))
+    }
+
+    setNextWeek = () => {
+      this.onChange(getWeekRange(1))
+    }
+
+    setPreviousWeek = () => {
+      this.onChange(getWeekRange(-1))
+    }
+
     setLast30Days = () => {
       this.setLastDays(30)
     }
@@ -141,7 +170,7 @@ export const withRange = Component => {
 
       const translations = LOCALES_RANGE_BLOCKS[this.props.locale]
 
-      const blocks = [
+      const defaultPresets = [
         { title: translations.today, method: this.setToday, name: "today" },
         { title: translations.last24Hours, method: this.setLast24Hours, name: "last24hours" },
         { title: translations.yesterday, method: this.setYesterday, name: "yesterday" },
@@ -153,20 +182,27 @@ export const withRange = Component => {
         { title: translations.allTime, method: this.setAllTime, name: "allTime" },
       ]
 
-      const availableBlocks = this.props.includeRangeButtons?.length
-        ? blocks.filter(({ name }) => this.props.includeRangeButtons.includes(name))
-        : blocks
+      const otherPresets = [
+        { title: translations.currentWeek, method: this.setCurrentWeek, name: "currentWeek" },
+        { title: translations.nextWeek, method: this.setNextWeek, name: "nextWeek" },
+        { title: translations.previousWeek, method: this.setPreviousWeek, name: "previousWeek" },
+      ]
+
+      const availablePresets = this.props.includeRangeButtons?.length
+        ? [...defaultPresets.filter(({ name }) => this.props.includeRangeButtons.includes(name)),
+          ...otherPresets.filter(({ name }) => this.props.includeRangeButtons.includes(name))]
+        : defaultPresets
 
       return (
         <div className="flex flex-column justify-content-between p-datepicker-range-buttons h-full">
           <div className="flex flex-column p-datepicker-range-buttons">
-            {availableBlocks.map((block, index) => (
+            {availablePresets.map((preset, index) => (
               <Button
                 key={index}
                 className="p-button-text p-button-plain"
-                label={block.title}
+                label={preset.title}
                 size="small"
-                onClick={block.method}
+                onClick={preset.method}
               />
             ))}
           </div>
