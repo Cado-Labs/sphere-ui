@@ -11,3 +11,4 @@ props:
   onCollapse: Callback to invoke when an active tab is collapsed by clicking on the header.
   onExpand: Callback to invoke when a tab gets expanded.
   onToggle: Callback to invoke when a tab gets expanded or collapsed.
+  
