@@ -1,0 +1,13 @@
+content: Fieldset is a grouping component with a content toggle feature.
+props:
+  id: Unique identifier of the element.
+  collapsed: Defines the default visibility state of the content.
+  collapseIcon: Icon of an expanded tab.
+  expandIcon: Icon of a collapsed tab.
+  legend: Header text of the fieldset.
+  toggleable: When specified, content can toggled by clicking the legend.
+  unstyled: When enabled, it removes component related styles in the core.
+  onClick: Callback to invoke when fieldset is clicked.
+  onCollapse: Callback to invoke when an active tab is collapsed by clicking on the header.
+  onExpand: Callback to invoke when a tab gets expanded.
+  onToggle: Callback to invoke when a tab gets expanded or collapsed.
