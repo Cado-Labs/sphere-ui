@@ -32,7 +32,7 @@ export const Dialog = React.forwardRef(({
     return () => {
       document.body.classList.remove("p-overflow-hidden")
     }
-  })
+  }, [])
 
   const dataAttributes = pickDataAttributes(props)
 
@@ -66,6 +66,7 @@ export const Dialog = React.forwardRef(({
       keepInViewport={keepInViewport}
       maximized={maximized}
       {...dataAttributes}
+      {...props}
     >
       {children}
     </PrimeDialog>
