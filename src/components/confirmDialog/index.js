@@ -27,6 +27,9 @@ const confirmDialog = ({
   breakpoints,
   onClick,
   onMaskClick,
+
+  // other params
+  ...props
 }) => {
   const params = {
     // confirmDialog params
@@ -56,7 +59,7 @@ const confirmDialog = ({
     onClick,
     onMaskClick,
 
-    // params below are unavailable for users
+    // default params
     draggable: false,
     resizable: false,
     modal: true,
@@ -68,9 +71,49 @@ const confirmDialog = ({
     blockScroll: true,
     keepInViewport: true,
     maximized: false,
+
+    // rewriting params
+    ...props,
   }
 
   return primeConfirmDialog(params)
+}
+
+confirmDialog.queue = steps => {
+  return new Promise((resolve, reject) => {
+    const step = index => {
+      if (index < steps.length) {
+        let isNextStepAvailable = false
+
+        confirmDialog({
+          ...steps[index],
+
+          transitionOptions: {
+            ...steps[index]?.transitionOptions,
+
+            onExited: () => {
+              if (isNextStepAvailable) {
+                step(index + 1)
+              }
+              steps[index]?.transitionOptions?.onExited?.()
+            },
+          },
+          accept: confirm => {
+            isNextStepAvailable = true
+            steps[index]?.accept?.(confirm)
+          },
+          reject: dismiss => {
+            steps[index]?.reject?.(dismiss)
+            reject(dismiss)
+          },
+        })
+      } else {
+        resolve()
+      }
+    }
+
+    step(0)
+  })
 }
 
 export {
