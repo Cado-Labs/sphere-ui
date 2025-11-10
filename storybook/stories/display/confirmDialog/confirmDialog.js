@@ -39,6 +39,31 @@ function confirmDialogExample () {
     })
   }
 
+  const queue = [
+    {
+      message: "Are you sure you want to proceed?",
+      header: "Step 1",
+      icon: "pi pi-exclamation-triangle",
+      accept: () => toast.current.show({ severity: "info", summary: "Confirmed", detail: "You confirm firts step", life: 3000 }),
+      reject: () => toast.current.show({ severity: "info", summary: "Rejected", detail: "You reject first step", life: 3000 }),
+    },
+    {
+      message: "Are you sure you want to proceed?",
+      header: "Step 2",
+      icon: "pi pi-exclamation-triangle",
+      accept: () => toast.current.show({ severity: "info", summary: "Confirmed", detail: "You confirm second step", life: 3000 }),
+      reject: () => toast.current.show({ severity: "info", summary: "Rejected", detail: "You reject second step", life: 3000 }),
+    }
+  ]
+
+  const onSuccess = () => {
+    toast.current.show({ severity: "info", summary: "Confirmed", detail: "You confirm all steps", life: 3000 })
+  }
+
+  const onReject = () => toast.current.show({ severity: "info", summary: "Rejected", detail: "You reject chain", life: 3000 })
+
+  const callChainable = () => confirmDialog.queue(queue).then(onSuccess, onReject)
+
   return (
     <div>
       <Toast ref={toast} />
@@ -47,6 +72,11 @@ function confirmDialogExample () {
         <h3>Basic</h3>
         <Button onClick={confirm1} icon="pi pi-check" label="Confirm" className="mr-2" />
         <Button onClick={confirm2} icon="pi pi-times" label="Delete" className="p-button-danger p-button-outlined" />
+      </div>
+
+      <div className="p-card s-container">
+        <h3>Call queue</h3>
+        <Button onClick={callChainable} icon="pi pi-play" label="Call" className="mr-2" />
       </div>
     </div>
   )
