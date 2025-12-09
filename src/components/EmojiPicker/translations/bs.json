@@ -5,14 +5,14 @@
   "pick": "Izaberite emotikon…",
   "add_custom": "Dodajte emotikon po mjeri",
   "categories": {
-    "activity": "Aktivnost",
+    "activity": "Aktivnosti",
     "custom": "Po mjeri",
-    "flags": "Zastavice",
+    "flags": "Zastave",
     "foods": "Hrana i piće",
     "frequent": "Često korišteni",
     "nature": "Životinje i priroda",
-    "objects": "Objekti",
-    "people": "Smajliji i ljudi",
+    "objects": "Predmeti",
+    "people": "smajlići i ljudi",
     "places": "Putovanja i mjesta",
     "search": "Rezultati pretraživanja",
     "symbols": "Simboli"
