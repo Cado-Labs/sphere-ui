@@ -11,11 +11,12 @@ function MoneyExample () {
     <div className="p-card s-container">
       <h3>Money component</h3>
       <Money
-        money={[1000.1000, "USD"]}
+        money={[102.25599999, "USD"]}
         precision={2}
         enforcePrecision
         delimiter={"."}
         separator={" "}
+        roundingMode="ROUND_UP"
       />
 
       <h3>with currencySeparator</h3>
@@ -46,5 +47,6 @@ export const money = {
     { name: "delimiter", type: "string", default: ",", description: `${I18N_PREFIX}.props.delimiter` },
     { name: "separator", type: "string", default: "'\xA0'", description: `${I18N_PREFIX}.props.separator` },
     { name: "currencySeparator", type: "string", default: "' '", description: `${I18N_PREFIX}.props.currencySeparator` },
+    { name: "roundingMode", type: "string", default: "ROUND_DOWN", description: `${I18N_PREFIX}.props.roundingMode` },
   ],
 }

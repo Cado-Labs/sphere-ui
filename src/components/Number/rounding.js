@@ -1,0 +1,13 @@
+import BigNumber from "bignumber.js"
+
+export const ROUNDING_MAP = {
+  ROUND_UP: BigNumber.ROUND_UP,
+  ROUND_DOWN: BigNumber.ROUND_DOWN,
+  ROUND_CEIL: BigNumber.ROUND_CEIL,
+  ROUND_FLOOR: BigNumber.ROUND_FLOOR,
+  ROUND_HALF_UP: BigNumber.ROUND_HALF_UP,
+  ROUND_HALF_DOWN: BigNumber.ROUND_HALF_DOWN,
+  ROUND_HALF_EVEN: BigNumber.ROUND_HALF_EVEN,
+  ROUND_HALF_CEIL: BigNumber.ROUND_HALF_CEIL,
+  ROUND_HALF_FLOOR: BigNumber.ROUND_HALF_FLOOR,
+}
