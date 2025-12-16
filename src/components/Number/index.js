@@ -1,4 +1,5 @@
 import BigNumber from "bignumber.js"
+
 import { ROUNDING_MAP } from "./rounding"
 
 const DEFAULT_PRECISION = 2
