@@ -6,3 +6,4 @@ props:
   delimiter: Delimiter for fractional portion.
   separator: Separator for thousands.
   currencySeparator: Separator between amount and currency.
+  roundingMode: "Rounding mode for decimal values. Accepts one of: ROUND_UP, ROUND_DOWN, ROUND_CEIL, ROUND_FLOOR, ROUND_HALF_UP, ROUND_HALF_DOWN, ROUND_HALF_EVEN, ROUND_HALF_CEIL, ROUND_HALF_FLOOR"
