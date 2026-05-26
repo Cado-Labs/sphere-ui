@@ -42,4 +42,13 @@
   &-thead > tr > th {
     line-height: 1;
   }
+
+  &-tbody > tr > td {
+    user-select: text;
+  }
+
+  &-reorderablerow-handle {
+    cursor: grab;
+    user-select: none;
+  }
 }
