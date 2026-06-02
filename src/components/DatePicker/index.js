@@ -51,11 +51,13 @@ export const DatePicker = React.forwardRef(({
   onShow,
   onHide,
   onVisibleChange,
+  viewDate,
+  onViewDateChange,
   utc,
   ...props
 }, ref) => {
   const defaultViewDate = value?.[0] || new Date()
-  const [viewDate, setViewDate] = useState(defaultViewDate)
+  const [customViewDate, setCustomViewDate] = useState(defaultViewDate)
   const dataAttributes = pickDataAttributes(props)
   const startDate = minDate || getTime(startCalendarDate, utc)
 
@@ -102,6 +104,8 @@ export const DatePicker = React.forwardRef(({
       onShow,
       onHide,
       onVisibleChange,
+      viewDate,
+      onViewDateChange,
       ...dataAttributes,
     }
   }
@@ -115,7 +119,7 @@ export const DatePicker = React.forwardRef(({
   }
 
   const onViewDateChangeCustom = e => {
-    setViewDate(e.value)
+    setCustomViewDate(e.value)
   }
 
   const renderDateRangePicker = () => {
@@ -126,7 +130,7 @@ export const DatePicker = React.forwardRef(({
         {...getDefaultProps()}
         rangeButtonsBar
         headerTemplate={headerTemplate}
-        viewDate={viewDate}
+        viewDate={customViewDate}
         onViewDateChange={onViewDateChangeCustom}
         numberOfMonths={2}
         startCalendarDate={startDate}
@@ -136,11 +140,11 @@ export const DatePicker = React.forwardRef(({
   }
 
   const headerTemplate = () => {
-    const month = viewDate.getMonth()
+    const month = customViewDate.getMonth()
     const nextMonth = month === 11 ? 0 : month + 1
     const monthName = MONTHS[primeLocale().locale][nextMonth]
 
-    const year = viewDate.getFullYear()
+    const year = customViewDate.getFullYear()
     const displayedYear = month === 11 ? year + 1 : year
 
     return (
