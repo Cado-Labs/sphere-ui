@@ -114,6 +114,11 @@ const onVisibleChangeParams = [
   { name: "callback", description: "It is used to refocus the input field in some cases when the overlay is hidden." },
 ]
 
+const onViewDateChangeParams = [
+  { name: "originalEvent", description: "Browser event" },
+  { name: "value", description: "New view date" },
+]
+
 export const datePicker = {
   component: "DatePicker",
   content: {
@@ -134,6 +139,7 @@ export const datePicker = {
     { name: "monthNavigator", type: "boolean", default: true, description: `${I18N_PREFIX}.props.monthNavigator` },
     { name: "yearNavigator", type: "boolean", default: true, description: `${I18N_PREFIX}.props.yearNavigator` },
     { name: "disabled", type: "boolean", default: false, description: `${I18N_PREFIX}.props.disabled` },
+    { name: "viewDate", type: "Date", default: null, description: `${I18N_PREFIX}.props.viewDate` },
     { name: "startRangeOfYears", type: "string", default: "2010", description: `${I18N_PREFIX}.props.startRangeOfYears` },
     { name: "mask", type: "string", default: null, description: `${I18N_PREFIX}.props.mask` },
     { name: "minDate", type: "Date", default: null, description: `${I18N_PREFIX}.props.minDate` },
@@ -169,5 +175,6 @@ export const datePicker = {
     { name: "onShow", description: `${I18N_PREFIX}.props.onShow` },
     { name: "onHide", description: `${I18N_PREFIX}.props.onHide` },
     { name: "onVisibleChange", params: onVisibleChangeParams, description: `${I18N_PREFIX}.props.onVisibleChange` },
+    { name: "onViewDateChange", params: onViewDateChangeParams, description: `${I18N_PREFIX}.props.onViewDateChange` },
   ],
 }
