@@ -13,6 +13,7 @@ props:
   monthNavigator: Displays a dropdown with months.
   yearNavigator: Whether the year should be rendered as a dropdown instead of text.
   disabled: Disable the component.
+  viewDate: Date instance whose month and year are used to display the calendar in default mode.
   startRangeOfYears: Start year of years range.
   mask: Mask pattern for input element.
   minDate: The minimum selectable date.
@@ -43,5 +44,6 @@ props:
   onShow: Callback to invoke when overlay panel or modal becomes visible.
   onHide: Callback to invoke when overlay panel or modal becomes hidden.
   onVisibleChange: Callback to invoke when visible is changed.
+  onViewDateChange: Callback to invoke when the displayed month or year changes in default mode.
   utc: To change the start of the date with UTC format
   includeRangeButtons: "Array of preset buttons that will be displayed in range mode. By default all datepickers include values: \"today\", \"last24hours\", \"yesterday\", \"week\", \"last30days\", \"thisMonth\", \"lastMonth\", \"last180days\", \"allTime\", values may also be included: \"currentWeek\", \"nextWeek\", \"previousWeek\"."
